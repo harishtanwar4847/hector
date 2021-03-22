@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include hector *.css
+recursive-include hector *.csv
+recursive-include hector *.html
+recursive-include hector *.ico
+recursive-include hector *.js
+recursive-include hector *.json
+recursive-include hector *.md
+recursive-include hector *.png
+recursive-include hector *.py
+recursive-include hector *.svg
+recursive-include hector *.txt
+recursive-exclude hector *.pyc
