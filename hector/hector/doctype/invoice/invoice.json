@@ -1,0 +1,134 @@
+{
+ "autoname": "format:Invoice-{YYYY}-{####}",
+ "creation": "2021-03-22 15:47:06.328327",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "invoice_no",
+  "customer_code",
+  "customer_name",
+  "customer_type",
+  "column_break_1",
+  "invoice_date",
+  "invoice_quantity",
+  "invoice_value",
+  "outward_warehouse_location",
+  "outward_warehouse_location_name",
+  "pode_copy",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "invoice_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Invoice No",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "customer_code",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_standard_filter": 1,
+   "label": "Customer Code",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fetch_from": "customer_code.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "label": "Customer Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer_type",
+   "fieldtype": "Data",
+   "label": "Customer Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "invoice_date",
+   "fieldtype": "Datetime",
+   "label": "Invoice Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "invoice_quantity",
+   "fieldtype": "Data",
+   "label": "Invoice Quantity",
+   "reqd": 1
+  },
+  {
+   "fieldname": "invoice_value",
+   "fieldtype": "Currency",
+   "label": "Invoice Value (inc GST)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "outward_warehouse_location",
+   "fieldtype": "Link",
+   "label": "Outward Warehouse Location",
+   "options": "Hector Locations",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Invoice",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "pode_copy",
+   "fieldtype": "Attach",
+   "label": "Attach PODE Copy"
+  },
+  {
+   "fetch_from": "outward_warehouse_location.location",
+   "fieldname": "outward_warehouse_location_name",
+   "fieldtype": "Data",
+   "label": "Outward warehouse location Name",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2021-03-25 11:36:29.124803",
+ "modified_by": "Administrator",
+ "module": "Hector",
+ "name": "Invoice",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "invoice_no",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "invoice_no",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
