@@ -1,6 +1,6 @@
 {
  "actions": [],
- "autoname": "format:Invoice-{YYYY}-{####}",
+ "autoname": "format:PODE-{YYYY}-{####}",
  "creation": "2021-03-22 15:47:06.328327",
  "doctype": "DocType",
  "document_type": "Document",
@@ -51,8 +51,13 @@
   {
    "fieldname": "customer_type",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Customer Type",
    "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "invoice_date",
@@ -81,30 +86,17 @@
    "reqd": 1
   },
   {
-   "fieldname": "column_break_1",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Invoice",
-   "print_hide": 1,
-   "read_only": 1
-  },
-  {
-   "fieldname": "pode_copy",
-   "fieldtype": "Attach",
-   "label": "Attach PODE Copy 1"
-  },
-  {
    "fetch_from": "outward_warehouse_location.location",
    "fieldname": "outward_warehouse_location_name",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Outward warehouse location Name",
    "read_only": 1
+  },
+  {
+   "fieldname": "pode_copy",
+   "fieldtype": "Attach",
+   "label": "Attach PODE Copy 1"
   },
   {
    "fieldname": "attach_pode_copy_2",
@@ -115,14 +107,23 @@
    "fieldname": "attach_pode_copy_3",
    "fieldtype": "Attach",
    "label": "Attach PODE Copy 3"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Invoice For PODE",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2021-04-22 12:03:05.248919",
+ "modified": "2021-04-23 15:38:47.038245",
  "modified_by": "Administrator",
  "module": "Hector",
- "name": "Invoice",
+ "name": "Invoice For PODE",
  "name_case": "Title Case",
  "owner": "Administrator",
  "permissions": [

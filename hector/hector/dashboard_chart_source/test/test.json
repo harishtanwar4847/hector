@@ -1,0 +1,13 @@
+{
+ "creation": "2021-04-21 18:18:47.724416",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart Source",
+ "idx": 0,
+ "modified": "2021-04-21 18:20:57.899478",
+ "modified_by": "Administrator",
+ "module": "Hector",
+ "name": "test",
+ "owner": "Administrator",
+ "source_name": "test",
+ "timeseries": 1
+}
