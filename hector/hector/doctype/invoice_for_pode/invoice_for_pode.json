@@ -52,7 +52,7 @@
    "fieldname": "customer_type",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Customer Type",
+   "label": "Customer Posting Group",
    "reqd": 1
   },
   {
@@ -68,8 +68,8 @@
   {
    "fieldname": "invoice_quantity",
    "fieldtype": "Data",
-   "label": "Invoice Quantity",
-   "reqd": 1
+   "hidden": 1,
+   "label": "Invoice Quantity"
   },
   {
    "fieldname": "invoice_value",
@@ -120,7 +120,7 @@
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2021-04-23 15:38:47.038245",
+ "modified": "2021-04-27 19:33:50.142034",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Invoice For PODE",
