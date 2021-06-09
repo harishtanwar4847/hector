@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2021 (64-Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="516px" height="516px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 202.7 202.7"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil4 {fill:none}
+    .fil3 {fill:#F26722}
+    .fil0 {fill:#F6851F}
+    .fil2 {fill:#FAA21C}
+    .fil1 {fill:#FAAB1A}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_2561948442448">
+   <g>
+    <polygon class="fil0" points="149.39,27.52 107.52,50.97 149.39,76.73 "/>
+    <polygon class="fil1" points="107.55,50.99 149.39,76.73 107.55,100.2 "/>
+    <polygon class="fil2" points="149.37,76.7 107.49,100.16 149.37,125.92 "/>
+    <polygon class="fil3" points="107.52,100.18 149.37,125.92 107.52,149.39 "/>
+    <polygon class="fil0" points="149.23,76.76 191.08,102.5 149.23,125.97 "/>
+    <polygon class="fil2" points="191.05,102.47 149.18,125.93 191.05,151.69 "/>
+    <polygon class="fil3" points="149.21,125.95 191.05,151.69 149.21,175.16 "/>
+    <polygon class="fil0" points="149.19,125.97 107.32,149.43 149.19,175.18 "/>
+    <polygon class="fil0" points="53.53,27.52 11.65,50.97 53.53,76.73 "/>
+    <polygon class="fil1" points="11.68,50.99 53.53,76.73 11.68,100.2 "/>
+    <polygon class="fil2" points="53.5,76.7 11.63,100.16 53.5,125.92 "/>
+    <polygon class="fil3" points="11.66,100.18 53.5,125.92 11.66,149.39 "/>
+    <polygon class="fil0" points="53.37,76.76 95.21,102.5 53.37,125.97 "/>
+    <polygon class="fil2" points="95.19,102.47 53.31,125.93 95.19,151.69 "/>
+    <polygon class="fil3" points="53.35,125.95 95.19,151.69 53.35,175.16 "/>
+   </g>
+   <rect class="fil4" width="202.7" height="202.7"/>
+  </g>
+ </g>
+</svg>
