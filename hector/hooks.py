@@ -10,6 +10,7 @@ app_icon = "octicon octicon-file-directory"
 app_color = "grey"
 app_email = "developers@atriina.com"
 app_license = "MIT"
+app_logo_url = "/assets/hector/images/logo_hector.png"
 
 # Includes in <head>
 # ------------------
@@ -97,6 +98,13 @@ fixtures = [
         ]
     }
 ]
+
+email_brand_image = "/assets/hector/images/logo_hector.png"
+
+website_context = {
+	"favicon": 	"/assets/hector/images/logo_hector.png",
+	"splash_image": "/assets/hector/images/logo_hector.png"
+}
 
 # Document Events
 # ---------------
