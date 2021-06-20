@@ -75,28 +75,7 @@ app_license = "MIT"
 # 	"Event": "frappe.desk.doctype.event.event.has_permission",
 # }
 
-fixtures = [
-    {
-        "dt": "Role",
-        "filters":[
-            [
-                "name",
-                "in",
-                ["Invoice Importer", "PODE Verifier", "CFA/Warehouse Manager"]
-            ]
-        ]
-    },
-    {
-        "dt": "Custom DocPerm",
-        "filters":[
-            [
-                "role",
-                "in",
-                ["Invoice Importer", "PODE Verifier", "CFA/Warehouse Manager"]
-            ]
-        ]
-    }
-]
+fixtures = ['Invoice For PODE']
 
 # Document Events
 # ---------------

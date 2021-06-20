@@ -1,6 +1,6 @@
 {
  "actions": [],
- "autoname": "naming_series:",
+ "autoname": "field:code",
  "creation": "2021-03-23 13:42:20.266027",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -16,7 +16,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Location Code",
-   "options": "LOC-YYYY#####",
+   "options": "LOC-YYYY",
    "reqd": 1
   },
   {
@@ -28,12 +28,14 @@
   },
   {
    "fieldname": "code",
-   "fieldtype": "Int",
-   "label": "Code"
+   "fieldtype": "Data",
+   "label": "Code",
+   "reqd": 1,
+   "unique": 0
   }
  ],
  "links": [],
- "modified": "2021-04-26 11:16:46.084455",
+ "modified": "2021-06-17 19:38:25.202133",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Hector Locations",
