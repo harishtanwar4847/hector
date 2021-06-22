@@ -76,28 +76,6 @@ app_logo_url = "/assets/hector/images/logo_hector.svg"
 # 	"Event": "frappe.desk.doctype.event.event.has_permission",
 # }
 
-fixtures = [
-    {
-        "dt": "Role",
-        "filters":[
-            [
-                "name",
-                "in",
-                ["Invoice Importer", "PODE Verifier", "CFA/Warehouse Manager"]
-            ]
-        ]
-    },
-    {
-        "dt": "Custom DocPerm",
-        "filters":[
-            [
-                "role",
-                "in",
-                ["Invoice Importer", "PODE Verifier", "CFA/Warehouse Manager"]
-            ]
-        ]
-    }
-]
 
 email_brand_image = "/assets/hector/images/logo_hector.png"
 
