@@ -1,0 +1,4 @@
+hector.patches.custom_roles
+hector.patches.custom_docperm.cfa_manager_perm
+hector.patches.custom_docperm.invoice_importer_perm
+hector.patches.custom_docperm.pode_verifier_perm
