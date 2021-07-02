@@ -295,7 +295,7 @@
    "depends_on": "eval:doc.workflow_state == 'Pending for TOT Approval from Customer'",
    "fieldname": "attach_email",
    "fieldtype": "Attach",
-   "label": "Attach Email",
+   "label": "Attach TOT Approval Email",
    "mandatory_depends_on": "eval:doc.workflow_state == 'Pending for TOT Approval from Customer'"
   },
   {
@@ -316,7 +316,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-07-02 15:56:06.401325",
+ "modified": "2021-07-02 17:58:01.697801",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Customer Onboarding Document",
