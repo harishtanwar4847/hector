@@ -1,0 +1,342 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2021-07-02 14:07:53.661863",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "basic_information_section",
+  "customer_name",
+  "billing_address",
+  "post_code",
+  "shipping_address",
+  "post_code_for_shipping_address",
+  "customer_email_address",
+  "mobile_no_of_the_customer",
+  "contact_name_of_the_customer",
+  "profile_information_section",
+  "partnership_all_the_partner_name",
+  "contact_person",
+  "companies_presently_under_distribution",
+  "commercial_information_section",
+  "gst_registration_number",
+  "pan_card_no",
+  "attach_pan_card_copy",
+  "attach_gst_registration_certificate",
+  "food_license_copy_and_number",
+  "food_license_valid_till",
+  "town_or_area_assigned__to_cover",
+  "godown_space_in_sqft_for_hector",
+  "godown_space_hygienic_",
+  "no_of_salesman_allotted_for_market_working_exclusive_or_shared",
+  "number_of_vehicles_assigned_for_delivery_",
+  "availability_of_computer_and_printer",
+  "internet_access",
+  "billing_process",
+  "total_investment_funds_required_in_lacs",
+  "outcome_of_market_survey_so_asm_is_positive",
+  "copy_of_interest_to_start_hector_bev_prod_distribution",
+  "will_the_ss_cover_the_local_market",
+  "total_number_of_years_in_business",
+  "total_turnover_of_the_firm",
+  "asm_sm_email_id",
+  "channel",
+  "customer_posting_group",
+  "location",
+  "region",
+  "reference_customer_code_for_setting_the_price_group",
+  "attach_email",
+  "customer_id",
+  "workflow_state"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Customer Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "billing_address",
+   "fieldtype": "Data",
+   "label": "Billing Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "post_code",
+   "fieldtype": "Data",
+   "label": "Post Code",
+   "length": 6,
+   "reqd": 1
+  },
+  {
+   "fieldname": "shipping_address",
+   "fieldtype": "Data",
+   "label": "Shipping Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "post_code_for_shipping_address",
+   "fieldtype": "Data",
+   "label": "Shipping Address Post Code",
+   "length": 6,
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer_email_address",
+   "fieldtype": "Data",
+   "label": "Customer Email Address ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mobile_no_of_the_customer",
+   "fieldtype": "Data",
+   "label": "Customer Mobile Number",
+   "length": 10,
+   "reqd": 1
+  },
+  {
+   "fieldname": "contact_name_of_the_customer",
+   "fieldtype": "Data",
+   "label": "Contact Name of the Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "profile_information_section",
+   "fieldtype": "Section Break",
+   "label": "Profile Information"
+  },
+  {
+   "fieldname": "partnership_all_the_partner_name",
+   "fieldtype": "Data",
+   "label": "Enter Your Partner Names Below"
+  },
+  {
+   "fieldname": "contact_person",
+   "fieldtype": "Data",
+   "label": "Name of the Contact Person"
+  },
+  {
+   "fieldname": "companies_presently_under_distribution",
+   "fieldtype": "Data",
+   "label": "Companies presently under Distribution"
+  },
+  {
+   "fieldname": "commercial_information_section",
+   "fieldtype": "Section Break",
+   "label": "Commercial Information"
+  },
+  {
+   "fieldname": "gst_registration_number",
+   "fieldtype": "Data",
+   "label": "GST Registration Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pan_card_no",
+   "fieldtype": "Data",
+   "label": "PAN Card No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "attach_pan_card_copy",
+   "fieldtype": "Attach",
+   "label": "Attach PAN Card Copy",
+   "reqd": 1
+  },
+  {
+   "fieldname": "attach_gst_registration_certificate",
+   "fieldtype": "Attach",
+   "label": "Attach GST Registration Certificate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "food_license_copy_and_number",
+   "fieldtype": "Data",
+   "label": "Food License Number"
+  },
+  {
+   "fieldname": "food_license_valid_till",
+   "fieldtype": "Date",
+   "label": "Food License Valid Till"
+  },
+  {
+   "fieldname": "town_or_area_assigned__to_cover",
+   "fieldtype": "Data",
+   "label": "Area Assigned to Cover"
+  },
+  {
+   "fieldname": "godown_space_in_sqft_for_hector",
+   "fieldtype": "Data",
+   "label": "Godown Space in sqft for Hector"
+  },
+  {
+   "fieldname": "godown_space_hygienic_",
+   "fieldtype": "Select",
+   "label": "Godown Space Hygienic",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "no_of_salesman_allotted_for_market_working_exclusive_or_shared",
+   "fieldtype": "Data",
+   "label": "Number of Exclusive or Shared Salesman Alloted for Market"
+  },
+  {
+   "fieldname": "number_of_vehicles_assigned_for_delivery_",
+   "fieldtype": "Data",
+   "label": "Number of Vehicles Assigned for Delivery"
+  },
+  {
+   "fieldname": "availability_of_computer_and_printer",
+   "fieldtype": "Select",
+   "label": "Availability of Computer and Printer",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "internet_access",
+   "fieldtype": "Select",
+   "label": "Internet Access",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "billing_process",
+   "fieldtype": "Select",
+   "label": "Billing Process",
+   "options": "Software\nManual"
+  },
+  {
+   "fieldname": "total_investment_funds_required_in_lacs",
+   "fieldtype": "Data",
+   "label": "Total Investment Funds Required in Lakhs"
+  },
+  {
+   "fieldname": "outcome_of_market_survey_so_asm_is_positive",
+   "fieldtype": "Select",
+   "label": "Outcome of Market Survey is Positive",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "copy_of_interest_to_start_hector_bev_prod_distribution",
+   "fieldtype": "Attach",
+   "label": "Copy of Interest to Start Hector Beverages Products Distribution"
+  },
+  {
+   "fieldname": "will_the_ss_cover_the_local_market",
+   "fieldtype": "Select",
+   "label": "Will the SS Cover the Local Market",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "total_number_of_years_in_business",
+   "fieldtype": "Data",
+   "label": "Total Number of Years in Business"
+  },
+  {
+   "fieldname": "total_turnover_of_the_firm",
+   "fieldtype": "Data",
+   "label": "Total Turnover of the Firm in Lakhs"
+  },
+  {
+   "fieldname": "asm_sm_email_id",
+   "fieldtype": "Data",
+   "label": "ASM SM Email ID",
+   "reqd": 1
+  },
+  {
+   "fieldname": "channel",
+   "fieldtype": "Select",
+   "label": "Channel",
+   "options": "GT METRO-PB\nGT-METRO-SWING\nGT-SWING\nKAY ACCOUNTS\nAIRLINES\nGOVERNMENT\nMODERN TRADE\nE-COMMERCE\nEXPORT"
+  },
+  {
+   "fieldname": "customer_posting_group",
+   "fieldtype": "Data",
+   "label": "Customer Posting Group",
+   "reqd": 1
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location",
+   "reqd": 1
+  },
+  {
+   "fieldname": "region",
+   "fieldtype": "Select",
+   "label": "Region",
+   "options": "\nNORTH\nSOUTH\nEAST\nWEST",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reference_customer_code_for_setting_the_price_group",
+   "fieldtype": "Data",
+   "label": "Reference Customer Code for Setting the Price Group"
+  },
+  {
+   "fetch_from": "customer_name",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "no_copy": 1,
+   "options": "CUST-.YYYY.-",
+   "set_only_once": 1
+  },
+  {
+   "depends_on": "eval:doc.workflow_state == 'Pending for TOT Approval from Customer'",
+   "fieldname": "attach_email",
+   "fieldtype": "Attach",
+   "label": "Attach Email",
+   "mandatory_depends_on": "eval:doc.workflow_state == 'Pending for TOT Approval from Customer'"
+  },
+  {
+   "depends_on": "eval:((doc.workflow_state == 'Pending for Master Team Approval') || (doc.workflow_state == 'Resent for Master Team Approval &nbsp;'))",
+   "fieldname": "customer_id",
+   "fieldtype": "Data",
+   "label": "Customer ID",
+   "mandatory_depends_on": "eval:((doc.workflow_state == 'Pending for Master Team Approval') || (doc.workflow_state == 'Resent for Master Team Approval &nbsp;'))"
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Workflow State",
+   "no_copy": 1,
+   "options": "Workflow State"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-07-02 15:56:06.401325",
+ "modified_by": "Administrator",
+ "module": "Hector",
+ "name": "Customer Onboarding Document",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
