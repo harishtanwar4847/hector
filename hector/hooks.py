@@ -73,7 +73,7 @@ app_logo_url = "/assets/hector/images/logo_hector.png"
 # }
 permission_query_conditions = {
     # "Customer": "hector.permissions.customer_query",
-	"Customer Onboarding Document": "hector.permissions.customer_onboarding_document_query"
+	"Customer Form": "hector.permissions.customer_form_query"
 }
 #
 # has_permission = {

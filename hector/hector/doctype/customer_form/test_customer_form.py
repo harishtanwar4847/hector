@@ -4,5 +4,5 @@
 # import frappe
 import unittest
 
-class TestCustomerOnboardingDocument(unittest.TestCase):
+class TestCustomerForm(unittest.TestCase):
 	pass
