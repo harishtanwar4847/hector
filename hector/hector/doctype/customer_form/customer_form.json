@@ -41,7 +41,6 @@
   "will_the_ss_cover_the_local_market",
   "total_number_of_years_in_business",
   "total_turnover_of_the_firm",
-  "asm_sm_email_id",
   "channel",
   "customer_posting_group",
   "location",
@@ -246,12 +245,6 @@
    "label": "Total Turnover of the Firm in Lakhs"
   },
   {
-   "fieldname": "asm_sm_email_id",
-   "fieldtype": "Data",
-   "label": "ASM SM Email ID",
-   "reqd": 1
-  },
-  {
    "fieldname": "channel",
    "fieldtype": "Select",
    "label": "Channel",
@@ -295,7 +288,7 @@
    "depends_on": "eval:doc.workflow_state == 'Pending for TOT Approval from Customer'",
    "fieldname": "attach_email",
    "fieldtype": "Attach",
-   "label": "Attach TOT Approval Email",
+   "label": "Attach TOT Acceptance Email",
    "mandatory_depends_on": "eval:doc.workflow_state == 'Pending for TOT Approval from Customer'"
   },
   {
@@ -316,7 +309,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-07-02 17:58:01.697801",
+ "modified": "2021-07-05 13:48:08.244482",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Customer Form",
