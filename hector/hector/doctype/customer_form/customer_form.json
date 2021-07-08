@@ -17,6 +17,7 @@
   "mobile_no_of_the_customer",
   "contact_name_of_the_customer",
   "profile_information_section",
+  "type_of_business",
   "partnership_all_the_partner_name",
   "contact_person",
   "companies_presently_under_distribution",
@@ -115,11 +116,13 @@
    "label": "Profile Information"
   },
   {
+   "depends_on": "eval:doc.type_of_business == \"Partnership\";",
    "fieldname": "partnership_all_the_partner_name",
    "fieldtype": "Data",
    "label": "Enter Your Partner Names Below"
   },
   {
+   "depends_on": "eval:doc.type_of_business == \"Partnership\";",
    "fieldname": "contact_person",
    "fieldtype": "Data",
    "label": "Name of the Contact Person"
@@ -182,11 +185,12 @@
    "fieldname": "godown_space_hygienic_",
    "fieldtype": "Select",
    "label": "Godown Space Hygienic",
-   "options": "\nYes\nNo"
+   "options": "Yes\nNo"
   },
   {
    "fieldname": "no_of_salesman_allotted_for_market_working_exclusive_or_shared",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Number of Exclusive or Shared Salesman Alloted for Market"
   },
   {
@@ -198,13 +202,13 @@
    "fieldname": "availability_of_computer_and_printer",
    "fieldtype": "Select",
    "label": "Availability of Computer and Printer",
-   "options": "\nYes\nNo"
+   "options": "Yes\nNo"
   },
   {
    "fieldname": "internet_access",
    "fieldtype": "Select",
    "label": "Internet Access",
-   "options": "\nYes\nNo"
+   "options": "Yes\nNo"
   },
   {
    "fieldname": "billing_process",
@@ -221,7 +225,7 @@
    "fieldname": "outcome_of_market_survey_so_asm_is_positive",
    "fieldtype": "Select",
    "label": "Outcome of Market Survey is Positive",
-   "options": "\nYes\nNo"
+   "options": "Yes\nNo"
   },
   {
    "fieldname": "copy_of_interest_to_start_hector_bev_prod_distribution",
@@ -232,7 +236,7 @@
    "fieldname": "will_the_ss_cover_the_local_market",
    "fieldtype": "Select",
    "label": "Will the SS Cover the Local Market",
-   "options": "\nYes\nNo"
+   "options": "Yes\nNo"
   },
   {
    "fieldname": "total_number_of_years_in_business",
@@ -305,11 +309,17 @@
    "label": "Workflow State",
    "no_copy": 1,
    "options": "Workflow State"
+  },
+  {
+   "fieldname": "type_of_business",
+   "fieldtype": "Select",
+   "label": "Type Of Business",
+   "options": "Partnership\nProprietary"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-07-05 13:48:08.244482",
+ "modified": "2021-07-08 13:02:10.412997",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Customer Form",
