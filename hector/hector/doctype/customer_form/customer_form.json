@@ -17,6 +17,7 @@
   "mobile_no_of_the_customer",
   "contact_name_of_the_customer",
   "profile_information_section",
+  "customer_type",
   "type_of_business",
   "partnership_all_the_partner_name",
   "contact_person",
@@ -141,7 +142,7 @@
    "fieldname": "gst_registration_number",
    "fieldtype": "Data",
    "label": "GST Registration Number",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.customer_type == \"Super Stockist\""
   },
   {
    "fieldname": "pan_card_no",
@@ -159,7 +160,7 @@
    "fieldname": "attach_gst_registration_certificate",
    "fieldtype": "Attach",
    "label": "Attach GST Registration Certificate",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.customer_type == \"Super Stockist\""
   },
   {
    "fieldname": "food_license_copy_and_number",
@@ -315,11 +316,17 @@
    "fieldtype": "Select",
    "label": "Type Of Business",
    "options": "Partnership\nProprietary"
+  },
+  {
+   "fieldname": "customer_type",
+   "fieldtype": "Select",
+   "label": "Customer Type",
+   "options": "Super Stockist\nDirect Party"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-07-08 13:02:10.412997",
+ "modified": "2021-07-14 10:48:54.642778",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Customer Form",
