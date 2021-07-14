@@ -1,0 +1,138 @@
+{
+ "actions": [],
+ "autoname": "format:SHM-{YYYY}-{#####}",
+ "creation": "2021-06-23 10:27:19.689934",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "so_user",
+  "ase_user",
+  "asm_user",
+  "rsm_user",
+  "column_break_5",
+  "so_name",
+  "ase_name",
+  "asm_name",
+  "rsm_name",
+  "column_break_10",
+  "so_emp_id",
+  "ase_emp_id",
+  "asm_emp_id",
+  "rsm_emp_id"
+ ],
+ "fields": [
+  {
+   "fieldname": "so_emp_id",
+   "fieldtype": "Data",
+   "label": "SO EMP ID"
+  },
+  {
+   "fetch_from": "so_user.full_name",
+   "fieldname": "so_name",
+   "fieldtype": "Read Only",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "SO NAME"
+  },
+  {
+   "fieldname": "ase_emp_id",
+   "fieldtype": "Data",
+   "label": "ASE EMP ID"
+  },
+  {
+   "fetch_from": "ase_user.full_name",
+   "fieldname": "ase_name",
+   "fieldtype": "Read Only",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "ASE NAME"
+  },
+  {
+   "fieldname": "asm_emp_id",
+   "fieldtype": "Data",
+   "label": "ASM EMP ID"
+  },
+  {
+   "fetch_from": "asm_user.full_name",
+   "fieldname": "asm_name",
+   "fieldtype": "Read Only",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "ASM NAME"
+  },
+  {
+   "fieldname": "rsm_emp_id",
+   "fieldtype": "Data",
+   "label": "RSM EMP ID"
+  },
+  {
+   "fetch_from": "rsm_user.full_name",
+   "fieldname": "rsm_name",
+   "fieldtype": "Read Only",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "RSM NAME"
+  },
+  {
+   "fieldname": "so_user",
+   "fieldtype": "Link",
+   "label": "SO USER",
+   "options": "User"
+  },
+  {
+   "fieldname": "ase_user",
+   "fieldtype": "Link",
+   "label": "ASE USER",
+   "options": "User"
+  },
+  {
+   "fieldname": "asm_user",
+   "fieldtype": "Link",
+   "label": "ASM USER",
+   "options": "User"
+  },
+  {
+   "fieldname": "rsm_user",
+   "fieldtype": "Link",
+   "label": "RSM USER",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-07-05 14:03:53.858417",
+ "modified_by": "Administrator",
+ "module": "Hector",
+ "name": "Sales Hierarchy Mapping",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

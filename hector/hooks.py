@@ -71,6 +71,10 @@ app_logo_url = "/assets/hector/images/logo_hector.png"
 # permission_query_conditions = {
 # 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
 # }
+permission_query_conditions = {
+    # "Customer": "hector.permissions.customer_query",
+	"Customer Form": "hector.permissions.customer_form_query"
+}
 #
 # has_permission = {
 # 	"Event": "frappe.desk.doctype.event.event.has_permission",
