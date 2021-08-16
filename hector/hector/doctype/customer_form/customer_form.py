@@ -9,7 +9,7 @@ from frappe.core.doctype.communication.email import make
 
 class CustomerForm(Document):
 	# pass
-	def on_update(self):
+	try:
 		print("\n\n\nI am from customer form\n\n\n")
 		# print("The self.name is \n\n",self.name)
 		asm_rsm = [x for x in frappe.db.sql("""select shm.asm_user,shm.rsm_user from `tabCustomer Form` cf inner join `tabSales Hierarchy Mapping` shm on shm.asm_user = cf.owner where cf.name = '{}'""".format(self.name), as_list=1)]
@@ -75,4 +75,5 @@ class CustomerForm(Document):
 			Thankyou""".format(self.customer_name)
 			frappe.sendmail(subject="TOT Rejected by Customer", content=msg, recipients = '{},{},{}'.format(asm_rsm[0][0], asm_rsm[0][1], cma_list[0][0]), sender="Notification@hectorbeverages.com")
 			print("\n email sent \n")
-		
+	except:
+		frappe.throw("Please add ASM in Sales Hierarchy Mapping")
