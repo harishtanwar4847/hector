@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 import frappe
 import frappe.desk.desktop
-__version__ = '0.0.1'
+__version__ = '1.0.0'
 
 # def get_page_for_user(self):
 #   roles_list = frappe.get_all("Has Role",filters={'parent':frappe.session.user},fields=['role'])
