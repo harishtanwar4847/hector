@@ -82,7 +82,7 @@ class CustomerForm(Document):
 				Your request for customer creation for customer {} has been rejected by {}.<br><br>
 				Kindly check reason for rejection in website apps.myhector.com<br><br><br>
 				Regards,<br>
-				Hector Beverages""".format(asm_rsm[0][0],self.customer_name,asm_rsm[0][1])
+				Hector Beverages""".format(asm_rsm_name[0][0],self.customer_name,asm_rsm_name[0][1])
 				frappe.sendmail(subject="Customer Creation Rejected : {}".format(self.customer_name), content=msg, recipients = '{}'.format(asm_rsm[0][0]), sender="Notification@hectorbeverages.com")
 				print("\n email sent \n")
 			

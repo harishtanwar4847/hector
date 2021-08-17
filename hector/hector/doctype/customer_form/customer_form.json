@@ -63,8 +63,7 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Customer Name",
-   "reqd": 1,
-   "unique": 1
+   "reqd": 1
   },
   {
    "fieldname": "billing_address",
@@ -326,7 +325,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-07-14 10:48:54.642778",
+ "modified": "2021-08-17 12:04:11.703278",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Customer Form",
