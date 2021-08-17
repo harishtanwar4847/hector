@@ -95,13 +95,13 @@ class CustomerForm(Document):
 				frappe.sendmail(subject="Customer Creation Rejected : {}".format(self.customer_name), content=msg, recipients = '{},{},{}'.format(asm_rsm[0][0], asm_rsm[0][1], cma_list[0][0]), sender="Notification@hectorbeverages.com")
 				print("\n email sent \n")
 			
-			if self.workflow_state == 'Customer Approved':
-				msg="""Hello Team,<br><br>
-				Your request for customer creation has been approved. And New Customer Code is {} for {}.<br><br>
-				Link- apps.myhector.com<br><br><br>
-				Regards,<br>
-				Hector Beverages""".format(self.customer_id,self.customer_name)
-				frappe.sendmail(subject="Customer Creation Completed : {} : {}".format(self.customer_id,self.customer_name), content=msg, recipients = '{},{}'.format(asm_rsm[0][0], asm_rsm[0][1]), sender="Notification@hectorbeverages.com")
-				print("\n email sent \n")
+			# if self.workflow_state == 'Customer Approved':
+			# 	msg="""Hello Team,<br><br>
+			# 	Your request for customer creation has been approved. And New Customer Code is {} for {}.<br><br>
+			# 	Link- apps.myhector.com<br><br><br>
+			# 	Regards,<br>
+			# 	Hector Beverages""".format(self.customer_id,self.customer_name)
+			# 	frappe.sendmail(subject="Customer Creation Completed : {} : {}".format(self.customer_id,self.customer_name), content=msg, recipients = '{},{}'.format(asm_rsm[0][0], asm_rsm[0][1]), sender="Notification@hectorbeverages.com")
+			# 	print("\n email sent \n")
 		except:
 			frappe.throw("Please add ASM in Sales Hierarchy Mapping")
