@@ -1,0 +1,34 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "condition": "doc.workflow_state == \"Pending for TOT Approval from Customer\"",
+ "creation": "2021-06-16 13:52:37.791187",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Customer Form",
+ "enabled": 1,
+ "event": "Value Change",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Dearest friend,<br>\n<br>\nThank you for choosing to sail with Paper Boat! <br>We hope to find new horizons and make the most of our journey together. We believe in putting our best foot forward in everything we do. Starting from the crucial innings of gully cricket to this partnership we are about to embark on.\nTo ensure our partnership is strong and will help us win our game we\u2019ve sent you a set of terms and conditions to go through. Please send us a response in agreement so that we may take this forward!\n<br><br>\nHoping to hear the best from you,\nYour newfound friends at Paper Boat! \nTOT(Terms Of Trade)<br>\n{% set doc = frappe.get_doc('File', 'db1206c842') %}\n<a href=\"/files/General Terms and Conditions_Distributors - 04062021.docx\">Click here to view TermsOfTrade</a>",
+ "modified": "2021-08-21 11:15:23.204260",
+ "modified_by": "developers@atriina.com",
+ "module": "Hector",
+ "name": "TOT Email Notification",
+ "owner": "anurag.mahadik@atriina.com",
+ "recipients": [
+  {
+   "cc": "{{ doc.modified_by }}, {{ doc.owner }}\nashwin@atriina.com",
+   "condition": "doc.workflow_state == \"Pending for TOT Approval from Customer\"",
+   "receiver_by_document_field": "customer_email_address",
+   "receiver_by_role": ""
+  }
+ ],
+ "send_system_notification": 1,
+ "send_to_all_assignees": 1,
+ "sender": "Notifications",
+ "sender_email": "notification@hectorbeverages.com",
+ "subject": "{{ doc.customer_name }} Thanks for connecting with Hector Beverages",
+ "value_changed": "workflow_state"
+}
