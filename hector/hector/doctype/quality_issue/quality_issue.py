@@ -6,6 +6,20 @@ from frappe.model.document import Document
 from datetime import datetime
 
 class QualityIssue(Document):
+	def before_save(self):
+		skuDetails = self.sku_details
+		currentDate = frappe.utils.today()
+		date_format = "%Y-%m-%d"
+		for i in range(len(skuDetails)):
+			todayDate = datetime.strptime(currentDate, date_format)
+			documentDate = frappe.utils.get_datetime(skuDetails[i].mgf_date).strftime(date_format)
+			documentDateStr = datetime.strptime(documentDate, date_format)
+			daysDiffrence = (todayDate - documentDateStr).days
+
+			#for selecting dates from past
+			if int(daysDiffrence) <= 0 :
+				frappe.throw("Please select correct manufacturing date")
+
 	def on_update(self):
 
 		complaintTeamEmail = self.owner
