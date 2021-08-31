@@ -23,3 +23,11 @@ def customer_form_query(user = frappe.session.user):
     if('Customer Form Master Approver' in frappe.get_roles(user) or 'Sales Manager' in frappe.get_roles(user) or 'Sales User' in frappe.get_roles(user) or 'System Manager' in frappe.get_roles(user) or 'Sales Master Manager' in frappe.get_roles(user)):
         print('\n\n\n<<<<<<<<<<<<Inside CMA MAPPING QUERY>>>>>>>>>>>>\n\n\n')
         return "(`tabCustomer Form`.docstatus = '0')"
+
+def quality_issue_query(user = frappe.session.user):
+    # passs
+    if ('Physical Verification Officer' in frappe.get_roles(user) and 'Administrator' not in frappe.get_roles(user)):
+        print("\n\nInside Physical Verification Officer Query\n\n")
+        return "(`tabQuality Issue`.physicalremote_verification_executive_email = '{}')".format(user)
+    else :
+        return "(`tabQuality Issue`.docstatus = '0')"

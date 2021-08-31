@@ -1,0 +1,286 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2021-08-23 16:03:16.953411",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "customer_details_section",
+  "rsm_name",
+  "customer_name",
+  "customer_code",
+  "customer_location",
+  "customer_phone_number",
+  "column_break_6",
+  "asm_name",
+  "indirect_customer_details",
+  "email_address_of_requestor_from_sales_team",
+  "issue_details_section",
+  "type_of_issue",
+  "other_issue",
+  "sku_name_and_damagedmissing_quantity",
+  "column_break_16",
+  "batch_details",
+  "column_break_18",
+  "sku_details",
+  "manufacturing_plant",
+  "manufacturing_date",
+  "section_break_22",
+  "invoice_number",
+  "issue_details",
+  "column_break_25",
+  "physicalremote_verification_executive",
+  "physicalremote_verification_executive_email",
+  "photo_mandatory",
+  "attach_rca_details",
+  "close_issue"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "QLTY-.YYYY.-",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "rsm_name",
+   "fieldtype": "Link",
+   "label": "RSM Name",
+   "options": "User"
+  },
+  {
+   "fieldname": "asm_name",
+   "fieldtype": "Link",
+   "label": "ASM Name",
+   "options": "User"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Customer Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Customer Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer_location",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Customer Location",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer_phone_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Customer Phone Number",
+   "reqd": 1
+  },
+  {
+   "description": "Use this field if the request is being raised on behalf of a Distributor of SS. Please enter the Indirect Customer Name, Address, Phone Number.",
+   "fieldname": "indirect_customer_details",
+   "fieldtype": "Small Text",
+   "label": "Indirect Customer Details",
+   "print_width": "4",
+   "width": "4"
+  },
+  {
+   "description": "Email notifications of the issue status will go to address",
+   "fieldname": "email_address_of_requestor_from_sales_team",
+   "fieldtype": "Data",
+   "label": "Email Address of Requestor from Sales Team",
+   "reqd": 1
+  },
+  {
+   "fieldname": "type_of_issue",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type of Issue",
+   "options": "Quality :Leakage/Puffing\nQuality :Damage/gas out/taste issue/solvent note\nQuality: Short in Case\nOther",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval: doc.type_of_issue == 'Other'",
+   "fieldname": "other_issue",
+   "fieldtype": "Data",
+   "label": "Other Issue",
+   "mandatory_depends_on": "eval: doc.type_of_issue == 'Other'"
+  },
+  {
+   "description": "Please enter the SKU Quantity in pieces. Add each SKU in a new line. Example: Swing Mango X 45: 23 Quantity",
+   "fieldname": "sku_name_and_damagedmissing_quantity",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "SKU Name and Damaged/Missing Quantity"
+  },
+  {
+   "description": "In case of multiple batches, please add each batch code on a new line ",
+   "fieldname": "batch_details",
+   "fieldtype": "Small Text",
+   "label": "Batch Details",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sku_details",
+   "fieldtype": "Table",
+   "label": "SKU Details",
+   "options": "SKU Details",
+   "reqd": 1
+  },
+  {
+   "fieldname": "manufacturing_plant",
+   "fieldtype": "Select",
+   "label": "Manufacturing Plant",
+   "options": "\nManesar\nMysore\nBaramati\nFazilika\nPaithan\nVinyak\nBD Foods\nATC\nKowai\nVSA"
+  },
+  {
+   "fieldname": "manufacturing_date",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Manufacturing Date"
+  },
+  {
+   "description": "In case of stock from multiple invoices, please create a separate request for each invoice",
+   "fieldname": "invoice_number",
+   "fieldtype": "Data",
+   "label": "Invoice Number",
+   "reqd": 1
+  },
+  {
+   "description": "Please share more details about the incidence",
+   "fieldname": "issue_details",
+   "fieldtype": "Small Text",
+   "label": "Issue Details"
+  },
+  {
+   "fieldname": "physicalremote_verification_executive",
+   "fieldtype": "Link",
+   "label": "Physical/Remote Verification executive user",
+   "options": "Physical Verification Officer",
+   "reqd": 1
+  },
+  {
+   "description": "You can upload up to 5 images ",
+   "fieldname": "photo_mandatory",
+   "fieldtype": "Attach",
+   "label": "Photo (Mandatory)",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "physicalremote_verification_executive.user_email",
+   "fieldname": "physicalremote_verification_executive_email",
+   "fieldtype": "Data",
+   "label": "Physical/Remote Verification executive email",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer_details_section",
+   "fieldtype": "Section Break",
+   "label": "Customer Details"
+  },
+  {
+   "fieldname": "issue_details_section",
+   "fieldtype": "Section Break",
+   "label": "Issue Details"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_22",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:((doc.workflow_state == 'Pending for RCA Details') || (doc.workflow_state == 'Pending for Quality Head Approval') || (doc.workflow_state == 'RCA Approved'))",
+   "fieldname": "attach_rca_details",
+   "fieldtype": "Attach",
+   "label": "Attach RCA Details",
+   "mandatory_depends_on": "eval:((doc.workflow_state == 'Pending for RCA Details') || (doc.workflow_state == 'Pending for Quality Head Approval') || (doc.workflow_state == 'RCA Approved'))"
+  },
+  {
+   "default": "0",
+   "fieldname": "close_issue",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Close Issue"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-08-30 11:14:24.718518",
+ "modified_by": "Administrator",
+ "module": "Hector",
+ "name": "Quality Issue",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "if_owner": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Complaint Registering Team",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Physical Verification Officer",
+   "select": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Finance Team",
+   "select": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Quality Head",
+   "select": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "customer_name",
+ "track_changes": 1
+}
