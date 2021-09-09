@@ -1,2 +1,4 @@
-hector.patches.workflow
 hector.patches.custom_roles
+hector.patches.workflow
+hector.patches.quality_workflow.custom_roles
+hector.patches.quality_workflow.quality_workflow
