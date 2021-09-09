@@ -4,6 +4,7 @@
 
 ### Added
 - [Quality workflow](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/14)
+- [added new fields,dashboard an sample email notifications to customer in Quality Issue](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/15)
 
 ## [v1.0.0] - 2021-08-21
 
