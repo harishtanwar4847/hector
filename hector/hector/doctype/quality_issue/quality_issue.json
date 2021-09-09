@@ -22,7 +22,6 @@
   "other_issue",
   "sku_name_and_damagedmissing_quantity",
   "column_break_16",
-  "batch_details",
   "column_break_18",
   "sku_details",
   "manufacturing_plant",
@@ -30,10 +29,14 @@
   "section_break_22",
   "invoice_number",
   "issue_details",
-  "column_break_25",
   "physicalremote_verification_executive",
   "physicalremote_verification_executive_email",
+  "column_break_25",
   "photo_mandatory",
+  "photo_2optional",
+  "photo_3optional",
+  "photo_4optional",
+  "photo_5optional",
   "attach_rca_details",
   "close_issue"
  ],
@@ -122,13 +125,6 @@
    "fieldtype": "Small Text",
    "hidden": 1,
    "label": "SKU Name and Damaged/Missing Quantity"
-  },
-  {
-   "description": "In case of multiple batches, please add each batch code on a new line ",
-   "fieldname": "batch_details",
-   "fieldtype": "Small Text",
-   "label": "Batch Details",
-   "reqd": 1
   },
   {
    "fieldname": "sku_details",
@@ -226,11 +222,31 @@
    "fieldtype": "Int",
    "hidden": 1,
    "label": "Close Issue"
+  },
+  {
+   "fieldname": "photo_2optional",
+   "fieldtype": "Attach",
+   "label": "Photo 2(Optional)"
+  },
+  {
+   "fieldname": "photo_3optional",
+   "fieldtype": "Attach",
+   "label": "Photo 3(Optional)"
+  },
+  {
+   "fieldname": "photo_4optional",
+   "fieldtype": "Attach",
+   "label": "Photo 4(Optional)"
+  },
+  {
+   "fieldname": "photo_5optional",
+   "fieldtype": "Attach",
+   "label": "Photo 5(Optional)"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-08-30 11:14:24.718518",
+ "modified": "2021-09-08 17:36:46.845140",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Quality Issue",

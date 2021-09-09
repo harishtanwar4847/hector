@@ -21,7 +21,9 @@ class QualityIssue(Document):
 				frappe.throw("Please select correct manufacturing date")
 
 	def on_update(self):
-
+		rsmEmail = self.rsm_name
+		asmEmail = self.asm_name
+		requestorSalesTeam = self.email_address_of_requestor_from_sales_team
 		complaintTeamEmail = self.owner
 		complaintTeamName = frappe.get_doc('User', complaintTeamEmail).full_name
 		physicalVerificationTeamEmail = self.physicalremote_verification_executive_email
@@ -41,7 +43,15 @@ class QualityIssue(Document):
 
 
 		if self.workflow_state == 'Pending for Physical Verification Officer Approval':
-			# print("inside PVO sent mail")
+			#For sendng email to sales team of customer complaint registered
+			msg="""Hello {},<br><br>
+				Your Complaint has been registered.<br><br>
+				Kindly login to apps.myhector.com for the approval process.<br><br><br>
+				Regards,<br>
+				Hector Beverages""".format(self.customer_name)
+			frappe.sendmail(subject="Customer Complaints: Complaint Registered", content=msg,recipients = '{}'.format(requestorSalesTeam), cc = '{},{}'.format(rsmEmail, asmEmail),expose_recipients="header", sender="Notification@hectorbeverages.com")
+			print("\n email sent \n")
+			#For sending approval email to Physical Verification Officer
 			msg="""Hello {},<br><br>
 			You have received a request for quality complaint from {} for the customer {}.<br><br>
 			Kindly login to apps.myhector.com for the approval process.<br><br><br>
@@ -171,6 +181,15 @@ class QualityIssue(Document):
 				Hector Beverages""".format(physicalVerificationTeamName, self.customer_name)
 				frappe.sendmail(subject="Customer Complaints: Pending for RCA Details", content=msg, recipients = '{}'.format(physicalVerificationTeamEmail),sender="Notification@hectorbeverages.com")
 				print("\n email sent \n")
+
+			#For sendng email to sales team of credit note raised process
+			msg="""Hello Team,<br><br>
+				Credit Note raised for the customer {}.<br><br>
+				Kindly login to apps.myhector.com for the approval process.<br><br><br>
+				Regards,<br>
+				Hector Beverages""".format(self.customer_name)
+			frappe.sendmail(subject="Customer Complaints: Credit Note Raised", content=msg, cc = '{},{}'.format(rsmEmail, asmEmail), recipients = '{}'.format(requestorSalesTeam), expose_recipients="header", sender="Notification@hectorbeverages.com")
+			print("\n email sent \n")
 
 
 		if self.workflow_state == 'Pending for Quality Head Approval':
