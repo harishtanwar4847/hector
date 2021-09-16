@@ -1,0 +1,10 @@
+"ID","Report","Based on Permissions For User","Email To","Frequency","Format","Enabled","Report Type","Reference Report","Send only if there is any data","Only Send Records Updated in Last X Hours","No of Rows (Max 500)","Filters","Filter Meta","From Date Field","To Date Field","Period","Day of Week","Message"
+"Quality Issue RSM","Quality Issue RSM","om.satam@atriina.com","om.satam@atriina.com
+komal.vadavale@atriina.com
+sameer@hectorbeverages.com","Weekly","HTML",1,"Query Report","",1,0,500,"","","","","","Monday","<div class=""ql-editor read-mode""><p>Dear All,</p><p><br></p><p>Please find below the&nbsp;analysis of Quality Issues reported by our GT Partners.</p><p><strong>Aging of the Open Quality Issues - RSM Area-wise:</strong></p><p><br></p><p>Link for the Portal</p><p>https://apps.myhector.com/#login</p><p><br></p><p>Thanks &amp; Regards,</p><p>Hector Beverages.</p></div>"
+"Quality Issue","Quality Issue","om.satam@atriina.com","om.satam@atriina.com
+komal.vadavale@atriina.com
+sameer@hectorbeverages.com","Weekly","XLSX",1,"Query Report","",1,0,500,"","","","","","Monday","<div class=""ql-editor read-mode""><p>Dear All,</p><p><br></p><p>Please find below the&nbsp;analysis of Quality&nbsp;Issues reported by our GT Partners.</p><p><br></p><p>Link for the Portal</p><p>https://apps.myhector.com/#login</p><p><br></p><p>Thanks &amp; Regards,</p><p>Hector Beverages.</p></div>"
+"Quality Issue Recorded","Quality Issue Recorded","om.satam@atriina.com","om.satam@atriina.com
+komal.vadavale@atriina.com
+sameer@hectorbeverages.com","Weekly","HTML",1,"Query Report","",1,0,500,"","","","","","Monday","<div class=""ql-editor read-mode""><p>Dear All,</p><p><br></p><p>Please find below the&nbsp;analysis of Quality Issues reported by our GT Partners.</p><p><strong>Quality Issues recorded in the last 90 days- Issue Type and Status:</strong></p><p><strong>﻿</strong></p><p>Link for the Portal</p><p>https://apps.myhector.com/#login</p><p><br></p><p>Thanks &amp; Regards,</p><p>Hector Beverages.</p></div>"

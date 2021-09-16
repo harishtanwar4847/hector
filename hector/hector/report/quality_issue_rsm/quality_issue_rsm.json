@@ -1,0 +1,39 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2021-09-13 16:45:53.216502",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2021-09-16 13:47:04.970650",
+ "modified_by": "Administrator",
+ "module": "Hector",
+ "name": "Quality Issue RSM",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT \nqi.rsm_full_name as 'RSM Name:Data:150',\n(SELECT COUNT(qb.name) from `tabQuality Issue` qb WHERE ((DATEDIFF(NOW(),qb.creation) < 8) AND qi.rsm_name = qb.rsm_name)) as 'Less than one week:Data:250',\n(SELECT COUNT(qb.name) from `tabQuality Issue` qb WHERE (((DATEDIFF(NOW(),qb.creation) < 15) AND (DATEDIFF(NOW(),qb.creation) > 7)) AND qi.rsm_name = qb.rsm_name)) as 'More than one week:Data:250',\n(SELECT COUNT(qb.name) from `tabQuality Issue` qb WHERE (((DATEDIFF(NOW(),qb.creation) < 22) AND (DATEDIFF(NOW(),qb.creation) > 14)) AND qi.rsm_name = qb.rsm_name)) as 'More than two weeks:Data:250',\n(SELECT COUNT(qb.name) from `tabQuality Issue` qb WHERE (((DATEDIFF(NOW(),qb.creation) < 29) AND (DATEDIFF(NOW(),qb.creation) > 21)) AND qi.rsm_name = qb.rsm_name)) as 'More than three weeks:Data:250',\n(SELECT COUNT(qb.name) from `tabQuality Issue` qb WHERE ((DATEDIFF(NOW(),qb.creation) >28) AND qi.rsm_name = qb.rsm_name)) as 'More than one month:Data:250'\nFROM `tabQuality Issue` qi\nInner Join \n`tabSKU Details` sd\nWHERE sd.parent = qi.name\nGROUP BY\nqi.rsm_name\n\nUNION\n\nselect 'Grand Total',CAST(sum(DATEDIFF(NOW(),qi.creation) < 8) AS int), CAST(sum(DATEDIFF(NOW(),qi.creation) < 15 AND DATEDIFF(NOW(),qi.creation) > 7) AS int), \nCAST(sum((DATEDIFF(NOW(),qi.creation) < 22) AND (DATEDIFF(NOW(),qi.creation) > 14)) AS int), CAST((sum(DATEDIFF(NOW(),qi.creation) < 29 AND DATEDIFF(NOW(),qi.creation) > 21)) AS int),\nCAST(sum(DATEDIFF(NOW(),qi.creation) > 28) AS int) from `tabQuality Issue` qi;\n\n\n\n\n",
+ "ref_doctype": "Quality Issue",
+ "report_name": "Quality Issue RSM",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Complaint Registering Team"
+  },
+  {
+   "role": "Physical Verification Officer"
+  },
+  {
+   "role": "Finance Team"
+  },
+  {
+   "role": "Quality Head"
+  }
+ ]
+}
