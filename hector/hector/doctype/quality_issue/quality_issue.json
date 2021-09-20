@@ -9,6 +9,7 @@
   "naming_series",
   "customer_details_section",
   "rsm_name",
+  "rsm_full_name",
   "customer_name",
   "customer_code",
   "customer_location",
@@ -53,13 +54,15 @@
    "fieldname": "rsm_name",
    "fieldtype": "Link",
    "label": "RSM Name",
-   "options": "User"
+   "options": "User",
+   "reqd": 1
   },
   {
    "fieldname": "asm_name",
    "fieldtype": "Link",
    "label": "ASM Name",
-   "options": "User"
+   "options": "User",
+   "reqd": 1
   },
   {
    "fieldname": "customer_name",
@@ -106,10 +109,10 @@
   },
   {
    "fieldname": "type_of_issue",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Type of Issue",
-   "options": "Quality :Leakage/Puffing\nQuality :Damage/gas out/taste issue/solvent note\nQuality: Short in Case\nOther",
+   "options": "Type of Issue",
    "reqd": 1
   },
   {
@@ -242,11 +245,18 @@
    "fieldname": "photo_5optional",
    "fieldtype": "Attach",
    "label": "Photo 5(Optional)"
+  },
+  {
+   "fetch_from": "rsm_name.full_name",
+   "fieldname": "rsm_full_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "RSM Full Name"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-09-08 17:36:46.845140",
+ "modified": "2021-09-16 17:29:22.629481",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Quality Issue",
