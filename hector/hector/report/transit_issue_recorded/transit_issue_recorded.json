@@ -1,0 +1,36 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2021-09-24 10:47:10.117253",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2021-09-25 10:45:11.213919",
+ "modified_by": "Administrator",
+ "module": "Hector",
+ "name": "Transit Issue Recorded",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT \ntype_of_issue AS 'Type of Issue:Data:250',\n(SELECT COUNT(tb.type_of_issue) from `tabTransit Issue` tb where tb.type_of_issue = ti.type_of_issue AND workflow_state = 'Issue Closed' AND DATEDIFF(NOW(),tb.creation) < 91) as 'Closed:Data:250',\n(SELECT COUNT(tb.type_of_issue) from `tabTransit Issue` tb where tb.type_of_issue = ti.type_of_issue AND workflow_state = 'Pending for Finance Team Approval' AND DATEDIFF(NOW(),tb.creation) < 91) as 'Pending with Finance Team:Data:250',\n(SELECT COUNT(tb.type_of_issue) from `tabTransit Issue` tb where tb.type_of_issue = ti.type_of_issue AND workflow_state = 'Requested for More Details by Supply Team' AND DATEDIFF(NOW(),tb.creation) < 91) as 'More info requested to Sales Team:Data:250'\nFROM\n`tabTransit Issue` ti\nGROUP BY\ntype_of_issue\nUNION\nSELECT 'Grand Total', CAST(sum(ti.workflow_state = 'Issue Closed') AS int), CAST(sum(ti.workflow_state = 'Pending for Finance Team Approval') AS int), CAST(sum(ti.workflow_state = 'Requested for More Details by Finance Team') AS int) from `tabTransit Issue` ti;\n\n",
+ "ref_doctype": "Transit Issue",
+ "report_name": "Transit Issue Recorded",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Complaint Registering Team"
+  },
+  {
+   "role": "Supply Team"
+  },
+  {
+   "role": "Finance Team"
+  }
+ ]
+}

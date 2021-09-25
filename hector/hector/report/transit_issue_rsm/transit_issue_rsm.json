@@ -1,0 +1,36 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2021-09-24 10:32:09.822735",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2021-09-24 10:32:38.851296",
+ "modified_by": "Administrator",
+ "module": "Hector",
+ "name": "Transit Issue RSM",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT \nti.rsm_full_name as 'RSM Name:Data:150',\n(SELECT COUNT(tb.name) from `tabTransit Issue` tb WHERE ((DATEDIFF(NOW(),tb.creation) < 8) AND ti.rsm_name = tb.rsm_name)) as 'Less than one week:Data:250',\n(SELECT COUNT(tb.name) from `tabTransit Issue` tb WHERE (((DATEDIFF(NOW(),tb.creation) < 15) AND (DATEDIFF(NOW(),tb.creation) > 7)) AND ti.rsm_name = tb.rsm_name)) as 'More than one week:Data:250',\n(SELECT COUNT(tb.name) from `tabTransit Issue` tb WHERE (((DATEDIFF(NOW(),tb.creation) < 22) AND (DATEDIFF(NOW(),tb.creation) > 14)) AND ti.rsm_name = tb.rsm_name)) as 'More than two weeks:Data:250',\n(SELECT COUNT(tb.name) from `tabTransit Issue` tb WHERE (((DATEDIFF(NOW(),tb.creation) < 29) AND (DATEDIFF(NOW(),tb.creation) > 21)) AND ti.rsm_name = tb.rsm_name)) as 'More than three weeks:Data:250',\n(SELECT COUNT(tb.name) from `tabTransit Issue` tb WHERE ((DATEDIFF(NOW(),tb.creation) >28) AND ti.rsm_name = tb.rsm_name)) as 'More than one month:Data:250'\nFROM `tabTransit Issue` ti\nInner Join \n`tabSKU Details Transit` sdt\nWHERE sdt.parent = ti.name\nGROUP BY\nti.rsm_name\n\nUNION\n\nselect 'Grand Total',CAST(sum(DATEDIFF(NOW(),ti.creation) < 8) AS int), CAST(sum(DATEDIFF(NOW(),ti.creation) < 15 AND DATEDIFF(NOW(),ti.creation) > 7) AS int), \nCAST(sum((DATEDIFF(NOW(),ti.creation) < 22) AND (DATEDIFF(NOW(),ti.creation) > 14)) AS int), CAST((sum(DATEDIFF(NOW(),ti.creation) < 29 AND DATEDIFF(NOW(),ti.creation) > 21)) AS int),\nCAST(sum(DATEDIFF(NOW(),ti.creation) > 28) AS int) from `tabTransit Issue` ti;\n\n\n",
+ "ref_doctype": "Transit Issue",
+ "report_name": "Transit Issue RSM",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Complaint Registering Team"
+  },
+  {
+   "role": "Supply Team"
+  },
+  {
+   "role": "Finance Team"
+  }
+ ]
+}
