@@ -1,42 +1,36 @@
 {
  "category": "Modules",
  "charts": [],
- "creation": "2021-09-01 15:35:26.657229",
+ "creation": "2021-09-22 18:48:22.338669",
  "developer_mode_only": 0,
  "disable_user_customization": 0,
  "docstatus": 0,
  "doctype": "Workspace",
  "extends_another_page": 0,
- "hide_custom": 0,
+ "hide_custom": 1,
  "idx": 0,
  "is_default": 0,
  "is_standard": 1,
- "label": "Quality Complaints",
+ "label": "Transit Complaints",
  "links": [],
- "modified": "2021-09-22 18:33:37.074920",
+ "modified": "2021-09-22 18:48:22.338669",
  "modified_by": "Administrator",
  "module": "Hector",
- "name": "Quality Complaints",
+ "name": "Transit Complaints",
  "owner": "Administrator",
  "pin_to_bottom": 0,
  "pin_to_top": 1,
  "shortcuts": [
   {
    "doc_view": "List",
-   "label": "Quality Issues List",
-   "link_to": "Quality Issue",
+   "label": "Transit Issue List",
+   "link_to": "Transit Issue",
    "type": "DocType"
   },
   {
    "doc_view": "New",
-   "label": "Raise your Quality Complaint",
-   "link_to": "Quality Issue",
-   "type": "DocType"
-  },
-  {
-   "doc_view": "List",
-   "label": "Physical Verification Officer List",
-   "link_to": "Physical Verification Officer",
+   "label": "Raise your Transit Complaint",
+   "link_to": "Transit Issue",
    "type": "DocType"
   },
   {

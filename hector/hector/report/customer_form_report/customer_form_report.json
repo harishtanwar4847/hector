@@ -1,0 +1,36 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2021-07-03 16:25:03.919352",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2021-09-22 14:57:57.766550",
+ "modified_by": "Administrator",
+ "module": "Hector",
+ "name": "Customer Form Report",
+ "owner": "anurag.mahadik@atriina.com",
+ "prepared_report": 0,
+ "query": "SELECT\n    c.customer_name as 'Customer Name',\n    c.billing_address as 'Billing Address',\n    c.post_code as 'Post Code',\n    c.shipping_address as 'Shipping Address',\n    c.post_code_for_shipping_address as 'Shipping Address Post Code',\n    c.customer_email_address as 'Customer Email Address',\n    c.mobile_no_of_the_customer as 'Customer Mobile Number',\n    c.contact_name_of_the_customer as 'Contact Name of the Customer',\n    c.customer_type as 'Customer Type',\n    c.type_of_business as 'Type Of Business',\n    c.partnership_all_the_partner_name as 'Partner Names',\n    c.contact_person as 'Name of the Contact Person',\n    c.companies_presently_under_distribution as 'Companies presently under Distribution',\n    c.gst_registration_number as 'GST Registration Number',\n    c.pan_card_no as 'PAN Card No',\n    c.food_license_copy_and_number as 'Food License Number',\n    c.food_license_valid_till as 'Food License Valid Till',\n    c.town_or_area_assigned__to_cover as 'Area Assigned to Cover',\n    c.godown_space_in_sqft_for_hector as 'Godown Space in sqft for Hector',\n    c.godown_space_hygienic_ as 'Godown Space Hygieneic',\n    c.no_of_salesman_allotted_for_market_working_exclusive_or_shared as 'Number of Exclusive or Shared Salesman Alloted for Market',\n    c.number_of_vehicles_assigned_for_delivery_ as 'Number of Vehicles Assigned for Delivery',\n    c.availability_of_computer_and_printer as 'Availability of Computer and Printer',\n    c.internet_access as 'Internet Access',\n    c.billing_process as 'Billing Process',\n    c.total_investment_funds_required_in_lacs as 'Total Investment Funds Required in Lakhs',\n    c.outcome_of_market_survey_so_asm_is_positive as 'Outcome of Market Survey is Positive',\n    c.will_the_ss_cover_the_local_market as 'Will the SS Cover the Local Market',\n    c.total_number_of_years_in_business as 'Total Number of Years in Business',\n    c.total_turnover_of_the_firm as 'Total Turnover of the Firm in Lakhs',\n    c.channel as 'Channel',\n    c.customer_posting_group as 'Customer Posting Group',\n    c.location as 'Location',\n    c.region as 'Region',\n    c.soase_employee_code as 'SO/ASE Employee Code',\n    c.soase_employee_name as 'SO/ASE Employee Name',\n    c.reference_customer_code_for_setting_the_price_group as 'Reference Customer Code for Setting the Price Group',\n    shm.asm_name as 'Area Sales Manager:Link/User:200',\n    shm.rsm_name as 'Regional Sales Manager:Link/User:200'\nFROM\n    `tabCustomer Form` c\nINNER JOIN\n    `tabSales Hierarchy Mapping` shm\nON\n    c.owner = shm.asm_user;",
+ "ref_doctype": "Customer Form",
+ "report_name": "Customer Form Report",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Customer Master Approver"
+  },
+  {
+   "role": "Area Sales Manager"
+  },
+  {
+   "role": "Regional Sales Manager"
+  }
+ ]
+}

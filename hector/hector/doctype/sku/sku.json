@@ -45,7 +45,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-08-29 13:02:46.235018",
+ "modified": "2021-09-22 18:49:53.648909",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "SKU",
@@ -104,6 +104,17 @@
    "read": 1,
    "report": 1,
    "role": "Quality Head",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Supply Team",
    "select": 1,
    "share": 1,
    "write": 1
