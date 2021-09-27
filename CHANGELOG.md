@@ -10,3 +10,4 @@
 
 ### Fixed
 - [fixed email notification error](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/12)
+- [replaced tot file in tot email notification](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/21)
