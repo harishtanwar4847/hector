@@ -106,7 +106,7 @@ class QualityIssue(Document):
 			print("\n email sent \n")
 
 		if self.workflow_state == 'Pending for Finance Team Approval':
-			msg="""Hello {},<br><br>equested for More Details by Physical Verification Officer
+			msg="""Hello {},<br><br>
 			You have received a request for finance team approval from {} for the customer {}.<br><br>
 			Kindly login to apps.myhector.com for the approval process.<br><br><br>
 			Regards,<br>
