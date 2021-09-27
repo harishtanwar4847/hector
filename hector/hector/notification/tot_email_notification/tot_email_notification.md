@@ -6,4 +6,4 @@ To ensure our partnership is strong and will help us win our game we’ve sent y
 Hoping to hear the best from you,
 Your newfound friends at Paper Boat!
 TOT(Terms Of Trade)<br>
-<a href="/assets/hector/files/General Terms and Conditions_Distributors - 04062021.docx">Click here to view TermsOfTrade</a>
+<a href="/assets/hector/files/Hector Beverages-General Terms and Conditions for Partners-.pdf">Click here to view TermsOfTrade</a>
