@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [v1.0.1] - 2021-08-27
+
+### Fixed
+- [replaced tot file in tot email notification](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/21)
+
 ## [v1.0.0] - 2021-08-21
 
 ### Added
@@ -10,4 +15,4 @@
 
 ### Fixed
 - [fixed email notification error](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/12)
-- [replaced tot file in tot email notification](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/21)
+
