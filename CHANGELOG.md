@@ -6,6 +6,7 @@
 
 ### Fixed
 - [replaced tot file in tot email notification](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/21)
+- [added hector settings doctype for adding tot attachment file](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/22)
 
 ## [v1.0.0] - 2021-08-21
 
