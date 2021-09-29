@@ -1,3 +1,2 @@
 hector.patches.workflow
 hector.patches.custom_roles
-hector.patches.tot_email_notification_file
