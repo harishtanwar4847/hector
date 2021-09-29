@@ -1,5 +1,5 @@
 import frappe
-totFilePath = "/assets/hector/files/Hector Beverages-General Terms and Conditions for Partners-.pdf"
+totFilePath =  "/assets/hector/files/Hector%20Beverages-General%20Terms%20and%20Conditions%20for%20Partners-.pdf"
 
 def execute():
     doc = frappe.get_doc("Hector Settings")
