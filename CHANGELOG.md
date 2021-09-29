@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+
+### Added
 - [added hector settings doctype for adding tot attachment file](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/22)
 
 ## [v1.0.1] - 2021-08-27
