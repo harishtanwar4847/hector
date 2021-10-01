@@ -5,6 +5,6 @@ def execute():
     path = frappe.get_app_path('hector','patches','transit_workflow','imports','workflow_state.csv')
     import_file('Workflow State', path, 'Insert',console=True)
     path = frappe.get_app_path('hector','patches','transit_workflow','imports','workflow_action_master.csv')
-    import_file('Workflow Action Master', path, 'Insert')
+    import_file('Workflow Action Master', path, 'Insert',console=True)
     path = frappe.get_app_path('hector','patches','transit_workflow','imports','transit_workflow.csv')
-    import_file('Workflow', path, 'Insert')
+    import_file('Workflow', path, 'Insert',console=True)

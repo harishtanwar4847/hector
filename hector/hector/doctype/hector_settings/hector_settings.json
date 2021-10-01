@@ -1,0 +1,50 @@
+{
+ "actions": [],
+ "creation": "2021-09-28 17:08:28.822651",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tot_attachment_section",
+  "tot_attachment"
+ ],
+ "fields": [
+  {
+   "fieldname": "tot_attachment_section",
+   "fieldtype": "Section Break",
+   "label": "TOT Attachment"
+  },
+  {
+   "default": "/assets/hector/files/Hector%20Beverages-General%20Terms%20and%20Conditions%20for%20Partners-.pdf",
+   "fieldname": "tot_attachment",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "TOT Attachment",
+   "reqd": 1,
+   "default": "/assets/hector/files/Hector%20Beverages-General%20Terms%20and%20Conditions%20for%20Partners-.pdf"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2021-10-01 16:07:12.675219",
+ "modified_by": "Administrator",
+ "module": "Hector",
+ "name": "Hector Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
