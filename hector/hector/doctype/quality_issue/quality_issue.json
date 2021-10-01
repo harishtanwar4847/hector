@@ -32,6 +32,7 @@
   "issue_details",
   "physicalremote_verification_executive",
   "physicalremote_verification_executive_email",
+  "reason_of_rejection",
   "column_break_25",
   "photo_mandatory",
   "photo_2optional",
@@ -39,7 +40,8 @@
   "photo_4optional",
   "photo_5optional",
   "attach_rca_details",
-  "close_issue"
+  "close_issue",
+  "workflow_state"
  ],
  "fields": [
   {
@@ -220,7 +222,7 @@
    "mandatory_depends_on": "eval:((doc.workflow_state == 'Pending for RCA Details') || (doc.workflow_state == 'Pending for Quality Head Approval') || (doc.workflow_state == 'RCA Approved'))"
   },
   {
-   "default": "0",
+   "default": "1",
    "fieldname": "close_issue",
    "fieldtype": "Int",
    "hidden": 1,
@@ -252,11 +254,24 @@
    "fieldtype": "Data",
    "hidden": 1,
    "label": "RSM Full Name"
+  },
+  {
+   "depends_on": "eval:((doc.workflow_state != \"\") || (doc.workflow_state == 'Pending for Physical Verification Officer Approval') || (doc.workflow_state == 'Resent for Physical Verification Officer Approval') || (doc.workflow_state == 'Rejected by Physical Verification Officer') || (doc.workflow_state == 'Rejected by Finance Team') || (doc.workflow_state == 'Pending for Finance Team Approval') || (doc.workflow_state == 'Resent for Finance Team Approval'))",
+   "description": "Manadatory if You want to reject this issue",
+   "fieldname": "reason_of_rejection",
+   "fieldtype": "Data",
+   "label": "Reason of Rejection"
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "label": "Workflow State",
+   "options": "Workflow State"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-09-16 17:29:22.629481",
+ "modified": "2021-09-30 20:40:44.255653",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Quality Issue",

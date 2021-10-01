@@ -77,6 +77,14 @@ class QualityIssue(Document):
 			Hector Beverages""".format(complaintTeamName, physicalVerificationTeamName, self.customer_name)
 			frappe.sendmail(subject="Customer Complaints: Rejected by Physical Verification Officer", content=msg, recipients = '{}'.format(complaintTeamEmail),sender="Notification@hectorbeverages.com")
 			print("\n email sent \n")
+			#For sendng email to sales team and customer of Issue rejected process
+			msg="""Hello Team,<br><br>
+				Your complaint for the customer {} is rejected by Physical Verification Officer. The reason for rejection is {}.<br><br>
+				Kindly login to apps.myhector.com for the approval process.<br><br><br>
+				Regards,<br>
+				Hector Beverages""".format(self.customer_name, self.reason_of_rejection)
+			frappe.sendmail(subject="Customer Complaints: Rejected by Finance Team", content=msg, cc = '{},{}'.format(rsmEmail, asmEmail), recipients = '{}'.format(requestorSalesTeam), expose_recipients="header", sender="Notification@hectorbeverages.com")
+			print("\n email sent \n")
 
 		if self.workflow_state == 'Requested for More Details by Physical Verification Officer':
 			msg="""Hello {},<br><br>
@@ -103,6 +111,14 @@ class QualityIssue(Document):
 			Regards,<br>
 			Hector Beverages""".format(financeTeamName, self.customer_name)
 			frappe.sendmail(subject="Customer Complaints: Rejected by Finance Team", content=msg, recipients = '{},{}'.format(complaintTeamEmail, physicalVerificationTeamEmail),sender="Notification@hectorbeverages.com")
+			print("\n email sent \n")
+			#For sendng email to sales team and customer of Issue rejected process
+			msg="""Hello Team,<br><br>
+				Your complaint for the customer {} is rejected by Finance Team. The reason for rejection is {}.<br><br>
+				Kindly login to apps.myhector.com for the approval process.<br><br><br>
+				Regards,<br>
+				Hector Beverages""".format(self.customer_name, self.reason_of_rejection)
+			frappe.sendmail(subject="Customer Complaints: Rejected by Finance Team", content=msg, cc = '{},{}'.format(rsmEmail, asmEmail), recipients = '{}'.format(requestorSalesTeam), expose_recipients="header", sender="Notification@hectorbeverages.com")
 			print("\n email sent \n")
 
 		if self.workflow_state == 'Pending for Finance Team Approval':
@@ -137,26 +153,20 @@ class QualityIssue(Document):
 			skuDetails = self.sku_details
 			currentDate = frappe.utils.today()
 			date_format = "%Y-%m-%d"
-			closeIssue = 0
+			closeIssue = 1
 			for i in range(len(skuDetails)):
 				todayDate = datetime.strptime(currentDate, date_format)
 				documentDate = frappe.utils.get_datetime(skuDetails[i].mgf_date).strftime(date_format)
 				documentDateStr = datetime.strptime(documentDate, date_format)
 				daysDiffrence = (todayDate - documentDateStr).days
 
-				#for Quantity less than 100 pouches
-				if int(skuDetails[i].quantity_in_pieces) < 100 :
-					closeIssue = 1
-					# self.close_issue = 1
-					frappe.db.set_value('Quality Issue', self.name, 'close_issue', 1)
+				#for Quantity less than 100 pouches and for diffrence between 2 dates greater than 3 months
+				if ((int(skuDetails[i].quantity_in_pieces) > 100) and (int(daysDiffrence) < 91)) :
+					closeIssue = 0
+					# self.close_issue = 0
+					frappe.db.set_value('Quality Issue', self.name, 'close_issue', 0)
 
-
-				#for diffrence between 2 dates greater than 3 months
-				if int(daysDiffrence) > 90 :
-					closeIssue = 1
-					# self.close_issue = 1
-					frappe.db.set_value('Quality Issue', self.name, 'close_issue', 1)
-
+			print("the close_issue value is ",closeIssue)
 
 			# self.save()
 			# frappe.db.commit()
@@ -195,13 +205,13 @@ class QualityIssue(Document):
 		if self.workflow_state == 'Pending for Quality Head Approval':
 			doc = frappe.get_doc('Quality Issue',self.name)
 			skuDetails = self.sku_details
-			closeIssue = 0
+			closeIssue = 1
 			for i in range(len(skuDetails)):
 				#for Quantity less than 500 pouches
-				if int(skuDetails[i].quantity_in_pieces) < 500 :
+				if int(skuDetails[i].quantity_in_pieces) >= 500 :
 					# frappe.throw('for Quantity less than 500 pouches')
-					closeIssue = 1
-					frappe.db.set_value('Quality Issue', self.name, 'close_issue', 1)
+					closeIssue = 0
+					frappe.db.set_value('Quality Issue', self.name, 'close_issue', 0)
 					# frappe.db.commit()
 
 
