@@ -399,7 +399,7 @@ class QualityIssue(Document):
 				daysDiffrence = (todayDate - documentDateStr).days
 
 				#for Quantity less than 500 pouches
-				if (int(skuDetails[i].quantity_in_pieces) > 500 and (int(daysDiffrence) < 91)):
+				if (int(skuDetails[i].quantity_in_pieces) >= 500 and (int(daysDiffrence) < 91)):
 					# frappe.throw('for Quantity less than 500 pouches')
 					closeIssue = 0
 					frappe.db.set_value('Quality Issue', self.name, 'close_issue', 0)
