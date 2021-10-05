@@ -399,7 +399,7 @@ class QualityIssue(Document):
 				daysDiffrence = (todayDate - documentDateStr).days
 
 				#for Quantity less than 500 pouches
-				if (int(skuDetails[i].quantity_in_pieces) >= 500 and (int(daysDiffrence) < 91)):
+				if (int(skuDetails[i].quantity_in_pieces) > 500 and (int(daysDiffrence) < 91)):
 					# frappe.throw('for Quantity less than 500 pouches')
 					closeIssue = 0
 					frappe.db.set_value('Quality Issue', self.name, 'close_issue', 0)
@@ -407,6 +407,7 @@ class QualityIssue(Document):
 
 
 			if closeIssue :
+				frappe.db.set_value('Quality Issue', self.name, 'workflow_state', 'Issue Closed')
 				msg=emailMessage
 				frappe.sendmail(subject="Quality Issue Completed: {}: {}".format(self.customer_code, self.customer_name), content=msg, recipients = '{},{},{}'.format(complaintTeamEmail, physicalVerificationTeamEmail, financeTeamEmail),sender="Notification@hectorbeverages.com")
 				print("\n email sent \n")
