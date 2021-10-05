@@ -4,7 +4,7 @@
 
 ### Added
 - [added approval notifications for transit issue, modified conditions for issue closed in quality complaints and added reason for rejection field](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/23)
-
+- [modified approval email notifications according to email templates](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/24)
 
 ## [v1.0.2] - 2021-09-29
 
