@@ -262,7 +262,7 @@ class QualityIssue(Document):
 			frappe.sendmail(subject="Quality Issue Completed: {}: {}".format(self.customer_code, self.customer_name), content=msg, recipients = '{},{},{}'.format(complaintTeamEmail, physicalVerificationTeamEmail, financeTeamEmail),sender="Notification@hectorbeverages.com")
 			print("\n email sent \n")
 
-			message1 = """Below Quality Issue have been Rejected:<br>
+			message1 = """Below Quality Issue have been Closed:<br>
 			<table border="1" cellspacing="0" cellpadding="5" align="">
 				<tbody>
 					<tr>
@@ -336,7 +336,7 @@ class QualityIssue(Document):
 				# frappe.db.commit()
 
 				#For sendng email to sales team of credit note raised process
-				message1 = """Below Quality Issue have been Rejected:<br>
+				message1 = """Below Quality Issue have been Closed:<br>
 			<table border="1" cellspacing="0" cellpadding="5" align="">
 				<tbody>
 					<tr>
@@ -414,7 +414,7 @@ class QualityIssue(Document):
 				self.reload()
 
 				#For sendng email to sales team of credit note raised process
-				message1 = """Below Quality Issue have been Rejected:<br>
+				message1 = """Below Quality Issue have been Closed:<br>
 			<table border="1" cellspacing="0" cellpadding="5" align="">
 				<tbody>
 					<tr>

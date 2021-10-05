@@ -234,7 +234,7 @@ class TransitIssue(Document):
 			print("\n email sent \n")
 
 			#For sendng email to sales team of credit note raised process
-			message1 = """Below Transit Issue have been Rejected:<br>
+			message1 = """Below Transit Issue have been Closed:<br>
 			<table border="1" cellspacing="0" cellpadding="5" align="">
 				<tbody>
 					<tr>
