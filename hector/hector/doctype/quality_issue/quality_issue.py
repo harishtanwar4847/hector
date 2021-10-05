@@ -118,7 +118,8 @@ class QualityIssue(Document):
 			frappe.sendmail(subject="Quality Issue Rejected: {}: {}".format(self.customer_code, self.customer_name), content=msg, recipients = '{}'.format(complaintTeamEmail),sender="Notification@hectorbeverages.com")
 			print("\n email sent \n")
 			#For sendng email to sales team and customer of Issue rejected process
-			msg="""Below Quality Issue have been Rejected:<br>
+			sku = self.sku_details
+			message1 = """Below Quality Issue have been Rejected:<br>
 			<table border="1" cellspacing="0" cellpadding="5" align="">
 				<tbody>
 					<tr>
@@ -141,13 +142,23 @@ class QualityIssue(Document):
 						<td>Type of Issue:</td>
 						<td>{}</td>
 					</tr>
+					<tr>
+						<td>Invoice Number:</td>
+						<td>{}</td>
+					</tr>
 				</tbody>
-			</table><br>
-			Comment: {}<br><br>
-			Kindly login to apps.myhector.com for the approval process.<br><br><br>
+			</table><br>""".format(self.customer_name, self.customer_code, self.customer_location, self.customer_phone_number, self.type_of_issue, self.invoice_number)
+			message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
+			<tr><th>SKU Code</th><th>SKU Name</th><th>Quantity</th><th>Mgf Date</th><th>Batch Details</th></tr>
+			"""
+			for skuRow in self.sku_details:
+				message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.quantity_in_pieces + "</td><td>" + str(skuRow.mgf_date) + "</td><td>" + skuRow.batch_details + "</td><tr>"
+			message2 += "</table><br>"
+			message3 = """Comment: {}<br><br><br>
 			Regards,<br>
-			Hector Beverages""".format(self.customer_name, self.customer_code, self.customer_location, self.customer_phone_number, self.type_of_issue, self.reason_of_rejection)
-			frappe.sendmail(subject="Quality Issue Rejected: {}: {}".format(self.customer_code, self.customer_name), content=msg, cc = '{},{}'.format(rsmEmail, asmEmail), recipients = '{}'.format(requestorSalesTeam), expose_recipients="header", sender="Notification@hectorbeverages.com")
+			Hector Beverages""".format(self.reason_of_rejection)
+			messageFinal = message1 + message2 + message3
+			frappe.sendmail(subject="Quality Issue Rejected: {}: {}".format(self.customer_code, self.customer_name), content=messageFinal, cc = '{},{}'.format(rsmEmail, asmEmail), recipients = '{}'.format(requestorSalesTeam), expose_recipients="header", sender="Notification@hectorbeverages.com")
 			print("\n email sent \n")
 
 		if self.workflow_state == 'Requested for More Details by Physical Verification Officer':
@@ -194,7 +205,7 @@ class QualityIssue(Document):
 			print("\n email sent \n")
 
 			#For sendng email to sales team and customer of Issue rejected process
-			msg="""Below Quality Issue have been Rejected:<br>
+			message1 = """Below Quality Issue have been Rejected:<br>
 			<table border="1" cellspacing="0" cellpadding="5" align="">
 				<tbody>
 					<tr>
@@ -217,13 +228,23 @@ class QualityIssue(Document):
 						<td>Type of Issue:</td>
 						<td>{}</td>
 					</tr>
+					<tr>
+						<td>Invoice Number:</td>
+						<td>{}</td>
+					</tr>
 				</tbody>
-			</table><br>
-			Comment: {}<br><br>
-			Kindly login to apps.myhector.com for the approval process.<br><br><br>
+			</table><br>""".format(self.customer_name, self.customer_code, self.customer_location, self.customer_phone_number, self.type_of_issue, self.invoice_number)
+			message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
+			<tr><th>SKU Code</th><th>SKU Name</th><th>Quantity</th><th>Mgf Date</th><th>Batch Details</th></tr>
+			"""
+			for skuRow in self.sku_details:
+				message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.quantity_in_pieces + "</td><td>" + str(skuRow.mgf_date) + "</td><td>" + skuRow.batch_details + "</td><tr>"
+			message2 += "</table><br>"
+			message3 = """Comment: {}<br><br><br>
 			Regards,<br>
-			Hector Beverages""".format(self.customer_name, self.customer_code, self.customer_location, self.customer_phone_number, self.type_of_issue, self.reason_of_rejection)
-			frappe.sendmail(subject="Quality Issue Rejected: {}: {}".format(self.customer_code, self.customer_name), content=msg, cc = '{},{}'.format(rsmEmail, asmEmail), recipients = '{}'.format(requestorSalesTeam), expose_recipients="header", sender="Notification@hectorbeverages.com")
+			Hector Beverages""".format(self.reason_of_rejection)
+			messageFinal = message1 + message2 + message3
+			frappe.sendmail(subject="Quality Issue Rejected: {}: {}".format(self.customer_code, self.customer_name), content=messageFinal, cc = '{},{}'.format(rsmEmail, asmEmail), recipients = '{}'.format(requestorSalesTeam), expose_recipients="header", sender="Notification@hectorbeverages.com")
 			print("\n email sent \n")
 
 		if self.workflow_state == 'Pending for Finance Team Approval':
@@ -241,8 +262,46 @@ class QualityIssue(Document):
 			frappe.sendmail(subject="Quality Issue Completed: {}: {}".format(self.customer_code, self.customer_name), content=msg, recipients = '{},{},{}'.format(complaintTeamEmail, physicalVerificationTeamEmail, financeTeamEmail),sender="Notification@hectorbeverages.com")
 			print("\n email sent \n")
 
-			msg=emailMessage
-			frappe.sendmail(subject="Quality Issue Completed: {}: {}".format(self.customer_code, self.customer_name), content=msg, cc = '{},{}'.format(rsmEmail, asmEmail), recipients = '{}'.format(requestorSalesTeam), expose_recipients="header",sender="Notification@hectorbeverages.com")
+			message1 = """Below Quality Issue have been Rejected:<br>
+			<table border="1" cellspacing="0" cellpadding="5" align="">
+				<tbody>
+					<tr>
+						<td>Customer Name:</td>
+						<td>{}</td>
+					</tr>
+					<tr>
+						<td>Customer Code:</td>
+						<td>{}</td>
+					</tr>
+					<tr>
+						<td>Customer Location:</td>
+						<td>{}</td>
+					</tr>
+					<tr>
+						<td>Customer Phone Number:</td>
+						<td>{}</td>
+					</tr>
+					<tr>
+						<td>Type of Issue:</td>
+						<td>{}</td>
+					</tr>
+					<tr>
+						<td>Invoice Number:</td>
+						<td>{}</td>
+					</tr>
+				</tbody>
+				</table><br>""".format(self.customer_name, self.customer_code, self.customer_location, self.customer_phone_number, self.type_of_issue, self.invoice_number)
+			message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
+			<tr><th>SKU Code</th><th>SKU Name</th><th>Quantity</th><th>Mgf Date</th><th>Batch Details</th></tr>
+			"""
+			for skuRow in self.sku_details:
+				message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.quantity_in_pieces + "</td><td>" + str(skuRow.mgf_date) + "</td><td>" + skuRow.batch_details + "</td><tr>"
+			message2 += "</table><br>"
+			message3 = """<br><br><br>
+			Regards,<br>
+			Hector Beverages"""
+			messageFinal = message1 + message2 + message3
+			frappe.sendmail(subject="Quality Issue Completed: {}: {}".format(self.customer_code, self.customer_name), content=messageFinal, cc = '{},{}'.format(rsmEmail, asmEmail), recipients = '{}'.format(requestorSalesTeam), expose_recipients="header",sender="Notification@hectorbeverages.com")
 			print("\n email sent \n")
 
 		if self.workflow_state == 'Pending for RCA Details' :
@@ -277,8 +336,46 @@ class QualityIssue(Document):
 				# frappe.db.commit()
 
 				#For sendng email to sales team of credit note raised process
-				msg=emailMessage
-				frappe.sendmail(subject="Quality Issue Completed: {}: {}".format(self.customer_code, self.customer_name), content=msg, cc = '{},{}'.format(rsmEmail, asmEmail), recipients = '{}'.format(requestorSalesTeam), expose_recipients="header", sender="Notification@hectorbeverages.com")
+				message1 = """Below Quality Issue have been Rejected:<br>
+			<table border="1" cellspacing="0" cellpadding="5" align="">
+				<tbody>
+					<tr>
+						<td>Customer Name:</td>
+						<td>{}</td>
+					</tr>
+					<tr>
+						<td>Customer Code:</td>
+						<td>{}</td>
+					</tr>
+					<tr>
+						<td>Customer Location:</td>
+						<td>{}</td>
+					</tr>
+					<tr>
+						<td>Customer Phone Number:</td>
+						<td>{}</td>
+					</tr>
+					<tr>
+						<td>Type of Issue:</td>
+						<td>{}</td>
+					</tr>
+					<tr>
+						<td>Invoice Number:</td>
+						<td>{}</td>
+					</tr>
+				</tbody>
+				</table><br>""".format(self.customer_name, self.customer_code, self.customer_location, self.customer_phone_number, self.type_of_issue, self.invoice_number)
+				message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
+				<tr><th>SKU Code</th><th>SKU Name</th><th>Quantity</th><th>Mgf Date</th><th>Batch Details</th></tr>
+				"""
+				for skuRow in self.sku_details:
+					message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.quantity_in_pieces + "</td><td>" + str(skuRow.mgf_date) + "</td><td>" + skuRow.batch_details + "</td><tr>"
+				message2 += "</table><br>"
+				message3 = """<br><br><br>
+				Regards,<br>
+				Hector Beverages"""
+				messageFinal = message1 + message2 + message3
+				frappe.sendmail(subject="Quality Issue Completed: {}: {}".format(self.customer_code, self.customer_name), content=messageFinal, cc = '{},{}'.format(rsmEmail, asmEmail), recipients = '{}'.format(requestorSalesTeam), expose_recipients="header", sender="Notification@hectorbeverages.com")
 				print("\n email sent \n")
 
 			else :
@@ -316,8 +413,46 @@ class QualityIssue(Document):
 				self.reload()
 
 				#For sendng email to sales team of credit note raised process
-				msg=emailMessage
-				frappe.sendmail(subject="Quality Issue Completed: {}: {}".format(self.customer_code, self.customer_name), content=msg, cc = '{},{}'.format(rsmEmail, asmEmail), recipients = '{}'.format(requestorSalesTeam), expose_recipients="header", sender="Notification@hectorbeverages.com")
+				message1 = """Below Quality Issue have been Rejected:<br>
+			<table border="1" cellspacing="0" cellpadding="5" align="">
+				<tbody>
+					<tr>
+						<td>Customer Name:</td>
+						<td>{}</td>
+					</tr>
+					<tr>
+						<td>Customer Code:</td>
+						<td>{}</td>
+					</tr>
+					<tr>
+						<td>Customer Location:</td>
+						<td>{}</td>
+					</tr>
+					<tr>
+						<td>Customer Phone Number:</td>
+						<td>{}</td>
+					</tr>
+					<tr>
+						<td>Type of Issue:</td>
+						<td>{}</td>
+					</tr>
+					<tr>
+						<td>Invoice Number:</td>
+						<td>{}</td>
+					</tr>
+				</tbody>
+				</table><br>""".format(self.customer_name, self.customer_code, self.customer_location, self.customer_phone_number, self.type_of_issue, self.invoice_number)
+				message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
+				<tr><th>SKU Code</th><th>SKU Name</th><th>Quantity</th><th>Mgf Date</th><th>Batch Details</th></tr>
+				"""
+				for skuRow in self.sku_details:
+					message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.quantity_in_pieces + "</td><td>" + str(skuRow.mgf_date) + "</td><td>" + skuRow.batch_details + "</td><tr>"
+				message2 += "</table><br>"
+				message3 = """<br><br><br>
+				Regards,<br>
+				Hector Beverages"""
+				messageFinal = message1 + message2 + message3
+				frappe.sendmail(subject="Quality Issue Completed: {}: {}".format(self.customer_code, self.customer_name), content=messageFinal, cc = '{},{}'.format(rsmEmail, asmEmail), recipients = '{}'.format(requestorSalesTeam), expose_recipients="header", sender="Notification@hectorbeverages.com")
 				print("\n email sent \n")
 
 			else :
