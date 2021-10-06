@@ -418,8 +418,8 @@ class QualityIssue(Document):
 
 			else :
 				msg=emailMessage
-			frappe.sendmail(subject="Quality Issue Pending for RCA: {}: {}".format(self.customer_code, self.customer_name), content=msg, recipients = '{}'.format(physicalVerificationTeamEmail),sender="Notification@hectorbeverages.com")
-			print("\n email sent \n")
+				frappe.sendmail(subject="Quality Issue Pending for RCA: {}: {}".format(self.customer_code, self.customer_name), content=msg, recipients = '{}'.format(physicalVerificationTeamEmail),sender="Notification@hectorbeverages.com")
+				print("\n email sent \n")
 
 
 		if self.workflow_state == 'Pending for Quality Head Approval':
