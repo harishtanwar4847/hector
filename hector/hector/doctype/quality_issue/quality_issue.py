@@ -63,11 +63,15 @@ class QualityIssue(Document):
 						<td>Type of Issue:</td>
 						<td>{}</td>
 					</tr>
+					<tr>
+						<td>Invoice Number:</td>
+						<td>{}</td>
+					</tr>
 				</tbody>
 			</table><br>
 			Kindly login to apps.myhector.com for the approval process.<br><br><br>
 			Regards,<br>
-			Hector Beverages""".format(self.customer_name, self.customer_code, self.customer_location, self.customer_phone_number, self.type_of_issue)
+			Hector Beverages""".format(self.customer_name, self.customer_code, self.customer_location, self.customer_phone_number, self.type_of_issue, self.invoice_number)
 
 		if self.workflow_state == 'Pending for Physical Verification Officer Approval':
 			#For sending approval email to Physical Verification Officer
@@ -147,12 +151,16 @@ class QualityIssue(Document):
 						<td>Type of Issue:</td>
 						<td>{}</td>
 					</tr>
+					<tr>
+						<td>Invoice Number:</td>
+						<td>{}</td>
+					</tr>
 				</tbody>
 			</table><br>
 			Comment: {}<br><br>
 			Kindly login to apps.myhector.com for the approval process.<br><br><br>
 			Regards,<br>
-			Hector Beverages""".format(self.customer_name, self.customer_code, self.customer_location, self.customer_phone_number, self.type_of_issue, self.reason_of_rejection)
+			Hector Beverages""".format(self.customer_name, self.customer_code, self.customer_location, self.customer_phone_number, self.type_of_issue, self.invoice_number, self.reason_of_rejection)
 			frappe.sendmail(subject="Quality Issue Rejected: {}: {}".format(self.customer_code, self.customer_name), content=msg, recipients = '{}'.format(complaintTeamEmail),sender="Notification@hectorbeverages.com")
 			print("\n email sent \n")
 			#For sendng email to sales team and customer of Issue rejected process
@@ -233,12 +241,16 @@ class QualityIssue(Document):
 						<td>Type of Issue:</td>
 						<td>{}</td>
 					</tr>
+					<tr>
+						<td>Invoice Number:</td>
+						<td>{}</td>
+					</tr>
 				</tbody>
 			</table><br>
 			Comment: {}<br><br>
 			Kindly login to apps.myhector.com for the approval process.<br><br><br>
 			Regards,<br>
-			Hector Beverages""".format(self.customer_name, self.customer_code, self.customer_location, self.customer_phone_number, self.type_of_issue, self.reason_of_rejection)
+			Hector Beverages""".format(self.customer_name, self.customer_code, self.customer_location, self.customer_phone_number, self.type_of_issue, self.invoice_number, self.reason_of_rejection)
 			frappe.sendmail(subject="Quality Issue Rejected: {}: {}".format(self.customer_code, self.customer_name), content=msg, recipients = '{},{}'.format(complaintTeamEmail, physicalVerificationTeamEmail),sender="Notification@hectorbeverages.com")
 			print("\n email sent \n")
 
