@@ -26,13 +26,14 @@
   "manufacturing_plant",
   "lr_number",
   "issue_details",
+  "pode_photo_mandatory",
+  "reason_of_rejection",
   "column_break_25",
   "stock_image_mandatory",
   "stock_image_2optional",
   "stock_image_3optional",
   "stock_image_4optional",
-  "stock_image_5optional",
-  "pode_photo_mandatory"
+  "stock_image_5optional"
  ],
  "fields": [
   {
@@ -194,11 +195,18 @@
    "fieldname": "stock_image_5optional",
    "fieldtype": "Attach",
    "label": "Stock Image 5(Optional)"
+  },
+  {
+   "depends_on": "eval:((doc.workflow_state == 'Pending for Supply Team Approval') || (doc.workflow_state == 'Resent for Supply Team Approval') || (doc.workflow_state == 'Rejected by Supply Team') || (doc.workflow_state == 'Rejected by Finance Team') || (doc.workflow_state == 'Pending for Finance Team Approval') || (doc.workflow_state == 'Resent for Finance Team Approval'))",
+   "description": "Manadatory if You want to reject this issue",
+   "fieldname": "reason_of_rejection",
+   "fieldtype": "Data",
+   "label": "Reason of Rejection"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-09-23 16:59:26.510535",
+ "modified": "2021-09-30 20:12:07.005578",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Transit Issue",
