@@ -47,6 +47,8 @@
   "customer_posting_group",
   "location",
   "region",
+  "soase_employee_code",
+  "soase_employee_name",
   "reference_customer_code_for_setting_the_price_group",
   "attach_email",
   "customer_id",
@@ -321,11 +323,23 @@
    "fieldtype": "Select",
    "label": "Customer Type",
    "options": "Super Stockist\nDirect Party"
+  },
+  {
+   "fieldname": "soase_employee_code",
+   "fieldtype": "Data",
+   "label": "SO/ASE Employee Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "soase_employee_name",
+   "fieldtype": "Data",
+   "label": "SO/ASE Employee Name",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-08-21 11:29:39.170807",
+ "modified": "2021-09-22 13:39:09.925507",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Customer Form",

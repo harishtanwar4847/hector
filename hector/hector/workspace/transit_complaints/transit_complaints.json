@@ -1,0 +1,43 @@
+{
+ "category": "Modules",
+ "charts": [],
+ "creation": "2021-09-22 18:48:22.338669",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 1,
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Transit Complaints",
+ "links": [],
+ "modified": "2021-09-22 18:48:22.338669",
+ "modified_by": "Administrator",
+ "module": "Hector",
+ "name": "Transit Complaints",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 1,
+ "shortcuts": [
+  {
+   "doc_view": "List",
+   "label": "Transit Issue List",
+   "link_to": "Transit Issue",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "New",
+   "label": "Raise your Transit Complaint",
+   "link_to": "Transit Issue",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "SKU List",
+   "link_to": "SKU",
+   "type": "DocType"
+  }
+ ]
+}

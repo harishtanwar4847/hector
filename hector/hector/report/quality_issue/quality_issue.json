@@ -1,0 +1,39 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2021-09-08 18:16:28.440147",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2021-09-24 11:34:20.161061",
+ "modified_by": "Administrator",
+ "module": "Hector",
+ "name": "Quality Issue",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT\nqi.name AS 'Name:Data:200',\nqi.workflow_state AS 'Workflow State:Data:200',\nqi.customer_name AS 'Customer Name:Data:200',\nqi.customer_code AS 'Customer Code:Data:200',\nqi.customer_location AS 'Customer Location:Data:200',\nqi.customer_phone_number AS 'Customer Phone Number:Data:200',\nqi.rsm_name AS 'RSM Name:Data:200',\nqi.asm_name AS 'ASM Name:Data:200',\nqi.indirect_customer_details AS 'Indirect Customer Details:Data:200',\nqi.email_address_of_requestor_from_sales_team AS 'Email Address of Requestor from Sales Team:Data:200',\nqi.type_of_issue AS 'Type of Issue:Data:200',\nsd.sku_code AS 'SKU Code:Data:200',\nsd.sku_name AS 'SKU Name:Data:200',\nsd.quantity_in_pieces AS 'Quantity (in pieces):Data:200',\nsd.mgf_date AS 'Mgf Date:Data:200',\nsd.batch_details AS 'Batch Details:Data:200',\nqi.manufacturing_plant AS 'Manufacturing Plant:Data:200',\nqi.manufacturing_date AS 'Manufacturing Date:Data:200',\nqi.invoice_number AS 'Invoice Number:Data:200',\nqi.issue_details AS 'Issue Details:Data:200',\nqi.physicalremote_verification_executive AS 'Physical/Remote Verification executive user:Data:200',\nqi.physicalremote_verification_executive_email as 'Physical/Remote Verification executive email:Data:200'\n\nFROM `tabQuality Issue` qi\nInner Join \n`tabSKU Details` sd\nWHERE sd.parent = qi.name\nORDER BY\nqi.name;",
+ "ref_doctype": "Quality Issue",
+ "report_name": "Quality Issue",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Complaint Registering Team"
+  },
+  {
+   "role": "Physical Verification Officer"
+  },
+  {
+   "role": "Finance Team"
+  },
+  {
+   "role": "Quality Head"
+  }
+ ]
+}

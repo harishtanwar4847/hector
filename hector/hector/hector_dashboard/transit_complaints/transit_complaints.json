@@ -1,0 +1,31 @@
+{
+ "cards": [
+  {
+   "card": "Issue Closed-1"
+  },
+  {
+   "card": "Pending for Supply Team Review"
+  },
+  {
+   "card": "Pending for Finance Team Approval"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Transit Complaints Chart",
+   "width": "Full"
+  }
+ ],
+ "creation": "2021-09-23 17:25:21.825427",
+ "dashboard_name": "Transit Complaints",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2021-09-23 17:26:27.646553",
+ "modified_by": "Administrator",
+ "module": "Hector",
+ "name": "Transit Complaints",
+ "owner": "Administrator"
+}

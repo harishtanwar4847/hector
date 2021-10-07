@@ -1,0 +1,35 @@
+{
+ "cards": [
+  {
+   "card": "Customer Approved"
+  },
+  {
+   "card": "Pending for TOT Approval"
+  },
+  {
+   "card": "Pending for RSM Approval"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Customer Form Chart",
+   "width": "Full"
+  },
+  {
+   "chart": "Customer Form Chart",
+   "width": "Half"
+  }
+ ],
+ "creation": "2021-09-06 15:39:42.661744",
+ "dashboard_name": "Customer Onboarding",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 1,
+ "is_standard": 1,
+ "modified": "2021-09-07 12:15:48.681471",
+ "modified_by": "Administrator",
+ "module": "Hector",
+ "name": "Customer Onboarding",
+ "owner": "Administrator"
+}
