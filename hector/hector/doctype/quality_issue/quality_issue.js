@@ -5,6 +5,10 @@ frappe.ui.form.on('Quality Issue', {
 	    {
 	        frm.set_intro('Please Attach RCA Details');
 	    }
+        if(frm.doc.workflow_state == 'Pending for Finance Team Approval' || frm.doc.workflow_state == 'Resent for Finance Team Approval')
+	    {
+	        frm.set_intro('Please Enter Credit Detals');
+	    }
 	},
 	validate(frm){
 
