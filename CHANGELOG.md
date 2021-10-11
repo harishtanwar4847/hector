@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+### Added
+- [added new field credit details, added workflow transitions and approval notifications for quality head](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/28)
+
 ## [v1.1.0] - 2021-10-07
 
 ### Added
