@@ -3,6 +3,11 @@
 ## [Unreleased]
 
 ### Added
+- [added new field credit details, added workflow transitions and approval notifications for quality head](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/28)
+
+## [v1.1.0] - 2021-10-07
+
+### Added
 - [added approval notifications for transit issue, modified conditions for issue closed in quality complaints and added reason for rejection field](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/23)
 - [modified approval email notifications according to email templates](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/24)
 - [minor changes in email template for quality issue](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/25)
