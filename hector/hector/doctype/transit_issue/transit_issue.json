@@ -27,6 +27,7 @@
   "lr_number",
   "issue_details",
   "pode_photo_mandatory",
+  "credit_details",
   "reason_of_rejection",
   "column_break_25",
   "stock_image_mandatory",
@@ -202,11 +203,17 @@
    "fieldname": "reason_of_rejection",
    "fieldtype": "Data",
    "label": "Reason of Rejection"
+  },
+  {
+   "depends_on": "eval:((doc.workflow_state == 'Pending for Finance Team Approval') || (doc.workflow_state == 'Resent for Finance Team Approval'))",
+   "fieldname": "credit_details",
+   "fieldtype": "Small Text",
+   "label": "Credit Details"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-09-30 20:12:07.005578",
+ "modified": "2021-10-08 20:38:58.335035",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Transit Issue",

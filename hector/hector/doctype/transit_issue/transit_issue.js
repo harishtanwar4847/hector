@@ -2,9 +2,12 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Transit Issue', {
-	// refresh: function(frm) {
-
-	// }
+	refresh: function(frm) {
+        if(frm.doc.workflow_state == 'Pending for Finance Team Approval' || frm.doc.workflow_state == 'Resent for Finance Team Approval')
+	    {
+	        frm.set_intro('Please Enter Credit Detals');
+	    }
+	},
 	validate(frm){
 
 	    var number_pattern = /^\d{10}$/
