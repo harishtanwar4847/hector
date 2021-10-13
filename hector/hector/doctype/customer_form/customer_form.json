@@ -298,7 +298,7 @@
    "mandatory_depends_on": "eval:doc.workflow_state == 'Pending for TOT Approval from Customer'"
   },
   {
-   "depends_on": "eval:((doc.workflow_state == 'Pending for Master Team Approval') || (doc.workflow_state == 'Resent for Master Team Approval &nbsp;'))",
+   "depends_on": "eval:((doc.workflow_state == 'Pending for Master Team Approval') || (doc.workflow_state == 'Resent for Master Team Approval &nbsp;') || (doc.workflow_state == 'Customer Approved'))",
    "fieldname": "customer_id",
    "fieldtype": "Data",
    "label": "Customer ID",
@@ -339,7 +339,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-09-22 13:39:09.925507",
+ "modified": "2021-10-13 08:34:07.133274",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Customer Form",
