@@ -41,7 +41,7 @@
   "photo_5optional",
   "attach_rca_details",
   "close_issue",
-  "workflow_state"
+  "credit_details"
  ],
  "fields": [
   {
@@ -263,15 +263,15 @@
    "label": "Reason of Rejection"
   },
   {
-   "fieldname": "workflow_state",
-   "fieldtype": "Link",
-   "label": "Workflow State",
-   "options": "Workflow State"
+   "depends_on": "eval:((doc.workflow_state == 'Pending for Finance Team Approval') || (doc.workflow_state == 'Resent for Finance Team Approval'))",
+   "fieldname": "credit_details",
+   "fieldtype": "Small Text",
+   "label": "Credit Details"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-09-30 20:40:44.255653",
+ "modified": "2021-10-08 20:31:37.145735",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Quality Issue",

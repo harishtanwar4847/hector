@@ -299,9 +299,11 @@ class TransitIssue(Document):
 			for skuRow in self.sku_details:
 				message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.damaged_missing_quantity + "</td><td>" + skuRow.invoice_number + "</td><td>" + skuRow.batch_details + "</td><tr>"
 			message2 += "</table><br>"
-			message3 = """<br><br><br>
-			Regards,<br>
-			Hector Beverages"""
+			message3 = """
+				Credit Details: {}
+				<br><br><br>
+				Regards,<br>
+				Hector Beverages""".format(self.credit_details)
 			messageFinal = message1 + message2 + message3
 			frappe.sendmail(subject="Transit Issue Completed: {}: {}".format(self.customer_code, self.customer_name), content=messageFinal, cc = '{},{}'.format(rsmEmail, asmEmail), recipients = '{}'.format(requestorSalesTeam), expose_recipients="header", sender="Notification@hectorbeverages.com")
 			print("\n email sent \n")
