@@ -9,13 +9,13 @@
  "filters": [],
  "idx": 0,
  "is_standard": "Yes",
- "modified": "2021-09-24 11:44:37.531767",
+ "modified": "2021-10-27 09:24:34.328125",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Transit Issue",
  "owner": "Administrator",
  "prepared_report": 0,
- "query": "SELECT\nti.name AS 'Name:Data:200',\nti.workflow_state AS 'Workflow State:Data:200',\nti.customer_name AS 'Customer Name:Data:200',\nti.customer_code AS 'Customer Code:Data:200',\nti.customer_location AS 'Customer Location:Data:200',\nti.customer_phone_number AS 'Customer Phone Number:Data:200',\nti.rsm_name AS 'RSM Name:Data:200',\nti.asm_name AS 'ASM Name:Data:200',\nti.email_address_of_requestor_from_sales_team AS 'Email Address of Requestor from Sales Team:Data:200',\nti.type_of_issue AS 'Type of Issue:Data:200',\nsdt.sku_code AS 'SKU Code:Data:200',\nsdt.sku_name AS 'SKU Name:Data:200',\nsdt.damaged_missing_quantity AS 'Damaged /Missing Quantity:Data:200',\nsdt.invoice_number AS 'Invoice Number:Data:200',\nsdt.batch_details AS 'Batch Details:Data:200',\nti.manufacturing_plant AS 'Manufacturing Plant:Data:200',\nti.lr_number AS 'LR number:Data:200',\nti.issue_details AS 'Issue Details:Data:200'\n\nFROM `tabTransit Issue` ti\nInner Join \n`tabSKU Details Transit` sdt\nWHERE sdt.parent = ti.name\nORDER BY\nti.name;",
+ "query": "SELECT\nti.name AS 'Name:Data:200',\nti.workflow_state AS 'Workflow State:Data:200',\nti.customer_name AS 'Customer Name:Data:200',\nti.customer_code AS 'Customer Code:Data:200',\nti.customer_location AS 'Customer Location:Data:200',\nti.customer_phone_number AS 'Customer Phone Number:Data:200',\nti.rsm_full_name AS 'RSM Name:Data:200',\nti.asm_full_name AS 'ASM Name:Data:200',\nti.email_address_of_requestor_from_sales_team AS 'Email Address of Requestor from Sales Team:Data:200',\nti.type_of_issue AS 'Type of Issue:Data:200',\nsdt.sku_code AS 'SKU Code:Data:200',\nsdt.sku_name AS 'SKU Name:Data:200',\nsdt.damaged_missing_quantity AS 'Damaged /Missing Quantity:Data:200',\nsdt.invoice_number AS 'Invoice Number:Data:200',\nsdt.batch_details AS 'Batch Details:Data:200',\nti.manufacturing_plant AS 'Manufacturing Plant:Data:200',\nti.lr_number AS 'LR number:Data:200',\nti.issue_details AS 'Issue Details:Data:200',\nti.creation as 'Created On:Data:200'\n\nFROM `tabTransit Issue` ti\nInner Join \n`tabSKU Details Transit` sdt\nWHERE sdt.parent = ti.name\nORDER BY\nti.name;",
  "ref_doctype": "Transit Issue",
  "report_name": "Transit Issue",
  "report_type": "Query Report",
@@ -24,10 +24,22 @@
    "role": "System Manager"
   },
   {
+   "role": "System Manager"
+  },
+  {
+   "role": "Complaint Registering Team"
+  },
+  {
    "role": "Complaint Registering Team"
   },
   {
    "role": "Supply Team"
+  },
+  {
+   "role": "Supply Team"
+  },
+  {
+   "role": "Finance Team"
   },
   {
    "role": "Finance Team"

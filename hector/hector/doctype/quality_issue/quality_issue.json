@@ -16,6 +16,7 @@
   "customer_phone_number",
   "column_break_6",
   "asm_name",
+  "asm_full_name",
   "indirect_customer_details",
   "email_address_of_requestor_from_sales_team",
   "issue_details_section",
@@ -41,7 +42,17 @@
   "photo_5optional",
   "attach_rca_details",
   "close_issue",
-  "credit_details"
+  "credit_details",
+  "pending_physical_verification_time",
+  "resent_physical_verification_time",
+  "request_details_physical_verification_time",
+  "pending_finance_team_time",
+  "resent_finance_team_time",
+  "request_details_finance_team_time",
+  "pending_quality_head_time",
+  "resent_quality_head_time",
+  "request_details_quality_head_time",
+  "pending_rca_details_time"
  ],
  "fields": [
   {
@@ -267,11 +278,78 @@
    "fieldname": "credit_details",
    "fieldtype": "Small Text",
    "label": "Credit Details"
+  },
+  {
+   "fieldname": "pending_physical_verification_time",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Pending Physical Verification Time"
+  },
+  {
+   "fieldname": "resent_physical_verification_time",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Resent Physical Verification Time"
+  },
+  {
+   "fieldname": "request_details_physical_verification_time",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Request Details Physical Verification Time"
+  },
+  {
+   "fieldname": "pending_finance_team_time",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Pending Finance Team Time"
+  },
+  {
+   "fieldname": "resent_finance_team_time",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Resent Finance Team Time"
+  },
+  {
+   "fieldname": "request_details_finance_team_time",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Request Details Finance Team Time"
+  },
+  {
+   "fieldname": "pending_quality_head_time",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Pending Quality Head Time"
+  },
+  {
+   "fieldname": "resent_quality_head_time",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Resent Quality Head Time"
+  },
+  {
+   "fieldname": "request_details_quality_head_time",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Request Details Quality Head Time"
+  },
+  {
+   "fieldname": "pending_rca_details_time",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Pending RCA Details Time"
+  },
+  {
+   "fetch_from": "asm_name.full_name",
+   "fieldname": "asm_full_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "ASM Full Name"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-10-08 20:31:37.145735",
+ "modified": "2021-10-27 09:22:03.280890",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Quality Issue",

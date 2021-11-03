@@ -3,6 +3,11 @@
 ## [Unreleased]
 
 ### Added
+- [added email notification for issue pending from 3 days, added asm, rsm names in auto email reports and minor changes in client scripts ](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/32)
+
+## [v1.2.0] - 2021-10-21
+
+### Added
 - [added new field credit details, added workflow transitions and approval notifications for quality head](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/28)
 - [changed patch for workflow state and workflow action master to insert from update ](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/29)
 
