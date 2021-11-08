@@ -5,7 +5,7 @@ frappe.ui.form.on('Transit Issue', {
 	refresh: function(frm) {
         if(frm.doc.workflow_state == 'Pending for Finance Team Approval' || frm.doc.workflow_state == 'Resent for Finance Team Approval')
 	    {
-	        frm.set_intro('Please Enter Credit Detals');
+	        frm.set_intro('Please Enter Credit Details');
 	    }
 	},
 	validate(frm){

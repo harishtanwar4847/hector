@@ -10,7 +10,7 @@ frappe.ui.form.on('Customer Form', {
 	    {
 	        frm.set_intro('Please Attach TOT Acceptance Email');
 	    }
-	    if(frm.doc.workflow_state == 'Pending for Master Team Approval')
+	    if(frm.doc.workflow_state == 'Pending for Master Team Approval' || frm.doc.workflow_state == 'Resent for Master Team Approval &nbsp;')
 	    {
 	        frm.set_intro('Please Enter Customer ID');
 	    }
