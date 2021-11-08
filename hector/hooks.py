@@ -104,23 +104,25 @@ website_context = {
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"hector.tasks.all"
-# 	],
-# 	"daily": [
-# 		"hector.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"hector.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"hector.tasks.weekly"
-# 	]
-# 	"monthly": [
-# 		"hector.tasks.monthly"
-# 	]
-# }
+scheduler_events = {
+	# "all": [
+	# 	"hector.tasks.all"
+	# ],
+	"daily": [
+		"hector.tasks.quality_issue_daily",
+		"hector.tasks.transit_issue_daily"
+	],
+	# "hourly": [
+	# 	"hector.tasks.quality_issue_daily",
+	# 	"hector.tasks.transit_issue_daily"
+	# ],
+	# "weekly": [
+	# 	"hector.tasks.weekly"
+	# ]
+	# "monthly": [
+	# 	"hector.tasks.monthly"
+	# ]
+}
 
 # Testing
 # -------

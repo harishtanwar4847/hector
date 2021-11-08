@@ -11,7 +11,7 @@ frappe.listview_settings['Quality Issue'] = {
         if(frappe.user_roles.includes('Physical Verification Officer'))
         {
             route_options = {
-				"workflow_state": ["in",'Pending for Physical Verification Officer Approval,Resent for Physical Verification Officer Approval,Pending for RCA Details']
+				"workflow_state": ["in",'Pending for Physical Verification Officer Approval,Resent for Physical Verification Officer Approval,Pending for RCA Details,Requested for More Details by Quality Head']
 			};
         }
         if(frappe.user_roles.includes('Finance Team'))
@@ -23,7 +23,7 @@ frappe.listview_settings['Quality Issue'] = {
         if(frappe.user_roles.includes('Quality Head'))
         {
             route_options = {
-				"workflow_state": ["=",'Pending for Quality Head Approval']
+				"workflow_state": ["in",'Pending for Quality Head Approval,Resent for Quality Head Approval']
 			};
         }
         if(frappe.user_roles.includes('System Manager') || frappe.user_roles.includes('Administrator'))
