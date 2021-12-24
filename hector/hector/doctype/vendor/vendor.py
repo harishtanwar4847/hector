@@ -1,0 +1,15 @@
+# -*- coding: utf-8 -*-
+# Copyright (c) 2021, Atrina Technologies Pvt Ltd and contributors
+# For license information, please see license.txt
+
+from __future__ import unicode_literals
+import frappe
+from frappe.model.document import Document
+
+class Vendor(Document):
+    def before_insert(self):
+        if not frappe.get_all('Email OTP Verification', filters={'email': self.email_address, 'otp': self.otp, 'used': 0, 'expiry': ['>=', frappe.utils.now_datetime()] }):
+            frappe.throw('Email not verified')
+
+    def after_insert(self):
+        frappe.db.sql('UPDATE `tabEmail OTP Verification` SET used = 1 WHERE email = %s AND otp = %s', (self.email_address, self.otp))

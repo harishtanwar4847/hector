@@ -1,0 +1,196 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2021-12-17 21:23:02.197145",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "email_address",
+  "name_of_company__vendor",
+  "address_of_company__line1",
+  "address_of_company__line2",
+  "city",
+  "post_code",
+  "company_phone_no",
+  "primary_contact_person_name",
+  "primary_contact_person_phone_number",
+  "primary_contact_e_mail_id",
+  "payment_terms_code",
+  "column_break_13",
+  "bank_name",
+  "bank_account_number",
+  "ifsc_code",
+  "attach_copy_of_cancelled_cheque",
+  "msme_registration_number",
+  "attach_the_msme_certificate",
+  "pan_number",
+  "attach_pan_card_copy",
+  "select_gst_registration_type_of_your_company",
+  "gst_registration_number",
+  "attach_gst_registration_certificate",
+  "vendor_code",
+  "naming_series",
+  "otp"
+ ],
+ "fields": [
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email Address"
+  },
+  {
+   "fieldname": "name_of_company__vendor",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name of Company / Vendor"
+  },
+  {
+   "fieldname": "address_of_company__line1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Address of Company  Line 1"
+  },
+  {
+   "fieldname": "address_of_company__line2",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Address of Company  Line 2"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "post_code",
+   "fieldtype": "Data",
+   "label": "Post Code"
+  },
+  {
+   "fieldname": "company_phone_no",
+   "fieldtype": "Data",
+   "label": "Company Phone No."
+  },
+  {
+   "fieldname": "primary_contact_person_name",
+   "fieldtype": "Data",
+   "label": "Primary Contact Person Name"
+  },
+  {
+   "fieldname": "primary_contact_person_phone_number",
+   "fieldtype": "Data",
+   "label": "Primary Contact Person Phone Number"
+  },
+  {
+   "fieldname": "primary_contact_e_mail_id",
+   "fieldtype": "Data",
+   "label": "Primary Contact Email ID"
+  },
+  {
+   "fieldname": "payment_terms_code",
+   "fieldtype": "Data",
+   "label": "Payment Terms Code"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bank_name",
+   "fieldtype": "Data",
+   "label": "Bank Name"
+  },
+  {
+   "fieldname": "bank_account_number",
+   "fieldtype": "Data",
+   "label": "Bank Account Number"
+  },
+  {
+   "fieldname": "ifsc_code",
+   "fieldtype": "Data",
+   "label": "IFSC Code"
+  },
+  {
+   "fieldname": "attach_copy_of_cancelled_cheque",
+   "fieldtype": "Attach",
+   "label": "Attach Copy of Cancelled Cheque"
+  },
+  {
+   "fieldname": "msme_registration_number",
+   "fieldtype": "Data",
+   "label": "MSME Registration Number"
+  },
+  {
+   "fieldname": "attach_the_msme_certificate",
+   "fieldtype": "Attach",
+   "label": "Attach the MSME certificate"
+  },
+  {
+   "fieldname": "pan_number",
+   "fieldtype": "Data",
+   "label": "PAN Number"
+  },
+  {
+   "fieldname": "attach_pan_card_copy",
+   "fieldtype": "Attach",
+   "label": "Attach PAN Card Copy"
+  },
+  {
+   "fieldname": "select_gst_registration_type_of_your_company",
+   "fieldtype": "Data",
+   "label": "Select GST Registration Type of Your Company"
+  },
+  {
+   "fieldname": "gst_registration_number",
+   "fieldtype": "Data",
+   "label": "GST Registration Number"
+  },
+  {
+   "fieldname": "attach_gst_registration_certificate",
+   "fieldtype": "Attach",
+   "label": "Attach GST Registration Certificate"
+  },
+  {
+   "fieldname": "vendor_code",
+   "fieldtype": "Data",
+   "label": "Vendor Code"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "Vendor-"
+  },
+  {
+   "fieldname": "otp",
+   "fieldtype": "Data",
+   "label": "OTP"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-12-22 21:41:23.396227",
+ "modified_by": "Administrator",
+ "module": "Hector",
+ "name": "Vendor",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
