@@ -49,18 +49,17 @@
   {
    "fieldname": "address_of_company__line1",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Address of Company  Line 1"
   },
   {
    "fieldname": "address_of_company__line2",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Address of Company  Line 2"
   },
   {
    "fieldname": "city",
    "fieldtype": "Data",
+   "in_standard_filter": 1,
    "label": "City"
   },
   {
@@ -71,6 +70,7 @@
   {
    "fieldname": "company_phone_no",
    "fieldtype": "Data",
+   "in_standard_filter": 1,
    "label": "Company Phone No."
   },
   {
@@ -81,6 +81,7 @@
   {
    "fieldname": "primary_contact_person_phone_number",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Primary Contact Person Phone Number"
   },
   {
@@ -171,7 +172,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-12-22 21:41:23.396227",
+ "modified": "2021-12-27 15:32:09.180184",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Vendor",
@@ -192,5 +193,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
+ "title_field": "name_of_company__vendor",
  "track_changes": 1
 }

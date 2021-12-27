@@ -42,7 +42,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-12-22 21:49:38.799015",
+ "modified": "2021-12-27 15:26:07.727498",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Email OTP Verification",
@@ -63,5 +63,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
+ "title_field": "email",
  "track_changes": 1
 }
