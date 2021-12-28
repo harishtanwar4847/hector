@@ -12,7 +12,7 @@ def accept(web_form, data, docname=None, for_payment=False):
         if frappe.get_all(data.doctype, filters={'email': data.email, 'otp': data.otp, 'used': 0, 'expiry': ['>=', frappe.utils.now_datetime()] }):
             return {}
         else:
-            frappe.throw('Your OTP is invalid')
+            frappe.throw('Invalid OTP, Please enter valid OTP')
     else:
         web_form_accept(web_form, data, docname, for_payment)
             
