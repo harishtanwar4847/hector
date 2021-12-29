@@ -13,7 +13,7 @@
  "is_standard": 1,
  "label": "Vendor Onboarding",
  "links": [],
- "modified": "2021-12-27 15:24:53.350188",
+ "modified": "2021-12-28 12:11:53.054857",
  "modified_by": "harish.tanwar@atriina.com",
  "module": "Hector",
  "name": "Vendor Onboarding",
@@ -23,7 +23,7 @@
  "shortcuts": [
   {
    "doc_view": "List",
-   "label": "Email OTP Verification List",
+   "label": "Registered Users List",
    "link_to": "Email OTP Verification",
    "type": "DocType"
   },
