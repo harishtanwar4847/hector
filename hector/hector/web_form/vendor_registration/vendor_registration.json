@@ -20,7 +20,7 @@
  "is_standard": 1,
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2021-12-28 18:11:54.812052",
+ "modified": "2021-12-29 11:56:40.503188",
  "modified_by": "harish.tanwar@atriina.com",
  "module": "Hector",
  "name": "vendor-registration",
@@ -33,7 +33,7 @@
  "show_in_grid": 0,
  "show_sidebar": 0,
  "sidebar_items": [],
- "success_url": "/vendor-registration",
+ "success_url": "/",
  "title": "Vendor Registration",
  "web_form_fields": [
   {
