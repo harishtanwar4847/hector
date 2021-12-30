@@ -11,6 +11,8 @@ def accept(web_form, data, docname=None, for_payment=False):
         data = frappe._dict(json.loads(data))
         if frappe.get_all(data.doctype, filters={'email': data.email, 'otp': data.otp, 'used': 0, 'expiry': ['>=', frappe.utils.now_datetime()] }):
             return {}
+        if frappe.get_all(data.doctype, filters={'email': data.email, 'otp': data.otp, 'used': 0, 'expiry': ['<=', frappe.utils.now_datetime()] }):
+            frappe.throw('Your OTP has been Expired, Please retry the Registration process')
         else:
             frappe.throw('Invalid OTP, Please enter valid OTP')
     else:

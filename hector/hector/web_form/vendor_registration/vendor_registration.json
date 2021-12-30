@@ -10,7 +10,7 @@
  "amount_based_on_field": 0,
  "apply_document_permissions": 0,
  "button_label": "Submit",
- "client_script": "frappe.web_form.after_load = () => {\n    setTimeout(function() {\n        if(!frappe.web_form.doc.email_address || !frappe.web_form.doc.otp) {\n            frappe.msgprint({indicator: 'red', title: 'Error', message: 'Your OTP is not verified!'})\n            setTimeout(function() {\n                location.href = '/'\n            }, 5000)\n            return\n        }\n        frappe.msgprint('Hurry Up! Your OTP will be expiring in next 30 minutes');\n    }, 500)\n}\n\nfrappe.web_form.validate = () => {\n\t\n    var comp_phone = frappe.web_form.get_values().company_phone_no\n    var post_code = frappe.web_form.get_values().post_code\n    var prim_cont_phone =  frappe.web_form.get_values().primary_contact_person_phone_number\n    var pan = frappe.web_form.get_values().pan_number\n    var gstin = frappe.web_form.get_values().gst_registration_number\n    var email1 = frappe.web_form.get_values().email_address\n    var email2 = frappe.web_form.get_values().primary_contact_e_mail_id\n    var number_list = ['0','1','2','3','4','5','6','7','8','9']\n    var char_list = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']\n    var email_pattern = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])/; \n\n\n    if(!email1.match(email_pattern))\n        {\n            frappe.msgprint('Enter Valid Email.')\n            return false;\n        }\n        \n    if (post_code.length != 6) {\n        frappe.msgprint('Length of Post Code Must be 6');\n        return false;\n    }\n    \n    if(post_code.length == 6)\n        {\n            if(!(number_list.includes(post_code[0]) && number_list.includes(post_code[1]) && number_list.includes(post_code[2]) && number_list.includes(post_code[3])\n\t          && number_list.includes(post_code[4]) && number_list.includes(post_code[5])))\n\t        {\n\t            frappe.throw('Enter Valid Post Code.')\n\t        }   \n        }\n   \n    if (comp_phone.length != 10 || prim_cont_phone.length != 10) {\n        frappe.msgprint('Length of Phone Number Must be 10');\n        return false;\n        }\n    if(comp_phone.length == 10)\n        {\n            if(!(number_list.includes(comp_phone[0]) && number_list.includes(comp_phone[1]) && number_list.includes(comp_phone[2]) && number_list.includes(comp_phone[3])\n\t          && number_list.includes(comp_phone[4]) && number_list.includes(comp_phone[5]) && number_list.includes(comp_phone[6]) && number_list.includes(comp_phone[7])\n\t          && number_list.includes(comp_phone[8]) && number_list.includes(comp_phone[9])))\n\t        {\n\t            frappe.throw('Enter Valid Phone Number.')\n\t       \n\t        }   \n        }\n        \n    \n    if(prim_cont_phone.length == 10)\n        {\n            if(!(number_list.includes(prim_cont_phone[0]) && number_list.includes(prim_cont_phone[1]) && number_list.includes(prim_cont_phone[2]) && number_list.includes(prim_cont_phone[3])\n\t          && number_list.includes(prim_cont_phone[4]) && number_list.includes(prim_cont_phone[5]) && number_list.includes(prim_cont_phone[6]) && number_list.includes(prim_cont_phone[7])\n\t          && number_list.includes(prim_cont_phone[8]) && number_list.includes(prim_cont_phone[9])))\n\t        {\n\t            frappe.throw('Enter Valid Phone Number.')\n\n\t        }   \n        }\n        \n    if(!email2.match(email_pattern))\n        {\n            frappe.msgprint('Enter Valid Email.')\n            return false;\n        }\n     \n    \n    if (pan.length != 10) {\n        frappe.msgprint('Length of Pan Number Must be 10');\n        return false;\n    }\n     if(pan.length == 10)\n\t    {\n\t        if(!(char_list.includes(pan[0]) && char_list.includes(pan[1]) && char_list.includes(pan[2]) && char_list.includes(pan[3]) && char_list.includes(pan[4])\n\t         && number_list.includes(pan[5]) && number_list.includes(pan[6]) && number_list.includes(pan[7]) && number_list.includes(pan[8])\n\t          && char_list.includes(pan[9])))\n\t        {\n\t            frappe.throw('Enter Valid Pan Card Number')\n\t           \n\t           \n\t       \n\t        }\n\t        \n        }\n    \n    if (gstin.length != 15){\n        frappe.msgprint(\"Length of GST Number must be 15\")\n        return false;\n        }\n     if(gstin.length == 15)\n\t    {\n\t        console.log(gstin)\n\t        if(!(number_list.includes(gstin[0]) && number_list.includes(gstin[1]) && char_list.includes(gstin[2]) && char_list.includes(gstin[3]) && char_list.includes(gstin[4])\n\t         && char_list.includes(gstin[5]) && char_list.includes(gstin[6]) && number_list.includes(gstin[7]) && number_list.includes(gstin[8])\n\t          && number_list.includes(gstin[9]) && number_list.includes(gstin[10]) && char_list.includes(gstin[11]) && number_list.includes(gstin[12])\n\t           && char_list.includes(gstin[13]) && (number_list.includes(gstin[14]) || char_list.includes(gstin[14]))))\n\t        {\n\t            frappe.throw('Enter Valid GST Number.')\n\t        }\n\t        else{\n\t        return true;\n\t        }\n\t        \n        }\n    \n   \n        \n   \n    \n    else{\n        return true;\n    };\n    \n    \n   \n    \n\t\n}\n\nfrappe.web_form.handle_success = () => {\n    frappe.msgprint({\n        title: __('Success'),\n        message: __('Your Information has been Submitted'),\n        primary_action: {\n            label: 'Submit',\n            action: function() {\n                window.location = frappe.web_form.success_url \n            }\n        }\n    });\n}\n\t\n",
+ "client_script": "frappe.web_form.after_load = () => {\n    setTimeout(function() {\n        if(!frappe.web_form.doc.email_address || !frappe.web_form.doc.otp) {\n            frappe.msgprint({indicator: 'red', title: 'Error', message: 'Your OTP is not verified!'})\n            setTimeout(function() {\n                location.href = '/'\n            }, 5000)\n            return\n        }\n        frappe.msgprint('Please Fill all the Details Carefully');\n    }, 500)\n}\n\nfrappe.web_form.validate = () => {\n\t\n    var comp_phone = frappe.web_form.get_values().company_phone_no\n    var post_code = frappe.web_form.get_values().post_code\n    var prim_cont_phone =  frappe.web_form.get_values().primary_contact_person_phone_number\n    var pan = frappe.web_form.get_values().pan_number\n    var gstin = frappe.web_form.get_values().gst_registration_number\n    var email1 = frappe.web_form.get_values().email_address\n    var email2 = frappe.web_form.get_values().primary_contact_e_mail_id\n    var number_list = ['0','1','2','3','4','5','6','7','8','9']\n    var char_list = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']\n    var email_pattern = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])/; \n\n\n    if(!email1.match(email_pattern))\n        {\n            frappe.msgprint('Enter Valid Email.')\n            return false;\n        }\n        \n    if (post_code.length != 6) {\n        frappe.msgprint('Length of Post Code Must be 6');\n        return false;\n    }\n    \n    if(post_code.length == 6)\n        {\n            if(!(number_list.includes(post_code[0]) && number_list.includes(post_code[1]) && number_list.includes(post_code[2]) && number_list.includes(post_code[3])\n\t          && number_list.includes(post_code[4]) && number_list.includes(post_code[5])))\n\t        {\n\t            frappe.throw('Enter Valid Post Code.')\n\t        }   \n        }\n   \n    if (comp_phone.length != 10 || prim_cont_phone.length != 10) {\n        frappe.msgprint('Length of Phone Number Must be 10');\n        return false;\n        }\n    if(comp_phone.length == 10)\n        {\n            if(!(number_list.includes(comp_phone[0]) && number_list.includes(comp_phone[1]) && number_list.includes(comp_phone[2]) && number_list.includes(comp_phone[3])\n\t          && number_list.includes(comp_phone[4]) && number_list.includes(comp_phone[5]) && number_list.includes(comp_phone[6]) && number_list.includes(comp_phone[7])\n\t          && number_list.includes(comp_phone[8]) && number_list.includes(comp_phone[9])))\n\t        {\n\t            frappe.throw('Enter Valid Phone Number.')\n\t       \n\t        }   \n        }\n        \n    \n    if(prim_cont_phone.length == 10)\n        {\n            if(!(number_list.includes(prim_cont_phone[0]) && number_list.includes(prim_cont_phone[1]) && number_list.includes(prim_cont_phone[2]) && number_list.includes(prim_cont_phone[3])\n\t          && number_list.includes(prim_cont_phone[4]) && number_list.includes(prim_cont_phone[5]) && number_list.includes(prim_cont_phone[6]) && number_list.includes(prim_cont_phone[7])\n\t          && number_list.includes(prim_cont_phone[8]) && number_list.includes(prim_cont_phone[9])))\n\t        {\n\t            frappe.throw('Enter Valid Phone Number.')\n\n\t        }   \n        }\n        \n    if(!email2.match(email_pattern))\n        {\n            frappe.msgprint('Enter Valid Email.')\n            return false;\n        }\n     \n    \n    if (pan.length != 10) {\n        frappe.msgprint('Length of Pan Number Must be 10');\n        return false;\n    }\n     if(pan.length == 10)\n\t    {\n\t        if(!(char_list.includes(pan[0]) && char_list.includes(pan[1]) && char_list.includes(pan[2]) && char_list.includes(pan[3]) && char_list.includes(pan[4])\n\t         && number_list.includes(pan[5]) && number_list.includes(pan[6]) && number_list.includes(pan[7]) && number_list.includes(pan[8])\n\t          && char_list.includes(pan[9])))\n\t        {\n\t            frappe.throw('Enter Valid Pan Card Number')\n\t           \n\t           \n\t       \n\t        }\n\t        \n        }\n    \n    if (gstin.length != 15){\n        frappe.msgprint(\"Length of GST Number must be 15\")\n        return false;\n        }\n     if(gstin.length == 15)\n\t    {\n\t        console.log(gstin)\n\t        if(!(number_list.includes(gstin[0]) && number_list.includes(gstin[1]) && char_list.includes(gstin[2]) && char_list.includes(gstin[3]) && char_list.includes(gstin[4])\n\t         && char_list.includes(gstin[5]) && char_list.includes(gstin[6]) && number_list.includes(gstin[7]) && number_list.includes(gstin[8])\n\t          && number_list.includes(gstin[9]) && number_list.includes(gstin[10]) && char_list.includes(gstin[11]) && number_list.includes(gstin[12])\n\t           && char_list.includes(gstin[13]) && (number_list.includes(gstin[14]) || char_list.includes(gstin[14]))))\n\t        {\n\t            frappe.throw('Enter Valid GST Number.')\n\t        }\n\t        else{\n\t        return true;\n\t        }\n\t        \n        }\n    \n   \n        \n   \n    \n    else{\n        return true;\n    };\n    \n    \n   \n    \n\t\n}\n\nfrappe.web_form.handle_success = () => {\n    frappe.msgprint({\n        title: __('Success'),\n        message: __('Your Information has been Submitted'),\n        primary_action: {\n            label: 'OK',\n            action: function() {\n                window.location = frappe.web_form.success_url \n            }\n        }\n    });\n}\n\t\n",
  "creation": "2021-12-20 11:37:47.117584",
  "currency": "INR",
  "doc_type": "Vendor",
@@ -20,7 +20,7 @@
  "is_standard": 1,
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2021-12-28 18:11:54.812052",
+ "modified": "2021-12-30 12:29:31.292688",
  "modified_by": "harish.tanwar@atriina.com",
  "module": "Hector",
  "name": "vendor-registration",
@@ -33,7 +33,7 @@
  "show_in_grid": 0,
  "show_sidebar": 0,
  "sidebar_items": [],
- "success_url": "/vendor-registration",
+ "success_url": "/",
  "title": "Vendor Registration",
  "web_form_fields": [
   {
@@ -46,7 +46,7 @@
    "max_value": 0,
    "options": "",
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -58,7 +58,7 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -70,7 +70,7 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -82,7 +82,7 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -94,7 +94,7 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -106,7 +106,7 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -118,7 +118,7 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -130,7 +130,7 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -142,7 +142,7 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -155,7 +155,7 @@
    "max_value": 0,
    "options": "",
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -167,7 +167,7 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -178,7 +178,7 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -190,7 +190,7 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -202,7 +202,7 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -214,7 +214,7 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -226,7 +226,7 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -238,7 +238,7 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -250,7 +250,7 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -262,7 +262,7 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -274,7 +274,7 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -286,7 +286,7 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -298,7 +298,7 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -310,7 +310,7 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
