@@ -11,7 +11,7 @@
  "idx": 0,
  "is_standard": 1,
  "message": "Hello Vendor,<br><br>\n\nPlease find your OTP for Vendor Registration with Hector Beverages {{ doc.otp }} .<br><br>\n\nYou can <a href=\"{{frappe.utils.get_url('/email-otp-verification?new=1&email={}&otp={}'.format(doc.email,doc.otp))}}\">click here</a> to Verify Your Email!",
- "modified": "2021-12-30 12:34:32.730012",
+ "modified": "2021-12-30 14:38:29.357736",
  "modified_by": "harish.tanwar@atriina.com",
  "module": "Hector",
  "name": "Here is your OTP",
@@ -23,7 +23,7 @@
  ],
  "send_system_notification": 0,
  "send_to_all_assignees": 0,
- "sender": "Harishtanwar4847",
- "sender_email": "harishtanwar4847@gmail.com",
+ "sender": "Notifications",
+ "sender_email": "notification@hectorbeverages.com",
  "subject": "Here is Your OTP for Vendor Registration"
 }

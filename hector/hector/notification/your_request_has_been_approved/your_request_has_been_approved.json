@@ -12,7 +12,7 @@
  "idx": 0,
  "is_standard": 1,
  "message": "Welcome to Hector Beverages,\n<br>\nYour Request for Vendor Creeation has been Approved.",
- "modified": "2021-12-30 12:35:09.974571",
+ "modified": "2021-12-30 14:38:09.941593",
  "modified_by": "harish.tanwar@atriina.com",
  "module": "Hector",
  "name": "Your Request has been Approved",
@@ -24,8 +24,8 @@
  ],
  "send_system_notification": 0,
  "send_to_all_assignees": 0,
- "sender": "Harishtanwar4847",
- "sender_email": "harishtanwar4847@gmail.com",
+ "sender": "Notifications",
+ "sender_email": "notification@hectorbeverages.com",
  "subject": "Your Request has been Approved",
  "value_changed": "workflow_state"
 }

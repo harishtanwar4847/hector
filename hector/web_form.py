@@ -4,7 +4,7 @@ import json
 from frappe.website.doctype.web_form.web_form import accept as web_form_accept
 
 @frappe.whitelist(allow_guest=True)
-@rate_limit(key='web_form', limit=5, seconds=60, methods=['POST'])
+#@rate_limit(key='web_form', limit=5, seconds=60, methods=['POST'])
 def accept(web_form, data, docname=None, for_payment=False):
     '''Save the web form'''
     if web_form == 'email-otp-verification':
