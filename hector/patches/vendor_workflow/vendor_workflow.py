@@ -2,9 +2,9 @@ import frappe
 from frappe.core.doctype.data_import.data_import import import_file
 
 def execute():
-    path = frappe.get_app_path('hector','patches','vendor_workflow','imports','workflow_state.csv')
+    path = frappe.get_app_path('hector','patches','vendor_workflow','workflow_state.csv')
     import_file('Workflow State', path, 'Insert',console=True)
-    path = frappe.get_app_path('hector','patches','vendor_workflow','imports','workflow_action_master.csv')
+    path = frappe.get_app_path('hector','patches','vendor_workflow','workflow_action_master.csv')
     import_file('Workflow Action Master', path, 'Insert',console=True)
-    path = frappe.get_app_path('hector','patches','vendor_workflow','imports','workflow.csv')
+    path = frappe.get_app_path('hector','patches','vendor_workflow','workflow.csv')
     import_file('Workflow', path, 'Insert',console=True)
