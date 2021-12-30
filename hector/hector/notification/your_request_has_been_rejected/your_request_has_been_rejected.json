@@ -1,0 +1,31 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "condition": "doc.workflow_state == \"Vendor Rejected\"",
+ "creation": "2021-12-24 16:56:04.666521",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Vendor",
+ "enabled": 1,
+ "event": "Value Change",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Hii,\n<br>\nYour Request has for Vendor Creation been Rejected.<br>\nPlease fill the Form again with Appropriate Details.\nYou can <a href=\"{{frappe.utils.get_url('/email-verification')}}\">click here</a> to fill the forrm.",
+ "modified": "2021-12-30 12:35:24.063604",
+ "modified_by": "harish.tanwar@atriina.com",
+ "module": "Hector",
+ "name": "Your Request has been Rejected",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "email_address"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "sender": "Harishtanwar4847",
+ "sender_email": "harishtanwar4847@gmail.com",
+ "subject": "Your Request has been Rejected",
+ "value_changed": "workflow_state"
+}

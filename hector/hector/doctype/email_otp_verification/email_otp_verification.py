@@ -11,4 +11,4 @@ from datetime import timedelta
 class EmailOTPVerification(Document):
     def before_insert(self):
         self.otp = "".join((random.choice("0123456789") for i in range(4))) 
-        self.expiry = frappe.utils.now_datetime() + timedelta(minutes=30)
+        self.expiry = frappe.utils.now_datetime() + timedelta(minutes=180)
