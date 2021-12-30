@@ -4,7 +4,7 @@
 frappe.ui.form.on('Vendor', {
     refresh: function(frm) {
 		if(frm.doc.workflow_state == "Requested for Vendor Creation"){
-		    frm.set_intro("Vendor Code is Mandatory Approval");
+		    frm.set_intro("Vendor Code is Mandatory for Approval");
 		}
 
 	}
