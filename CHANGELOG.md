@@ -8,6 +8,7 @@
 
 ### Added
 - [added email notification for issue pending from 3 days, added asm, rsm names in auto email reports and minor changes in client scripts ](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/32)
+- [Adding Notifications and OTP Time Validation](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/38)
 
 ## [v1.2.0] - 2021-10-21
 
