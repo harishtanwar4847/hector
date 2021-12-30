@@ -10,7 +10,7 @@ class Vendor(Document):
     def before_insert(self):
         
         if frappe.get_all('Vendor', filters={'email_address': self.email_address, 'otp': self.otp}):
-            frappe.throw('Your Information already Submitted')  
+            frappe.throw('Your Information is already Submitted')  
         if not frappe.get_all('Email OTP Verification', filters={'email': self.email_address, 'otp': self.otp, 'used': 0}):
             frappe.throw('Your OTP and Email are not Correct')
 
