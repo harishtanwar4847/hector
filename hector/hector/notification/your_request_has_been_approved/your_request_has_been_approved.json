@@ -11,7 +11,7 @@
  "event": "Value Change",
  "idx": 0,
  "is_standard": 1,
- "message": "Welcome to Hector Beverages,\n<br><br>\nYour Request for Vendor Creeation has been Approved.",
+ "message": "Welcome to Hector Beverages,\n<br><br>\nYour Request for Vendor Creation has been Approved.",
  "modified": "2021-12-30 14:38:09.941593",
  "modified_by": "harish.tanwar@atriina.com",
  "module": "Hector",
