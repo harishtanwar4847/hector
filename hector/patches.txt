@@ -9,3 +9,5 @@ hector.patches.transit_workflow.auto_email_report
 hector.patches.quality_workflow.auto_email_report
 hector.patches.transit_workflow.workflow_update.transit_workflow
 hector.patches.quality_workflow.workflow_update.quality_workflow
+hector.patches.website_settings
+hector.patches.vendor_workflow.vendor_workflow

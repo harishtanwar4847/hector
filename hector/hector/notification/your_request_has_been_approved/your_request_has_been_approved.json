@@ -1,0 +1,31 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "condition": "doc.workflow_state == \"Vendor Created\"",
+ "creation": "2021-12-24 16:57:48.753730",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Vendor",
+ "enabled": 1,
+ "event": "Value Change",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Welcome to Hector Beverages,\n<br><br>\nYour Request for Vendor Creation has been Approved.",
+ "modified": "2021-12-30 14:38:09.941593",
+ "modified_by": "harish.tanwar@atriina.com",
+ "module": "Hector",
+ "name": "Your Request has been Approved",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "email_address"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "sender": "Notifications",
+ "sender_email": "notification@hectorbeverages.com",
+ "subject": "Your Request has been Approved",
+ "value_changed": "workflow_state"
+}
