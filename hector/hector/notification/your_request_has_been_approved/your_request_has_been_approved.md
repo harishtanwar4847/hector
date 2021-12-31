@@ -1,3 +1,3 @@
 Welcome to Hector Beverages,
-<br>
-Your Request for Vendor Creeation has been Approved.
+<br><br>
+Your Request for Vendor Creation has been Approved.
