@@ -9,6 +9,7 @@
 - [redirect vendor to home after vendor registration](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/37)
 - [Adding Notifications and OTP Time Validation](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/38)
 - [Adding Patch for Vendor Workflow and Setting intro for vendor doctype](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/39)
+- [Changes in Email notifications content](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/40)
 
 ## [v1.2.0] - 2021-10-21
 
