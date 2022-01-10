@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [v1.3.0] - 2021-11-08
+
 ### Added
 - [added email notification for issue pending from 3 days, added asm, rsm names in auto email reports and minor changes in client scripts ](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/32)
 - [Vendor registration](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/35)
@@ -10,6 +12,7 @@
 - [Adding Notifications and OTP Time Validation](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/38)
 - [Adding Patch for Vendor Workflow and Setting intro for vendor doctype](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/39)
 - [Changes in Email notifications content](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/40)
+- [Adding otp time validation changes in pop up](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/43)
 
 ## [v1.2.0] - 2021-10-21
 
