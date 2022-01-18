@@ -1,0 +1,31 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "condition": "",
+ "creation": "2021-12-29 13:35:14.720235",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Vendor",
+ "enabled": 1,
+ "event": "Value Change",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Hello {{doc.name_of_company__vendor}}, <br><br>\n\nA Vendor Code has been created {{doc.vendor_code}} with Hector Beverages. \n\n \n<br><br>\n \n\nRegards, <br>\n\nHector Beverages ",
+ "modified": "2021-12-30 14:38:18.716391",
+ "modified_by": "harish.tanwar@atriina.com",
+ "module": "Hector",
+ "name": "Vendor Code Created",
+ "owner": "harish.tanwar@atriina.com",
+ "recipients": [
+  {
+   "receiver_by_document_field": "email_address"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "sender": "Notifications",
+ "sender_email": "notification@hectorbeverages.com",
+ "subject": "Vendor Code Created",
+ "value_changed": "vendor_code"
+}

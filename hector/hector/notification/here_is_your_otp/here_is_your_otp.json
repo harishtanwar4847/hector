@@ -1,0 +1,29 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "creation": "2021-12-24 16:09:51.843858",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Email OTP Verification",
+ "enabled": 1,
+ "event": "New",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Hello Vendor,<br><br>\n\nPlease find your OTP for Vendor Registration with Hector Beverages {{ doc.otp }} .<br><br>\n\nYou can <a href=\"{{frappe.utils.get_url('/email-otp-verification?new=1&email={}&otp={}'.format(doc.email,doc.otp))}}\">click here</a> to Verify Your Email!",
+ "modified": "2021-12-30 14:38:29.357736",
+ "modified_by": "harish.tanwar@atriina.com",
+ "module": "Hector",
+ "name": "Here is your OTP",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "email"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "sender": "Notifications",
+ "sender_email": "notification@hectorbeverages.com",
+ "subject": "Here is Your OTP for Vendor Registration"
+}
