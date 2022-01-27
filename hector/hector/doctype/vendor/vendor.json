@@ -126,7 +126,7 @@
   {
    "fieldname": "attach_the_msme_certificate",
    "fieldtype": "Attach",
-   "label": "Attach the MSME certificate"
+   "label": "Attach the MSME Certificate\\If not MSME registered, Attach Declaration of Company Letterhead"
   },
   {
    "fieldname": "pan_number",
@@ -140,8 +140,9 @@
   },
   {
    "fieldname": "select_gst_registration_type_of_your_company",
-   "fieldtype": "Data",
-   "label": "Select GST Registration Type of Your Company"
+   "fieldtype": "Select",
+   "label": "Select GST Registration Type of Your Company",
+   "options": "GST Registered\nGST Unregistered\nExempted"
   },
   {
    "fieldname": "gst_registration_number",
@@ -151,7 +152,7 @@
   {
    "fieldname": "attach_gst_registration_certificate",
    "fieldtype": "Attach",
-   "label": "Attach GST Registration Certificate"
+   "label": "Attach GST Registration Certificate\\If GST is unregistered or exempted kindly attach a valid government proof"
   },
   {
    "fieldname": "vendor_code",
@@ -172,7 +173,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-12-29 12:15:08.108375",
+ "modified": "2022-01-20 13:01:56.468590",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Vendor",
