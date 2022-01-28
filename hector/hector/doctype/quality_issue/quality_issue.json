@@ -349,7 +349,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-10-27 09:22:03.280890",
+ "modified": "2022-01-27 14:37:40.192130",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Quality Issue",
@@ -394,6 +394,16 @@
    "read": 1,
    "role": "Quality Head",
    "select": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "H-O Team",
+   "share": 1,
    "write": 1
   }
  ],
