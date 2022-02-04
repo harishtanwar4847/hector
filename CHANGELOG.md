@@ -13,6 +13,7 @@
 - [Adding Patch for Vendor Workflow and Setting intro for vendor doctype](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/39)
 - [Changes in Email notifications content](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/40)
 - [Adding otp time validation changes in pop up](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/43)
+- [quality-workflow and report changes](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/48)
 
 ## [v1.2.0] - 2021-10-21
 
