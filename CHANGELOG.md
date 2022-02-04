@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+### Added
+- [quality-workflow and report changes](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/48)
+
 ## [v1.4.0] -  2022-01-18
 
 ### Added

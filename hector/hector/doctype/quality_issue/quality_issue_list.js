@@ -5,13 +5,13 @@ frappe.listview_settings['Quality Issue'] = {
         if(frappe.user_roles.includes('Complaint Registering Team'))
         {
             route_options = {
-				"workflow_state": ["in",'Requested for More Details by Physical Verification Officer, Requested for More Details by Finance Team']
+				"workflow_state": ["in",'Requested for More Details by Physical Verification Officer']
 			};
         }
         if(frappe.user_roles.includes('Physical Verification Officer'))
         {
             route_options = {
-				"workflow_state": ["in",'Pending for Physical Verification Officer Approval,Resent for Physical Verification Officer Approval,Pending for RCA Details,Requested for More Details by Quality Head']
+				"workflow_state": ["in",'Pending for Physical Verification Officer Approval,Resent for Physical Verification Officer Approval,Requested for More Details by Finance Team,Pending for RCA Details,Requested for More Details by Quality Head']
 			};
         }
         if(frappe.user_roles.includes('Finance Team'))

@@ -1,5 +1,5 @@
 Hello Sir,<br><br>
-This is to inform you that there has been a Quality/Transit Complaint ticket placed. Please Find ticket details below:
+This is to inform you that there has been a Quality Complaint ticket placed. Please Find ticket details below:
 <table>
 				<tbody>
                     <tr>
