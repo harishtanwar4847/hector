@@ -236,7 +236,7 @@ class QualityIssue(Document):
 		if self.workflow_state == 'Requested for More Details by Finance Team':
 			frappe.db.set_value('Quality Issue', self.name, 'request_details_finance_team_time', frappe.utils.now())
 			msg=emailMessage
-			frappe.sendmail(subject="Quality Issue requesting for more details: {}: {}".format(self.customer_code, self.customer_name), content=msg, recipients = '{}'.format(complaintTeamEmail),sender="Notification@hectorbeverages.com")
+			frappe.sendmail(subject="Quality Issue requesting for more details: {}: {}".format(self.customer_code, self.customer_name), content=msg, recipients = '{}'.format(physicalVerificationTeamEmail),sender="Notification@hectorbeverages.com")
 			print("\n email sent \n")
 
 		if self.workflow_state == 'Rejected by Finance Team':
