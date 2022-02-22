@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [v1.5.0] -  2022-02-22
+
 ### Added
 - [quality-workflow and report changes](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/48)
 - [Transit workflow and vendor onboarding changes](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/50)
