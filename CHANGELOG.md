@@ -7,6 +7,7 @@
 ### Added
 - [quality-workflow and report changes](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/48)
 - [Transit workflow and vendor onboarding changes](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/50)
+- [workflow changes](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/52)
 
 ## [v1.4.0] -  2022-01-18
 
