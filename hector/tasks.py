@@ -119,9 +119,9 @@ def quality_issue_daily():
             print("\n email sent \n")
 
         if (issue.workflow_state == 'Requested for More Details by Finance Team' and daysDiffrence(issue.request_details_finance_team_time) >= 3):
-            salutation = "Hello " + complaintTeamName + ",<br><br>"
+            salutation = "Hello " + physicalVerificationTeamName + ",<br><br>"
             msg= salutation + emailMessage
-            frappe.sendmail(subject="Quality Complaint: Ticket Pending since 3 Days", content=msg, recipients = '{}'.format(complaintTeamEmail),sender="Notification@hectorbeverages.com")
+            frappe.sendmail(subject="Quality Complaint: Ticket Pending since 3 Days", content=msg, recipients = '{}'.format(physicalVerificationTeamEmail),sender="Notification@hectorbeverages.com")
             print("\n email sent \n")
 
         if (issue.workflow_state == 'Requested for More Details by Quality Head' and daysDiffrence(issue.request_details_quality_head_time) >= 3):

@@ -9,7 +9,7 @@
  "filters": [],
  "idx": 0,
  "is_standard": "Yes",
- "modified": "2021-09-16 13:47:04.970650",
+ "modified": "2022-01-14 18:51:02.454975",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Quality Issue RSM",
@@ -34,6 +34,9 @@
   },
   {
    "role": "Quality Head"
+  },
+  {
+   "role": "H-O Team"
   }
  ]
 }

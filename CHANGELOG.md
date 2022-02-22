@@ -2,6 +2,13 @@
 
 ## [Unreleased]
 
+## [v1.5.0] -  2022-02-22
+
+### Added
+- [quality-workflow and report changes](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/48)
+- [Transit workflow and vendor onboarding changes](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/50)
+- [workflow changes](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/52)
+
 ## [v1.4.0] -  2022-01-18
 
 ### Added
@@ -12,6 +19,7 @@
 - [Adding Patch for Vendor Workflow and Setting intro for vendor doctype](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/39)
 - [Changes in Email notifications content](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/40)
 - [Adding otp time validation changes in pop up](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/43)
+- [Role and workflow changes](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/46)
 
 ## [v1.3.0] - 2021-11-08
 

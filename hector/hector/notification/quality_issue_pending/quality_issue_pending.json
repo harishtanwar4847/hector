@@ -1,0 +1,29 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "creation": "2022-01-14 11:43:47.151569",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Quality Issue",
+ "enabled": 1,
+ "event": "New",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Hello Sir,<br><br>\nThis is to inform you that there has been a Quality Complaint ticket placed. Please Find ticket details below:\n<table>\n\t\t\t\t<tbody>\n                    <tr>\n\t\t\t\t\t\t<td>Ticket No.:</td>\n\t\t\t\t\t\t<td>{{doc.name}}</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>Customer Name:</td>\n\t\t\t\t\t\t<td>{{doc.customer_name}}</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>Customer Code:</td>\n\t\t\t\t\t\t<td>{{doc.customer_code}}</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>Customer Loocation:</td>\n\t\t\t\t\t\t<td>{{doc.customer_location}}</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>Customer Phone Number:</td>\n\t\t\t\t\t\t<td>{{doc.customer_phone_number}}</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>Type of Issue:</td>\n\t\t\t\t\t\t<td>{{doc.type_of_issue}}</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>Invoice Number:</td>\n\t\t\t\t\t\t<td>{{doc.invoice_number}}</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>ASM:</td>\n\t\t\t\t\t\t<td>{% set var = frappe.db.get_value(\"User\", doc.asm_name, \"full_name\") %} {{var}}</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>RSM:</td>\n\t\t\t\t\t\t<td>{% set var = frappe.db.get_value(\"User\", doc.rsm_name, \"full_name\") %} {{var}}</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>Total SKU(in Pieces):</td>\n\t\t\t\t\t\t<td>{% for row in doc.sku_details %} {{row.quantity_in_pieces}} {% endfor %}</td>\n\t\t\t\t\t</tr>\n\t\t\t\t</tbody>\n\t\t\t</table><br><br>\n\t\t\tRegards,<br>\n\t\t\tHector Beverages\n",
+ "modified": "2022-01-27 11:12:06.068420",
+ "modified_by": "Administrator",
+ "module": "Hector",
+ "name": "Quality Issue Pending",
+ "owner": "harish.tanwar@atriina.com",
+ "recipients": [
+  {
+   "receiver_by_role": "H-O Team"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "sender": "Notifications",
+ "sender_email": "notification@hectorbeverages.com",
+ "subject": "Quality Complaint Registered"
+}
