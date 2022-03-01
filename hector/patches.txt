@@ -12,7 +12,6 @@ hector.patches.quality_workflow.workflow_update.quality_workflow
 hector.patches.website_settings
 hector.patches.vendor_workflow.vendor_workflow
 hector.patches.system_settings
-hector.patches.new_quality_workflow.new_quality_workflow
-hector.patches.new_transit_workflow.new_transit_workflow
+#hector.patches.new_transit_workflow.new_transit_workflow
 hector.patches.custom_roles2
-hector.patches.quality_workflow_new.quality_workflow_new
+hector.patches.quality_workflow_new.quality_workflow_new ##14-02-2022
