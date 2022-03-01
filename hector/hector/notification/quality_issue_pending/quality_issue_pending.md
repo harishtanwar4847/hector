@@ -1,6 +1,6 @@
 Hello Sir,<br><br>
 This is to inform you that there has been a Quality Complaint ticket placed. Please Find ticket details below:
-<table>
+<table border="1" cellspacing="0" cellpadding="5" align="">
 				<tbody>
                     <tr>
 						<td>Ticket No.:</td>
@@ -40,7 +40,7 @@ This is to inform you that there has been a Quality Complaint ticket placed. Ple
 					</tr>
 					<tr>
 						<td>Total SKU(in Pieces):</td>
-						<td>{% for row in doc.sku_details %} {{row.quantity_in_pieces}} {% endfor %}</td>
+						<td>{% set vars = {'total_amount': 0} %} {% for item in doc.sku_details %} {% if vars.update({'total_amount': vars.total_amount + item.quantity_in_pieces|int }) %}{% endif %} {% endfor %} {{ vars.total_amount }}</td>
 					</tr>
 				</tbody>
 			</table><br><br>
