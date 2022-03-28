@@ -40,7 +40,8 @@ This is to inform you that there has been a Transit Complaint ticket placed. Ple
 					</tr>
 					<tr>
 						<td>Total SKU(in Pieces):</td>
-						<td>{% set vars = {'total_amount': 0} %} {% for item in doc.sku_details %} {% if vars.update({'total_amount': vars.total_amount + item.damaged_missing_quantity|int }) %}{% endif %} {% endfor %} {{ vars.total_amount }}</td>
+						<td>{% set var = namespace (qty = 0) %}{% for item in doc.sku_details %}{% set list1 = item.damaged_missing_quantity.split(' ') %}{% set var.qty = var.qty + list1[0]|int %}{% endfor %} {{ var.qty }}</td>
+
 
 					</tr>
 				</tbody>
