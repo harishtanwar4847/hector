@@ -15,4 +15,4 @@ hector.patches.system_settings
 hector.patches.new_transit_workflow.new_transit_workflow
 hector.patches.custom_roles2
 hector.patches.quality_workflow_new.quality_workflow_new ##14-02-2022
-hector.patches.new_quality_workflow.new_quality_workflow
+hector.patches.new_quality_workflow.new_quality_workflow #
