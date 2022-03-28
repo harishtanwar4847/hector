@@ -1,5 +1,11 @@
 # Changelog
 
+## [v1.5.2-dev] - 2022-03-28
+
+### Added
+
+-[quality and transit workflow changes](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/57)
+
 ## [v1.5.1-uat] - 2022-03-01
 ## [v1.5.1-dev] - 2022-03-01
 
