@@ -1,6 +1,6 @@
 Hello Sir,<br><br>
 This is to inform you that there has been a Transit Complaint ticket placed. Please Find ticket details below:
-<table>
+<table border="1" cellspacing="0" cellpadding="5" align="">
 				<tbody>
                     <tr>
 						<td>Ticket No.:</td>
@@ -40,7 +40,8 @@ This is to inform you that there has been a Transit Complaint ticket placed. Ple
 					</tr>
 					<tr>
 						<td>Total SKU(in Pieces):</td>
-						<td>{% for row in doc.sku_details %} {{row.damaged_missing_quantity}} {% endfor %}</td>
+						<td>{% set var = namespace (qty = 0) %}{% for item in doc.sku_details %}{% set list1 = item.damaged_missing_quantity.split(' ') %}{% set var.qty = var.qty + list1[0]|int %}{% endfor %} {{ var.qty }}</td>
+
 
 					</tr>
 				</tbody>

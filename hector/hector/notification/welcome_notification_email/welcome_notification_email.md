@@ -8,7 +8,7 @@ Much like the first day of school, we would love for you to get to know us. At P
 We are beyond happy to work with you and cannot wait to change our partnership into a long-standing friendship! Please know that you may reach out to us for anything.
 <br><br>
 1. Paper Boat WhatsApp Channel - so you can contact the company directly!<br>
-http://paper-boat.com/WhatsApp
+https://wa.me/919513416168
 <br><br>
 2. Paper Boat B2B Sales Platform App - for placing the orders and tracking order status!<br>
 http://paper-boat.com/B2B
