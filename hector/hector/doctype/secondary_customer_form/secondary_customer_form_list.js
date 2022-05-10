@@ -1,17 +1,17 @@
-frappe.listview_settings['Customer Form'] = {
+frappe.listview_settings['Secondary Customer Form'] = {
     onload(listview) {
         var route_options = {}
         console.log(listview)
         if(frappe.user_roles.includes('Regional Sales Manager') && frappe.user_roles.includes('Area Sales Manager'))
         {
             route_options = {
-				"workflow_state": ["not in",'Primary Customer Approved']
+				"workflow_state": ["not in", 'Secondary Customer Approved']
 			};
         }
         if(frappe.user_roles.includes('Area Sales Manager'))
         {
             route_options = {
-				"workflow_state": ["in",'Pending For Primary Customer Additional Details, Requested for More Details by NSM, Requested for More Details by Primary Master Team'],
+				"workflow_state": ["in",'Pending For Secondary Customer Additional Details, Requested for More Details by NSM, Requested for More Details by Secondary Master Team'],
 				// "workflow_state": ["=",'Requested for More Details by Master Team']
 			};
         }
@@ -21,10 +21,11 @@ frappe.listview_settings['Customer Form'] = {
 				"workflow_state": ["in",'Pending for NSM Approval,Resent for NSM Approval']
 			};
         }
-        if(frappe.user_roles.includes('Primary Customer Master Approver'))
+
+        if(frappe.user_roles.includes('Secondary Customer Master Approver'))
         {
             route_options = {
-				"workflow_state": ["in",'Resent for Primary Master Processing,Pending for TOT Approval from Customer,Pending with Primary Master Processing']
+				"workflow_state": ["in",'Resent for Secondary Master Processing, Pending with Secondary Master Processing']
 			};
         }
         frappe.route_options = route_options

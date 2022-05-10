@@ -27,8 +27,8 @@ app_logo_url = "/assets/hector/images/logo_hector.png"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
-# doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
+doctype_js = {"Lead" : "public/js/lead.js"}
+doctype_list_js = {"Lead" : "public/js/lead_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 
@@ -74,6 +74,7 @@ app_logo_url = "/assets/hector/images/logo_hector.png"
 permission_query_conditions = {
     # "Customer": "hector.permissions.customer_query",
 	"Customer Form": "hector.permissions.customer_form_query",
+	"Secondary Customer Form": "hector.permissions.secondary_customer_form_query",
 	"Quality Issue": "hector.permissions.quality_issue_query"
 }
 #
@@ -93,13 +94,13 @@ website_context = {
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
+doc_events = {
+    "Lead": {
+ 	    "on_update": "hector.lead.on_update",
 # 		"on_cancel": "method",
 # 		"on_trash": "method"
-#	}
-# }
+    }
+}
 
 # Scheduled Tasks
 # ---------------

@@ -1,16 +1,19 @@
 frappe.ui.form.on('Customer Form', {
     onload(frm){
-        if(frm.doc.workflow_state == "Customer Approved")
+        if(frm.doc.workflow_state == "Primary Customer Approved" || frm.doc.workflow_state == "Secondary Customer Approved")
 	    {
 	        frm.page.sidebar.remove();
 	    }
     },
 	refresh(frm){
+        if (frm.is_new() && (frappe.user_roles.includes("Area Sales Manager") || frappe.user_roles.includes("Regional Sales Manager"))){
+            frm.set_value("asm_user", frappe.session.user)
+        }
         if(frm.doc.workflow_state == 'Pending for TOT Approval from Customer')
 	    {
 	        frm.set_intro('Please Attach TOT Acceptance Email');
 	    }
-	    if(frm.doc.workflow_state == 'Pending for Master Team Approval' || frm.doc.workflow_state == 'Resent for Master Team Approval &nbsp;')
+	    if(frm.doc.workflow_state == 'Pending with Primary Master Processing' || frm.doc.workflow_state == 'Resent for Primary Master Processing')
 	    {
 	        frm.set_intro('Please Enter Customer ID');
 	    }

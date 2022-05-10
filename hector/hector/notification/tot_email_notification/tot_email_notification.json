@@ -12,7 +12,7 @@
  "idx": 0,
  "is_standard": 1,
  "message": "{% set document = frappe.get_doc(\"Hector Settings\") %}\nDearest friend,<br>\n<br>\nThank you for choosing to sail with Paper Boat! <br>We hope to find new horizons and make the most of our journey together. We believe in putting our best foot forward in everything we do. Starting from the crucial innings of gully cricket to this partnership we are about to embark on.\nTo ensure our partnership is strong and will help us win our game we\u2019ve sent you a set of terms and conditions to go through. Please send us a response in agreement so that we may take this forward!\n<br><br>\nHoping to hear the best from you,\nYour newfound friends at Paper Boat!\nTOT(Terms Of Trade)<br>\n<a href={{document.tot_attachment}}>Click here to view TermsOfTrade</a>\n",
- "modified": "2022-02-25 17:12:39.926619",
+ "modified": "2022-05-10 09:34:16.844286",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "TOT Email Notification",
@@ -21,7 +21,8 @@
   {
    "cc": "{{ doc.modified_by }}, {{ doc.owner }}\nprathap-v@hectorbeverages.com",
    "condition": "doc.workflow_state == \"Pending for TOT Approval from Customer\"",
-   "receiver_by_document_field": "customer_email_address"
+   "receiver_by_document_field": "customer_email_address",
+   "receiver_by_role": "Primary Customer Master Approver"
   }
  ],
  "send_system_notification": 1,
