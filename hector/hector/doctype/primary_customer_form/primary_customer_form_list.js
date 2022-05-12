@@ -1,4 +1,4 @@
-frappe.listview_settings['Customer Form'] = {
+frappe.listview_settings['Primary Customer Form'] = {
     onload(listview) {
         var route_options = {}
         console.log(listview)

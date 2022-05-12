@@ -1,6 +1,6 @@
-frappe.ui.form.on('Customer Form', {
+frappe.ui.form.on('Primary Customer Form', {
     onload(frm){
-        if(frm.doc.workflow_state == "Primary Customer Approved" || frm.doc.workflow_state == "Secondary Customer Approved")
+        if(frm.doc.workflow_state == "Primary Customer Approved")
 	    {
 	        frm.page.sidebar.remove();
 	    }

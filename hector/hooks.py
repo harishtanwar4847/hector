@@ -73,7 +73,7 @@ doctype_list_js = {"Lead" : "public/js/lead_list.js"}
 # }
 permission_query_conditions = {
     # "Customer": "hector.permissions.customer_query",
-	"Customer Form": "hector.permissions.customer_form_query",
+	"Primary Customer Form": "hector.permissions.primary_customer_form_query",
 	"Secondary Customer Form": "hector.permissions.secondary_customer_form_query",
 	"Quality Issue": "hector.permissions.quality_issue_query"
 }

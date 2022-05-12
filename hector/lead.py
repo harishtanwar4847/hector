@@ -1,8 +1,8 @@
 import frappe
 
 def on_update(doc,method):
-    if doc.workflow_state == "Primary Customer Created":
-        res = frappe.new_doc("Customer Form")
+    if doc.workflow_state == "Pending For Primary Customer Additional Details":
+        res = frappe.new_doc("Primary Customer Form")
         res.customer_name = doc.lead_name
         res.post_code = doc.pincode
         res.shipping_address = doc.address
@@ -17,7 +17,7 @@ def on_update(doc,method):
         res.insert()
         frappe.msgprint("Primary Customer Created")
     
-    if doc.workflow_state == "Secondary Customer Created":
+    if doc.workflow_state == "Pending For Secondary Customer Additional Details":
         res2 = frappe.new_doc("Secondary Customer Form")
         res2.customer_type = doc.customer_type
         res2.asm_user = doc.asm_user

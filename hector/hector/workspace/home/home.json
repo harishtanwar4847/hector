@@ -14,7 +14,7 @@
  "is_standard": 1,
  "label": "Home",
  "links": [],
- "modified": "2022-05-02 18:27:25.917898",
+ "modified": "2022-05-12 10:08:36.064609",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Home",
@@ -24,14 +24,14 @@
  "shortcuts": [
   {
    "doc_view": "New",
-   "label": " Create Your Customer",
-   "link_to": "Customer Form",
+   "label": " Create Your Primary Customer",
+   "link_to": "Primary Customer Form",
    "type": "DocType"
   },
   {
    "doc_view": "List",
-   "label": "Customer List",
-   "link_to": "Customer Form",
+   "label": "Primary Customer List",
+   "link_to": "Primary Customer Form",
    "type": "DocType"
   },
   {
