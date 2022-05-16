@@ -1,5 +1,16 @@
 # Changelog
 
+## [v1.5.4-dev] - 2022-05-10
+
+[lead generation](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/61)
+
+## [v1.5.3-dev] - 2022-05-04
+
+### Added
+
+[Updating Lead Form](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/60)
+
+## [v1.5.2] - 2022-04-01
 ## [v1.5.2-uat] - 2022-03-28
 ## [v1.5.2-dev] - 2022-03-28
 
