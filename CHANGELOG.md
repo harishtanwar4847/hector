@@ -1,5 +1,9 @@
 # Changelog
 
+## [v1.5.5-dev] - 2022-05-20
+
+[phone number validation](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/63)
+
 ## [v1.5.4-uat] - 2022-05-16
 ## [v1.5.4-dev] - 2022-05-10
 
