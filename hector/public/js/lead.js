@@ -5,19 +5,13 @@ frappe.ui.form.on('Lead', {
     }
   },
   validate(frm){
-    var email_pattern = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$";
-    var mobile_pattern = "^\\d{10}$";
+    var mobile_pattern = "^\\d{10,11}$";
     var pin_pattern = "^[1-9][0-9]{5}$"
     var gst_pattern = "^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$";
-    var email = frm.doc.email_id || ""
     var phone = frm.doc.phone || ""
     var pin = frm.doc.pincode || ""
     var gstin = frm.doc.gst_number || ""
 
-    if(email.length > 0  && !email.match(email_pattern))
-        {
-            frappe.throw('Enter Valid Email ID')
-        }
     if(phone.length > 0  && !phone.match(mobile_pattern))
         {
             frappe.throw('Enter Valid Mobile Number')
