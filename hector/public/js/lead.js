@@ -20,7 +20,7 @@ frappe.ui.form.on('Lead', {
         {
             frappe.throw('Enter Valid Pin Code')
         }
-    if(gstin.length > 0 && !gstin.match(gst_pattern))
+    if(frm.doc.gst_registration == "Yes" && gstin.length > 0 && !gstin.match(gst_pattern))
         {
             frappe.throw('Enter Valid GST Number')
         }

@@ -49,7 +49,8 @@
   "distributor_food_certificate",
   "remarks",
   "asm_user",
-  "rsm_user"
+  "rsm_user",
+  "reason_of_rejection"
  ],
  "fields": [
   {
@@ -282,11 +283,17 @@
    "fieldtype": "Select",
    "label": "Customer Type",
    "options": "\nDirect Distributor\nIndirect Distributor\nSuper Stockist"
+  },
+  {
+   "description": "Mandatory if you want to reject this customer",
+   "fieldname": "reason_of_rejection",
+   "fieldtype": "Data",
+   "label": "Reason of Rejection"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-05-06 15:14:52.808088",
+ "modified": "2022-05-24 17:59:27.037743",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Secondary Customer Form",

@@ -24,7 +24,7 @@ class PrimaryCustomerForm(Document):
 				
 			if self.workflow_state == 'Pending for NSM Approval':
 				msg="""Hello {},<br><br>
-				You have received a request for primary customer creation approval from {} for the customer {}.<br><br>
+				You have received a request for Primary customer creation approval from {} for the customer {}.<br><br>
 				Kindly login to apps.myhector.com for the approval process.<br><br><br>
 				Regards,<br>
 				Hector Beverages""".format(nsm_name[0][0],asm_rsm_name[0][0],self.customer_name)
@@ -42,7 +42,7 @@ class PrimaryCustomerForm(Document):
 
 			if self.workflow_state == 'Resent for NSM Approval':
 				msg="""Hello {},<br><br>
-				You have received a request for primary customer creation approval from {} for the customer {}.<br><br>
+				You have received a request for Primary customer creation approval from {} for the customer {}.<br><br>
 				Kindly login to apps.myhector.com for the approval process.<br><br><br>
 				Regards,<br>
 				Hector Beverages""".format(nsm_name[0][0],asm_rsm_name[0][0],self.customer_name)
@@ -52,7 +52,7 @@ class PrimaryCustomerForm(Document):
 			if self.workflow_state == 'Pending with Primary Master Processing':
 				for i in range(len(pcma_list)):
 					msg="""Hello {},<br><br>
-					You have received a request for primary customer creation from {} for the customer {}.<br><br>
+					You have received a request for Primary customer creation from {} for the customer {}.<br><br>
 					Kindly login to apps.myhector.com for the approval process.<br><br><br>
 					Regards,<br>
 					Hector Beverages""".format(frappe.get_doc('User', pcma_list[i]).full_name,nsm_name[0][0],self.customer_name)
@@ -62,7 +62,7 @@ class PrimaryCustomerForm(Document):
 			if self.workflow_state == 'Resent for Primary Master Processing':
 				for i in range(len(pcma_list)):
 					msg="""Hello {},<br><br>
-					You have received a request for primary customer creation from {} for the customer {}.<br><br>
+					You have received a request for Primary customer creation from {} for the customer {}.<br><br>
 					Kindly login to apps.myhector.com for the approval process.<br><br><br>
 					Regards,<br>
 					Hector Beverages""".format(frappe.get_doc('User', pcma_list[i]).full_name,nsm_name[0][0],self.customer_name)
@@ -71,7 +71,7 @@ class PrimaryCustomerForm(Document):
 
 			if self.workflow_state == 'Requested for More Details by NSM':
 				msg="""Hello {},<br><br>
-				You have received a request for more information in primary customer creation from {} for the customer {}.<br><br>
+				You have received a request for more information in Primary customer creation from {} for the customer {}.<br><br>
 				Kindly login to apps.myhector.com for the approval process.<br><br><br>
 				Regards,<br>
 				Hector Beverages""".format(asm_rsm_name[0][0],nsm_name[0][0],self.customer_name)
@@ -80,7 +80,7 @@ class PrimaryCustomerForm(Document):
 
 			if self.workflow_state == 'Requested for More Details by Primary Master Team':
 				msg="""Hello {},<br><br>
-				You have received a request for more information in primary customer creation from {} for the customer {}.<br><br>
+				You have received a request for more information in Primary customer creation from {} for the customer {}.<br><br>
 				Kindly login to apps.myhector.com for the approval process.<br><br><br>
 				Regards,<br>
 				Hector Beverages""".format(asm_rsm_name[0][0],pcma_name[0],self.customer_name)
@@ -89,7 +89,7 @@ class PrimaryCustomerForm(Document):
 
 			if self.workflow_state == 'Rejected by NSM':
 				msg="""Hello {},<br><br>
-				Your request for primary customer creation for customer {} has been rejected by {}.<br><br>
+				Your request for Primary customer creation for customer {} has been rejected by {}.<br><br>
 				Kindly check reason for rejection in website apps.myhector.com<br><br><br>
 				Regards,<br>
 				Hector Beverages""".format(asm_rsm_name[0][0],self.customer_name,nsm_name[0][0])
@@ -98,7 +98,7 @@ class PrimaryCustomerForm(Document):
 
 			if self.workflow_state == 'TOT Rejected by Customer':
 				msg="""Hello Team,<br><br>
-				Your request for primary customer creation has been rejected.<br><br>
+				Your request for Primary customer creation has been rejected.<br><br>
 				Kindly check reason for rejection in website apps.myhector.com<br><br><br>
 				Regards,<br>
 				Hector Beverages"""
@@ -107,7 +107,7 @@ class PrimaryCustomerForm(Document):
 
 			if self.workflow_state == 'Primary Customer Approved':
 				msg="""Hello Team,<br><br>
-				Your request for primary customer creation has been approved. And New Customer Code is {} for {}.<br><br>
+				Your request for Primary customer creation has been approved. And New Customer Code is {} for {}.<br><br>
 				Link- apps.myhector.com<br><br><br>
 				Regards,<br>
 				Hector Beverages""".format(self.customer_id,self.customer_name)

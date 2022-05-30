@@ -26,7 +26,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-04-19 14:48:13.474650",
+ "modified": "2022-05-24 18:03:11.172624",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "State",
@@ -48,6 +48,11 @@
    "export": 1,
    "read": 1,
    "role": "Customer Support Team"
+  },
+  {
+   "read": 1,
+   "role": "Area Sales Manager",
+   "write": 1
   }
  ],
  "sort_field": "modified",
