@@ -31,7 +31,8 @@
   "attach_gst_registration_certificate",
   "vendor_code",
   "naming_series",
-  "otp"
+  "otp",
+  "please_confirm"
  ],
  "fields": [
   {
@@ -170,11 +171,16 @@
    "fieldname": "otp",
    "fieldtype": "Data",
    "label": "OTP"
+  },
+  {
+   "fieldname": "please_confirm",
+   "fieldtype": "Data",
+   "label": "I understand that Hector Beverages will maintain this information in their systems for further reference as required by the regulations"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-02-07 12:36:45.539141",
+ "modified": "2022-05-31 14:56:39.005833",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Vendor",
