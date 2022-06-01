@@ -1,5 +1,11 @@
 # Changelog
 
+## [v1.5.2-1] - 2022-06-01
+
+### Added
+
+-[TOT acceptance checkbox addition in Vendor Creation form | Changes in welcome email notification](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/65)
+
 ## [v1.5.2] - 2022-04-01
 ## [v1.5.2-uat] - 2022-03-28
 ## [v1.5.2-dev] - 2022-03-28
