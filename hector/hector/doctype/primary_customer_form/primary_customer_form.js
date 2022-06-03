@@ -6,8 +6,11 @@ frappe.ui.form.on('Primary Customer Form', {
 	    }
     },
 	refresh(frm){
-        if (frm.is_new() && (frappe.user_roles.includes("Area Sales Manager") || frappe.user_roles.includes("Regional Sales Manager"))){
+        if (frm.is_new() && (frappe.user_roles.includes("Area Sales Manager"))){
             frm.set_value("asm_user", frappe.session.user)
+        }
+        if (frm.is_new() && (frappe.user_roles.includes("Regional Sales Manager"))){
+            frm.set_value("rsm_user", frappe.session.user)
         }
         if(frm.doc.workflow_state == 'Pending for TOT Approval from Customer')
 	    {

@@ -343,7 +343,8 @@
    "fieldname": "asm_user",
    "fieldtype": "Link",
    "label": "ASM Name",
-   "options": "User"
+   "options": "User",
+   "reqd": 1
   },
   {
    "fieldname": "rsm_user",
@@ -360,7 +361,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-05-24 17:58:23.503429",
+ "modified": "2022-06-02 18:22:01.727921",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Primary Customer Form",
@@ -391,6 +392,7 @@
    "write": 1
   },
   {
+   "create": 1,
    "email": 1,
    "export": 1,
    "print": 1,

@@ -48,6 +48,8 @@
   "distributor_gst_no",
   "distributor_food_certificate",
   "remarks",
+  "db_code",
+  "workflow_state",
   "asm_user",
   "rsm_user",
   "reason_of_rejection"
@@ -62,8 +64,10 @@
   {
    "fieldname": "asm_user",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "ASM Name",
-   "options": "User"
+   "options": "User",
+   "reqd": 1
   },
   {
    "fieldname": "rsm_user",
@@ -289,11 +293,26 @@
    "fieldname": "reason_of_rejection",
    "fieldtype": "Data",
    "label": "Reason of Rejection"
+  },
+  {
+   "depends_on": "eval:((doc.workflow_state == 'Pending with Secondary Master Processing') || (doc.workflow_state == 'Resent for Secondary Master Processing') || (doc.workflow_state == 'Secondary Customer Approved'))",
+   "fieldname": "db_code",
+   "fieldtype": "Data",
+   "label": "DB Code",
+   "mandatory_depends_on": "eval:((doc.workflow_state == 'Pending with Secondary Master Processing') || (doc.workflow_state == 'Resent for Secondary Master Processing'))"
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Workflow State",
+   "no_copy": 1,
+   "options": "Workflow State"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-05-24 17:59:27.037743",
+ "modified": "2022-06-02 18:22:37.201342",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Secondary Customer Form",
@@ -324,6 +343,7 @@
    "write": 1
   },
   {
+   "create": 1,
    "email": 1,
    "export": 1,
    "print": 1,

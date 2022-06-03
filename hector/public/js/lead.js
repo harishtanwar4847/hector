@@ -10,7 +10,6 @@ frappe.ui.form.on('Lead', {
     var gst_pattern = "^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$";
     var phone = frm.doc.phone || ""
     var pin = frm.doc.pincode || ""
-    var gstin = frm.doc.gst_number || ""
 
     if(phone.length > 0  && !phone.match(mobile_pattern))
         {
@@ -20,12 +19,7 @@ frappe.ui.form.on('Lead', {
         {
             frappe.throw('Enter Valid Pin Code')
         }
-    if(frm.doc.gst_registration == "Yes" && gstin.length > 0 && !gstin.match(gst_pattern))
-        {
-            frappe.throw('Enter Valid GST Number')
-        }
-
-
+    
   }
 
   
