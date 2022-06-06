@@ -1,0 +1,391 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-05-02 16:36:15.961646",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "customer_type",
+  "state",
+  "sales_officer_name",
+  "super_stockist_code",
+  "ssdp_name_of_district",
+  "name_of_new_distributor",
+  "name_of_db_town",
+  "distributor_district_name",
+  "distributor_contact_number",
+  "distributor_tehsiltaluk",
+  "distributor_email_id",
+  "date_of_birth_of_distributor",
+  "number_of_years_in_distribution_business",
+  "other_company_brandhandled",
+  "total_turn_over_the_distributor_in_lakhs_in_a_month",
+  "number_of_vehicles",
+  "does_db_goes_to_market_himself",
+  "is_the_distributor_is_a_beverage_distributor_as_well",
+  "is_he_working_as_a_ready_stock_or_order_booking",
+  "is_this_distributor_a_new_db_or_replacement",
+  "old_db_name_if_it_is_replaced__by_old_db",
+  "old_db_code_if_it_is_replaced_by_old_db",
+  "districttown_population__in_lakhs",
+  "no_of_outlets_covered",
+  "no_of_salesman",
+  "warehouse_type",
+  "warehouse_sizein_sq_feets",
+  "db_internet_available",
+  "expected_volume_in_cases_for_hector",
+  "expected_value_sales",
+  "expected_per_month_in_lacs",
+  "no_of_outlet_covered_in_hector_beverages",
+  "coverage_frequency",
+  "reason_for_new_distributor_appointment",
+  "did_you_have_taken_feedback_about_the_distributor_from_market",
+  "distributor_owner_name",
+  "please_enter_the_db_townunique_code_as_per_census_data",
+  "distributor_gst_no",
+  "distributor_food_certificate",
+  "remarks",
+  "db_code",
+  "workflow_state",
+  "asm_user",
+  "rsm_user",
+  "reason_of_rejection"
+ ],
+ "fields": [
+  {
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "label": "State",
+   "options": "State"
+  },
+  {
+   "fieldname": "asm_user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "ASM Name",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rsm_user",
+   "fieldtype": "Link",
+   "label": "RSM Name",
+   "options": "User"
+  },
+  {
+   "fieldname": "sales_officer_name",
+   "fieldtype": "Data",
+   "label": "Sales Officer Name"
+  },
+  {
+   "fieldname": "super_stockist_code",
+   "fieldtype": "Data",
+   "label": "Super Stockist Code"
+  },
+  {
+   "fieldname": "ssdp_name_of_district",
+   "fieldtype": "Data",
+   "label": "SS/DP Name of District"
+  },
+  {
+   "fieldname": "name_of_new_distributor",
+   "fieldtype": "Data",
+   "label": "Name of New Distributor"
+  },
+  {
+   "fieldname": "name_of_db_town",
+   "fieldtype": "Data",
+   "label": "Name of DB Town"
+  },
+  {
+   "fieldname": "distributor_district_name",
+   "fieldtype": "Data",
+   "label": "Distributor district Name"
+  },
+  {
+   "fieldname": "distributor_contact_number",
+   "fieldtype": "Data",
+   "label": "Distributor Contact Number"
+  },
+  {
+   "fieldname": "distributor_tehsiltaluk",
+   "fieldtype": "Data",
+   "label": "Distributor Tehsil/Taluk"
+  },
+  {
+   "fieldname": "distributor_email_id",
+   "fieldtype": "Data",
+   "label": "Distributor Email ID"
+  },
+  {
+   "fieldname": "date_of_birth_of_distributor",
+   "fieldtype": "Data",
+   "label": "Date of Birth of Distributor"
+  },
+  {
+   "fieldname": "number_of_years_in_distribution_business",
+   "fieldtype": "Float",
+   "label": "Number of Years in Distribution Business"
+  },
+  {
+   "fieldname": "other_company_brandhandled",
+   "fieldtype": "Data",
+   "label": "Other Company Brand/Handled"
+  },
+  {
+   "fieldname": "total_turn_over_the_distributor_in_lakhs_in_a_month",
+   "fieldtype": "Float",
+   "label": "Total Turn over the Distributor in lakhs in a month "
+  },
+  {
+   "fieldname": "number_of_vehicles",
+   "fieldtype": "Data",
+   "label": "Number of Vehicles"
+  },
+  {
+   "fieldname": "does_db_goes_to_market_himself",
+   "fieldtype": "Select",
+   "label": "Does DB goes to market himself",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "is_the_distributor_is_a_beverage_distributor_as_well",
+   "fieldtype": "Select",
+   "label": "Is the distributor is a beverage distributor as well",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "is_he_working_as_a_ready_stock_or_order_booking",
+   "fieldtype": "Select",
+   "label": "Is he working as a ready stock or order booking",
+   "options": "\nReady Stock\nOrder Booking"
+  },
+  {
+   "fieldname": "is_this_distributor_a_new_db_or_replacement",
+   "fieldtype": "Select",
+   "label": "Is this Distributor a new DB or Replacement",
+   "options": "\nDB\nReplacement"
+  },
+  {
+   "fieldname": "old_db_name_if_it_is_replaced__by_old_db",
+   "fieldtype": "Data",
+   "label": "Old DB Name if it is replaced  by old DB "
+  },
+  {
+   "fieldname": "old_db_code_if_it_is_replaced_by_old_db",
+   "fieldtype": "Data",
+   "label": "Old DB Code if it is replaced by old DB"
+  },
+  {
+   "fieldname": "districttown_population__in_lakhs",
+   "fieldtype": "Float",
+   "label": "District/Town Population  in Lakhs"
+  },
+  {
+   "fieldname": "no_of_outlets_covered",
+   "fieldtype": "Int",
+   "label": "No of Outlets covered"
+  },
+  {
+   "fieldname": "no_of_salesman",
+   "fieldtype": "Int",
+   "label": "No of Salesman"
+  },
+  {
+   "fieldname": "warehouse_type",
+   "fieldtype": "Select",
+   "label": "Warehouse Type",
+   "options": "\nOwn\nRented"
+  },
+  {
+   "fieldname": "warehouse_sizein_sq_feets",
+   "fieldtype": "Float",
+   "label": "Warehouse Size(In Sq. feets) "
+  },
+  {
+   "fieldname": "db_internet_available",
+   "fieldtype": "Select",
+   "label": "DB Internet Available",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "expected_volume_in_cases_for_hector",
+   "fieldtype": "Float",
+   "label": "Expected Volume in Cases for Hector"
+  },
+  {
+   "fieldname": "expected_value_sales",
+   "fieldtype": "Float",
+   "label": "Expected Value Sales"
+  },
+  {
+   "fieldname": "expected_per_month_in_lacs",
+   "fieldtype": "Float",
+   "label": "Expected Per Month in Lacs"
+  },
+  {
+   "fieldname": "no_of_outlet_covered_in_hector_beverages",
+   "fieldtype": "Int",
+   "label": "No of Outlet Covered in Hector Beverages"
+  },
+  {
+   "fieldname": "coverage_frequency",
+   "fieldtype": "Select",
+   "label": "Coverage Frequency",
+   "options": "\nDaily\nWeekly\nFortnightly"
+  },
+  {
+   "fieldname": "reason_for_new_distributor_appointment",
+   "fieldtype": "Data",
+   "label": "Reason For new Distributor Appointment"
+  },
+  {
+   "fieldname": "did_you_have_taken_feedback_about_the_distributor_from_market",
+   "fieldtype": "Select",
+   "label": "Did you have taken feedback about the distributor from market",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "distributor_owner_name",
+   "fieldtype": "Data",
+   "label": "Distributor Owner Name"
+  },
+  {
+   "fieldname": "please_enter_the_db_townunique_code_as_per_census_data",
+   "fieldtype": "Data",
+   "label": "Please Enter the DB Town(Unique Code) As per Census Data"
+  },
+  {
+   "fieldname": "distributor_gst_no",
+   "fieldtype": "Data",
+   "label": "Distributor GST No"
+  },
+  {
+   "fieldname": "distributor_food_certificate",
+   "fieldtype": "Data",
+   "label": "Distributor Food Certificate"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "no_copy": 1,
+   "options": "CUST-.YYYY.-",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "customer_type",
+   "fieldtype": "Select",
+   "label": "Customer Type",
+   "options": "\nDirect Distributor\nIndirect Distributor\nSuper Stockist"
+  },
+  {
+   "description": "Mandatory if you want to reject this customer",
+   "fieldname": "reason_of_rejection",
+   "fieldtype": "Data",
+   "label": "Reason of Rejection"
+  },
+  {
+   "depends_on": "eval:((doc.workflow_state == 'Pending with Secondary Master Processing') || (doc.workflow_state == 'Resent for Secondary Master Processing') || (doc.workflow_state == 'Secondary Customer Approved'))",
+   "fieldname": "db_code",
+   "fieldtype": "Data",
+   "label": "DB Code",
+   "mandatory_depends_on": "eval:((doc.workflow_state == 'Pending with Secondary Master Processing') || (doc.workflow_state == 'Resent for Secondary Master Processing'))"
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Workflow State",
+   "no_copy": 1,
+   "options": "Workflow State"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-06-02 18:22:37.201342",
+ "modified_by": "Administrator",
+ "module": "Hector",
+ "name": "Secondary Customer Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Area Sales Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Regional Sales Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "National Sales Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Secondary Customer Master Approver",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "role": "Customer Support Team",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

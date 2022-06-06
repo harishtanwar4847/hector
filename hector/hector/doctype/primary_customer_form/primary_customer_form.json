@@ -52,7 +52,10 @@
   "reference_customer_code_for_setting_the_price_group",
   "attach_email",
   "customer_id",
-  "workflow_state"
+  "workflow_state",
+  "asm_user",
+  "rsm_user",
+  "reason_of_rejection"
  ],
  "fields": [
   {
@@ -71,7 +74,7 @@
    "fieldname": "billing_address",
    "fieldtype": "Data",
    "label": "Billing Address",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Primary Customer Additional Details\""
   },
   {
    "fieldname": "post_code",
@@ -91,13 +94,13 @@
    "fieldtype": "Data",
    "label": "Shipping Address Post Code",
    "length": 6,
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Primary Customer Additional Details\""
   },
   {
    "fieldname": "customer_email_address",
    "fieldtype": "Data",
    "label": "Customer Email Address ",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Primary Customer Additional Details\""
   },
   {
    "fieldname": "mobile_no_of_the_customer",
@@ -110,7 +113,7 @@
    "fieldname": "contact_name_of_the_customer",
    "fieldtype": "Data",
    "label": "Contact Name of the Customer",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Primary Customer Additional Details\""
   },
   {
    "fieldname": "profile_information_section",
@@ -149,13 +152,13 @@
    "fieldname": "pan_card_no",
    "fieldtype": "Data",
    "label": "PAN Card No",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Primary Customer Additional Details\""
   },
   {
    "fieldname": "attach_pan_card_copy",
    "fieldtype": "Attach",
    "label": "Attach PAN Card Copy",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Primary Customer Additional Details\""
   },
   {
    "fieldname": "attach_gst_registration_certificate",
@@ -257,23 +260,23 @@
    "options": "GT METRO-PB\nGT-METRO-SWING\nGT-SWING\nKAY ACCOUNTS\nAIRLINES\nGOVERNMENT\nMODERN TRADE\nE-COMMERCE\nEXPORT"
   },
   {
+   "depends_on": "eval:doc.workflow_state == \"Pending For Primary Customer Additional Details\"",
    "fieldname": "customer_posting_group",
    "fieldtype": "Data",
-   "label": "Customer Posting Group",
-   "reqd": 1
+   "label": "Customer Posting Group"
   },
   {
    "fieldname": "location",
    "fieldtype": "Data",
    "label": "Location",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Primary Customer Additional Details\""
   },
   {
    "fieldname": "region",
    "fieldtype": "Select",
    "label": "Region",
-   "options": "\nNORTH\nSOUTH\nEAST\nWEST",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Primary Customer Additional Details\"",
+   "options": "\nNORTH\nSOUTH\nEAST\nWEST"
   },
   {
    "fieldname": "reference_customer_code_for_setting_the_price_group",
@@ -298,11 +301,11 @@
    "mandatory_depends_on": "eval:doc.workflow_state == 'Pending for TOT Approval from Customer'"
   },
   {
-   "depends_on": "eval:((doc.workflow_state == 'Pending for Master Team Approval') || (doc.workflow_state == 'Resent for Master Team Approval &nbsp;') || (doc.workflow_state == 'Customer Approved'))",
+   "depends_on": "eval:((doc.workflow_state == 'Pending with Primary Master Processing') || (doc.workflow_state == 'Resent for Primary Master Processing') || (doc.workflow_state == 'Primary Customer Approved'))",
    "fieldname": "customer_id",
    "fieldtype": "Data",
    "label": "Customer ID",
-   "mandatory_depends_on": "eval:((doc.workflow_state == 'Pending for Master Team Approval') || (doc.workflow_state == 'Resent for Master Team Approval &nbsp;'))"
+   "mandatory_depends_on": "eval:((doc.workflow_state == 'Pending with Primary Master Processing') || (doc.workflow_state == 'Resent for Primary Master Processing'))"
   },
   {
    "fieldname": "workflow_state",
@@ -322,27 +325,46 @@
    "fieldname": "customer_type",
    "fieldtype": "Select",
    "label": "Customer Type",
-   "options": "Super Stockist\nDirect Party"
+   "options": "Direct Distributor\nIndirect Distributor\nSuper Stockist"
   },
   {
    "fieldname": "soase_employee_code",
    "fieldtype": "Data",
    "label": "SO/ASE Employee Code",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Primary Customer Additional Details\""
   },
   {
    "fieldname": "soase_employee_name",
    "fieldtype": "Data",
    "label": "SO/ASE Employee Name",
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Primary Customer Additional Details\""
+  },
+  {
+   "fieldname": "asm_user",
+   "fieldtype": "Link",
+   "label": "ASM Name",
+   "options": "User",
    "reqd": 1
+  },
+  {
+   "fieldname": "rsm_user",
+   "fieldtype": "Link",
+   "label": "RSM Name",
+   "options": "User"
+  },
+  {
+   "description": "Mandatory if you want to reject this customer",
+   "fieldname": "reason_of_rejection",
+   "fieldtype": "Data",
+   "label": "Reason of Rejection"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-10-13 08:34:07.133274",
+ "modified": "2022-06-02 18:22:01.727921",
  "modified_by": "Administrator",
  "module": "Hector",
- "name": "Customer Form",
+ "name": "Primary Customer Form",
  "owner": "Administrator",
  "permissions": [
   {
@@ -361,7 +383,6 @@
    "create": 1,
    "email": 1,
    "export": 1,
-   "if_owner": 1,
    "print": 1,
    "read": 1,
    "report": 1,
@@ -371,6 +392,7 @@
    "write": 1
   },
   {
+   "create": 1,
    "email": 1,
    "export": 1,
    "print": 1,
@@ -390,6 +412,32 @@
    "select": 1,
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "National Sales Manager",
+   "select": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Primary Customer Master Approver",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "export": 1,
+   "role": "Customer Support Team"
   }
  ],
  "quick_entry": 1,
