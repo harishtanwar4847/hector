@@ -1,5 +1,9 @@
 # Changelog
 
+## [v1.5.6-dev] - 2022-06-06
+
+[changes in lead generation flow](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/66)
+
 ## [v1.5.5-uat] - 2022-05-20
 ## [v1.5.5-dev] - 2022-05-20
 
