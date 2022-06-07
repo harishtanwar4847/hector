@@ -1,5 +1,6 @@
 # Changelog
 
+## [v1.5.7-uat] - 2022-06-07
 ## [v1.5.7-dev] - 2022-06-06
 
 [welcome mail notification to distributor](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/68)
