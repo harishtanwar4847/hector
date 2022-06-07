@@ -1,4 +1,4 @@
-Hello {{  doc.customer_name  }}, <br><br>
+Hello {{  doc.name_of_new_distributor  }}, <br><br>
 <b>Welcome aboard friend!</b>
 <br><br>
 It is great to have you onboard Paper Boat! We're all set to sail and take on the rolling seas with you by our side.

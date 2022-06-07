@@ -15,7 +15,7 @@ def on_update(doc,method):
         res.asm_user = doc.asm_user
         res.rsm_user = doc.rsm_user
         res.insert()
-        frappe.msgprint("Primary Customer Created")
+        frappe.msgprint("Send for Primary Customer Additional Details")
     
     if doc.workflow_state == "Pending For Secondary Customer Additional Details":
         res2 = frappe.new_doc("Secondary Customer Form")
@@ -34,7 +34,7 @@ def on_update(doc,method):
         res2.number_of_vehicles = doc.number_of_vehicles_for_distribution
         res2.no_of_salesman = doc.sales_man_that_are_not_sponsor_by_other_brands
         res2.insert()
-        frappe.msgprint("Secondary Customer Created")
+        frappe.msgprint("Send for Secondary Customer Additional Details")
 
 
 

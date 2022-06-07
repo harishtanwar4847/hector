@@ -1,5 +1,14 @@
 # Changelog
 
+## [v1.5.7-uat] - 2022-06-07
+## [v1.5.7-dev] - 2022-06-06
+
+[welcome mail notification to distributor](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/68)
+
+## [v1.5.6-dev] - 2022-06-06
+
+[changes in lead generation flow](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/66)
+
 ## [v1.5.5-uat] - 2022-05-20
 ## [v1.5.5-dev] - 2022-05-20
 
@@ -16,6 +25,11 @@
 
 [Updating Lead Form](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/60)
 
+## [v1.5.2-1] - 2022-06-01
+
+### Added
+
+-[TOT acceptance checkbox addition in Vendor Creation form | Changes in welcome email notification](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/65)
 ## [v1.5.2] - 2022-04-01
 ## [v1.5.2-uat] - 2022-03-28
 ## [v1.5.2-dev] - 2022-03-28
