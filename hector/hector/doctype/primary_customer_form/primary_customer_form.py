@@ -97,6 +97,15 @@ class PrimaryCustomerForm(Document):
 				print("\n email sent \n")
 
 			if self.workflow_state == 'Rejected by NSM':
+				msg="""Hello,<br><br>
+				Your request for Primary customer creation for customer {} has been rejected by {}.<br><br>
+				Kindly check reason for rejection in website apps.myhector.com<br><br><br>
+				Regards,<br>
+				Hector Beverages""".format(self.customer_name,asm_rsm_name[0][1])
+				frappe.sendmail(subject="Customer Creation Rejected : {}".format(self.customer_name), content=msg, recipients = '{}'.format(self.owner), sender="Notification@hectorbeverages.com")
+				print("\n email sent \n")
+
+			if self.workflow_state == 'Rejected by NSM':
 				msg="""Hello {},<br><br>
 				Your request for Primary customer creation for customer {} has been rejected by {}.<br><br>
 				Kindly check reason for rejection in website apps.myhector.com<br><br><br>
