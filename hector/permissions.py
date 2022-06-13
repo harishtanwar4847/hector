@@ -11,7 +11,7 @@ def customer_query(user = frappe.session.user):
         return "(`tabCustomer`.naming_series = 'CUST-.YYYY.-')"
 
 def primary_customer_form_query(user = frappe.session.user):
-    if ('Area Sales Manager' in frappe.get_roles(user)):
+    if ('Area Sales Manager' in frappe.get_roles(user) and 'Regional Sales Manager' not in frappe.get_roles(user)):
         print('\n\n\n<<<<<<<<<<<<Inside ASM MAPPING QUERY>>>>>>>>>>>>\n\n\n')
         return "((`tabPrimary Customer Form`.owner = '{user}') OR (`tabPrimary Customer Form`.asm_user = '{user}'))".format(user=frappe.session.user)
     # #    return "(`tabCustomer Form`.workflow_state = 'Pending For NSM Approval')"
@@ -32,7 +32,7 @@ def primary_customer_form_query(user = frappe.session.user):
         return "(`tabPrimary Customer Form`.docstatus = '0')"
 
 def secondary_customer_form_query(user = frappe.session.user):
-    if ('Area Sales Manager' in frappe.get_roles(user)):
+    if ('Area Sales Manager' in frappe.get_roles(user) and 'Regional Sales Manager' not in frappe.get_roles(user)):
         print('\n\n\n<<<<<<<<<<<<Inside ASM MAPPING QUERY>>>>>>>>>>>>\n\n\n')
         return "((`tabSecondary Customer Form`.owner = '{user}') OR (`tabSecondary Customer Form`.asm_user = '{user}'))".format(user=frappe.session.user)
     
