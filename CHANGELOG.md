@@ -1,5 +1,9 @@
 # Changelog
 
+## [v1.5.8-dev] - 2022-06-13
+
+[edit right to rsm and field level changes](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/70)
+
 ## [v1.5.7-uat] - 2022-06-07
 ## [v1.5.7-dev] - 2022-06-06
 
