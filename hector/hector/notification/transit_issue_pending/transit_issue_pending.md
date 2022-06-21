@@ -46,5 +46,25 @@ This is to inform you that there has been a Transit Complaint ticket placed. Ple
 					</tr>
 				</tbody>
 			</table><br><br>
+<table border="1" cellspacing="0" cellpadding="5" align="">
+				<tbody>
+                    <tr>
+						<td>SKU Code</td>
+						<td>SKU Name</td>
+						<td>Damaged/Missing Quantity</td>
+						<td>Invoice Number</td>
+						<td>Batch details</td>
+					</tr>
+					{% for item in doc.sku_details %}
+					<tr>
+						<td>{{item.sku_code}}</td>
+						<td>{{item.sku_name}}</td>
+						<td>{{item.damaged_missing_quantity}}</td>
+						<td>{{item.invoice_number}}</td>
+						<td>{{item.batch_details}}</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table><br><br>
 			Regards,<br>
 			Hector Beverages
