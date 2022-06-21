@@ -44,5 +44,25 @@ This is to inform you that there has been a Quality Complaint ticket placed. Ple
 					</tr>
 				</tbody>
 			</table><br><br>
+<table border="1" cellspacing="0" cellpadding="5" align="">
+				<tbody>
+                    <tr>
+						<td>SKU Code</td>
+						<td>SKU Name</td>
+						<td>Quantity in Pcs.</td>
+						<td>Mgf. Date</td>
+						<td>Batch details</td>
+					</tr>
+					{% for item in doc.sku_details %}
+					<tr>
+						<td>{{item.sku_code}}</td>
+						<td>{{item.sku_name}}</td>
+						<td>{{item.quantity_in_pieces}}</td>
+						<td>{{item.mgf_date}}</td>
+						<td>{{item.batch_details}}</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table><br><br>
 			Regards,<br>
 			Hector Beverages
