@@ -1,5 +1,11 @@
 # Changelog
 
+## [v1.5.2-2] - 2022-06-21
+
+### Added
+
+-[SKU details child table addition in automatic mails of quality and transit issue](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/72)
+
 ## [v1.5.2-1] - 2022-06-01
 
 ### Added
