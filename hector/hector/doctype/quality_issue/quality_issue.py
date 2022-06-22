@@ -132,8 +132,7 @@ class QualityIssue(Document):
 			for skuRow in self.sku_details:
 				message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + str(skuRow.mgf_date) + "</td><td>" + skuRow.quantity_in_pieces + "</td><tr>"
 			message2 += "</table><br>"
-			message3 = """<br>
-			Kindly login to apps.myhector.com for the approval process.<br><br><br>
+			message3 = """<br><br><br>
 			Regards,<br>
 			Hector Beverages"""
 			messageFinal = message1 + message2 + message3
@@ -198,8 +197,7 @@ class QualityIssue(Document):
 			for skuRow in self.sku_details:
 				message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + str(skuRow.mgf_date) + "</td><td>" + skuRow.quantity_in_pieces + "</td><tr>"
 			message2 += "</table><br>"
-			message3 = """Comment: {}<br>
-			Kindly login to apps.myhector.com for the approval process.<br><br><br>
+			message3 = """Comment: {}<br><br><br>
 			Regards,<br>
 			Hector Beverages""".format(self.reason_of_rejection)
 			messageFinal = msg + message2 + message3
@@ -246,8 +244,7 @@ class QualityIssue(Document):
 			for skuRow in self.sku_details:
 				message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + str(skuRow.mgf_date) + "</td><td>" + skuRow.quantity_in_pieces + "</td><tr>"
 			message2 += "</table><br>"
-			message3 = """Comment: {}<br>
-			Kindly login to apps.myhector.com for the approval process.<br><br><br>
+			message3 = """Comment: {}<br><br><br>
 			Regards,<br>
 			Hector Beverages""".format(self.reason_of_rejection)
 			messageFinal = message1 + message2 + message3
@@ -326,8 +323,7 @@ class QualityIssue(Document):
 			for skuRow in self.sku_details:
 				message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + str(skuRow.mgf_date) + "</td><td>" + skuRow.quantity_in_pieces + "</td><tr>"
 			message2 += "</table><br>"
-			message3 = """Comment: {}<br>
-			Kindly login to apps.myhector.com for the approval process.<br><br><br>
+			message3 = """Comment: {}<br><br><br>
 			Regards,<br>
 			Hector Beverages""".format(self.reason_of_rejection)
 			messageFinal = msg + message2 + message3
@@ -374,8 +370,7 @@ class QualityIssue(Document):
 			for skuRow in self.sku_details:
 				message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + str(skuRow.mgf_date) + "</td><td>" + skuRow.quantity_in_pieces + "</td><tr>"
 			message2 += "</table><br>"
-			message3 = """Comment: {}<br>
-			Kindly login to apps.myhector.com for the approval process.<br><br><br>
+			message3 = """Comment: {}<br><br><br>
 			Regards,<br>
 			Hector Beverages""".format(self.reason_of_rejection)
 			messageFinal = message1 + message2 + message3
@@ -421,8 +416,7 @@ class QualityIssue(Document):
 			for skuRow in self.sku_details:
 				message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + str(skuRow.mgf_date) + "</td><td>" + skuRow.quantity_in_pieces + "</td><tr>"
 			message2 += "</table><br>"
-			message3 = """<br>
-			Kindly login to apps.myhector.com for the approval process.<br><br><br>
+			message3 = """<br><br><br>
 			Regards,<br>
 			Hector Beverages"""
 			messageFinal = emailMessage + message2 + message3
@@ -469,9 +463,7 @@ class QualityIssue(Document):
 				message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + str(skuRow.mgf_date) + "</td><td>" + skuRow.quantity_in_pieces + "</td><tr>"
 			message2 += "</table><br>"
 			message4 = """
-				Credit Details: {}<br>
-			    Kindly login to apps.myhector.com for the approval process.
-				<br><br><br>
+				Credit Details: {}<br><br><br>
 				Regards,<br>
 				Hector Beverages""".format(self.credit_details)
 			messageFinal = message1 + message2 + message4
@@ -510,8 +502,7 @@ class QualityIssue(Document):
 				for skuRow in self.sku_details:
 					message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + str(skuRow.mgf_date) + "</td><td>" + skuRow.quantity_in_pieces + "</td><tr>"
 				message2 += "</table><br>"
-				message3 = """<br>
-			    Kindly login to apps.myhector.com for the approval process.<br><br><br>
+				message3 = """<br><br><br>
 				Regards,<br>
 				Hector Beverages"""
 				messageFinal = emailMessage + message2 + message3
@@ -561,9 +552,7 @@ class QualityIssue(Document):
 					message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + str(skuRow.mgf_date) + "</td><td>" + skuRow.quantity_in_pieces + "</td><tr>"
 				message2 += "</table><br>"
 				message4 = """
-				Credit Details: {}<br>
-			    Kindly login to apps.myhector.com for the approval process.
-				<br><br><br>
+				Credit Details: {}<br><br><br>
 				Regards,<br>
 				Hector Beverages""".format(self.credit_details)
 				messageFinal = message1 + message2 + message4
@@ -618,8 +607,7 @@ class QualityIssue(Document):
 				for skuRow in self.sku_details:
 					message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + str(skuRow.mgf_date) + "</td><td>" + skuRow.quantity_in_pieces + "</td><tr>"
 				message2 += "</table><br>"
-				message3 = """<br>
-			    Kindly login to apps.myhector.com for the approval process.<br><br><br>
+				message3 = """<br><br><br>
 				Regards,<br>
 				Hector Beverages"""
 				messageFinal = emailMessage + message2 + message3
@@ -668,9 +656,7 @@ class QualityIssue(Document):
 					message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + str(skuRow.mgf_date) + "</td><td>" + skuRow.quantity_in_pieces + "</td><tr>"
 				message2 += "</table><br>"
 				message4 = """
-				Credit Details: {}<br>
-			    Kindly login to apps.myhector.com for the approval process.
-				<br><br><br>
+				Credit Details: {}<br><br><br>
 				Regards,<br>
 				Hector Beverages""".format(self.credit_details)
 				messageFinal = message1 + message2 + message4
@@ -751,8 +737,7 @@ class QualityIssue(Document):
 			for skuRow in self.sku_details:
 				message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + str(skuRow.mgf_date) + "</td><td>" + skuRow.quantity_in_pieces + "</td><tr>"
 			message2 += "</table><br>"
-			message3 = """Comment: {}<br>
-			Kindly login to apps.myhector.com for the approval process.<br><br><br>
+			message3 = """Comment: {}<br><br><br>
 			Regards,<br>
 			Hector Beverages""".format(self.reason_of_rejection)
 			messageFinal = msg + message2 + message3
@@ -799,8 +784,7 @@ class QualityIssue(Document):
 			for skuRow in self.sku_details:
 				message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + str(skuRow.mgf_date) + "</td><td>" + skuRow.quantity_in_pieces + "</td><tr>"
 			message2 += "</table><br>"
-			message3 = """Comment: {}<br>
-			Kindly login to apps.myhector.com for the approval process.<br><br><br>
+			message3 = """Comment: {}<br><br><br>
 			Regards,<br>
 			Hector Beverages""".format(self.reason_of_rejection)
 			messageFinal = message1 + message2 + message3

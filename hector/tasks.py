@@ -282,22 +282,22 @@ def transit_issue_daily():
 				</tbody>
 			</table><br>""".format(issue.name, issue.customer_name, issue.customer_code, issue.customer_location, issue.customer_phone_number, issue.type_of_issue, issue.asm_full_name, issue.rsm_full_name)
 
-        # if (issue.workflow_state == 'Pending for Supply Team Approval' and daysDiffrence(issue.pending_supply_team_time) >= 3):
-        for i in range(len(supplyTeamEmail)):
-            salutation = "Hello " + frappe.get_doc('User', supplyTeamEmail[i]).full_name + ",<br><br>"
-            message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
-        <tr><th>Invoice Number</th><th>SKU Code</th><th>SKU Name</th><th>Batch Details</th><th>Damaged /Missing Quantity</th></tr>
-        """
-            for skuRow in issue.sku_details:
-                message2 += "<tr><td>" + skuRow.invoice_number + "</td><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + skuRow.damaged_missing_quantity + "</td><tr>"
-            message2 += "</table><br>"
-            message3 = """<br>
-			Kindly login to apps.myhector.com for the approval process.<br><br><br>
-            Regards,<br>
-            Hector Beverages"""
-            msg= salutation + emailMessage + message2 + message3
-            frappe.sendmail(subject="Transit Complaint: Ticket Pending since 3 Days", content=msg, recipients = '{}'.format(supplyTeamEmail[i]) ,sender="Notification@hectorbeverages.com")
-            print("\n email sent \n")
+        if (issue.workflow_state == 'Pending for Supply Team Approval' and daysDiffrence(issue.pending_supply_team_time) >= 3):
+            for i in range(len(supplyTeamEmail)):
+                salutation = "Hello " + frappe.get_doc('User', supplyTeamEmail[i]).full_name + ",<br><br>"
+                message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
+            <tr><th>Invoice Number</th><th>SKU Code</th><th>SKU Name</th><th>Batch Details</th><th>Damaged /Missing Quantity</th></tr>
+            """
+                for skuRow in issue.sku_details:
+                    message2 += "<tr><td>" + skuRow.invoice_number + "</td><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + skuRow.damaged_missing_quantity + "</td><tr>"
+                message2 += "</table><br>"
+                message3 = """<br>
+                Kindly login to apps.myhector.com for the approval process.<br><br><br>
+                Regards,<br>
+                Hector Beverages"""
+                msg= salutation + emailMessage + message2 + message3
+                frappe.sendmail(subject="Transit Complaint: Ticket Pending since 3 Days", content=msg, recipients = '{}'.format(supplyTeamEmail[i]) ,sender="Notification@hectorbeverages.com")
+                print("\n email sent \n")
 
 
         if (issue.workflow_state == 'Resent for Supply Team Approval' and daysDiffrence(issue.resent_supply_team_time) >= 3):
