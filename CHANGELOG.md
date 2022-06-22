@@ -1,5 +1,11 @@
 # Changelog
 
+## [v1.5.2-3] - 2022-06-22
+
+### Added
+
+-[rearranging columns in sku details child table in mail notifications of quality and transit workflow](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/73)
+
 ## [v1.5.2-2] - 2022-06-21
 
 ### Added
