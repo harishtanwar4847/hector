@@ -52,12 +52,13 @@ class TransitIssue(Document):
 			frappe.db.set_value('Transit Issue', self.name, 'pending_supply_team_time', frappe.utils.now())
 			#For sending approval email to Supply Team
 			message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
-			<tr><th>SKU Code</th><th>SKU Name</th><th>Damaged /Missing Quantity</th><th>Invoice Number</th><th>Batch Details</th></tr>
+			<tr><th>Invoice Number</th><th>SKU Code</th><th>SKU Name</th><th>Batch Details</th><th>Damaged /Missing Quantity</th></tr>
 			"""
 			for skuRow in self.sku_details:
-				message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.damaged_missing_quantity + "</td><td>" + skuRow.invoice_number + "</td><td>" + skuRow.batch_details + "</td><tr>"
+				message2 += "<tr><td>" + skuRow.invoice_number + "</td><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + skuRow.damaged_missing_quantity + "</td><tr>"
 			message2 += "</table><br>"
-			message3 = """<br><br><br>
+			message3 = """<br>
+			Kindly login to apps.myhector.com for the approval process.<br><br><br>
 			Regards,<br>
 			Hector Beverages"""
 			messageFinal = emailMessage + message2 + message3
@@ -94,12 +95,13 @@ class TransitIssue(Document):
 				</tbody>
 			</table><br>""".format(self.name, self.customer_name, self.customer_code, self.customer_location, self.customer_phone_number, self.type_of_issue)
 			message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
-			<tr><th>SKU Code</th><th>SKU Name</th><th>Damaged /Missing Quantity</th><th>Invoice Number</th><th>Batch Details</th></tr>
+			<tr><th>Invoice Number</th><th>SKU Code</th><th>SKU Name</th><th>Batch Details</th><th>Damaged /Missing Quantity</th></tr>
 			"""
 			for skuRow in self.sku_details:
-				message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.damaged_missing_quantity + "</td><td>" + skuRow.invoice_number + "</td><td>" + skuRow.batch_details + "</td><tr>"
+				message2 += "<tr><td>" + skuRow.invoice_number + "</td><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + skuRow.damaged_missing_quantity + "</td><tr>"
 			message2 += "</table><br>"
-			message3 = """<br><br><br>
+			message3 = """<br>
+			Kindly login to apps.myhector.com for the approval process.<br><br><br>
 			Regards,<br>
 			Hector Beverages"""
 			messageFinal = message1 + message2 + message3
@@ -110,12 +112,13 @@ class TransitIssue(Document):
 			frappe.db.set_value('Transit Issue', self.name, 'resent_supply_team_time', frappe.utils.now())
 			msg=emailMessage
 			message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
-			<tr><th>SKU Code</th><th>SKU Name</th><th>Damaged /Missing Quantity</th><th>Invoice Number</th><th>Batch Details</th></tr>
+			<tr><th>Invoice Number</th><th>SKU Code</th><th>SKU Name</th><th>Batch Details</th><th>Damaged /Missing Quantity</th></tr>
 			"""
 			for skuRow in self.sku_details:
-				message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.damaged_missing_quantity + "</td><td>" + skuRow.invoice_number + "</td><td>" + skuRow.batch_details + "</td><tr>"
+				message2 += "<tr><td>" + skuRow.invoice_number + "</td><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + skuRow.damaged_missing_quantity + "</td><tr>"
 			message2 += "</table><br>"
-			message3 = """<br><br><br>
+			message3 = """<br>
+			Kindly login to apps.myhector.com for the approval process.<br><br><br>
 			Regards,<br>
 			Hector Beverages"""
 			messageFinal = emailMessage + message2 + message3
@@ -153,12 +156,13 @@ class TransitIssue(Document):
 				</tbody>
 			</table><br><br>""".format(self.name, self.customer_name, self.customer_code, self.customer_location, self.customer_phone_number, self.type_of_issue, self.reason_of_rejection)
 			message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
-			<tr><th>SKU Code</th><th>SKU Name</th><th>Damaged /Missing Quantity</th><th>Invoice Number</th><th>Batch Details</th></tr>
+			<tr><th>Invoice Number</th><th>SKU Code</th><th>SKU Name</th><th>Batch Details</th><th>Damaged /Missing Quantity</th></tr>
 			"""
 			for skuRow in self.sku_details:
-				message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.damaged_missing_quantity + "</td><td>" + skuRow.invoice_number + "</td><td>" + skuRow.batch_details + "</td><tr>"
+				message2 += "<tr><td>" + skuRow.invoice_number + "</td><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + skuRow.damaged_missing_quantity + "</td><tr>"
 			message2 += "</table><br>"
-			message3 = """Comment: {}<br><br><br>
+			message3 = """Comment: {}<br>
+			Kindly login to apps.myhector.com for the approval process.<br><br><br>
 			Regards,<br>
 			Hector Beverages""".format(self.reason_of_rejection)
 			messageFinal = msg + message2 + message3
@@ -195,12 +199,13 @@ class TransitIssue(Document):
 				</tbody>
 			</table><br>""".format(self.name, self.customer_name, self.customer_code, self.customer_location, self.customer_phone_number, self.type_of_issue)
 			message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
-			<tr><th>SKU Code</th><th>SKU Name</th><th>Damaged /Missing Quantity</th><th>Invoice Number</th><th>Batch Details</th></tr>
+			<tr><th>Invoice Number</th><th>SKU Code</th><th>SKU Name</th><th>Batch Details</th><th>Damaged /Missing Quantity</th></tr>
 			"""
 			for skuRow in self.sku_details:
-				message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.damaged_missing_quantity + "</td><td>" + skuRow.invoice_number + "</td><td>" + skuRow.batch_details + "</td><tr>"
+				message2 += "<tr><td>" + skuRow.invoice_number + "</td><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + skuRow.damaged_missing_quantity + "</td><tr>"
 			message2 += "</table><br>"
-			message3 = """Comment: {}<br><br><br>
+			message3 = """Comment: {}<br>
+			Kindly login to apps.myhector.com for the approval process.<br><br><br>
 			Regards,<br>
 			Hector Beverages""".format(self.reason_of_rejection)
 			messageFinal = message1 + message2 + message3
@@ -211,12 +216,13 @@ class TransitIssue(Document):
 		if self.workflow_state == 'Requested for More Details by Supply Team':
 			frappe.db.set_value('Transit Issue', self.name, 'request_details_supply_team_time', frappe.utils.now())
 			message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
-			<tr><th>SKU Code</th><th>SKU Name</th><th>Damaged /Missing Quantity</th><th>Invoice Number</th><th>Batch Details</th></tr>
+			<tr><th>Invoice Number</th><th>SKU Code</th><th>SKU Name</th><th>Batch Details</th><th>Damaged /Missing Quantity</th></tr>
 			"""
 			for skuRow in self.sku_details:
-				message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.damaged_missing_quantity + "</td><td>" + skuRow.invoice_number + "</td><td>" + skuRow.batch_details + "</td><tr>"
+				message2 += "<tr><td>" + skuRow.invoice_number + "</td><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + skuRow.damaged_missing_quantity + "</td><tr>"
 			message2 += "</table><br>"
-			message3 = """<br><br><br>
+			message3 = """<br>
+			Kindly login to apps.myhector.com for the approval process.<br><br><br>
 			Regards,<br>
 			Hector Beverages"""
 			messageFinal = emailMessage + message2 + message3
@@ -226,12 +232,13 @@ class TransitIssue(Document):
 		if self.workflow_state == 'Requested for More Details by Finance Team':
 			frappe.db.set_value('Transit Issue', self.name, 'request_details_finance_team_time', frappe.utils.now())
 			message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
-			<tr><th>SKU Code</th><th>SKU Name</th><th>Damaged /Missing Quantity</th><th>Invoice Number</th><th>Batch Details</th></tr>
+			<tr><th>Invoice Number</th><th>SKU Code</th><th>SKU Name</th><th>Batch Details</th><th>Damaged /Missing Quantity</th></tr>
 			"""
 			for skuRow in self.sku_details:
-				message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.damaged_missing_quantity + "</td><td>" + skuRow.invoice_number + "</td><td>" + skuRow.batch_details + "</td><tr>"
+				message2 += "<tr><td>" + skuRow.invoice_number + "</td><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + skuRow.damaged_missing_quantity + "</td><tr>"
 			message2 += "</table><br>"
-			message3 = """<br><br><br>
+			message3 = """<br>
+			Kindly login to apps.myhector.com for the approval process.<br><br><br>
 			Regards,<br>
 			Hector Beverages"""
 			messageFinal = emailMessage + message2 + message3
@@ -269,12 +276,13 @@ class TransitIssue(Document):
 				</tbody>
 			</table><br><br>""".format(self.name, self.customer_name, self.customer_code, self.customer_location, self.customer_phone_number, self.type_of_issue, self.reason_of_rejection)
 			message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
-			<tr><th>SKU Code</th><th>SKU Name</th><th>Damaged /Missing Quantity</th><th>Invoice Number</th><th>Batch Details</th></tr>
+			<tr><th>Invoice Number</th><th>SKU Code</th><th>SKU Name</th><th>Batch Details</th><th>Damaged /Missing Quantity</th></tr>
 			"""
 			for skuRow in self.sku_details:
-				message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.damaged_missing_quantity + "</td><td>" + skuRow.invoice_number + "</td><td>" + skuRow.batch_details + "</td><tr>"
+				message2 += "<tr><td>" + skuRow.invoice_number + "</td><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + skuRow.damaged_missing_quantity + "</td><tr>"
 			message2 += "</table><br>"
-			message3 = """Comment: {}<br><br><br>
+			message3 = """Comment: {}<br>
+			Kindly login to apps.myhector.com for the approval process.<br><br><br>
 			Regards,<br>
 			Hector Beverages""".format(self.reason_of_rejection)
 			messageFinal = msg + message2 + message3
@@ -311,12 +319,13 @@ class TransitIssue(Document):
 				</tbody>
 			</table><br>""".format(self.name, self.customer_name, self.customer_code, self.customer_location, self.customer_phone_number, self.type_of_issue)
 			message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
-			<tr><th>SKU Code</th><th>SKU Name</th><th>Damaged /Missing Quantity</th><th>Invoice Number</th><th>Batch Details</th></tr>
+			<tr><th>Invoice Number</th><th>SKU Code</th><th>SKU Name</th><th>Batch Details</th><th>Damaged /Missing Quantity</th></tr>
 			"""
 			for skuRow in self.sku_details:
-				message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.damaged_missing_quantity + "</td><td>" + skuRow.invoice_number + "</td><td>" + skuRow.batch_details + "</td><tr>"
+				message2 += "<tr><td>" + skuRow.invoice_number + "</td><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + skuRow.damaged_missing_quantity + "</td><tr>"
 			message2 += "</table><br>"
-			message3 = """Comment: {}<br><br><br>
+			message3 = """Comment: {}<br>
+			Kindly login to apps.myhector.com for the approval process.<br><br><br>
 			Regards,<br>
 			Hector Beverages""".format(self.reason_of_rejection)
 			messageFinal = message1 + message2 + message3
@@ -327,12 +336,13 @@ class TransitIssue(Document):
 		if self.workflow_state == 'Pending for Finance Team Approval':
 			frappe.db.set_value('Transit Issue', self.name, 'pending_finance_team_time', frappe.utils.now())
 			message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
-			<tr><th>SKU Code</th><th>SKU Name</th><th>Damaged /Missing Quantity</th><th>Invoice Number</th><th>Batch Details</th></tr>
+			<tr><th>Invoice Number</th><th>SKU Code</th><th>SKU Name</th><th>Batch Details</th><th>Damaged /Missing Quantity</th></tr>
 			"""
 			for skuRow in self.sku_details:
-				message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.damaged_missing_quantity + "</td><td>" + skuRow.invoice_number + "</td><td>" + skuRow.batch_details + "</td><tr>"
+				message2 += "<tr><td>" + skuRow.invoice_number + "</td><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + skuRow.damaged_missing_quantity + "</td><tr>"
 			message2 += "</table><br>"
-			message3 = """<br><br><br>
+			message3 = """<br>
+			Kindly login to apps.myhector.com for the approval process.<br><br><br>
 			Regards,<br>
 			Hector Beverages"""
 			messageFinal = emailMessage + message2 + message3
@@ -342,12 +352,13 @@ class TransitIssue(Document):
 		if self.workflow_state == 'Resent for Finance Team Approval':
 			frappe.db.set_value('Transit Issue', self.name, 'resent_finance_team_time', frappe.utils.now())
 			message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
-			<tr><th>SKU Code</th><th>SKU Name</th><th>Damaged /Missing Quantity</th><th>Invoice Number</th><th>Batch Details</th></tr>
+			<tr><th>Invoice Number</th><th>SKU Code</th><th>SKU Name</th><th>Batch Details</th><th>Damaged /Missing Quantity</th></tr>
 			"""
 			for skuRow in self.sku_details:
-				message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.damaged_missing_quantity + "</td><td>" + skuRow.invoice_number + "</td><td>" + skuRow.batch_details + "</td><tr>"
+				message2 += "<tr><td>" + skuRow.invoice_number + "</td><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + skuRow.damaged_missing_quantity + "</td><tr>"
 			message2 += "</table><br>"
-			message3 = """<br><br><br>
+			message3 = """<br>
+			Kindly login to apps.myhector.com for the approval process.<br><br><br>
 			Regards,<br>
 			Hector Beverages"""
 			messageFinal = emailMessage + message2 + message3
@@ -356,12 +367,13 @@ class TransitIssue(Document):
 
 		if self.workflow_state == 'Issue Closed':
 			message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
-			<tr><th>SKU Code</th><th>SKU Name</th><th>Damaged /Missing Quantity</th><th>Invoice Number</th><th>Batch Details</th></tr>
+			<tr><th>Invoice Number</th><th>SKU Code</th><th>SKU Name</th><th>Batch Details</th><th>Damaged /Missing Quantity</th></tr>
 			"""
 			for skuRow in self.sku_details:
-				message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.damaged_missing_quantity + "</td><td>" + skuRow.invoice_number + "</td><td>" + skuRow.batch_details + "</td><tr>"
+				message2 += "<tr><td>" + skuRow.invoice_number + "</td><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + skuRow.damaged_missing_quantity + "</td><tr>"
 			message2 += "</table><br>"
-			message3 = """<br><br><br>
+			message3 = """<br>
+			Kindly login to apps.myhector.com for the approval process.<br><br><br>
 			Regards,<br>
 			Hector Beverages"""
 			messageFinal = emailMessage + message2 + message3
@@ -399,13 +411,14 @@ class TransitIssue(Document):
 				</tbody>
 			</table><br>""".format(self.name, self.customer_name, self.customer_code, self.customer_location, self.customer_phone_number, self.type_of_issue)
 			message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
-			<tr><th>SKU Code</th><th>SKU Name</th><th>Damaged /Missing Quantity</th><th>Invoice Number</th><th>Batch Details</th></tr>
+			<tr><th>Invoice Number</th><th>SKU Code</th><th>SKU Name</th><th>Batch Details</th><th>Damaged /Missing Quantity</th></tr>
 			"""
 			for skuRow in self.sku_details:
-				message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.damaged_missing_quantity + "</td><td>" + skuRow.invoice_number + "</td><td>" + skuRow.batch_details + "</td><tr>"
+				message2 += "<tr><td>" + skuRow.invoice_number + "</td><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + skuRow.damaged_missing_quantity + "</td><tr>"
 			message2 += "</table><br>"
 			message4 = """
-				Credit Details: {}
+				Credit Details: {}<br>
+			    Kindly login to apps.myhector.com for the approval process.
 				<br><br><br>
 				Regards,<br>
 				Hector Beverages""".format(self.credit_details)
