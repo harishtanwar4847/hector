@@ -1,16 +1,10 @@
 # Changelog
 
-## [v1.5.2-4] - 2022-06-22
-
-### Added
-
--[changes in quality and transit auto mails](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/74)
-
 ## [v1.5.2-3] - 2022-06-22
 
 ### Added
 
--[rearranging columns in sku details child table in mail notifications of quality and transit workflow](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/73)
+-[changes in quality and transit auto mails](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/74)
 
 ## [v1.5.2-2] - 2022-06-21
 
