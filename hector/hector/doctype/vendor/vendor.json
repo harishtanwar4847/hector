@@ -17,9 +17,9 @@
   "primary_contact_person_phone_number",
   "primary_contact_e_mail_id",
   "payment_terms_code",
-  "column_break_13",
   "bank_name",
   "bank_account_number",
+  "column_break_13",
   "ifsc_code",
   "attach_copy_of_cancelled_cheque",
   "msme_registration_number",
@@ -29,6 +29,8 @@
   "select_gst_registration_type_of_your_company",
   "gst_registration_number",
   "attach_gst_registration_certificate",
+  "vendor_posting_group",
+  "copy_of_bank_details_with_seal_and_signature",
   "vendor_code",
   "naming_series",
   "otp",
@@ -173,14 +175,26 @@
    "label": "OTP"
   },
   {
+   "default": "0",
    "fieldname": "please_confirm",
-   "fieldtype": "Data",
+   "fieldtype": "Check",
    "label": "I understand that Hector Beverages will maintain this information in their systems for further reference as required by the regulations"
+  },
+  {
+   "fieldname": "copy_of_bank_details_with_seal_and_signature",
+   "fieldtype": "Attach",
+   "label": "Certified Copy of Board Resolution\u00a0or Declaration Letter for Bank details with seal and signature"
+  },
+  {
+   "fieldname": "vendor_posting_group",
+   "fieldtype": "Select",
+   "label": "Vendor Posting Group",
+   "options": "\nCAPEX\nCOPACKER\nEXPENSE\nFREIGHT\nPMAT\nRM"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-05-31 14:56:39.005833",
+ "modified": "2022-06-28 10:40:02.645506",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Vendor",
