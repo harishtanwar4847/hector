@@ -183,7 +183,7 @@
   {
    "fieldname": "copy_of_bank_details_with_seal_and_signature",
    "fieldtype": "Attach",
-   "label": "Certified Copy of Board Resolution\u00a0or Declaration Letter for Bank details with seal and signature"
+   "label": "Certified Copy of Board Resolution\u00a0or Declaration Letter of Bank details with seal and signature"
   },
   {
    "fieldname": "vendor_posting_group",
@@ -194,7 +194,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-06-28 10:40:02.645506",
+ "modified": "2022-06-28 17:35:36.083957",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Vendor",
