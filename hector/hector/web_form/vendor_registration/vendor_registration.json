@@ -20,8 +20,8 @@
  "is_standard": 1,
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2022-06-01 15:47:31.297221",
- "modified_by": "harish.tanwar@atriina.com",
+ "modified": "2022-06-28 17:35:58.942982",
+ "modified_by": "Administrator",
  "module": "Hector",
  "name": "vendor-registration",
  "owner": "harish.tanwar@atriina.com",
@@ -170,17 +170,6 @@
   },
   {
    "allow_read_on_all_link_options": 0,
-   "fieldname": "column_break_13",
-   "fieldtype": "Column Break",
-   "hidden": 0,
-   "max_length": 0,
-   "max_value": 0,
-   "read_only": 0,
-   "reqd": 0,
-   "show_in_filter": 0
-  },
-  {
-   "allow_read_on_all_link_options": 0,
    "fieldname": "bank_name",
    "fieldtype": "Data",
    "hidden": 0,
@@ -201,6 +190,17 @@
    "max_value": 0,
    "read_only": 0,
    "reqd": 1,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break",
+   "hidden": 0,
+   "max_length": 0,
+   "max_value": 0,
+   "read_only": 0,
+   "reqd": 0,
    "show_in_filter": 0
   },
   {
@@ -307,6 +307,31 @@
    "fieldtype": "Attach",
    "hidden": 0,
    "label": "Attach GST Registration Certificate\\If GST is unregistered or exempted kindly attach a valid government proof",
+   "max_length": 0,
+   "max_value": 0,
+   "read_only": 0,
+   "reqd": 1,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "vendor_posting_group",
+   "fieldtype": "Select",
+   "hidden": 0,
+   "label": "Vendor Posting Group",
+   "max_length": 0,
+   "max_value": 0,
+   "options": "\nCAPEX\nCOPACKER\nEXPENSE\nFREIGHT\nPMAT\nRM",
+   "read_only": 0,
+   "reqd": 1,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "copy_of_bank_details_with_seal_and_signature",
+   "fieldtype": "Attach",
+   "hidden": 0,
+   "label": "Certified Copy of Board Resolution\u00a0or Declaration Letter of Bank details with seal and signature",
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
