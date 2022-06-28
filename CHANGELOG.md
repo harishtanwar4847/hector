@@ -1,5 +1,11 @@
 # Changelog
 
+## [v1.5.2-4] - 2022-06-28
+
+### Added
+
+-[Fields addition in Vendor web form](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/75)
+
 ## [v1.5.2-3] - 2022-06-22
 
 ### Added
