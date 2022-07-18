@@ -153,7 +153,8 @@
    "fieldname": "manufacturing_plant",
    "fieldtype": "Select",
    "label": "Manufacturing Plant",
-   "options": "\nManesar\nMysore\nBaramati\nFazilika\nPaithan\nVinyak\nBD Foods\nATC\nKowai\nVSA"
+   "options": "\nFazilka\nGeonutri\nVinayak Beverages\nManesar\nMysore\nAmaya Foods\nBD Foods\nPaithan\nCeylon Beverages\nATC\nPTIPL\nBaramati\nTethys\nVSA Foods\nKovai\nGanesh Packaging",
+   "reqd": 1
   },
   {
    "fieldname": "manufacturing_date",
@@ -349,7 +350,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-02-02 13:46:55.234081",
+ "modified": "2022-07-18 12:36:11.553164",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Quality Issue",
