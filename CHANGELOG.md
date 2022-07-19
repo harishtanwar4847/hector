@@ -1,5 +1,11 @@
 # Changelog
 
+## [v1.5.2-5] - 2022-07-18
+
+### Added
+
+-[changes in quality issue doctype](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/76)
+
 ## [v1.5.2-4] - 2022-06-28
 
 ### Added
