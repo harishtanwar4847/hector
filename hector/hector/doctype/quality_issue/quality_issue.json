@@ -153,7 +153,8 @@
    "fieldname": "manufacturing_plant",
    "fieldtype": "Select",
    "label": "Manufacturing Plant",
-   "options": "\nManesar\nMysore\nBaramati\nFazilika\nPaithan\nVinyak\nBD Foods\nATC\nKowai\nVSA"
+   "options": "\nSDDPL@ Fazilka\nGEONUTRI @ Kolkata\nVINAYAK BEVERAGES@ Hyderabad\nHBPL@Manesar\nHBPL@Mysore\nAMAYA FOODS@ Karnal\nBD FOOD@ Varanasi\nPAITHAN@ Aurangabad\nCEYLON BEVERAGES @Srilanka\nHFL @Mysore\nPTPL@Kolkatta\nSDDPL@Baramati\nTETHYS@ Indore\nVSA FOODS @ Dindigul\nKOVAI @ Coimbatore\nGANESH PACKAGING @ Tirupur",
+   "reqd": 1
   },
   {
    "fieldname": "manufacturing_date",
@@ -349,7 +350,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-02-02 13:46:55.234081",
+ "modified": "2022-07-21 14:38:11.514591",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Quality Issue",
@@ -379,6 +380,7 @@
    "write": 1
   },
   {
+   "export": 1,
    "read": 1,
    "role": "Physical Verification Officer",
    "select": 1,
