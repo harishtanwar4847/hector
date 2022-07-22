@@ -19,3 +19,4 @@ hector.patches.new_quality_workflow.new_quality_workflow #
 hector.patches.custom_roles3
 hector.patches.rename_doctype
 hector.patches.new_workflows3
+hector.patches.update_manufacture_plants
