@@ -1,5 +1,9 @@
 # Changelog
 
+## [v1.5.2-6] - 2022-07-25
+
+-[mandatory removal from manufacturing plant field](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/78)
+
 ## [v1.5.2-5] - 2022-07-18
 
 ### Added
