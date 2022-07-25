@@ -153,8 +153,7 @@
    "fieldname": "manufacturing_plant",
    "fieldtype": "Select",
    "label": "Manufacturing Plant",
-   "options": "\nSDDPL@ Fazilka\nGEONUTRI @ Kolkata\nVINAYAK BEVERAGES@ Hyderabad\nHBPL@Manesar\nHBPL@Mysore\nAMAYA FOODS@ Karnal\nBD FOOD@ Varanasi\nPAITHAN@ Aurangabad\nCEYLON BEVERAGES @Srilanka\nHFL @Mysore\nPTPL@Kolkatta\nSDDPL@Baramati\nTETHYS@ Indore\nVSA FOODS @ Dindigul\nKOVAI @ Coimbatore\nGANESH PACKAGING @ Tirupur",
-   "reqd": 1
+   "options": "\nSDDPL@ Fazilka\nGEONUTRI @ Kolkata\nVINAYAK BEVERAGES@ Hyderabad\nHBPL@Manesar\nHBPL@Mysore\nAMAYA FOODS@ Karnal\nBD FOOD@ Varanasi\nPAITHAN@ Aurangabad\nCEYLON BEVERAGES @Srilanka\nHFL @Mysore\nPTPL@Kolkatta\nSDDPL@Baramati\nTETHYS@ Indore\nVSA FOODS @ Dindigul\nKOVAI @ Coimbatore\nGANESH PACKAGING @ Tirupur"
   },
   {
    "fieldname": "manufacturing_date",
@@ -350,7 +349,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-07-21 14:38:11.514591",
+ "modified": "2022-07-25 10:19:26.720818",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Quality Issue",
