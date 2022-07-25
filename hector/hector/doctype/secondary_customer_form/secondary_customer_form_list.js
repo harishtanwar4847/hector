@@ -8,7 +8,7 @@ frappe.listview_settings['Secondary Customer Form'] = {
 				"workflow_state": ["not in", 'Secondary Customer Approved']
 			};
         }
-        if(frappe.user_roles.includes('Area Sales Manager'))
+        if(frappe.user_roles.includes('Area Sales Manager') || frappe.user_roles.includes('Regional Sales Manager'))
         {
             route_options = {
 				"workflow_state": ["in",'Pending For Secondary Customer Additional Details, Requested for More Details by NSM, Requested for More Details by Secondary Master Team'],

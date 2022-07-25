@@ -1,5 +1,13 @@
 # Changelog
 
+## [v1.5.8-dev] - 2022-07-22
+
+[Changes in Lead Form](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/77)
+
+## [v1.5.7-uat-1] - 2022-06-13
+
+[edit right to rsm and field level changes](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/70)
+
 ## [v1.5.7-uat] - 2022-06-07
 ## [v1.5.7-dev] - 2022-06-06
 
@@ -24,6 +32,37 @@
 ### Added
 
 [Updating Lead Form](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/60)
+
+## [v1.5.2-6] - 2022-07-25
+
+### Added
+
+-[mandatory removal from manufacturing plant field](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/78)
+
+## [v1.5.2-5] - 2022-07-18
+
+### Added
+
+-[changes in quality issue doctype](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/76)
+
+## [v1.5.2-4] - 2022-06-28
+
+### Added
+
+-[Fields addition in Vendor web form](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/75)
+
+## [v1.5.2-3] - 2022-06-22
+
+### Added
+
+-[rearranging columns in sku details child table in mail notifications of quality and transit workflow](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/73)
+-[changes in quality and transit auto mails](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/74)
+
+## [v1.5.2-2] - 2022-06-21
+
+### Added
+
+-[SKU details child table addition in automatic mails of quality and transit issue](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/72)
 
 ## [v1.5.2-1] - 2022-06-01
 

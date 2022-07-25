@@ -120,7 +120,7 @@ frappe.ui.form.on('Primary Customer Form', {
             frappe.throw('Enter Valid Email.')
             frm.doc.customer_email_address = ''
         }
-        if(frm.doc.workflow_state == "Pending for Master Team Approval")
+        if(frm.doc.workflow_state == "Pending with Primary Master Processing")
         {
             if(frm.doc.customer_id[0] != "C")
             {

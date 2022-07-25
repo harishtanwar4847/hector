@@ -105,6 +105,15 @@ class SecondaryCustomerForm(Document):
 				frappe.sendmail(subject="Customer Creation Rejected : {}".format(self.name_of_new_distributor), content=msg, recipients = '{}'.format(self.owner), sender="Notification@hectorbeverages.com")
 				print("\n email sent \n")
 
+			if self.workflow_state == 'Rejected by RSM':
+				msg="""Hello,<br><br>
+				Your request for Secondary customer creation for customer {} has been rejected by {}.<br><br>
+				Kindly check reason for rejection in website apps.myhector.com<br><br><br>
+				Regards,<br>
+				Hector Beverages""".format(self.name_of_new_distributor,asm_rsm_name[0][1])
+				frappe.sendmail(subject="Customer Creation Rejected : {}".format(self.name_of_new_distributor), content=msg, recipients = '{}'.format(self.owner), sender="Notification@hectorbeverages.com")
+				print("\n email sent \n")
+
 			if self.workflow_state == 'Secondary Customer Approved':
 				msg="""Hello Team,<br><br>
 				Your request for Secondary customer creation has been approved. And New Customer Code is {} for {}.<br><br>
