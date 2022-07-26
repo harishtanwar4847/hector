@@ -45,17 +45,24 @@ class TransitIssue(Document):
 						<td>{}</td>
 					</tr>
 				</tbody>
-			</table><br>
-			Kindly login to apps.myhector.com for the approval process.<br><br><br>
-			Regards,<br>
-			Hector Beverages""".format(self.name, self.customer_name, self.customer_code, self.customer_location, self.customer_phone_number, self.type_of_issue)
+			</table><br>""".format(self.name, self.customer_name, self.customer_code, self.customer_location, self.customer_phone_number, self.type_of_issue)
 
 
 		if self.workflow_state == 'Pending for Supply Team Approval' :
 			frappe.db.set_value('Transit Issue', self.name, 'pending_supply_team_time', frappe.utils.now())
 			#For sending approval email to Supply Team
-			msg=emailMessage
-			frappe.sendmail(subject="Transit Issue Pending for Supply Team Approval: {}: {}".format(self.customer_code, self.customer_name), content=msg, recipients = supplyTeamEmail,sender="Notification@hectorbeverages.com")
+			message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
+			<tr><th>Invoice Number</th><th>SKU Code</th><th>SKU Name</th><th>Batch Details</th><th>Damaged /Missing Quantity</th></tr>
+			"""
+			for skuRow in self.sku_details:
+				message2 += "<tr><td>" + skuRow.invoice_number + "</td><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + skuRow.damaged_missing_quantity + "</td><tr>"
+			message2 += "</table><br>"
+			message3 = """<br>
+			Kindly login to apps.myhector.com for the approval process.<br><br><br>
+			Regards,<br>
+			Hector Beverages"""
+			messageFinal = emailMessage + message2 + message3
+			frappe.sendmail(subject="Transit Issue Pending for Supply Team Approval: {}: {}".format(self.customer_code, self.customer_name), content=messageFinal, recipients = supplyTeamEmail,sender="Notification@hectorbeverages.com")
 			print("\n email sent \n")
 			#For sendng email to sales team of customer complaint registered
 			message1 = """Below Transit Issue have been Registered:<br>
@@ -88,10 +95,10 @@ class TransitIssue(Document):
 				</tbody>
 			</table><br>""".format(self.name, self.customer_name, self.customer_code, self.customer_location, self.customer_phone_number, self.type_of_issue)
 			message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
-			<tr><th>SKU Code</th><th>SKU Name</th><th>Damaged /Missing Quantity</th><th>Invoice Number</th><th>Batch Details</th></tr>
+			<tr><th>Invoice Number</th><th>SKU Code</th><th>SKU Name</th><th>Batch Details</th><th>Damaged /Missing Quantity</th></tr>
 			"""
 			for skuRow in self.sku_details:
-				message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.damaged_missing_quantity + "</td><td>" + skuRow.invoice_number + "</td><td>" + skuRow.batch_details + "</td><tr>"
+				message2 += "<tr><td>" + skuRow.invoice_number + "</td><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + skuRow.damaged_missing_quantity + "</td><tr>"
 			message2 += "</table><br>"
 			message3 = """<br><br><br>
 			Regards,<br>
@@ -103,7 +110,18 @@ class TransitIssue(Document):
 		if self.workflow_state == 'Resent for Supply Team Approval' :
 			frappe.db.set_value('Transit Issue', self.name, 'resent_supply_team_time', frappe.utils.now())
 			msg=emailMessage
-			frappe.sendmail(subject="Transit Issue Resent for Supply Team Approval: {}: {}".format(self.customer_code, self.customer_name), content=msg, recipients = supplyTeamEmail,sender="Notification@hectorbeverages.com")
+			message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
+			<tr><th>Invoice Number</th><th>SKU Code</th><th>SKU Name</th><th>Batch Details</th><th>Damaged /Missing Quantity</th></tr>
+			"""
+			for skuRow in self.sku_details:
+				message2 += "<tr><td>" + skuRow.invoice_number + "</td><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + skuRow.damaged_missing_quantity + "</td><tr>"
+			message2 += "</table><br>"
+			message3 = """<br>
+			Kindly login to apps.myhector.com for the approval process.<br><br><br>
+			Regards,<br>
+			Hector Beverages"""
+			messageFinal = emailMessage + message2 + message3
+			frappe.sendmail(subject="Transit Issue Resent for Supply Team Approval: {}: {}".format(self.customer_code, self.customer_name), content=messageFinal, recipients = supplyTeamEmail,sender="Notification@hectorbeverages.com")
 			print("\n email sent \n")
 
 		if self.workflow_state == 'Rejected by Supply Team' :
@@ -135,12 +153,18 @@ class TransitIssue(Document):
 						<td>{}</td>
 					</tr>
 				</tbody>
-			</table><br>
-			Comment: {}<br><br>
-			Kindly login to apps.myhector.com for the approval process.<br><br><br>
+			</table><br><br>""".format(self.name, self.customer_name, self.customer_code, self.customer_location, self.customer_phone_number, self.type_of_issue, self.reason_of_rejection)
+			message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
+			<tr><th>Invoice Number</th><th>SKU Code</th><th>SKU Name</th><th>Batch Details</th><th>Damaged /Missing Quantity</th></tr>
+			"""
+			for skuRow in self.sku_details:
+				message2 += "<tr><td>" + skuRow.invoice_number + "</td><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + skuRow.damaged_missing_quantity + "</td><tr>"
+			message2 += "</table><br>"
+			message3 = """Comment: {}<br><br><br>
 			Regards,<br>
-			Hector Beverages""".format(self.name, self.customer_name, self.customer_code, self.customer_location, self.customer_phone_number, self.type_of_issue, self.reason_of_rejection)
-			frappe.sendmail(subject="Transit Issue Rejected: {}: {}".format(self.customer_code, self.customer_name), content=msg, recipients = '{}'.format(complaintTeamEmail),sender="Notification@hectorbeverages.com")
+			Hector Beverages""".format(self.reason_of_rejection)
+			messageFinal = msg + message2 + message3
+			frappe.sendmail(subject="Transit Issue Rejected: {}: {}".format(self.customer_code, self.customer_name), content=messageFinal, recipients = '{}'.format(complaintTeamEmail),sender="Notification@hectorbeverages.com")
 			print("\n email sent \n")
 			#For sendng email to sales team and customer of Issue rejected process
 			message1 = """Below Transit Issue have been Rejected:<br>
@@ -173,10 +197,10 @@ class TransitIssue(Document):
 				</tbody>
 			</table><br>""".format(self.name, self.customer_name, self.customer_code, self.customer_location, self.customer_phone_number, self.type_of_issue)
 			message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
-			<tr><th>SKU Code</th><th>SKU Name</th><th>Damaged /Missing Quantity</th><th>Invoice Number</th><th>Batch Details</th></tr>
+			<tr><th>Invoice Number</th><th>SKU Code</th><th>SKU Name</th><th>Batch Details</th><th>Damaged /Missing Quantity</th></tr>
 			"""
 			for skuRow in self.sku_details:
-				message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.damaged_missing_quantity + "</td><td>" + skuRow.invoice_number + "</td><td>" + skuRow.batch_details + "</td><tr>"
+				message2 += "<tr><td>" + skuRow.invoice_number + "</td><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + skuRow.damaged_missing_quantity + "</td><tr>"
 			message2 += "</table><br>"
 			message3 = """Comment: {}<br><br><br>
 			Regards,<br>
@@ -188,14 +212,34 @@ class TransitIssue(Document):
 
 		if self.workflow_state == 'Requested for More Details by Supply Team':
 			frappe.db.set_value('Transit Issue', self.name, 'request_details_supply_team_time', frappe.utils.now())
-			msg=emailMessage
-			frappe.sendmail(subject="Transit Issue requesting for more details: {}: {}".format(self.customer_code, self.customer_name), content=msg, recipients = '{}'.format(complaintTeamEmail),sender="Notification@hectorbeverages.com")
+			message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
+			<tr><th>Invoice Number</th><th>SKU Code</th><th>SKU Name</th><th>Batch Details</th><th>Damaged /Missing Quantity</th></tr>
+			"""
+			for skuRow in self.sku_details:
+				message2 += "<tr><td>" + skuRow.invoice_number + "</td><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + skuRow.damaged_missing_quantity + "</td><tr>"
+			message2 += "</table><br>"
+			message3 = """<br>
+			Kindly login to apps.myhector.com for the approval process.<br><br><br>
+			Regards,<br>
+			Hector Beverages"""
+			messageFinal = emailMessage + message2 + message3
+			frappe.sendmail(subject="Transit Issue requesting for more details: {}: {}".format(self.customer_code, self.customer_name), content=messageFinal, recipients = '{}'.format(complaintTeamEmail),sender="Notification@hectorbeverages.com")
 			print("\n email sent \n")
 
 		if self.workflow_state == 'Requested for More Details by Finance Team':
 			frappe.db.set_value('Transit Issue', self.name, 'request_details_finance_team_time', frappe.utils.now())
-			msg=emailMessage
-			frappe.sendmail(subject="Transit Issue requesting for more details: {}: {}".format(self.customer_code, self.customer_name), content=msg, recipients = supplyTeamEmail,sender="Notification@hectorbeverages.com")
+			message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
+			<tr><th>Invoice Number</th><th>SKU Code</th><th>SKU Name</th><th>Batch Details</th><th>Damaged /Missing Quantity</th></tr>
+			"""
+			for skuRow in self.sku_details:
+				message2 += "<tr><td>" + skuRow.invoice_number + "</td><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + skuRow.damaged_missing_quantity + "</td><tr>"
+			message2 += "</table><br>"
+			message3 = """<br>
+			Kindly login to apps.myhector.com for the approval process.<br><br><br>
+			Regards,<br>
+			Hector Beverages"""
+			messageFinal = emailMessage + message2 + message3
+			frappe.sendmail(subject="Transit Issue requesting for more details: {}: {}".format(self.customer_code, self.customer_name), content=messageFinal, recipients = supplyTeamEmail,sender="Notification@hectorbeverages.com")
 			print("\n email sent \n")
 
 		if self.workflow_state == 'Rejected by Finance Team':
@@ -227,12 +271,18 @@ class TransitIssue(Document):
 						<td>{}</td>
 					</tr>
 				</tbody>
-			</table><br>
-			Comment: {}<br><br>
-			Kindly login to apps.myhector.com for the approval process.<br><br><br>
+			</table><br><br>""".format(self.name, self.customer_name, self.customer_code, self.customer_location, self.customer_phone_number, self.type_of_issue, self.reason_of_rejection)
+			message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
+			<tr><th>Invoice Number</th><th>SKU Code</th><th>SKU Name</th><th>Batch Details</th><th>Damaged /Missing Quantity</th></tr>
+			"""
+			for skuRow in self.sku_details:
+				message2 += "<tr><td>" + skuRow.invoice_number + "</td><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + skuRow.damaged_missing_quantity + "</td><tr>"
+			message2 += "</table><br>"
+			message3 = """Comment: {}<br><br><br>
 			Regards,<br>
-			Hector Beverages""".format(self.name, self.customer_name, self.customer_code, self.customer_location, self.customer_phone_number, self.type_of_issue, self.reason_of_rejection)
-			frappe.sendmail(subject="Transit Issue Rejected: {}: {}".format(self.customer_code, self.customer_name), content=msg, recipients = [complaintTeamEmail] + supplyTeamEmail, sender="Notification@hectorbeverages.com")
+			Hector Beverages""".format(self.reason_of_rejection)
+			messageFinal = msg + message2 + message3
+			frappe.sendmail(subject="Transit Issue Rejected: {}: {}".format(self.customer_code, self.customer_name), content=messageFinal, recipients = [complaintTeamEmail] + supplyTeamEmail, sender="Notification@hectorbeverages.com")
 			print("\n email sent \n")
 			#For sendng email to sales team and customer of Issue rejected process
 			message1 = """Below Transit Issue have been Rejected:<br>
@@ -265,10 +315,10 @@ class TransitIssue(Document):
 				</tbody>
 			</table><br>""".format(self.name, self.customer_name, self.customer_code, self.customer_location, self.customer_phone_number, self.type_of_issue)
 			message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
-			<tr><th>SKU Code</th><th>SKU Name</th><th>Damaged /Missing Quantity</th><th>Invoice Number</th><th>Batch Details</th></tr>
+			<tr><th>Invoice Number</th><th>SKU Code</th><th>SKU Name</th><th>Batch Details</th><th>Damaged /Missing Quantity</th></tr>
 			"""
 			for skuRow in self.sku_details:
-				message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.damaged_missing_quantity + "</td><td>" + skuRow.invoice_number + "</td><td>" + skuRow.batch_details + "</td><tr>"
+				message2 += "<tr><td>" + skuRow.invoice_number + "</td><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + skuRow.damaged_missing_quantity + "</td><tr>"
 			message2 += "</table><br>"
 			message3 = """Comment: {}<br><br><br>
 			Regards,<br>
@@ -280,19 +330,48 @@ class TransitIssue(Document):
 
 		if self.workflow_state == 'Pending for Finance Team Approval':
 			frappe.db.set_value('Transit Issue', self.name, 'pending_finance_team_time', frappe.utils.now())
-			msg=emailMessage
-			frappe.sendmail(subject="Transit Issue Pending for Finance Team Approval: {}: {}".format(self.customer_code, self.customer_name), content=msg, recipients = financeTeamEmail,sender="Notification@hectorbeverages.com")
+			message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
+			<tr><th>Invoice Number</th><th>SKU Code</th><th>SKU Name</th><th>Batch Details</th><th>Damaged /Missing Quantity</th></tr>
+			"""
+			for skuRow in self.sku_details:
+				message2 += "<tr><td>" + skuRow.invoice_number + "</td><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + skuRow.damaged_missing_quantity + "</td><tr>"
+			message2 += "</table><br>"
+			message3 = """<br>
+			Kindly login to apps.myhector.com for the approval process.<br><br><br>
+			Regards,<br>
+			Hector Beverages"""
+			messageFinal = emailMessage + message2 + message3
+			frappe.sendmail(subject="Transit Issue Pending for Finance Team Approval: {}: {}".format(self.customer_code, self.customer_name), content=messageFinal, recipients = financeTeamEmail,sender="Notification@hectorbeverages.com")
 			print("\n email sent \n")
 
 		if self.workflow_state == 'Resent for Finance Team Approval':
 			frappe.db.set_value('Transit Issue', self.name, 'resent_finance_team_time', frappe.utils.now())
-			msg=emailMessage
-			frappe.sendmail(subject="Transit Issue Resent for Finance Team Approval: {}: {}".format(self.customer_code, self.customer_name), content=msg, recipients = financeTeamEmail,sender="Notification@hectorbeverages.com")
+			message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
+			<tr><th>Invoice Number</th><th>SKU Code</th><th>SKU Name</th><th>Batch Details</th><th>Damaged /Missing Quantity</th></tr>
+			"""
+			for skuRow in self.sku_details:
+				message2 += "<tr><td>" + skuRow.invoice_number + "</td><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + skuRow.damaged_missing_quantity + "</td><tr>"
+			message2 += "</table><br>"
+			message3 = """<br>
+			Kindly login to apps.myhector.com for the approval process.<br><br><br>
+			Regards,<br>
+			Hector Beverages"""
+			messageFinal = emailMessage + message2 + message3
+			frappe.sendmail(subject="Transit Issue Resent for Finance Team Approval: {}: {}".format(self.customer_code, self.customer_name), content=messageFinal, recipients = financeTeamEmail,sender="Notification@hectorbeverages.com")
 			print("\n email sent \n")
 
 		if self.workflow_state == 'Issue Closed':
-			msg=emailMessage
-			frappe.sendmail(subject="Transit Issue Completed: {}: {}".format(self.customer_code, self.customer_name), content=msg, recipients = [complaintTeamEmail] + supplyTeamEmail, sender="Notification@hectorbeverages.com")
+			message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
+			<tr><th>Invoice Number</th><th>SKU Code</th><th>SKU Name</th><th>Batch Details</th><th>Damaged /Missing Quantity</th></tr>
+			"""
+			for skuRow in self.sku_details:
+				message2 += "<tr><td>" + skuRow.invoice_number + "</td><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + skuRow.damaged_missing_quantity + "</td><tr>"
+			message2 += "</table><br>"
+			message3 = """<br><br><br>
+			Regards,<br>
+			Hector Beverages"""
+			messageFinal = emailMessage + message2 + message3
+			frappe.sendmail(subject="Transit Issue Completed: {}: {}".format(self.customer_code, self.customer_name), content=messageFinal, recipients = [complaintTeamEmail] + supplyTeamEmail, sender="Notification@hectorbeverages.com")
 			print("\n email sent \n")
 
 			#For sendng email to sales team of credit note raised process
@@ -326,17 +405,15 @@ class TransitIssue(Document):
 				</tbody>
 			</table><br>""".format(self.name, self.customer_name, self.customer_code, self.customer_location, self.customer_phone_number, self.type_of_issue)
 			message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
-			<tr><th>SKU Code</th><th>SKU Name</th><th>Damaged /Missing Quantity</th><th>Invoice Number</th><th>Batch Details</th></tr>
+			<tr><th>Invoice Number</th><th>SKU Code</th><th>SKU Name</th><th>Batch Details</th><th>Damaged /Missing Quantity</th></tr>
 			"""
 			for skuRow in self.sku_details:
-				message2 += "<tr><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.damaged_missing_quantity + "</td><td>" + skuRow.invoice_number + "</td><td>" + skuRow.batch_details + "</td><tr>"
+				message2 += "<tr><td>" + skuRow.invoice_number + "</td><td>"+skuRow.sku_code + "</td><td>"+skuRow.sku_name + "</td><td>" + skuRow.batch_details + "</td><td>" + skuRow.damaged_missing_quantity + "</td><tr>"
 			message2 += "</table><br>"
-			message3 = """
-				Credit Details: {}
-				<br><br><br>
+			message4 = """
+				Credit Details: {}<br><br><br>
 				Regards,<br>
 				Hector Beverages""".format(self.credit_details)
-			messageFinal = message1 + message2 + message3
+			messageFinal = message1 + message2 + message4
 			frappe.sendmail(subject="Transit Issue Completed: {}: {}".format(self.customer_code, self.customer_name), content=messageFinal, cc = '{},{}'.format(rsmEmail, asmEmail), recipients = '{}'.format(requestorSalesTeam), expose_recipients="header", sender="Notification@hectorbeverages.com")
 			print("\n email sent \n")
-
