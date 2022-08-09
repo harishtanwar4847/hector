@@ -1,5 +1,11 @@
 # Changelog
 
+## [v1.5.9-dev] - 2022-08-09
+
+### Added
+
+- [Field level changes and validations](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/80)
+
 ## [v1.5.8-uat] - 2022-07-26
 ## [v1.5.8-dev] - 2022-07-22
 
