@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 import frappe
 import frappe.desk.desktop
-__version__ = '1.5.9-uat'
+__version__ = '1.6.0-uat'
 
 
 # def get_page_for_user(self):

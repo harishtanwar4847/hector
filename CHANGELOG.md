@@ -1,5 +1,18 @@
 # Changelog
 
+## [v1.6.0-uat] - 2022-08-10
+## [v1.6.0-dev+1] - 2022-08-10
+
+### Added
+
+- [Change datatype of total_outlets_handling field](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/83)
+
+## [v1.6.0-dev] - 2022-08-10
+
+### Added
+
+- [Changing datatype of field](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/82)
+
 ## [v1.5.9-uat] - 2022-08-09
 ## [v1.5.9-dev] - 2022-08-09
 
