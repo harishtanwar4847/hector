@@ -1,5 +1,11 @@
 # Changelog
 
+## [v1.6.1-dev] - 2022-08-11
+
+### Added
+
+- [mobile number validation changes](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/85)
+
 ## [v1.6.0-uat] - 2022-08-10
 ## [v1.6.0-dev+1] - 2022-08-10
 
