@@ -16,6 +16,7 @@ frappe.ui.form.on('Lead', {
     var experience = frm.doc.enter_distribution_experience_in_years || ""
     var average_salary =  frm.doc.monthly_turn_over || ""
     var vehicles = frm.doc.number_of_vehicles_for_distribution || ""
+    var infra = frm.doc.infrastructure || ""
     var number_list = ['0','1','2','3','4','5','6','7','8','9']
 
     if(phone.length > 0  && !phone.match(mobile_pattern))
@@ -55,6 +56,9 @@ frappe.ui.form.on('Lead', {
     if(vehicles > 999){
       frappe.throw('Number of vehicles for distribution can be a maximum 3 digit number')
   }
+    if(infra > 99999999999999999999){
+      frappe.throw('Infrastructure(In Sq. ft) can be a maximum 20 digit number')
+    }
     
     
   }
