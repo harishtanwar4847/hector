@@ -106,7 +106,6 @@
    "fieldname": "mobile_no_of_the_customer",
    "fieldtype": "Data",
    "label": "Customer Mobile Number",
-   "length": 10,
    "reqd": 1
   },
   {
@@ -361,7 +360,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-06-02 18:22:01.727921",
+ "modified": "2022-08-11 10:57:59.822244",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Primary Customer Form",

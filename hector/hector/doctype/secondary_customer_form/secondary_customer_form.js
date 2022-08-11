@@ -13,5 +13,25 @@ frappe.ui.form.on('Secondary Customer Form', {
 	    {
 	        frm.set_intro('Please Enter DB Code');
 	    }
-	}
+	},
+
+    validate(frm){
+        var phone = frm.doc.distributor_contact_number || ""
+        var email = frm.doc.distributor_email_id || ""
+        var mobile_pattern = "^\\d{10,11}$";
+        var email_pattern = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
+
+        if(phone.length > 0  && !phone.match(mobile_pattern))
+        {
+            frappe.throw('Enter Valid Phone Number')
+        }
+
+        if(email.length > 0  && !email.match(email_pattern))
+        {
+            frappe.throw('Enter Valid Email ID')
+        }
+
+
+
+    }
 });
