@@ -2,7 +2,7 @@
  "attach_print": 0,
  "channel": "Email",
  "condition": "doc.workflow_state == \"Pending for TOT Approval from Customer\"",
- "creation": "2021-06-16 13:52:37.791187",
+ "creation": "2022-08-12 18:36:13.296385",
  "days_in_advance": 0,
  "docstatus": 0,
  "doctype": "Notification",
@@ -11,12 +11,12 @@
  "event": "Value Change",
  "idx": 0,
  "is_standard": 1,
- "message": "{% set document = frappe.get_doc(\"Hector Settings\") %}\nDearest friend,<br>\n<br>\nThank you for choosing to sail with Paper Boat! <br>We hope to find new horizons and make the most of our journey together. We believe in putting our best foot forward in everything we do. Starting from the crucial innings of gully cricket to this partnership we are about to embark on.\nTo ensure our partnership is strong and will help us win our game we\u2019ve sent you a set of terms and conditions to go through. Please send us a response in agreement so that we may take this forward!\n<br><br>\nHoping to hear the best from you,\nYour newfound friends at Paper Boat!\nTOT(Terms Of Trade)<br>\n<a href={{document.tot_attachment}}>Click here to view TermsOfTrade</a>\n",
- "modified": "2022-06-02 16:02:33.058869",
+ "message": "{% set document = frappe.get_doc(\"Hector Settings\") %}\nDearest friend,<br>\n<br>\nThank you for choosing to sail with Paper Boat! <br>We hope to find new horizons and make the most of our journey together. We believe in putting our best foot forward in everything we do. Starting from the crucial innings of gully cricket to this partnership we are about to embark on.\nTo ensure our partnership is strong and will help us win our game we\u2019ve sent you a set of terms and conditions to go through. Please send us a response in agreement so that we may take this forward!\n<br><br>\nHoping to hear the best from you,\nYour newfound friends at Paper Boat!\nTOT(Terms Of Trade)<br>\n<a href={{document.tot_attachment}}>Click here to view TermsOfTrade</a>",
+ "modified": "2022-08-12 18:37:53.459946",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "TOT Email Notification",
- "owner": "anurag.mahadik@atriina.com",
+ "owner": "Administrator",
  "recipients": [
   {
    "cc": "{{ doc.modified_by }}, {{ doc.owner }}\nprathap-v@hectorbeverages.com",
@@ -25,9 +25,9 @@
    "receiver_by_role": "Primary Customer Master Approver"
   }
  ],
- "send_system_notification": 1,
- "send_to_all_assignees": 1,
- "sender": "Notification",
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "sender": "Notifications",
  "sender_email": "notification@hectorbeverages.com",
  "subject": "{{ doc.customer_name }} Thanks for connecting with Hector Beverages",
  "value_changed": "workflow_state"
