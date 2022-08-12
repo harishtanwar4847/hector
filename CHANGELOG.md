@@ -1,5 +1,11 @@
 # Changelog
 
+## [v1.6.2-dev] - 2022-08-12
+
+### Added
+
+- [changes in email notifications](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/88)
+
 ## [v1.6.1-uat] - 2022-08-11
 ## [v1.6.1-dev] - 2022-08-11
 
