@@ -1,6 +1,11 @@
 # Changelog
 
-## [v1.6.2-uat] - 2022-08-17
+## [v1.6.2-dev+1] - 2022-08-17
+
+### Added
+
+- [patch for updating notifications](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/90)
+
 ## [v1.6.2-dev] - 2022-08-12
 
 ### Added
