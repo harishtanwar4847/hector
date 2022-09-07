@@ -1,5 +1,11 @@
 # Changelog
 
+## [v1.6.3-dev] - 2022-09-07
+
+### Added
+
+- [workflow patch for handling existing customer form tickets](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/92)
+
 ## [v1.6.2-uat] - 2022-08-18
 ## [v1.6.2-dev+1] - 2022-08-17
 
