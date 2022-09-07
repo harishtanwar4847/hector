@@ -22,3 +22,5 @@ hector.patches.new_workflows3
 hector.patches.update_manufacture_plants
 hector.patches.setting_site
 hector.patches.update_notifications
+hector.patches.update_customer_type ##
+hector.patches.new_workflows4 ##
