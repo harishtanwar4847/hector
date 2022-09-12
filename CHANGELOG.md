@@ -1,5 +1,11 @@
 # Changelog
 
+## [v1.6.4-dev] - 2022-09-12
+
+### Added
+
+-[remove the Remarks column mandatory status in secondary customer form](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/93)
+
 ## [v1.6.3-dev] - 2022-09-07
 
 ### Added

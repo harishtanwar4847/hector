@@ -310,8 +310,7 @@
   {
    "fieldname": "remarks",
    "fieldtype": "Small Text",
-   "label": "Remarks",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\""
+   "label": "Remarks"
   },
   {
    "fieldname": "naming_series",
@@ -353,7 +352,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-06-13 14:00:20.482464",
+ "modified": "2022-09-12 10:57:23.578784",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Secondary Customer Form",
