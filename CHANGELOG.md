@@ -1,6 +1,96 @@
 # Changelog
 
+## [v1.6.4] - 2022-09-19
+## [v1.6.4-uat] - 2022-09-12
+## [v1.6.4-dev] - 2022-09-12
+
+### Added
+
+-[remove the Remarks column mandatory status in secondary customer form](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/93)
+
+## [v1.6.3-dev] - 2022-09-07
+
+### Added
+
+- [workflow patch for handling existing customer form tickets](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/92)
+
+## [v1.6.2-uat] - 2022-08-18
+## [v1.6.2-dev+1] - 2022-08-17
+
+### Added
+
+- [patch for updating notifications](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/90)
+
+## [v1.6.2-dev] - 2022-08-12
+
+### Added
+
+- [changes in email notifications](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/88)
+
+## [v1.6.1-uat] - 2022-08-11
+## [v1.6.1-dev] - 2022-08-11
+
+### Added
+
+- [mobile number validation changes](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/85)
+
+## [v1.6.0-uat] - 2022-08-10
+## [v1.6.0-dev+1] - 2022-08-10
+
+### Added
+
+- [Change datatype of total_outlets_handling field](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/83)
+
+## [v1.6.0-dev] - 2022-08-10
+
+### Added
+
+- [Changing datatype of field](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/82)
+
+## [v1.5.9-uat] - 2022-08-09
+## [v1.5.9-dev] - 2022-08-09
+
+### Added
+
+- [Field level changes and validations](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/80)
+
+## [v1.5.8-uat] - 2022-07-26
+## [v1.5.8-dev] - 2022-07-22
+
+[Changes in Lead Form](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/77)
+
+## [v1.5.7-uat-1] - 2022-06-13
+
+[edit right to rsm and field level changes](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/70)
+
+## [v1.5.7-uat] - 2022-06-07
+## [v1.5.7-dev] - 2022-06-06
+
+[welcome mail notification to distributor](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/68)
+
+## [v1.5.6-dev] - 2022-06-06
+
+[changes in lead generation flow](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/66)
+
+## [v1.5.5-uat] - 2022-05-20
+## [v1.5.5-dev] - 2022-05-20
+
+[phone number validation](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/63)
+
+## [v1.5.4-uat] - 2022-05-16
+## [v1.5.4-dev] - 2022-05-10
+
+[lead generation](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/61)
+
+## [v1.5.3-dev] - 2022-05-04
+
+### Added
+
+[Updating Lead Form](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/60)
+
 ## [v1.5.2-6] - 2022-07-25
+
+### Added
 
 -[mandatory removal from manufacturing plant field](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/78)
 
@@ -34,7 +124,6 @@
 ### Added
 
 -[TOT acceptance checkbox addition in Vendor Creation form | Changes in welcome email notification](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/65)
-
 ## [v1.5.2] - 2022-04-01
 ## [v1.5.2-uat] - 2022-03-28
 ## [v1.5.2-dev] - 2022-03-28

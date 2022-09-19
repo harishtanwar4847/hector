@@ -14,7 +14,7 @@
  "is_standard": 1,
  "label": "Home",
  "links": [],
- "modified": "2021-10-13 08:44:13.873932",
+ "modified": "2022-07-21 13:30:29.337414",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Home",
@@ -24,20 +24,32 @@
  "shortcuts": [
   {
    "doc_view": "New",
-   "label": " Create Your Customer",
-   "link_to": "Customer Form",
+   "label": " Create Your Primary Customer",
+   "link_to": "Primary Customer Form",
    "type": "DocType"
   },
   {
    "doc_view": "List",
-   "label": "Customer List",
-   "link_to": "Customer Form",
+   "label": "Primary Customer List",
+   "link_to": "Primary Customer Form",
    "type": "DocType"
   },
   {
    "doc_view": "List",
    "label": "Sales Hierarchy Mapping",
    "link_to": "Sales Hierarchy Mapping",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "New",
+   "label": "Create Your Secondary Customer",
+   "link_to": "Secondary Customer Form",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Secondary Customer List",
+   "link_to": "Secondary Customer Form",
    "type": "DocType"
   }
  ]

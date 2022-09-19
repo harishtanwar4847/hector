@@ -1,16 +1,22 @@
-frappe.ui.form.on('Customer Form', {
+frappe.ui.form.on('Primary Customer Form', {
     onload(frm){
-        if(frm.doc.workflow_state == "Customer Approved")
+        if(frm.doc.workflow_state == "Primary Customer Approved")
 	    {
 	        frm.page.sidebar.remove();
 	    }
     },
 	refresh(frm){
+        if (frm.is_new() && (frappe.user_roles.includes("Area Sales Manager"))){
+            frm.set_value("asm_user", frappe.session.user)
+        }
+        if (frm.is_new() && (frappe.user_roles.includes("Regional Sales Manager"))){
+            frm.set_value("rsm_user", frappe.session.user)
+        }
         if(frm.doc.workflow_state == 'Pending for TOT Approval from Customer')
 	    {
 	        frm.set_intro('Please Attach TOT Acceptance Email');
 	    }
-	    if(frm.doc.workflow_state == 'Pending for Master Team Approval' || frm.doc.workflow_state == 'Resent for Master Team Approval &nbsp;')
+	    if(frm.doc.workflow_state == 'Pending with Primary Master Processing' || frm.doc.workflow_state == 'Resent for Primary Master Processing')
 	    {
 	        frm.set_intro('Please Enter Customer ID');
 	    }
@@ -24,7 +30,8 @@ frappe.ui.form.on('Customer Form', {
         }
 	    var number_list = ['0','1','2','3','4','5','6','7','8','9']
 	    var char_list = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
-	    var gstin = frm.doc.gst_registration_number
+	    var mobile_pattern = "^\\d{10,11}$";
+        var gstin = frm.doc.gst_registration_number
 	    if (frm.doc.customer_type === "Super Stockist" || !isEmpty(gstin)) {
 	    if(gstin.length == 15)
 	    {
@@ -57,24 +64,12 @@ frappe.ui.form.on('Customer Form', {
         {
             frappe.throw('Enter Valid PAN Card Number.')
         }
-        var ph_number = frm.doc.mobile_no_of_the_customer
-        if(ph_number.length == 10)
+        var phone = frm.doc.mobile_no_of_the_customer
+        if(phone.length > 0  && !phone.match(mobile_pattern))
         {
-            if(!(number_list.includes(ph_number[0]) && number_list.includes(ph_number[1]) && number_list.includes(ph_number[2]) && number_list.includes(ph_number[3])
-	          && number_list.includes(ph_number[4]) && number_list.includes(ph_number[5]) && number_list.includes(ph_number[6]) && number_list.includes(ph_number[7])
-	          && number_list.includes(ph_number[8]) && number_list.includes(ph_number[9])))
-	        {
-	            frm.doc.mobile_no_of_the_customer = ''
-	            frm.refresh_field('mobile_no_of_the_customer');
-	            frappe.throw('Enter Valid Mobile Number.')
-	        }
+            frappe.throw('Enter Valid Phone Number')
         }
-        else
-        {
-            frm.doc.mobile_no_of_the_customer = ''
-	        frm.refresh_field('mobile_no_of_the_customer');
-            frappe.throw('Enter Valid Mobile Number.')
-        }
+
         var post_code = frm.doc.post_code;
         if(post_code.length == 6)
         {
@@ -114,7 +109,7 @@ frappe.ui.form.on('Customer Form', {
             frappe.throw('Enter Valid Email.')
             frm.doc.customer_email_address = ''
         }
-        if(frm.doc.workflow_state == "Pending for Master Team Approval")
+        if(frm.doc.workflow_state == "Pending with Primary Master Processing")
         {
             if(frm.doc.customer_id[0] != "C")
             {
