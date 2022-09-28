@@ -342,8 +342,7 @@
    "fieldname": "asm_user",
    "fieldtype": "Link",
    "label": "ASM Name",
-   "options": "User",
-   "reqd": 1
+   "options": "User"
   },
   {
    "fieldname": "rsm_user",
@@ -352,7 +351,6 @@
    "options": "User"
   },
   {
-   "description": "Mandatory if you want to reject this customer",
    "fieldname": "reason_of_rejection",
    "fieldtype": "Data",
    "label": "Reason of Rejection"
@@ -360,7 +358,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-08-11 10:57:59.822244",
+ "modified": "2022-09-19 23:24:32.878980",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Primary Customer Form",
