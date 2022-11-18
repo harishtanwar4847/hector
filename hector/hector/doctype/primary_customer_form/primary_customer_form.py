@@ -124,7 +124,7 @@ class PrimaryCustomerForm(Document):
 				frappe.sendmail(subject="Customer Creation Rejected : {}".format(self.customer_name), content=msg, recipients = '{}'.format(asm_rsm[0][0]), sender="Notification@hectorbeverages.com")
 				print("\n email sent \n")
 
-			if self.workflow_state == 'TOT Rejected by Customer':
+			if self.workflow_state == 'TOT Rejected by Customer &nbsp;':
 				msg="""Hello Team,<br><br>
 				Your request for Primary customer creation has been rejected.<br><br>
 				Kindly check reason for rejection in website apps.myhector.com<br><br><br>
