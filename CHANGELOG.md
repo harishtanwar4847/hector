@@ -1,5 +1,11 @@
 # Changelog
 
+## [v1.6.5-dev] - 2022-11-18
+
+### Added
+
+-[Lead generation/Customer onboarding and Vendor Registration Auto mail changes](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/96)
+
 ## [v1.6.4] - 2022-09-19
 ## [v1.6.4-uat] - 2022-09-12
 ## [v1.6.4-dev] - 2022-09-12
