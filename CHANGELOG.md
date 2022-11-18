@@ -1,5 +1,11 @@
 # Changelog
 
+## [v1.6.5-dev+1] - 2022-11-18
+
+### Added
+
+-[Changes in TOT Rejected by Customer auto mail](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/97)
+
 ## [v1.6.5-dev] - 2022-11-18
 
 ### Added
