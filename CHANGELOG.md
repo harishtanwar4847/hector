@@ -1,5 +1,12 @@
 # Changelog
 
+## [v1.6.6-uat] - 2022-12-05
+## [v1.6.6-dev] - 2022-12-05
+
+### Added
+
+-[Vendor registration form changes](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/99)
+
 ## [v1.6.5-uat] - 2022-11-21
 ## [v1.6.5-dev+1] - 2022-11-18
 
