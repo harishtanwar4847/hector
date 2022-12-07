@@ -1,5 +1,12 @@
 # Changelog
 
+## [v1.6.7-uat] - 2022-12-07
+## [v1.6.7-dev] - 2022-12-07
+
+### Added
+
+-[Removing double quotes and change the format to Italic to Normal for all the automail](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/102)
+
 ## [v1.6.6] - 2022-12-06
 ## [v1.6.6-uat] - 2022-12-05
 ## [v1.6.6-dev] - 2022-12-05
