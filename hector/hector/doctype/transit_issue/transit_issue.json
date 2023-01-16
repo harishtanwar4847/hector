@@ -16,6 +16,7 @@
   "column_break_6",
   "asm_name",
   "asm_full_name",
+  "customer_state",
   "customer_location",
   "email_address_of_requestor_from_sales_team",
   "issue_details_section",
@@ -30,18 +31,22 @@
   "pode_photo_mandatory",
   "credit_details",
   "reason_of_rejection",
-  "column_break_25",
   "stock_image_mandatory",
   "stock_image_2optional",
   "stock_image_3optional",
   "stock_image_4optional",
   "stock_image_5optional",
+  "time_details_section",
   "pending_supply_team_time",
   "resent_supply_team_time",
   "request_details_supply_team_time",
   "pending_finance_team_time",
   "resent_finance_team_time",
-  "request_details_finance_team_time"
+  "column_break_38",
+  "request_details_finance_team_time",
+  "supply_team_rejection_time",
+  "finance_team_approval_time",
+  "finance_team_rejection_time"
  ],
  "fields": [
   {
@@ -168,17 +173,13 @@
    "label": "Issue Details"
   },
   {
-   "fieldname": "column_break_25",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "pode_photo_mandatory",
    "fieldtype": "Attach",
    "label": "PODE Photo (Mandatory)",
    "reqd": 1
   },
   {
-   "description": "You can upload up to 5 images ",
+   "description": "You can upload up to 20 images ",
    "fieldname": "stock_image_mandatory",
    "fieldtype": "Attach",
    "label": "Stock Image (Mandatory)",
@@ -238,20 +239,20 @@
   {
    "fieldname": "pending_finance_team_time",
    "fieldtype": "Data",
-   "hidden": 1,
-   "label": "Pending Finance Team Time"
+   "label": "Supply Team Approval Time",
+   "read_only": 1
   },
   {
    "fieldname": "resent_finance_team_time",
    "fieldtype": "Data",
-   "hidden": 1,
-   "label": "Resent Finance Team Time"
+   "label": "Resent for Finance Team Approval Time",
+   "read_only": 1
   },
   {
    "fieldname": "request_details_finance_team_time",
    "fieldtype": "Data",
-   "hidden": 1,
-   "label": "Request Details Finance Team Time"
+   "label": "Requested for More Details by Finance Team Time",
+   "read_only": 1
   },
   {
    "fetch_from": "asm_name.full_name",
@@ -259,11 +260,45 @@
    "fieldtype": "Data",
    "hidden": 1,
    "label": "ASM Full Name"
+  },
+  {
+   "fieldname": "time_details_section",
+   "fieldtype": "Section Break",
+   "label": "Time Details"
+  },
+  {
+   "fieldname": "customer_state",
+   "fieldtype": "Link",
+   "label": "Customer State",
+   "options": "State",
+   "reqd": 1
+  },
+  {
+   "fieldname": "supply_team_rejection_time",
+   "fieldtype": "Data",
+   "label": "Supply Team Rejection Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "finance_team_approval_time",
+   "fieldtype": "Data",
+   "label": "Finance Team Approval Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "finance_team_rejection_time",
+   "fieldtype": "Data",
+   "label": "Finance Team Rejection Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_38",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-02-04 12:15:14.996655",
+ "modified": "2023-01-13 21:13:01.228381",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Transit Issue",

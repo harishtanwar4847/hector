@@ -158,6 +158,7 @@ class QualityIssue(Document):
 			print("\n email sent \n")
 
 		if self.workflow_state == 'Rejected by Physical Verification Officer':
+			frappe.db.set_value("Quality Issue", self.name, "physical_verification_officer_rejection_time", frappe.utils.now())
 			msg="""Below Quality Issue have been Rejected:<br>
 			<table border="1" cellspacing="0" cellpadding="5" align="">
 				<tbody>
@@ -410,6 +411,7 @@ class QualityIssue(Document):
 			print("\n email sent \n")
 
 		if self.workflow_state == 'RCA Approved':
+			frappe.db.set_value('Quality Issue', self.name, 'quality_head_approval_time', frappe.utils.now())
 			message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
 				<tr><th>SKU Code</th><th>SKU Name</th><th>Batch Details</th><th>Mgf Date</th><th>Quantity</th></tr>
 				"""
@@ -698,6 +700,7 @@ class QualityIssue(Document):
 			print("\n email sent \n")
 
 		if self.workflow_state == 'Rejected by Quality Head':
+			frappe.db.set_value('Quality Issue', self.name, 'quality_head_rejection_time', frappe.utils.now())
 			msg="""Below Quality Issue have been Rejected:<br>
 			<table border="1" cellspacing="0" cellpadding="5" align="">
 				<tbody>
@@ -807,3 +810,8 @@ class QualityIssue(Document):
 			frappe.sendmail(subject="Quality Issue requesting for more details: {}: {}".format(self.customer_code, self.customer_name), content=messageFinal, recipients = '{}'.format(physicalVerificationTeamEmail),sender="Notification@hectorbeverages.com")
 			print("\n email sent \n")
 
+		if self.workflow_state == "Rejected by Finance Team":
+			frappe.db.set_value('Quality Issue', self.name, 'finance_team_rejection_time', frappe.utils.now())
+
+		if self.workflow_state == "Issue Closed":
+			frappe.db.set_value('Quality Issue', self.name, 'issue_closed_time', frappe.utils.now())
