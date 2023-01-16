@@ -55,7 +55,21 @@
   "workflow_state",
   "asm_user",
   "rsm_user",
-  "reason_of_rejection"
+  "reason_of_rejection",
+  "time_details_section",
+  "primary_customer_additional_details_approval_time",
+  "rejected_by_asm_time",
+  "rejected_by_rsm_time",
+  "nsm_approval_time",
+  "rejected_by_nsm_time",
+  "requested_for_more_details_by_nsm_time",
+  "column_break_58",
+  "resent_for_nsm_approval_time",
+  "tot_approval_from_customer_time",
+  "tot_rejected_by_customer_time",
+  "primary_customer_master_approval_time",
+  "requested_for_more_details_by_primary_master_team_time",
+  "resent_for_primary_master_processing_time"
  ],
  "fields": [
   {
@@ -356,11 +370,92 @@
    "fieldname": "reason_of_rejection",
    "fieldtype": "Data",
    "label": "Reason of Rejection"
+  },
+  {
+   "fieldname": "time_details_section",
+   "fieldtype": "Section Break",
+   "label": "Time Details"
+  },
+  {
+   "fieldname": "rejected_by_asm_time",
+   "fieldtype": "Data",
+   "label": "Rejected by ASM Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rejected_by_rsm_time",
+   "fieldtype": "Data",
+   "label": "Rejected by RSM Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rejected_by_nsm_time",
+   "fieldtype": "Data",
+   "label": "Rejected by NSM Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "requested_for_more_details_by_nsm_time",
+   "fieldtype": "Data",
+   "label": "Requested for More Details by NSM Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "resent_for_nsm_approval_time",
+   "fieldtype": "Data",
+   "label": "Resent for NSM Approval Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tot_rejected_by_customer_time",
+   "fieldtype": "Data",
+   "label": "TOT Rejected by Customer Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "requested_for_more_details_by_primary_master_team_time",
+   "fieldtype": "Data",
+   "label": "Requested for More Details by Primary Master Team Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "resent_for_primary_master_processing_time",
+   "fieldtype": "Data",
+   "label": "Resent for Primary Master Processing Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "primary_customer_additional_details_approval_time",
+   "fieldtype": "Data",
+   "label": "Primary Customer Additional Details Approval Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "nsm_approval_time",
+   "fieldtype": "Data",
+   "label": "NSM Approval Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tot_approval_from_customer_time",
+   "fieldtype": "Data",
+   "label": "TOT Approval from Customer Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "primary_customer_master_approval_time",
+   "fieldtype": "Data",
+   "label": "Primary Customer Master Approval Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_58",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-09-28 14:15:04.630439",
+ "modified": "2023-01-13 17:54:55.315158",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Primary Customer Form",

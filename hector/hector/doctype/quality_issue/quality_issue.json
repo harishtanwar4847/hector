@@ -12,6 +12,7 @@
   "rsm_full_name",
   "customer_name",
   "customer_code",
+  "customer_state",
   "customer_location",
   "customer_phone_number",
   "column_break_6",
@@ -34,15 +35,36 @@
   "physicalremote_verification_executive",
   "physicalremote_verification_executive_email",
   "reason_of_rejection",
-  "column_break_25",
   "photo_mandatory",
   "photo_2optional",
   "photo_3optional",
   "photo_4optional",
   "photo_5optional",
+  "photo_6optional",
+  "photo_7optional",
+  "photo_8optional",
+  "photo_9optional",
+  "photo_10optional",
+  "column_break_25",
+  "photo_11optional",
+  "photo_12optional",
+  "photo_13optional",
+  "photo_14optional",
+  "photo_15optional",
+  "photo_16optional",
+  "photo_17optional",
+  "photo_18optional",
+  "photo_19optional",
+  "photo_20optional",
+  "photo_21optional",
+  "photo_22optional",
+  "photo_23optional",
+  "photo_24optional",
+  "photo_25optional",
   "attach_rca_details",
   "close_issue",
   "credit_details",
+  "time_details_section",
   "pending_physical_verification_time",
   "resent_physical_verification_time",
   "request_details_physical_verification_time",
@@ -52,7 +74,13 @@
   "pending_quality_head_time",
   "resent_quality_head_time",
   "request_details_quality_head_time",
-  "pending_rca_details_time"
+  "column_break_67",
+  "pending_rca_details_time",
+  "physical_verification_officer_rejection_time",
+  "finance_team_rejection_time",
+  "issue_closed_time",
+  "quality_head_approval_time",
+  "quality_head_rejection_time"
  ],
  "fields": [
   {
@@ -182,7 +210,7 @@
    "reqd": 1
   },
   {
-   "description": "You can upload up to 5 images ",
+   "description": "You can upload up to 20 images ",
    "fieldname": "photo_mandatory",
    "fieldtype": "Attach",
    "label": "Photo (Mandatory)",
@@ -300,44 +328,44 @@
   {
    "fieldname": "pending_finance_team_time",
    "fieldtype": "Data",
-   "hidden": 1,
-   "label": "Pending Finance Team Time"
+   "label": "Physical Verification Officer Approval Time",
+   "read_only": 1
   },
   {
    "fieldname": "resent_finance_team_time",
    "fieldtype": "Data",
-   "hidden": 1,
-   "label": "Resent Finance Team Time"
+   "label": "Resent for Finance Team Approval Time",
+   "read_only": 1
   },
   {
    "fieldname": "request_details_finance_team_time",
    "fieldtype": "Data",
-   "hidden": 1,
-   "label": "Request Details Finance Team Time"
+   "label": "Requested for More Details by Finance Team Time",
+   "read_only": 1
   },
   {
    "fieldname": "pending_quality_head_time",
    "fieldtype": "Data",
-   "hidden": 1,
-   "label": "Pending Quality Head Time"
+   "label": "RCA Details Approval Time",
+   "read_only": 1
   },
   {
    "fieldname": "resent_quality_head_time",
    "fieldtype": "Data",
-   "hidden": 1,
-   "label": "Resent Quality Head Time"
+   "label": "Resent for Quality Head Approval Time",
+   "read_only": 1
   },
   {
    "fieldname": "request_details_quality_head_time",
    "fieldtype": "Data",
-   "hidden": 1,
-   "label": "Request Details Quality Head Time"
+   "label": "Requested for More Details by Quality Head Time",
+   "read_only": 1
   },
   {
    "fieldname": "pending_rca_details_time",
    "fieldtype": "Data",
-   "hidden": 1,
-   "label": "Pending RCA Details Time"
+   "label": "Finance Team Approval Time",
+   "read_only": 1
   },
   {
    "fetch_from": "asm_name.full_name",
@@ -345,11 +373,157 @@
    "fieldtype": "Data",
    "hidden": 1,
    "label": "ASM Full Name"
+  },
+  {
+   "fieldname": "customer_state",
+   "fieldtype": "Link",
+   "label": "Customer State",
+   "options": "State",
+   "reqd": 1
+  },
+  {
+   "fieldname": "photo_6optional",
+   "fieldtype": "Attach",
+   "label": "Photo 6(Optional)"
+  },
+  {
+   "fieldname": "photo_7optional",
+   "fieldtype": "Attach",
+   "label": "Photo 7(Optional)"
+  },
+  {
+   "fieldname": "photo_8optional",
+   "fieldtype": "Attach",
+   "label": "Photo 8(Optional)"
+  },
+  {
+   "fieldname": "photo_9optional",
+   "fieldtype": "Attach",
+   "label": "Photo 9(Optional)"
+  },
+  {
+   "fieldname": "photo_10optional",
+   "fieldtype": "Attach",
+   "label": "Photo 10(Optional)"
+  },
+  {
+   "fieldname": "photo_11optional",
+   "fieldtype": "Attach",
+   "label": "Photo 11(Optional)"
+  },
+  {
+   "fieldname": "photo_12optional",
+   "fieldtype": "Attach",
+   "label": "Photo 12(Optional)"
+  },
+  {
+   "fieldname": "photo_13optional",
+   "fieldtype": "Attach",
+   "label": "Photo 13(Optional)"
+  },
+  {
+   "fieldname": "photo_14optional",
+   "fieldtype": "Attach",
+   "label": "Photo 14(Optional)"
+  },
+  {
+   "fieldname": "photo_15optional",
+   "fieldtype": "Attach",
+   "label": "Photo 15(Optional)"
+  },
+  {
+   "fieldname": "photo_16optional",
+   "fieldtype": "Attach",
+   "label": "Photo 16(Optional)"
+  },
+  {
+   "fieldname": "photo_17optional",
+   "fieldtype": "Attach",
+   "label": "Photo 17(Optional)"
+  },
+  {
+   "fieldname": "photo_18optional",
+   "fieldtype": "Attach",
+   "label": "Photo 18(Optional)"
+  },
+  {
+   "fieldname": "photo_19optional",
+   "fieldtype": "Attach",
+   "label": "Photo 19(Optional)"
+  },
+  {
+   "fieldname": "photo_20optional",
+   "fieldtype": "Attach",
+   "label": "Photo 20(Optional)"
+  },
+  {
+   "fieldname": "time_details_section",
+   "fieldtype": "Section Break",
+   "label": "Time Details"
+  },
+  {
+   "fieldname": "photo_21optional",
+   "fieldtype": "Attach",
+   "label": "Photo 21(Optional)"
+  },
+  {
+   "fieldname": "photo_22optional",
+   "fieldtype": "Attach",
+   "label": "Photo 22(Optional)"
+  },
+  {
+   "fieldname": "photo_23optional",
+   "fieldtype": "Attach",
+   "label": "Photo 23(Optional)"
+  },
+  {
+   "fieldname": "photo_24optional",
+   "fieldtype": "Attach",
+   "label": "Photo 24(Optional)"
+  },
+  {
+   "fieldname": "photo_25optional",
+   "fieldtype": "Attach",
+   "label": "Photo 25(Optional)"
+  },
+  {
+   "fieldname": "physical_verification_officer_rejection_time",
+   "fieldtype": "Data",
+   "label": "Physical Verification Officer Rejection Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "finance_team_rejection_time",
+   "fieldtype": "Data",
+   "label": "Finance Team Rejection Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "issue_closed_time",
+   "fieldtype": "Data",
+   "label": "Issue Closed Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "quality_head_approval_time",
+   "fieldtype": "Data",
+   "label": "Quality Head Approval Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "quality_head_rejection_time",
+   "fieldtype": "Data",
+   "label": "Quality Head Rejection Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_67",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-07-25 10:19:26.720818",
+ "modified": "2023-01-13 21:06:00.699678",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Quality Issue",
