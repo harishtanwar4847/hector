@@ -1,5 +1,12 @@
 # Changelog
 
+## [v1.6.8-dev] - 2023-01-16
+
+### Added
+
+-[Time stamp capture and addition of image fields](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/105)
+
+## [v1.6.7] - 2022-12-07
 ## [v1.6.7-uat] - 2022-12-07
 ## [v1.6.7-dev] - 2022-12-07
 

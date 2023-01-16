@@ -22,6 +22,7 @@ class SecondaryCustomerForm(Document):
 
 
 			if self.workflow_state == 'Pending for NSM Approval':
+				frappe.db.set_value("Secondary Customer Form", self.name, "secondary_customer_additional_details_approval_time", frappe.utils.now())
 				msg="""Hello {},<br><br>
 				You have received a request for Secondary customer creation approval from {} for the customer {}.<br><br>
 				Kindly login to apps.myhector.com for the approval process.<br><br><br>
@@ -42,6 +43,7 @@ class SecondaryCustomerForm(Document):
 				print("\n email sent \n")
 
 			if self.workflow_state == 'Resent for NSM Approval':
+				frappe.db.set_value("Secondary Customer Form", self.name, "resent_for_nsm_approval_time", frappe.utils.now())
 				msg="""Hello {},<br><br>
 				You have received a request for Secondary customer creation approval from {} for the customer {}.<br><br>
 				Kindly login to apps.myhector.com for the approval process.<br><br><br>
@@ -52,6 +54,7 @@ class SecondaryCustomerForm(Document):
 				print("\n email sent \n")
 
 			if self.workflow_state == 'Pending with Secondary Master Processing':
+				frappe.db.set_value("Secondary Customer Form", self.name, "nsm_approval_time", frappe.utils.now())
 				for i in range(len(scma_list)):
 					msg="""Hello {},<br><br>
 					You have received a request for Secondary customer creation from {} for the customer {}.<br><br>
@@ -63,6 +66,7 @@ class SecondaryCustomerForm(Document):
 					print("\n email sent \n")
 
 			if self.workflow_state == 'Resent for Secondary Master Processing':
+				frappe.db.set_value("Secondary Customer Form", self.name, "resent_for_secondary_master_processing_time", frappe.utils.now())
 				for i in range(len(scma_list)):
 					msg="""Hello {},<br><br>
 					You have received a request for Secondary customer creation from {} for the customer {}.<br><br>
@@ -75,6 +79,7 @@ class SecondaryCustomerForm(Document):
 
 
 			if self.workflow_state == 'Requested for More Details by NSM':
+				frappe.db.set_value("Secondary Customer Form", self.name, "requested_for_more_details_by_nsm_time", frappe.utils.now())
 				msg="""Hello {},<br><br>
 				You have received a request for more information in Secondary customer creation from {} for the customer {}.<br><br>
 				Kindly login to apps.myhector.com for the approval process.<br><br><br>
@@ -85,6 +90,7 @@ class SecondaryCustomerForm(Document):
 				print("\n email sent \n")
 
 			if self.workflow_state == 'Requested for More Details by Secondary Master Team':
+				frappe.db.set_value("Secondary Customer Form", self.name, "requested_for_more_details_by_secondary_master_team_time", frappe.utils.now())
 				msg="""Hello {},<br><br>
 				You have received a request for more information in Secondary customer creation from {} for the customer {}.<br><br>
 				Kindly login to apps.myhector.com for the approval process.<br><br><br>
@@ -95,6 +101,7 @@ class SecondaryCustomerForm(Document):
 				print("\n email sent \n")
 
 			if self.workflow_state == 'Rejected by NSM':
+				frappe.db.set_value("Secondary Customer Form", self.name, "rejected_by_nsm_time", frappe.utils.now())
 				msg="""Hello {},<br><br>
 				Your request for Secondary customer creation for customer {} has been rejected by {}.<br><br>
 				Kindly check reason for rejection in website apps.myhector.com<br><br><br>
@@ -105,6 +112,7 @@ class SecondaryCustomerForm(Document):
 				print("\n email sent \n")
 
 			if self.workflow_state == 'Rejected by ASM':
+				frappe.db.set_value("Secondary Customer Form", self.name, "rejected_by_asm_time", frappe.utils.now())
 				msg="""Hello,<br><br>
 				Your request for Secondary customer creation for customer {} has been rejected by {}.<br><br>
 				Kindly check reason for rejection in website apps.myhector.com<br><br><br>
@@ -115,6 +123,7 @@ class SecondaryCustomerForm(Document):
 				print("\n email sent \n")
 
 			if self.workflow_state == 'Rejected by RSM':
+				frappe.db.set_value("Secondary Customer Form", self.name, "rejected_by_rsm_time", frappe.utils.now())
 				msg="""Hello,<br><br>
 				Your request for Secondary customer creation for customer {} has been rejected by {}.<br><br>
 				Kindly check reason for rejection in website apps.myhector.com<br><br><br>
@@ -125,6 +134,7 @@ class SecondaryCustomerForm(Document):
 				print("\n email sent \n")
 
 			if self.workflow_state == 'Secondary Customer Approved':
+				frappe.db.set_value("Secondary Customer Form", self.name, "secondary_customer_master_approval_time", frappe.utils.now())
 				msg="""Hello Team,<br><br>
 				Your request for Secondary customer creation has been approved. And New Customer Code is {} for {}.<br><br>
 				Link- apps.myhector.com<br><br><br>

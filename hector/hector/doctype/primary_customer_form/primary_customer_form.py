@@ -23,6 +23,7 @@ class PrimaryCustomerForm(Document):
 			print("The pcma is ",pcma_list)
 				
 			if self.workflow_state == 'Pending for NSM Approval':
+				frappe.db.set_value("Primary Customer Form", self.name, "primary_customer_additional_details_approval_time", frappe.utils.now())
 				msg="""Hello {},<br><br>
 				You have received a request for Primary customer creation approval from {} for the customer {}.<br><br>
 				Kindly login to apps.myhector.com for the approval process.<br><br><br>
@@ -43,6 +44,7 @@ class PrimaryCustomerForm(Document):
 				print("\n email sent \n")
 
 			if self.workflow_state == 'Resent for NSM Approval':
+				frappe.db.set_value("Primary Customer Form", self.name, "resent_for_nsm_approval_time", frappe.utils.now())
 				msg="""Hello {},<br><br>
 				You have received a request for Primary customer creation approval from {} for the customer {}.<br><br>
 				Kindly login to apps.myhector.com for the approval process.<br><br><br>
@@ -53,6 +55,7 @@ class PrimaryCustomerForm(Document):
 				print("\n email sent \n")
 
 			if self.workflow_state == 'Pending with Primary Master Processing':
+				frappe.db.set_value("Primary Customer Form", self.name, "tot_approval_from_customer_time", frappe.utils.now())
 				for i in range(len(pcma_list)):
 					msg="""Hello {},<br><br>
 					You have received a request for Primary customer creation from {} for the customer {}.<br><br>
@@ -64,6 +67,7 @@ class PrimaryCustomerForm(Document):
 					print("\n email sent \n")
 
 			if self.workflow_state == 'Resent for Primary Master Processing':
+				frappe.db.set_value("Primary Customer Form", self.name, "resent_for_primary_master_processing_time", frappe.utils.now())
 				for i in range(len(pcma_list)):
 					msg="""Hello {},<br><br>
 					You have received a request for Primary customer creation from {} for the customer {}.<br><br>
@@ -75,6 +79,7 @@ class PrimaryCustomerForm(Document):
 					print("\n email sent \n")
 
 			if self.workflow_state == 'Requested for More Details by NSM':
+				frappe.db.set_value("Primary Customer Form", self.name, "requested_for_more_details_by_nsm_time", frappe.utils.now())
 				msg="""Hello {},<br><br>
 				You have received a request for more information in Primary customer creation from {} for the customer {}.<br><br>
 				Kindly login to apps.myhector.com for the approval process.<br><br><br>
@@ -85,6 +90,7 @@ class PrimaryCustomerForm(Document):
 				print("\n email sent \n")
 
 			if self.workflow_state == 'Requested for More Details by Primary Master Team':
+				frappe.db.set_value("Primary Customer Form", self.name, "requested_for_more_details_by_primary_master_team_time", frappe.utils.now())
 				msg="""Hello {},<br><br>
 				You have received a request for more information in Primary customer creation from {} for the customer {}.<br><br>
 				Kindly login to apps.myhector.com for the approval process.<br><br><br>
@@ -95,6 +101,7 @@ class PrimaryCustomerForm(Document):
 				print("\n email sent \n")
 
 			if self.workflow_state == 'Rejected by ASM':
+				frappe.db.set_value("Primary Customer Form", self.name, "rejected_by_asm_time", frappe.utils.now())
 				msg="""Hello,<br><br>
 				Your request for Primary customer creation for customer {} has been rejected by {}.<br><br>
 				Kindly check reason for rejection in website apps.myhector.com<br><br><br>
@@ -105,6 +112,7 @@ class PrimaryCustomerForm(Document):
 				print("\n email sent \n")
 
 			if self.workflow_state == 'Rejected by NSM':
+				frappe.db.set_value("Primary Customer Form", self.name, "rejected_by_nsm_time", frappe.utils.now())
 				msg="""Hello,<br><br>
 				Your request for Primary customer creation for customer {} has been rejected by {}.<br><br>
 				Kindly check reason for rejection in website apps.myhector.com<br><br><br>
@@ -125,6 +133,7 @@ class PrimaryCustomerForm(Document):
 				print("\n email sent \n")
 
 			if self.workflow_state == 'TOT Rejected by Customer &nbsp;':
+				frappe.db.set_value("Primary Customer Form", self.name, "tot_rejected_by_customer_time", frappe.utils.now())
 				msg="""Hello Team,<br><br>
 				Your request for Primary customer creation has been rejected.<br><br>
 				Kindly check reason for rejection in website apps.myhector.com<br><br><br>
@@ -135,6 +144,7 @@ class PrimaryCustomerForm(Document):
 				print("\n email sent \n")
 
 			if self.workflow_state == 'Primary Customer Approved':
+				frappe.db.set_value("Primary Customer Form", self.name, "primary_customer_master_approval_time", frappe.utils.now())
 				msg="""Hello Team,<br><br>
 				Your request for Primary customer creation has been approved. And New Customer Code is {} for {}.<br><br>
 				Link- apps.myhector.com<br><br><br>
@@ -143,6 +153,12 @@ class PrimaryCustomerForm(Document):
 				<br><br><p style="color:#424242;font-size:12px">The personal information including sensitive personal data or information (as such term is defined in the Information Technology Act, 2000 read with the Information Technology (Reasonable security practices and procedures and sensitive personal data or information) Rules, 2011), and the Aadhaar number (as such term is defined under the Aadhaar (Targeted Delivery of Financial and Other Subsidies, Benefits and Services) Act, 2016) (collectively, the <b>“Personal Information”</b>), you provide to the company in connection with your association with the company will be used for the purpose of administering your association with the company and the company's internal record keeping purposes generally. The company may either by itself, or through third party service providers, process such Personal Information for relevant and limited purposes in connection with your association with the company, conducting background checks, and the business of the company. By providing information through this form, you expressly consent to the collection, processing, storage, retention, disclosure and transfer of your Personal Information by the company in accordance with the company’s privacy policy and applicable law. Subject to applicable law, this may include the retention of the Personal Information by the company even after the termination of your association with the company. You have the right to access and update the Personal Information which relates to you and has been collected by the company. You hereby certify that the Personal Information provided to the company is true, accurate and complete, and agree to fully indemnify and keep indemnified the company, its management, employees and representatives for any claims, demands, losses, damages, or other liabilities, whether financial or otherwise, arising directly or indirectly from any reliance thereupon.</p>""".format(self.customer_id,self.customer_name)
 				frappe.sendmail(subject="Customer Creation Completed : {} : {}".format(self.customer_id,self.customer_name), content=msg, recipients = '{},{}'.format(asm_rsm[0][0], nsm_user[0][0]), sender="Notification@hectorbeverages.com")
 				print("\n email sent \n")
+
+			if self.workflow_state == 'Rejected by RSM':
+				frappe.db.set_value("Primary Customer Form", self.name, "rejected_by_rsm_time", frappe.utils.now())
+
+			if self.workflow_state == 'Pending for TOT Approval from Customer':
+				frappe.db.set_value("Primary Customer Form", self.name, "nsm_approval_time", frappe.utils.now())
 
 		except:
 			frappe.throw("Please add ASM in Sales Hierarchy Mapping")
