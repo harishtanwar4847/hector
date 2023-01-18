@@ -125,6 +125,7 @@ class TransitIssue(Document):
 			print("\n email sent \n")
 
 		if self.workflow_state == 'Rejected by Supply Team' :
+			frappe.db.set_value('Transit Issue', self.name, 'supply_team_rejection_time', frappe.utils.now())
 			msg="""Below Transit Issue have been Rejected:<br>
 			<table border="1" cellspacing="0" cellpadding="5" align="">
 				<tbody>
@@ -243,6 +244,7 @@ class TransitIssue(Document):
 			print("\n email sent \n")
 
 		if self.workflow_state == 'Rejected by Finance Team':
+			frappe.db.set_value('Transit Issue', self.name, 'finance_team_rejection_time', frappe.utils.now())
 			msg="""Below Transit Issue have been Rejected:<br>
 			<table border="1" cellspacing="0" cellpadding="5" align="">
 				<tbody>
@@ -361,6 +363,7 @@ class TransitIssue(Document):
 			print("\n email sent \n")
 
 		if self.workflow_state == 'Issue Closed':
+			frappe.db.set_value('Transit Issue', self.name, 'finance_team_approval_time', frappe.utils.now())
 			message2 = """<table border="1" cellspacing="0" cellpadding="5" align="">
 			<tr><th>Invoice Number</th><th>SKU Code</th><th>SKU Name</th><th>Batch Details</th><th>Damaged /Missing Quantity</th></tr>
 			"""
