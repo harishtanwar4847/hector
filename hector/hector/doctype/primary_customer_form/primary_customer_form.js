@@ -104,7 +104,7 @@ frappe.ui.form.on('Primary Customer Form', {
             frm.refresh_field('post_code_for_shipping_address');
 	        frappe.throw('Enter Valid Shipping Address Post Code.')
         }
-        if(!(frm.doc.customer_email_address.includes('@') && frm.doc.customer_email_address.toLowerCase().includes('.com' || '.org' || '.in')))
+        if(!(frm.doc.customer_email_address.includes('@') && (frm.doc.customer_email_address.toLowerCase().includes('.com') || frm.doc.customer_email_address.toLowerCase().includes('.org') || frm.doc.customer_email_address.toLowerCase().includes('.in'))))
         {
             frappe.throw('Enter Valid Email.')
             frm.doc.customer_email_address = ''

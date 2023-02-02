@@ -1,5 +1,11 @@
 # Changelog
 
+## [v1.6.9-dev] - 2023-02-02
+
+### Added
+
+-[Updated vendor posting group options]()
+
 ## [v1.6.8] - 2023-01-18
 ## [v1.6.8-uat] - 2023-01-16
 ## [v1.6.8-dev] - 2023-01-16
