@@ -4,7 +4,7 @@
 
 ### Added
 
--[Reject primary and secondary form without filling mandatory fields]()
+-[Reject primary and secondary form without filling mandatory fields](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/109)
 
 ## [v1.6.9-dev] - 2023-02-02
 
