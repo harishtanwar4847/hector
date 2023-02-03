@@ -92,19 +92,19 @@
    "fieldname": "sales_officer_name",
    "fieldtype": "Data",
    "label": "Sales Officer Name",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\""
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection"
   },
   {
    "fieldname": "super_stockist_code",
    "fieldtype": "Data",
    "label": "Super Stockist Code",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\""
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection"
   },
   {
    "fieldname": "ssdp_name_of_district",
    "fieldtype": "Data",
    "label": "SS/DP Name of District",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\""
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection"
   },
   {
    "fieldname": "name_of_new_distributor",
@@ -135,19 +135,19 @@
    "fieldname": "distributor_tehsiltaluk",
    "fieldtype": "Data",
    "label": "Distributor Tehsil/Taluk",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\""
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection"
   },
   {
    "fieldname": "distributor_email_id",
    "fieldtype": "Data",
    "label": "Distributor Email ID",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\""
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection"
   },
   {
    "fieldname": "date_of_birth_of_distributor",
    "fieldtype": "Date",
    "label": "Date of Birth of Distributor",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\""
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection"
   },
   {
    "fieldname": "number_of_years_in_distribution_business",
@@ -177,41 +177,41 @@
    "fieldname": "does_db_goes_to_market_himself",
    "fieldtype": "Select",
    "label": "Does DB goes to market himself",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\"",
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection",
    "options": "\nYes\nNo"
   },
   {
    "fieldname": "is_the_distributor_is_a_beverage_distributor_as_well",
    "fieldtype": "Select",
    "label": "Is the distributor is a beverage distributor as well",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\"",
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection",
    "options": "\nYes\nNo"
   },
   {
    "fieldname": "is_he_working_as_a_ready_stock_or_order_booking",
    "fieldtype": "Select",
    "label": "Is he working as a ready stock or order booking",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\"",
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection",
    "options": "\nReady Stock\nOrder Booking"
   },
   {
    "fieldname": "is_this_distributor_a_new_db_or_replacement",
    "fieldtype": "Select",
    "label": "Is this Distributor a new DB or Replacement",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\"",
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection",
    "options": "\nDB\nReplacement"
   },
   {
    "fieldname": "old_db_name_if_it_is_replaced__by_old_db",
    "fieldtype": "Data",
    "label": "Old DB Name if it is replaced  by old DB ",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\""
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection"
   },
   {
    "fieldname": "old_db_code_if_it_is_replaced_by_old_db",
    "fieldtype": "Data",
    "label": "Old DB Code if it is replaced by old DB",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\""
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection"
   },
   {
    "fieldname": "districttown_population__in_lakhs",
@@ -235,7 +235,7 @@
    "fieldname": "warehouse_type",
    "fieldtype": "Select",
    "label": "Warehouse Type",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\"",
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection",
    "options": "\nOwn\nRented"
   },
   {
@@ -248,7 +248,7 @@
    "fieldname": "db_internet_available",
    "fieldtype": "Select",
    "label": "DB Internet Available",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\"",
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection",
    "options": "\nYes\nNo"
   },
   {
@@ -279,45 +279,45 @@
    "fieldname": "coverage_frequency",
    "fieldtype": "Select",
    "label": "Coverage Frequency",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\"",
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection",
    "options": "\nDaily\nWeekly\nFortnightly"
   },
   {
    "fieldname": "reason_for_new_distributor_appointment",
    "fieldtype": "Data",
    "label": "Reason For new Distributor Appointment",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\""
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection"
   },
   {
    "fieldname": "did_you_have_taken_feedback_about_the_distributor_from_market",
    "fieldtype": "Select",
    "label": "Did you have taken feedback about the distributor from market",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\"",
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection",
    "options": "\nYes\nNo"
   },
   {
    "fieldname": "distributor_owner_name",
    "fieldtype": "Data",
    "label": "Distributor Owner Name",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\""
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection"
   },
   {
    "fieldname": "please_enter_the_db_townunique_code_as_per_census_data",
    "fieldtype": "Data",
    "label": "Please Enter the DB Town(Unique Code) As per Census Data",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\""
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection"
   },
   {
    "fieldname": "distributor_gst_no",
    "fieldtype": "Data",
    "label": "Distributor GST No",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\""
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection"
   },
   {
    "fieldname": "distributor_food_certificate",
    "fieldtype": "Data",
    "label": "Distributor Food Certificate",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\""
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection"
   },
   {
    "fieldname": "remarks",
@@ -433,7 +433,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-01-13 22:03:35.656510",
+ "modified": "2023-02-03 13:05:26.700996",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Secondary Customer Form",
