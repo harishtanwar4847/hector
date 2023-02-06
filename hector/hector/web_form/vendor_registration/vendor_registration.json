@@ -20,7 +20,7 @@
  "is_standard": 1,
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2023-02-02 16:32:33.850108",
+ "modified": "2023-02-06 16:31:33.476708",
  "modified_by": "gurutirth.prayag@gmail.com",
  "module": "Hector",
  "name": "vendor-registration",
@@ -321,7 +321,7 @@
    "label": "Vendor Posting Group",
    "max_length": 0,
    "max_value": 0,
-   "options": "\nADVERTISING AND MARKETING\nCAPEX\nCENTRAL EXPENSES OTHERS\nCFA\nCOPACKERS\nEMPLOYEES\nFACTORY\nFREIGHT\nPM\nRM\nSERVICES",
+   "options": "\nCAPEX\nCOPACKER\nEXPENSE\nFREIGHT\nPMAT\nRM",
    "read_only": 0,
    "reqd": 1,
    "show_in_filter": 0

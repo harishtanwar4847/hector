@@ -1,5 +1,11 @@
 # Changelog
 
+## [v1.7.0-dev] - 2023-02-06
+
+### Added
+
+-[Undo changes in vendor posting group]()
+
 ## [v1.6.9-uat] - 2023-02-03
 ## [v1.6.9-dev+1] - 2023-02-03
 
