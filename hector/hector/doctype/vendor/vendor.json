@@ -190,12 +190,12 @@
    "fieldname": "vendor_posting_group",
    "fieldtype": "Select",
    "label": "Vendor Posting Group",
-   "options": "\nADVERTISING AND MARKETING\nCAPEX\nCENTRAL EXPENSES OTHERS\nCFA\nCOPACKERS\nEMPLOYEES\nFACTORY\nFREIGHT\nPM\nRM\nSERVICES"
+   "options": "\nCAPEX\nCOPACKER\nEXPENSE\nFREIGHT\nPMAT\nRM"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-02-02 16:28:06.449708",
+ "modified": "2023-02-06 16:30:51.867666",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Vendor",
