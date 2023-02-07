@@ -88,7 +88,7 @@
    "fieldname": "billing_address",
    "fieldtype": "Data",
    "label": "Billing Address",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Primary Customer Additional Details\""
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Primary Customer Additional Details\" && !(doc.reason_of_rejection)"
   },
   {
    "fieldname": "post_code",
@@ -108,13 +108,13 @@
    "fieldtype": "Data",
    "label": "Shipping Address Post Code",
    "length": 6,
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Primary Customer Additional Details\""
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Primary Customer Additional Details\" && !doc.reason_of_rejection"
   },
   {
    "fieldname": "customer_email_address",
    "fieldtype": "Data",
    "label": "Customer Email Address ",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Primary Customer Additional Details\""
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Primary Customer Additional Details\" && !(doc.reason_of_rejection)"
   },
   {
    "fieldname": "mobile_no_of_the_customer",
@@ -126,7 +126,7 @@
    "fieldname": "contact_name_of_the_customer",
    "fieldtype": "Data",
    "label": "Contact Name of the Customer",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Primary Customer Additional Details\""
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Primary Customer Additional Details\" && !(doc.reason_of_rejection)"
   },
   {
    "fieldname": "profile_information_section",
@@ -165,13 +165,13 @@
    "fieldname": "pan_card_no",
    "fieldtype": "Data",
    "label": "PAN Card No",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Primary Customer Additional Details\""
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Primary Customer Additional Details\" && !(doc.reason_of_rejection)"
   },
   {
    "fieldname": "attach_pan_card_copy",
    "fieldtype": "Attach",
    "label": "Attach PAN Card Copy",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Primary Customer Additional Details\""
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Primary Customer Additional Details\" && !(doc.reason_of_rejection)"
   },
   {
    "fieldname": "attach_gst_registration_certificate",
@@ -282,13 +282,13 @@
    "fieldname": "location",
    "fieldtype": "Data",
    "label": "Location",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Primary Customer Additional Details\""
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Primary Customer Additional Details\" && !(doc.reason_of_rejection)"
   },
   {
    "fieldname": "region",
    "fieldtype": "Select",
    "label": "Region",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Primary Customer Additional Details\"",
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Primary Customer Additional Details\" && !(doc.reason_of_rejection)",
    "options": "\nNORTH\nSOUTH\nEAST\nWEST"
   },
   {
@@ -344,13 +344,13 @@
    "fieldname": "soase_employee_code",
    "fieldtype": "Data",
    "label": "SO/ASE Employee Code",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Primary Customer Additional Details\""
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Primary Customer Additional Details\" && !(doc.reason_of_rejection)"
   },
   {
    "fieldname": "soase_employee_name",
    "fieldtype": "Data",
    "label": "SO/ASE Employee Name",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Primary Customer Additional Details\""
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Primary Customer Additional Details\" && !(doc.reason_of_rejection)"
   },
   {
    "fieldname": "asm_user",
@@ -455,7 +455,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-01-13 17:54:55.315158",
+ "modified": "2023-02-03 13:51:51.475373",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Primary Customer Form",
