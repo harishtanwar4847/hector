@@ -4,7 +4,7 @@
 
 ### Added
 
--[Change disclaimer in vendor and customer onboarding automails]()
+-[Change disclaimer in vendor and customer onboarding automails](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/114)
 
 ## [v1.7.0] - 2023-02-07
 ## [v1.7.0-uat] - 2023-02-06
