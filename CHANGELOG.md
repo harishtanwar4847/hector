@@ -1,5 +1,12 @@
 # Changelog
 
+## [v1.7.1-dev] - 2023-02-17
+
+### Added
+
+-[Change disclaimer in vendor and customer onboarding automails](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/114)
+
+## [v1.7.0] - 2023-02-07
 ## [v1.7.0-uat] - 2023-02-06
 ## [v1.7.0-dev] - 2023-02-06
 
