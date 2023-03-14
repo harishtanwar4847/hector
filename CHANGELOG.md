@@ -4,7 +4,7 @@
 
 ### Added
 
--[Fixes in customer onboarding automails]()
+-[Fixes in customer onboarding automails](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/116)
 
 ## [v1.7.1-uat] - 2023-02-20
 ## [v1.7.1-dev] - 2023-02-17
