@@ -1,5 +1,11 @@
 # Changelog
 
+## [v1.7.2-dev] - 2023-03-14
+
+### Added
+
+-[Fixes in customer onboarding automails]()
+
 ## [v1.7.1-uat] - 2023-02-20
 ## [v1.7.1-dev] - 2023-02-17
 
