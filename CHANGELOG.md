@@ -4,7 +4,7 @@
 
 ### Added
 
--[Fixes in transit workflow]()
+-[Fixes in transit workflow](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/121)
 
 ## [v1.7.3-dev+1] - 2023-03-30
 
