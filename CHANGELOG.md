@@ -1,5 +1,11 @@
 # Changelog
 
+## [v1.7.3-dev+2] - 2023-03-30
+
+### Added
+
+-[Fixes in transit workflow]()
+
 ## [v1.7.3-dev+1] - 2023-03-30
 
 ### Added
