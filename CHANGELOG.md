@@ -4,7 +4,7 @@
 
 ### Added
 
--[Field addition in lead and customer forms | Fields and new workflow state addition in quality and transit]()
+-[Field addition in lead and customer forms | Fields and new workflow state addition in quality and transit](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/119)
 
 ## [v1.7.2] - 2023-03-15
 ## [v1.7.2-uat] - 2023-03-15
