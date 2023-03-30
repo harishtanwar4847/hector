@@ -4,7 +4,7 @@
 
 ### Added
 
--[Fixes in Lead Form additional fields]()
+-[Fixes in Lead Form additional fields](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/120)
 
 ## [v1.7.3-dev] - 2023-03-30
 
