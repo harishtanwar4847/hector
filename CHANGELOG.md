@@ -1,5 +1,11 @@
 # Changelog
 
+## [v1.7.3-dev] - 2023-03-30
+
+### Added
+
+-[Field addition in lead and customer forms | Fields and new workflow state addition in quality and transit]()
+
 ## [v1.7.2] - 2023-03-15
 ## [v1.7.2-uat] - 2023-03-15
 ## [v1.7.2-dev] - 2023-03-14

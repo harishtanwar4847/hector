@@ -30,6 +30,7 @@
   "issue_details",
   "pode_photo_mandatory",
   "credit_details",
+  "complaint_reported_date",
   "reason_of_rejection",
   "stock_image_mandatory",
   "stock_image_2optional",
@@ -206,7 +207,7 @@
    "label": "Stock Image 5(Optional)"
   },
   {
-   "depends_on": "eval:((doc.workflow_state == 'Pending for Supply Team Approval') || (doc.workflow_state == 'Resent for Supply Team Approval') || (doc.workflow_state == 'Rejected by Supply Team') || (doc.workflow_state == 'Rejected by Finance Team') || (doc.workflow_state == 'Pending for Finance Team Approval') || (doc.workflow_state == 'Resent for Finance Team Approval'))",
+   "depends_on": "eval:((doc.workflow_state == 'Pending for confirmation with the Transit complaint Registration Team') || (doc.workflow_state == 'Rejected by Transit complaint Registration Team') || (doc.workflow_state == 'Pending for Supply Team Approval') || (doc.workflow_state == 'Resent for Supply Team Approval') || (doc.workflow_state == 'Rejected by Supply Team') || (doc.workflow_state == 'Rejected by Finance Team') || (doc.workflow_state == 'Pending for Finance Team Approval') || (doc.workflow_state == 'Resent for Finance Team Approval'))",
    "description": "Manadatory if You want to reject this issue",
    "fieldname": "reason_of_rejection",
    "fieldtype": "Data",
@@ -294,11 +295,17 @@
   {
    "fieldname": "column_break_38",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "complaint_reported_date",
+   "fieldtype": "Datetime",
+   "label": "Complaint Reported Date",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-01-13 21:13:01.228381",
+ "modified": "2023-03-30 15:07:20.443892",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Transit Issue",

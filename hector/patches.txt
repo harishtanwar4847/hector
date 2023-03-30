@@ -24,3 +24,4 @@ hector.patches.setting_site
 hector.patches.update_notifications
 hector.patches.update_customer_type
 hector.patches.new_workflows4
+hector.patches.new_transit_quality_workflow
