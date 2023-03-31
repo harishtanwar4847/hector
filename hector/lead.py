@@ -35,6 +35,8 @@ def on_update(doc,method):
         res2.distributor_gst_no = doc.gst_number
         res2.number_of_vehicles = doc.number_of_vehicles_for_distribution
         res2.no_of_salesman = doc.sales_man_that_are_not_sponsor_by_other_brands
+        res2.super_stockist_name = doc.ss_name
+        res2.super_stockist_code = doc.ss_code
         res2.insert()
         frappe.msgprint("Send for Secondary Customer Additional Details")
 

@@ -34,6 +34,7 @@
   "issue_details",
   "physicalremote_verification_executive",
   "physicalremote_verification_executive_email",
+  "complaint_reported_date",
   "reason_of_rejection",
   "photo_mandatory",
   "photo_2optional",
@@ -519,11 +520,17 @@
   {
    "fieldname": "column_break_67",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "complaint_reported_date",
+   "fieldtype": "Datetime",
+   "label": "Complaint Reported Date",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-01-13 21:06:00.699678",
+ "modified": "2023-03-30 15:06:26.441508",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Quality Issue",

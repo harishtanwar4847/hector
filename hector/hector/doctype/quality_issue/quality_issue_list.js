@@ -5,7 +5,7 @@ frappe.listview_settings['Quality Issue'] = {
         if(frappe.user_roles.includes('Complaint Registering Team'))
         {
             route_options = {
-				"workflow_state": ["in",'Requested for More Details by Physical Verification Officer']
+				"workflow_state": ["in",'Requested for More Details by Physical Verification Officer,Pending for confirmation with the Quality Complaint Registration Team,Rejected by Quality Complaint Registration Team']
 			};
         }
         if(frappe.user_roles.includes('Physical Verification Officer'))
