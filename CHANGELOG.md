@@ -1,5 +1,11 @@
 # Changelog
 
+## [v1.7.4-dev] - 2023-04-18
+
+### Added
+
+-[time stamps addition for complaint team in Quality and transit issue]()
+
 ## [v1.7.3-uat] - 2023-03-31
 ## [v1.7.3-dev+2] - 2023-03-30
 
