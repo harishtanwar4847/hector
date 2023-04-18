@@ -39,11 +39,12 @@
   "stock_image_5optional",
   "time_details_section",
   "pending_supply_team_time",
+  "transit_complaint_registration_team_rejection_time",
   "resent_supply_team_time",
   "request_details_supply_team_time",
   "pending_finance_team_time",
-  "resent_finance_team_time",
   "column_break_38",
+  "resent_finance_team_time",
   "request_details_finance_team_time",
   "supply_team_rejection_time",
   "finance_team_approval_time",
@@ -222,8 +223,7 @@
   {
    "fieldname": "pending_supply_team_time",
    "fieldtype": "Data",
-   "hidden": 1,
-   "label": "Pending Supply Team Time"
+   "label": "Transit complaint Registration Team Approval Time"
   },
   {
    "fieldname": "resent_supply_team_time",
@@ -298,14 +298,20 @@
   },
   {
    "fieldname": "complaint_reported_date",
-   "fieldtype": "Datetime",
+   "fieldtype": "Date",
    "label": "Complaint Reported Date",
    "reqd": 1
+  },
+  {
+   "fieldname": "transit_complaint_registration_team_rejection_time",
+   "fieldtype": "Data",
+   "label": "Transit complaint Registration Team Rejection Time",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-03-30 15:07:20.443892",
+ "modified": "2023-04-18 13:01:40.361978",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Transit Issue",
