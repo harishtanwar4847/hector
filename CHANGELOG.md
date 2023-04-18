@@ -1,5 +1,12 @@
 # Changelog
 
+## [v1.7.5-uat] - 2023-04-18
+## [v1.7.5-dev] - 2023-04-18
+
+### Added
+
+-[Fixes in transit issue](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/125)
+
 ## [v1.7.4-uat] - 2023-04-18
 ## [v1.7.4-dev] - 2023-04-18
 

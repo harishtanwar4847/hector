@@ -223,7 +223,8 @@
   {
    "fieldname": "pending_supply_team_time",
    "fieldtype": "Data",
-   "label": "Transit complaint Registration Team Approval Time"
+   "label": "Transit complaint Registration Team Approval Time",
+   "read_only": 1
   },
   {
    "fieldname": "resent_supply_team_time",
@@ -311,7 +312,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-18 13:01:40.361978",
+ "modified": "2023-04-18 14:36:13.860722",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Transit Issue",
