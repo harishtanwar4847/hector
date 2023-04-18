@@ -47,6 +47,8 @@ class TransitIssue(Document):
 				</tbody>
 			</table><br>""".format(self.name, self.customer_name, self.customer_code, self.customer_location, self.customer_phone_number, self.type_of_issue)
 
+		if self.workflow_state == 'Rejected by Transit complaint Registration Team' :
+			frappe.db.set_value('Transit Issue', self.name, 'transit_complaint_registration_team_rejection_time', frappe.utils.now())
 
 		if self.workflow_state == 'Pending for Supply Team Approval' :
 			frappe.db.set_value('Transit Issue', self.name, 'pending_supply_team_time', frappe.utils.now())
