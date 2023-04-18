@@ -4,7 +4,7 @@
 
 ### Added
 
--[time stamps addition for complaint team in Quality and transit issue]()
+-[time stamps addition for complaint team in Quality and transit issue](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/123)
 
 ## [v1.7.3-uat] - 2023-03-31
 ## [v1.7.3-dev+2] - 2023-03-30
