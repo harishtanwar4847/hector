@@ -1,5 +1,11 @@
 # Changelog
 
+## [v1.7.6-dev] - 2023-04-25
+
+### Added
+
+-[Fixes in Lead form](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/127)
+
 ## [v1.7.5-uat] - 2023-04-18
 ## [v1.7.5-dev] - 2023-04-18
 

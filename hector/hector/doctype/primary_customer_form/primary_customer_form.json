@@ -462,7 +462,7 @@
    "fieldname": "beat_1",
    "fieldtype": "Data",
    "label": "Beat 1",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Primary Customer Additional Details\" && !(doc.reason_of_rejection)"
   },
   {
    "depends_on": "beat_1",
@@ -497,7 +497,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-03-30 15:03:35.287597",
+ "modified": "2023-04-25 17:07:31.128147",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Primary Customer Form",
