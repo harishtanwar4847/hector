@@ -11,6 +11,7 @@
   "customer_type",
   "state",
   "sales_officer_name",
+  "super_stockist_name",
   "super_stockist_code",
   "ssdp_name_of_district",
   "name_of_new_distributor",
@@ -50,6 +51,12 @@
   "remarks",
   "db_code",
   "workflow_state",
+  "beat_1",
+  "beat_2",
+  "beat_3",
+  "beat_4",
+  "beat_5",
+  "beat_6",
   "asm_user",
   "rsm_user",
   "reason_of_rejection",
@@ -429,11 +436,53 @@
    "fieldtype": "Data",
    "label": "Secondary Customer Master Approval Time",
    "read_only": 1
+  },
+  {
+   "fieldname": "beat_1",
+   "fieldtype": "Data",
+   "label": "Beat 1",
+   "mandatory_depends_on": "eval: (doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection)"
+  },
+  {
+   "depends_on": "beat_1",
+   "fieldname": "beat_2",
+   "fieldtype": "Data",
+   "label": "Beat 2"
+  },
+  {
+   "depends_on": "beat_2",
+   "fieldname": "beat_3",
+   "fieldtype": "Data",
+   "label": "Beat 3"
+  },
+  {
+   "depends_on": "beat_3",
+   "fieldname": "beat_4",
+   "fieldtype": "Data",
+   "label": "Beat 4"
+  },
+  {
+   "depends_on": "beat_4",
+   "fieldname": "beat_5",
+   "fieldtype": "Data",
+   "label": "Beat 5"
+  },
+  {
+   "fieldname": "super_stockist_name",
+   "fieldtype": "Data",
+   "label": "Super Stockist Name",
+   "mandatory_depends_on": "eval: doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection"
+  },
+  {
+   "depends_on": "beat_5",
+   "fieldname": "beat_6",
+   "fieldtype": "Data",
+   "label": "Beat 6"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-02-03 13:05:26.700996",
+ "modified": "2023-03-30 15:00:45.441051",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Secondary Customer Form",

@@ -53,6 +53,12 @@
   "attach_email",
   "customer_id",
   "workflow_state",
+  "beat_1",
+  "beat_2",
+  "beat_3",
+  "beat_4",
+  "beat_5",
+  "beat_6",
   "asm_user",
   "rsm_user",
   "reason_of_rejection",
@@ -451,11 +457,47 @@
   {
    "fieldname": "column_break_58",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "beat_1",
+   "fieldtype": "Data",
+   "label": "Beat 1",
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Primary Customer Additional Details\" && !(doc.reason_of_rejection)"
+  },
+  {
+   "depends_on": "beat_1",
+   "fieldname": "beat_2",
+   "fieldtype": "Data",
+   "label": "Beat 2"
+  },
+  {
+   "depends_on": "beat_2",
+   "fieldname": "beat_3",
+   "fieldtype": "Data",
+   "label": "Beat 3"
+  },
+  {
+   "depends_on": "beat_3",
+   "fieldname": "beat_4",
+   "fieldtype": "Data",
+   "label": "Beat 4"
+  },
+  {
+   "depends_on": "beat_4",
+   "fieldname": "beat_5",
+   "fieldtype": "Data",
+   "label": "Beat 5"
+  },
+  {
+   "depends_on": "beat_5",
+   "fieldname": "beat_6",
+   "fieldtype": "Data",
+   "label": "Beat 6"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-02-03 13:51:51.475373",
+ "modified": "2023-04-25 17:07:31.128147",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Primary Customer Form",

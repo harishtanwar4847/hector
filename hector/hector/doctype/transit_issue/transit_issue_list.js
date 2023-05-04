@@ -5,7 +5,7 @@ frappe.listview_settings['Transit Issue'] = {
         if(frappe.user_roles.includes('Complaint Registering Team'))
         {
             route_options = {
-				"workflow_state": ["=",'Requested for More Details by Supply Team']
+				"workflow_state": ["in",'Requested for More Details by Supply Team,Pending for confirmation with the Transit complaint Registration Team,Rejected by Transit complaint Registration Team']
 			};
         }
         if(frappe.user_roles.includes('Supply Team'))

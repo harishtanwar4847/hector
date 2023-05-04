@@ -34,6 +34,7 @@
   "issue_details",
   "physicalremote_verification_executive",
   "physicalremote_verification_executive_email",
+  "complaint_reported_date",
   "reason_of_rejection",
   "photo_mandatory",
   "photo_2optional",
@@ -66,6 +67,7 @@
   "credit_details",
   "time_details_section",
   "pending_physical_verification_time",
+  "quality_complaint_registration_team_rejection_time",
   "resent_physical_verification_time",
   "request_details_physical_verification_time",
   "pending_finance_team_time",
@@ -310,8 +312,8 @@
   {
    "fieldname": "pending_physical_verification_time",
    "fieldtype": "Data",
-   "hidden": 1,
-   "label": "Pending Physical Verification Time"
+   "label": "Quality Complaint Registration Team Approval Time",
+   "read_only": 1
   },
   {
    "fieldname": "resent_physical_verification_time",
@@ -519,11 +521,23 @@
   {
    "fieldname": "column_break_67",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "complaint_reported_date",
+   "fieldtype": "Date",
+   "label": "Complaint Reported Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "quality_complaint_registration_team_rejection_time",
+   "fieldtype": "Data",
+   "label": "Quality Complaint Registration Team Rejection Time",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-01-13 21:06:00.699678",
+ "modified": "2023-04-18 13:03:32.783905",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Quality Issue",

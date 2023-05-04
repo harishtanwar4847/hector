@@ -1,5 +1,46 @@
 # Changelog
 
+## [v1.7.6] - 2023-05-04
+## [v1.7.6-uat] - 2023-04-25
+## [v1.7.6-dev] - 2023-04-25
+
+### Added
+
+-[Fixes in Lead form](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/127)
+
+## [v1.7.5-uat] - 2023-04-18
+## [v1.7.5-dev] - 2023-04-18
+
+### Added
+
+-[Fixes in transit issue](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/125)
+
+## [v1.7.4-uat] - 2023-04-18
+## [v1.7.4-dev] - 2023-04-18
+
+### Added
+
+-[time stamps addition for complaint team in Quality and transit issue](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/123)
+
+## [v1.7.3-uat] - 2023-03-31
+## [v1.7.3-dev+2] - 2023-03-30
+
+### Added
+
+-[Fixes in transit workflow](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/121)
+
+## [v1.7.3-dev+1] - 2023-03-30
+
+### Added
+
+-[Fixes in Lead Form additional fields](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/120)
+
+## [v1.7.3-dev] - 2023-03-30
+
+### Added
+
+-[Field addition in lead and customer forms | Fields and new workflow state addition in quality and transit](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/119)
+
 ## [v1.7.2] - 2023-03-15
 ## [v1.7.2-uat] - 2023-03-15
 ## [v1.7.2-dev] - 2023-03-14

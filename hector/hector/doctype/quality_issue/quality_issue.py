@@ -76,6 +76,9 @@ class QualityIssue(Document):
 				</tbody>
 			</table><br>""".format(self.name, self.customer_name, self.customer_code, self.customer_location, self.customer_phone_number, self.type_of_issue, self.invoice_number)
 
+		if self.workflow_state == 'Rejected by Quality Complaint Registration Team':
+			frappe.db.set_value('Quality Issue', self.name, 'quality_complaint_registration_team_rejection_time', frappe.utils.now())
+
 		if self.workflow_state == 'Pending for Physical Verification Officer Approval':
 			frappe.db.set_value('Quality Issue', self.name, 'pending_physical_verification_time', frappe.utils.now())
 			#For sending approval email to Physical Verification Officer
