@@ -35,6 +35,7 @@
   "physicalremote_verification_executive",
   "physicalremote_verification_executive_email",
   "complaint_reported_date",
+  "reference_old_ticket_number",
   "reason_of_rejection",
   "photo_mandatory",
   "photo_2optional",
@@ -82,7 +83,8 @@
   "finance_team_rejection_time",
   "issue_closed_time",
   "quality_head_approval_time",
-  "quality_head_rejection_time"
+  "quality_head_rejection_time",
+  "transferred_as_transit_ticket_time"
  ],
  "fields": [
   {
@@ -155,8 +157,8 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Type of Issue",
-   "options": "Type of Issue",
-   "reqd": 1
+   "mandatory_depends_on": "eval:!doc.___islocal || !doc.reference_old_ticket_number ",
+   "options": "Type of Issue"
   },
   {
    "depends_on": "eval: doc.type_of_issue == 'Other'",
@@ -196,7 +198,7 @@
    "fieldname": "invoice_number",
    "fieldtype": "Data",
    "label": "Invoice Number",
-   "reqd": 1
+   "mandatory_depends_on": "eval:!doc.___islocal || !doc.reference_old_ticket_number"
   },
   {
    "description": "Please share more details about the incidence",
@@ -208,15 +210,15 @@
    "fieldname": "physicalremote_verification_executive",
    "fieldtype": "Link",
    "label": "Physical/Remote Verification executive user",
-   "options": "Physical Verification Officer",
-   "reqd": 1
+   "mandatory_depends_on": "eval:!doc.___islocal || !doc.reference_old_ticket_number",
+   "options": "Physical Verification Officer"
   },
   {
    "description": "You can upload up to 20 images ",
    "fieldname": "photo_mandatory",
    "fieldtype": "Attach",
    "label": "Photo (Mandatory)",
-   "reqd": 1
+   "mandatory_depends_on": "eval:!doc.___islocal || !doc.reference_old_ticket_number"
   },
   {
    "fetch_from": "physicalremote_verification_executive.user_email",
@@ -533,11 +535,24 @@
    "fieldtype": "Data",
    "label": "Quality Complaint Registration Team Rejection Time",
    "read_only": 1
+  },
+  {
+   "fieldname": "reference_old_ticket_number",
+   "fieldtype": "Link",
+   "label": "Reference Old Ticket Number",
+   "options": "Transit Issue",
+   "read_only": 1
+  },
+  {
+   "fieldname": "transferred_as_transit_ticket_time",
+   "fieldtype": "Data",
+   "label": "Transferred as Transit Ticket Time",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-18 13:03:32.783905",
+ "modified": "2023-05-18 11:16:47.276263",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Quality Issue",

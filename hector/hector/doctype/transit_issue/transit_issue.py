@@ -422,3 +422,29 @@ class TransitIssue(Document):
 			messageFinal = message1 + message2 + message4
 			frappe.sendmail(subject="Transit Issue Completed: {}: {}".format(self.customer_code, self.customer_name), content=messageFinal, cc = '{},{}'.format(rsmEmail, asmEmail), recipients = '{}'.format(requestorSalesTeam), expose_recipients="header", sender="Notification@hectorbeverages.com")
 			print("\n email sent \n")
+
+		if self.workflow_state == "Rejected and transferred as Quality Complaint" and (self.get_doc_before_save().workflow_state != self.workflow_state):
+			print('inside code-------------------------------------')
+			# set value of transferred_as_quality_ticket_time
+			self.transferred_as_quality_ticket_time = frappe.utils.now()
+			
+			# create a new quality issue
+			doc = frappe.new_doc('Quality Issue')
+			doc.asm_name = self.asm_name
+			doc.rsm_name = self.rsm_name
+			doc.customer_name = self.customer_name
+			doc.customer_code = self.customer_code
+			doc.customer_state = self.customer_state
+			doc.email_address_of_requestor_from_sales_team = self.email_address_of_requestor_from_sales_team
+			doc.customer_location = self.customer_location
+			doc.customer_phone_number = self.customer_phone_number
+			for i in self.sku_details:
+				doc.append('sku_details', {
+					'sku_code': i.sku_code,
+					'sku_name': i.sku_name,
+					'quantity_in_pieces': i.damaged_missing_quantity,
+					'batch_details': i.batch_details
+				})
+			doc.complaint_reported_date = self.complaint_reported_date
+			doc.reference_old_ticket_number = self.name
+			doc.save()
