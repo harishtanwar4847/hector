@@ -4,7 +4,7 @@
 
 ### Added
 
--[Transfer quality complaint as transit complaint and vice versa]()
+-[Transfer quality complaint as transit complaint and vice versa](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/130)
 
 ## [v1.7.6] - 2023-05-04
 ## [v1.7.6-uat] - 2023-04-25
