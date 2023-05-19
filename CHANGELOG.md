@@ -1,5 +1,12 @@
 # Changelog
 
+## [v1.7.7-dev] - 2023-05-19
+
+### Added
+
+-[Transfer quality complaint as transit complaint and vice versa](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/130)
+
+## [v1.7.6] - 2023-05-04
 ## [v1.7.6-uat] - 2023-04-25
 ## [v1.7.6-dev] - 2023-04-25
 

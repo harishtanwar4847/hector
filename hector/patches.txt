@@ -26,3 +26,4 @@ hector.patches.update_customer_type
 hector.patches.new_workflows4
 hector.patches.new_transit_quality_workflow
 hector.patches.new_transit_workflow_fix
+hector.patches.new_transit_quality_workflow1

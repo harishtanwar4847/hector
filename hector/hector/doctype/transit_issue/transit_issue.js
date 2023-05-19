@@ -7,6 +7,9 @@ frappe.ui.form.on('Transit Issue', {
 	    {
 	        frm.set_intro('Please Enter Credit Details');
 	    }
+        if(frm.doc.workflow_state == 'Pending for confirmation with the Transit complaint Registration Team' && (frm.doc.reference_old_ticket_number && !frm.doc.type_of_issue)){
+            frm.set_intro(`This ticket has been transferred from Quality Issue. Please fill mandatory fields to proceed`, 'orange');
+        }
 	},
 	validate(frm){
 

@@ -11,14 +11,15 @@ class QualityIssue(Document):
 		currentDate = frappe.utils.today()
 		date_format = "%Y-%m-%d"
 		for i in range(len(skuDetails)):
-			todayDate = datetime.strptime(currentDate, date_format)
-			documentDate = frappe.utils.get_datetime(skuDetails[i].mgf_date).strftime(date_format)
-			documentDateStr = datetime.strptime(documentDate, date_format)
-			daysDiffrence = (todayDate - documentDateStr).days
+			if skuDetails[i].mgf_date:
+				todayDate = datetime.strptime(currentDate, date_format)
+				documentDate = frappe.utils.get_datetime(skuDetails[i].mgf_date).strftime(date_format)
+				documentDateStr = datetime.strptime(documentDate, date_format)
+				daysDiffrence = (todayDate - documentDateStr).days
 
-			#for selecting dates from past
-			if int(daysDiffrence) <= 0 :
-				frappe.throw("Please select correct manufacturing date")
+				#for selecting dates from past
+				if int(daysDiffrence) <= 0 :
+					frappe.throw("Please select correct manufacturing date")
 			try :
 				int(skuDetails[i].quantity_in_pieces)
 			except :
@@ -33,7 +34,7 @@ class QualityIssue(Document):
 		complaintTeamEmail = self.owner
 		complaintTeamName = frappe.get_doc('User', complaintTeamEmail).full_name
 		physicalVerificationTeamEmail = self.physicalremote_verification_executive_email
-		physicalVerificationTeamName = frappe.get_doc('User',physicalVerificationTeamEmail).full_name
+		# physicalVerificationTeamName = frappe.get_doc('User',physicalVerificationTeamEmail).full_name
 		financeTeamEmail = [x[0] for x in frappe.db.sql("""select u.name from `tabUser` u inner join `tabHas Role` hr on hr.parent = u.name where hr.role = 'Finance Team'""", as_list=1)]
 		financeTeamEmail.remove('Administrator')
 		financeTeamName = [x[0] for x in frappe.db.sql("""select u.full_name from `tabUser` u inner join `tabHas Role` hr on hr.parent = u.name where hr.role = 'Finance Team'""", as_list=1)]
@@ -818,3 +819,30 @@ class QualityIssue(Document):
 
 		if self.workflow_state == "Issue Closed":
 			frappe.db.set_value('Quality Issue', self.name, 'issue_closed_time', frappe.utils.now())
+
+		if self.workflow_state == "Rejected and transferred as Transit Complaint" and (self.get_doc_before_save().workflow_state != self.workflow_state):
+			print('inside code-------------------------------------')
+			# set value of transferred_as_quality_ticket_time
+			self.transferred_as_transit_ticket_time = frappe.utils.now()
+			
+			# create a new quality issue
+			doc = frappe.new_doc('Transit Issue')
+			doc.asm_name = self.asm_name
+			doc.rsm_name = self.rsm_name
+			doc.customer_name = self.customer_name
+			doc.customer_code = self.customer_code
+			doc.customer_state = self.customer_state
+			doc.email_address_of_requestor_from_sales_team = self.email_address_of_requestor_from_sales_team
+			doc.customer_location = self.customer_location
+			doc.customer_phone_number = self.customer_phone_number
+			for i in self.sku_details:
+				doc.append('sku_details', {
+					'sku_code': i.sku_code,
+					'sku_name': i.sku_name,
+					'damaged_missing_quantity': i.quantity_in_pieces,
+					'invoice_number': self.invoice_number,
+					'batch_details': i.batch_details
+				})
+			doc.complaint_reported_date = self.complaint_reported_date
+			doc.reference_old_ticket_number = self.name
+			doc.save()
