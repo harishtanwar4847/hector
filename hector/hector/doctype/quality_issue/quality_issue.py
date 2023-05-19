@@ -823,7 +823,7 @@ class QualityIssue(Document):
 		if self.workflow_state == "Rejected and transferred as Transit Complaint" and (self.get_doc_before_save().workflow_state != self.workflow_state):
 			print('inside code-------------------------------------')
 			# set value of transferred_as_quality_ticket_time
-			self.transferred_as_transit_ticket_time = frappe.utils.now()
+			frappe.db.set_value('Quality Issue', self.name, 'transferred_as_transit_ticket_time', frappe.utils.now())
 			
 			# create a new quality issue
 			doc = frappe.new_doc('Transit Issue')

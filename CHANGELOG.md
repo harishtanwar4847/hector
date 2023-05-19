@@ -1,5 +1,11 @@
 # Changelog
 
+## [v1.7.7-dev+1] - 2023-05-19
+
+### Added
+
+-[Fixes in trnsit and quality complaint timestamps](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/131)
+
 ## [v1.7.7-dev] - 2023-05-19
 
 ### Added
