@@ -165,7 +165,7 @@
    "fieldname": "gst_registration_number",
    "fieldtype": "Data",
    "label": "GST Registration Number",
-   "mandatory_depends_on": "eval:doc.customer_type == \"Super Stockist\""
+   "mandatory_depends_on": "eval:doc.customer_type == \"Super Stockist\" && (!doc.reason_of_rejection)"
   },
   {
    "fieldname": "pan_card_no",
@@ -183,7 +183,7 @@
    "fieldname": "attach_gst_registration_certificate",
    "fieldtype": "Attach",
    "label": "Attach GST Registration Certificate",
-   "mandatory_depends_on": "eval:doc.customer_type == \"Super Stockist\""
+   "mandatory_depends_on": "eval:doc.customer_type == \"Super Stockist\" && (!doc.reason_of_rejection)"
   },
   {
    "fieldname": "food_license_copy_and_number",
@@ -497,7 +497,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-25 17:07:31.128147",
+ "modified": "2023-05-17 16:51:40.886971",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Primary Customer Form",

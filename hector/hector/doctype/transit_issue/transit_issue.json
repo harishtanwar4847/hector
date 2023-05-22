@@ -31,6 +31,7 @@
   "pode_photo_mandatory",
   "credit_details",
   "complaint_reported_date",
+  "reference_old_ticket_number",
   "reason_of_rejection",
   "stock_image_mandatory",
   "stock_image_2optional",
@@ -48,7 +49,8 @@
   "request_details_finance_team_time",
   "supply_team_rejection_time",
   "finance_team_approval_time",
-  "finance_team_rejection_time"
+  "finance_team_rejection_time",
+  "transferred_as_quality_ticket_time"
  ],
  "fields": [
   {
@@ -134,8 +136,8 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Type of Issue",
-   "options": "\nShort Quantity\nTransit Damage",
-   "reqd": 1
+   "mandatory_depends_on": "eval:!doc.___islocal || !doc.reference_old_ticket_number",
+   "options": "\nShort Quantity\nTransit Damage"
   },
   {
    "fieldname": "column_break_16",
@@ -178,14 +180,14 @@
    "fieldname": "pode_photo_mandatory",
    "fieldtype": "Attach",
    "label": "PODE Photo (Mandatory)",
-   "reqd": 1
+   "mandatory_depends_on": "eval:!doc.___islocal || !doc.reference_old_ticket_number"
   },
   {
    "description": "You can upload up to 20 images ",
    "fieldname": "stock_image_mandatory",
    "fieldtype": "Attach",
    "label": "Stock Image (Mandatory)",
-   "reqd": 1
+   "mandatory_depends_on": "eval:!doc.___islocal || !doc.reference_old_ticket_number"
   },
   {
    "fieldname": "stock_image_2optional",
@@ -308,11 +310,24 @@
    "fieldtype": "Data",
    "label": "Transit complaint Registration Team Rejection Time",
    "read_only": 1
+  },
+  {
+   "fieldname": "reference_old_ticket_number",
+   "fieldtype": "Link",
+   "label": "Reference Old Ticket Number",
+   "options": "Quality Issue",
+   "read_only": 1
+  },
+  {
+   "fieldname": "transferred_as_quality_ticket_time",
+   "fieldtype": "Data",
+   "label": "Transferred as Quality Ticket Time",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-18 14:36:13.860722",
+ "modified": "2023-05-18 11:20:10.092614",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Transit Issue",
