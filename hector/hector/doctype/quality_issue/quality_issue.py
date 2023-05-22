@@ -845,4 +845,6 @@ class QualityIssue(Document):
 				})
 			doc.complaint_reported_date = self.complaint_reported_date
 			doc.reference_old_ticket_number = self.name
-			doc.save()
+			doc.owner = self.owner
+			doc.save(ignore_permissions=True)
+			

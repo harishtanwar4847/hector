@@ -1,5 +1,12 @@
 # Changelog
 
+## [v1.7.8-uat] - 2023-05-22
+## [v1.7.8-dev] - 2023-05-22
+
+### Added
+
+-[Fix permission issues while transferring complaints](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/133)
+
 ## [v1.7.7-uat] - 2023-05-22
 ## [v1.7.7-dev+1] - 2023-05-19
 
