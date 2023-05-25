@@ -31,24 +31,26 @@ frappe.ui.form.on('Primary Customer Form', {
 	    var number_list = ['0','1','2','3','4','5','6','7','8','9']
 	    var char_list = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
 	    var mobile_pattern = "^\\d{10,11}$";
-        var gstin = frm.doc.gst_registration_number
-	    if (frm.doc.customer_type === "Super Stockist" || !isEmpty(gstin)) {
-	    if(gstin.length == 15)
-	    {
-	       // console.log(gstin)
-	        if(!(number_list.includes(gstin[0]) && number_list.includes(gstin[1]) && char_list.includes(gstin[2]) && char_list.includes(gstin[3]) && char_list.includes(gstin[4])
-	         && char_list.includes(gstin[5]) && char_list.includes(gstin[6]) && number_list.includes(gstin[7]) && number_list.includes(gstin[8])
-	          && number_list.includes(gstin[9]) && number_list.includes(gstin[10]) && char_list.includes(gstin[11]) && number_list.includes(gstin[12])
-	           && char_list.includes(gstin[13]) && (number_list.includes(gstin[14]) || char_list.includes(gstin[14]))))
-	        {
-	            frappe.throw('Enter Valid GST Number.')
-	        }
+        if (frm.doc.gst_registration_number) {
+            var gstin = frm.doc.gst_registration_number
+            if (frm.doc.customer_type === "Super Stockist" || !isEmpty(gstin)) {
+            if(gstin.length == 15)
+            {
+            // console.log(gstin)
+                if(!(number_list.includes(gstin[0]) && number_list.includes(gstin[1]) && char_list.includes(gstin[2]) && char_list.includes(gstin[3]) && char_list.includes(gstin[4])
+                && char_list.includes(gstin[5]) && char_list.includes(gstin[6]) && number_list.includes(gstin[7]) && number_list.includes(gstin[8])
+                && number_list.includes(gstin[9]) && number_list.includes(gstin[10]) && char_list.includes(gstin[11]) && number_list.includes(gstin[12])
+                && char_list.includes(gstin[13]) && (number_list.includes(gstin[14]) || char_list.includes(gstin[14]))))
+                {
+                    frappe.throw('Enter Valid GST Number.')
+                }
+            }
+            else
+            {
+                frappe.throw('Enter Valid GST Number.')
+            }
+            }
         }
-        else
-        {
-            frappe.throw('Enter Valid GST Number.')
-        }
-	    }
         if (frm.doc.pan_card_no){
             var pan = frm.doc.pan_card_no
             if(pan.length == 10)
