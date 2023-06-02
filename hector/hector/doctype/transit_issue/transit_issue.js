@@ -11,6 +11,17 @@ frappe.ui.form.on('Transit Issue', {
             frm.set_intro(`This ticket has been transferred from Quality Issue. Please fill mandatory fields to proceed`, 'orange');
         }
 	},
+
+    setup: function(frm) {
+        frm.set_query('sku_code', 'sku_details', () => {
+            return {
+                filters: {
+                    sku_inactive: 0
+                }
+            }
+        })
+    },
+
 	validate(frm){
 
 	    var number_pattern = /^\d{10}$/
