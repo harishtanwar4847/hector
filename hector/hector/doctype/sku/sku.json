@@ -9,7 +9,8 @@
   "nav_sku_code",
   "sku_name",
   "sku_variant_code",
-  "sku_mrp"
+  "sku_mrp",
+  "sku_inactive"
  ],
  "fields": [
   {
@@ -41,11 +42,17 @@
    "in_list_view": 1,
    "label": "SKU MRP",
    "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "sku_inactive",
+   "fieldtype": "Check",
+   "label": "SKU Inactive"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-09-22 18:49:53.648909",
+ "modified": "2023-06-02 15:21:01.843553",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "SKU",
