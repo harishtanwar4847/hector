@@ -4,7 +4,7 @@
 
 ### Added
 
--[Add provision to deactivate and activate SKUs]()
+-[Add provision to deactivate and activate SKUs](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/136)
 
 ## [v1.7.8] - 2023-05-25
 ## [v1.7.8-uat] - 2023-05-22
