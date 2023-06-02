@@ -1,5 +1,12 @@
 # Changelog
 
+## [v1.7.9-uat] - 2023-06-02
+## [v1.7.9-dev] - 2023-06-02
+
+### Added
+
+-[Add provision to deactivate and activate SKUs](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/136)
+
 ## [v1.7.8] - 2023-05-25
 ## [v1.7.8-uat] - 2023-05-22
 ## [v1.7.8-dev] - 2023-05-22
