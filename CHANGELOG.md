@@ -1,5 +1,11 @@
 # Changelog
 
+## [v1.8.0-dev+1] - 2023-08-14
+
+### Added
+
+-[Fix bugs in lead.py](https://github.com/atrina-technologies-pvt-ltd/hector/pull/2)
+
 ## [v1.8.0-dev] - 2023-08-14
 
 ### Added
