@@ -21,7 +21,12 @@ frappe.listview_settings['Secondary Customer Form'] = {
 				"workflow_state": ["in",'Pending for NSM Approval,Resent for NSM Approval']
 			};
         }
-
+        if(frappe.user_roles.includes('RTM Manager'))
+        {
+            route_options = {
+				"workflow_state": ["in",'Pending for RTM Approval,Resent for RTM Approval']
+			};
+        }
         if(frappe.user_roles.includes('Secondary Customer Master Approver'))
         {
             route_options = {
