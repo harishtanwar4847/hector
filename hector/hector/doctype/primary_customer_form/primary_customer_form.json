@@ -62,6 +62,7 @@
   "asm_user",
   "rsm_user",
   "reason_of_rejection",
+  "lead_id",
   "time_details_section",
   "primary_customer_additional_details_approval_time",
   "rejected_by_asm_time",
@@ -493,11 +494,18 @@
    "fieldname": "beat_6",
    "fieldtype": "Data",
    "label": "Beat 6"
+  },
+  {
+   "fieldname": "lead_id",
+   "fieldtype": "Link",
+   "label": "Lead ID",
+   "options": "Lead",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-05-17 16:51:40.886971",
+ "modified": "2023-08-10 16:32:39.558793",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Primary Customer Form",
