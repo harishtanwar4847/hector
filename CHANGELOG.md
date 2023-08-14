@@ -4,7 +4,7 @@
 
 ### Added
 
--[Changes in Secondary Customer workflow and Lead workflow]()
+-[Changes in Secondary Customer workflow and Lead workflow](https://github.com/atrina-technologies-pvt-ltd/hector/pull/1)
 
 ## [v1.7.9-uat] - 2023-06-02
 ## [v1.7.9-dev] - 2023-06-02
