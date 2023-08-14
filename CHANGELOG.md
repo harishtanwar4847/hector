@@ -1,5 +1,11 @@
 # Changelog
 
+## [v1.8.0-dev+1] - 2023-08-14
+
+### Added
+
+-[Fix bugs in lead.py]()
+
 ## [v1.8.0-dev] - 2023-08-14
 
 ### Added
