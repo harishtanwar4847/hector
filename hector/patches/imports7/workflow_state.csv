@@ -1,0 +1,6 @@
+"State","Icon","Style"
+"Resent for RTM Approval","",""
+"Requested for More Details by RTM","","Warning"
+"Rejected by RTM","","Danger"
+"Pending for RTM Approval","","Primary"
+"Lead Closed","","Warning"
