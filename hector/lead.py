@@ -4,6 +4,7 @@ def on_update(doc,method):
     if doc.workflow_state == "Pending For Primary Customer Additional Details":
         frappe.db.set_value("Lead", doc.name, "customer_support_approval_date_and_time", frappe.utils.now())
         res = frappe.new_doc("Primary Customer Form")
+        res.lead_id = doc.name
         res.customer_name = doc.lead_name
         res.post_code = doc.pincode
         res.shipping_address = doc.address
@@ -21,6 +22,7 @@ def on_update(doc,method):
     if doc.workflow_state == "Pending For Secondary Customer Additional Details":
         frappe.db.set_value("Lead", doc.name, "customer_support_approval_date_and_time", frappe.utils.now())
         res2 = frappe.new_doc("Secondary Customer Form")
+        res2.lead_id = doc.name
         res2.customer_type = doc.customer_type
         res2.asm_user = doc.asm_user
         res2.rsm_user = doc.rsm_user

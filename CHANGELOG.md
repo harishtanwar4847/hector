@@ -1,5 +1,33 @@
 # Changelog
 
+## [v1.8.1] - 2023-08-24
+## [v1.8.1-uat] - 2023-08-24
+## [v1.8.1-dev] - 2023-08-24
+
+### Added
+
+-[Changes in Customer Master](https://github.com/atrina-technologies-pvt-ltd/hector/pull/4)
+
+## [v1.8.0-uat] - 2023-08-16
+## [v1.8.0-dev+1] - 2023-08-14
+
+### Added
+
+-[Fix bugs in lead.py](https://github.com/atrina-technologies-pvt-ltd/hector/pull/2)
+
+## [v1.8.0-dev] - 2023-08-14
+
+### Added
+
+-[Changes in Secondary Customer workflow and Lead workflow](https://github.com/atrina-technologies-pvt-ltd/hector/pull/1)
+
+## [v1.7.9-uat] - 2023-06-02
+## [v1.7.9-dev] - 2023-06-02
+
+### Added
+
+-[Add provision to deactivate and activate SKUs](https://gitlab.com/atri-tech/atri-maintainers/hector/-/merge_requests/136)
+
 ## [v1.7.8] - 2023-05-25
 ## [v1.7.8-uat] - 2023-05-22
 ## [v1.7.8-dev] - 2023-05-22

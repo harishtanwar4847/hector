@@ -60,6 +60,7 @@
   "asm_user",
   "rsm_user",
   "reason_of_rejection",
+  "lead_id",
   "time_details_section",
   "secondary_customer_additional_details_approval_time",
   "rejected_by_asm_time",
@@ -67,8 +68,12 @@
   "nsm_approval_time",
   "rejected_by_nsm_time",
   "requested_for_more_details_by_nsm_time",
-  "column_break_53",
   "resent_for_nsm_approval_time",
+  "rtm_approval_time",
+  "column_break_53",
+  "rejected_by_rtm_time",
+  "requested_for_more_details_by_rtm_time",
+  "resent_for_rtm_approval_time",
   "secondary_customer_master_approval_time",
   "requested_for_more_details_by_secondary_master_team_time",
   "resent_for_secondary_master_processing_time"
@@ -478,11 +483,42 @@
    "fieldname": "beat_6",
    "fieldtype": "Data",
    "label": "Beat 6"
+  },
+  {
+   "fieldname": "lead_id",
+   "fieldtype": "Link",
+   "label": "Lead ID",
+   "options": "Lead",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rejected_by_rtm_time",
+   "fieldtype": "Data",
+   "label": "Rejected by RTM Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rtm_approval_time",
+   "fieldtype": "Data",
+   "label": "RTM Approval Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "resent_for_rtm_approval_time",
+   "fieldtype": "Data",
+   "label": "Resent for RTM Approval Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "requested_for_more_details_by_rtm_time",
+   "fieldtype": "Data",
+   "label": "Requested for More Details by RTM Time",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-03-30 15:00:45.441051",
+ "modified": "2023-08-14 15:50:59.385781",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Secondary Customer Form",
@@ -554,6 +590,17 @@
    "report": 1,
    "role": "Customer Support Team",
    "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "RTM Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
   }
  ],
  "sort_field": "modified",
