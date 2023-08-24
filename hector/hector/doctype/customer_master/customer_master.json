@@ -30,11 +30,9 @@
   },
   {
    "fieldname": "customer_type",
-   "fieldtype": "Select",
+   "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Customer Type",
-   "options": "\nDirect Distributor\nIndirect Distributor\nSuper Stockist",
-   "reqd": 1
+   "label": "Customer Type"
   },
   {
    "default": "Active",
@@ -42,13 +40,12 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
-   "options": "\nActive\nInactive",
-   "reqd": 1
+   "options": "\nActive\nInactive"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-08-14 15:56:46.352800",
+ "modified": "2023-08-24 16:05:59.126194",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Customer Master",
