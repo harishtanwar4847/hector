@@ -4,7 +4,7 @@
 
 ### Added
 
--[Changes in Customer Master]()
+-[Changes in Customer Master](https://github.com/atrina-technologies-pvt-ltd/hector/pull/4)
 
 ## [v1.8.0-uat] - 2023-08-16
 ## [v1.8.0-dev+1] - 2023-08-14
