@@ -1,5 +1,11 @@
 # Changelog
 
+## [v1.8.3-uat] - 2023-12-29
+
+### Added
+
+-[Multiple town code fileds in Secondary Customer Form](https://github.com/atrina-technologies-pvt-ltd/hector/pull/9)
+
 ## [v1.8.2] - 2023-11-29
 ## [v1.8.2-uat] - 2023-11-22
 
