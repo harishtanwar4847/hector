@@ -47,26 +47,26 @@
   "distributor_owner_name",
   "please_enter_the_db_townunique_code_as_per_census_data",
   "will_the_distibutor_cover_more_than_1_town",
-  "additional_town_1_name_as_per_census_file",
-  "additional_town_1_code_as_per_census_file",
-  "additional_town_2_name_as_per_census_file",
-  "additional_town_2_code_as_per_census_file",
-  "additional_town_3_name_as_per_census_file",
-  "additional_town_3_code_as_per_census_file",
-  "additional_town_4_name_as_per_census_file",
-  "additional_town_4_code_as_per_census_file",
-  "additional_town_5_name_as_per_census_file",
-  "additional_town_5_code_as_per_census_file",
-  "additional_town_6_name_as_per_census_file",
-  "additional_town_6_code_as_per_census_file",
-  "additional_town_7_name_as_per_census_file",
-  "additional_town_7_code_as_per_census_file",
-  "additional_town_8_name_as_per_census_file",
-  "additional_town_8_code_as_per_census_file",
-  "additional_town_9_name_as_per_census_file",
-  "additional_town_9_code_as_per_census_file",
-  "additional_town_10_name_as_per_census_file",
-  "additional_town_10_code_as_per_census_file",
+  "additional_town_1_name",
+  "additional_town_1_code",
+  "additional_town_2_name",
+  "additional_town_2_code",
+  "additional_town_3_name",
+  "additional_town_3_code",
+  "additional_town_4_name",
+  "additional_town_4_code",
+  "additional_town_5_name",
+  "additional_town_5_code",
+  "additional_town_6_name",
+  "additional_town_6_code",
+  "additional_town_7_name",
+  "additional_town_7_code",
+  "additional_town_8_name",
+  "additional_town_8_code",
+  "additional_town_9_name",
+  "additional_town_9_code",
+  "additional_town_10_name",
+  "additional_town_10_code",
   "distributor_gst_no",
   "distributor_food_certificate",
   "remarks",
@@ -545,130 +545,130 @@
   },
   {
    "depends_on": "eval:doc.will_the_distibutor_cover_more_than_1_town === \"Yes\";",
-   "fieldname": "additional_town_1_name_as_per_census_file",
+   "fieldname": "additional_town_1_name",
    "fieldtype": "Data",
    "label": "Additional Town 1 name as per Census File",
    "mandatory_depends_on": "eval:doc.will_the_distibutor_cover_more_than_1_town === \"Yes\";"
   },
   {
    "depends_on": "eval:doc.will_the_distibutor_cover_more_than_1_town === \"Yes\";",
-   "fieldname": "additional_town_1_code_as_per_census_file",
+   "fieldname": "additional_town_1_code",
    "fieldtype": "Data",
    "label": "Additional Town 1 code as per Census File",
    "mandatory_depends_on": "eval:doc.will_the_distibutor_cover_more_than_1_town === \"Yes\";"
   },
   {
-   "depends_on": "eval:doc.additional_town_1_name_as_per_census_file && doc.additional_town_1_code_as_per_census_file;",
-   "fieldname": "additional_town_2_name_as_per_census_file",
+   "depends_on": "eval:doc.additional_town_1_name && doc.additional_town_1_code;",
+   "fieldname": "additional_town_2_name",
    "fieldtype": "Data",
    "label": "Additional Town 2 name as per Census File"
   },
   {
-   "depends_on": "eval:doc.additional_town_1_name_as_per_census_file && doc.additional_town_1_code_as_per_census_file;",
-   "fieldname": "additional_town_2_code_as_per_census_file",
+   "depends_on": "eval:doc.additional_town_1_name && doc.additional_town_1_code;",
+   "fieldname": "additional_town_2_code",
    "fieldtype": "Data",
    "label": "Additional Town 2 code as per Census File"
   },
   {
-   "depends_on": "eval:doc.additional_town_2_name_as_per_census_file && doc.additional_town_2_code_as_per_census_file;",
-   "fieldname": "additional_town_3_name_as_per_census_file",
+   "depends_on": "eval:doc.additional_town_2_name && doc.additional_town_2_code;",
+   "fieldname": "additional_town_3_name",
    "fieldtype": "Data",
    "label": "Additional Town 3 name as per Census File"
   },
   {
-   "depends_on": "eval:doc.additional_town_2_name_as_per_census_file && doc.additional_town_2_code_as_per_census_file;",
-   "fieldname": "additional_town_3_code_as_per_census_file",
+   "depends_on": "eval:doc.additional_town_2_name && doc.additional_town_2_code;",
+   "fieldname": "additional_town_3_code",
    "fieldtype": "Data",
    "label": "Additional Town 3 code as per Census File"
   },
   {
-   "depends_on": "eval:doc.additional_town_3_name_as_per_census_file && doc.additional_town_3_code_as_per_census_file;",
-   "fieldname": "additional_town_4_name_as_per_census_file",
+   "depends_on": "eval:doc.additional_town_3_name && doc.additional_town_3_code;",
+   "fieldname": "additional_town_4_name",
    "fieldtype": "Data",
    "label": "Additional Town 4 name as per Census File"
   },
   {
-   "depends_on": "eval:doc.additional_town_3_name_as_per_census_file && doc.additional_town_3_code_as_per_census_file;",
-   "fieldname": "additional_town_4_code_as_per_census_file",
-   "fieldtype": "Data",
-   "label": "Additional Town 4 code as per Census File"
-  },
-  {
-   "depends_on": "eval:doc.additional_town_4_name_as_per_census_file && doc.additional_town_4_code_as_per_census_file;",
-   "fieldname": "additional_town_5_name_as_per_census_file",
+   "depends_on": "eval:doc.additional_town_4_name && doc.additional_town_4_code;",
+   "fieldname": "additional_town_5_name",
    "fieldtype": "Data",
    "label": "Additional Town 5 name as per Census File"
   },
   {
-   "depends_on": "eval:doc.additional_town_4_name_as_per_census_file && doc.additional_town_4_code_as_per_census_file;",
-   "fieldname": "additional_town_5_code_as_per_census_file",
+   "depends_on": "eval:doc.additional_town_4_name && doc.additional_town_4_code;",
+   "fieldname": "additional_town_5_code",
    "fieldtype": "Data",
    "label": "Additional Town 5 code as per Census File"
   },
   {
-   "depends_on": "eval:doc.additional_town_5_name_as_per_census_file && doc.additional_town_5_code_as_per_census_file;",
-   "fieldname": "additional_town_6_name_as_per_census_file",
+   "depends_on": "eval:doc.additional_town_5_name && doc.additional_town_5_code;",
+   "fieldname": "additional_town_6_name",
    "fieldtype": "Data",
    "label": "Additional Town 6 name as per Census File"
   },
   {
-   "depends_on": "eval:doc.additional_town_5_name_as_per_census_file && doc.additional_town_5_code_as_per_census_file;",
-   "fieldname": "additional_town_6_code_as_per_census_file",
+   "depends_on": "eval:doc.additional_town_5_name && doc.additional_town_5_code;",
+   "fieldname": "additional_town_6_code",
    "fieldtype": "Data",
    "label": "Additional Town 6 code as per Census File"
   },
   {
-   "depends_on": "eval:doc.additional_town_6_name_as_per_census_file && doc.additional_town_6_code_as_per_census_file;",
-   "fieldname": "additional_town_7_name_as_per_census_file",
+   "depends_on": "eval:doc.additional_town_6_name && doc.additional_town_6_code;",
+   "fieldname": "additional_town_7_name",
    "fieldtype": "Data",
    "label": "Additional Town 7 name as per Census File"
   },
   {
-   "depends_on": "eval:doc.additional_town_6_name_as_per_census_file && doc.additional_town_6_code_as_per_census_file;",
-   "fieldname": "additional_town_7_code_as_per_census_file",
+   "depends_on": "eval:doc.additional_town_6_name && doc.additional_town_6_code;",
+   "fieldname": "additional_town_7_code",
    "fieldtype": "Data",
    "label": "Additional Town 7 code as per Census File"
   },
   {
-   "depends_on": "eval:doc.additional_town_7_name_as_per_census_file && doc.additional_town_7_code_as_per_census_file;",
-   "fieldname": "additional_town_8_name_as_per_census_file",
+   "depends_on": "eval:doc.additional_town_7_name && doc.additional_town_7_code;",
+   "fieldname": "additional_town_8_name",
    "fieldtype": "Data",
    "label": "Additional Town 8 name as per Census File"
   },
   {
-   "depends_on": "eval:doc.additional_town_7_name_as_per_census_file && doc.additional_town_7_code_as_per_census_file;",
-   "fieldname": "additional_town_8_code_as_per_census_file",
+   "depends_on": "eval:doc.additional_town_7_name && doc.additional_town_7_code;",
+   "fieldname": "additional_town_8_code",
    "fieldtype": "Data",
    "label": "Additional Town 8 code as per Census File"
   },
   {
-   "depends_on": "eval:doc.additional_town_8_name_as_per_census_file && doc.additional_town_8_code_as_per_census_file;",
-   "fieldname": "additional_town_9_name_as_per_census_file",
+   "depends_on": "eval:doc.additional_town_8_name && doc.additional_town_8_code;",
+   "fieldname": "additional_town_9_name",
    "fieldtype": "Data",
    "label": "Additional Town 9 name as per Census File"
   },
   {
-   "depends_on": "eval:doc.additional_town_8_name_as_per_census_file && doc.additional_town_8_code_as_per_census_file;",
-   "fieldname": "additional_town_9_code_as_per_census_file",
+   "depends_on": "eval:doc.additional_town_8_name && doc.additional_town_8_code;",
+   "fieldname": "additional_town_9_code",
    "fieldtype": "Data",
    "label": "Additional Town 9 code as per Census File"
   },
   {
-   "depends_on": "eval:doc.additional_town_9_name_as_per_census_file && doc.additional_town_9_code_as_per_census_file;",
-   "fieldname": "additional_town_10_name_as_per_census_file",
+   "depends_on": "eval:doc.additional_town_9_name && doc.additional_town_9_code;",
+   "fieldname": "additional_town_10_name",
    "fieldtype": "Data",
    "label": "Additional Town 10 name as per Census File"
   },
   {
-   "depends_on": "eval:doc.additional_town_9_name_as_per_census_file && doc.additional_town_9_code_as_per_census_file;",
-   "fieldname": "additional_town_10_code_as_per_census_file",
+   "depends_on": "eval:doc.additional_town_3_name && doc.additional_town_3_code;",
+   "fieldname": "additional_town_4_code",
+   "fieldtype": "Data",
+   "label": "Additional Town 4 code as per Census File"
+  },
+  {
+   "depends_on": "eval:doc.additional_town_9_name && doc.additional_town_9_code;",
+   "fieldname": "additional_town_10_code",
    "fieldtype": "Data",
    "label": "Additional Town 10 code as per Census File"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-28 14:52:25.457317",
+ "modified": "2023-12-29 17:15:47.731115",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Secondary Customer Form",

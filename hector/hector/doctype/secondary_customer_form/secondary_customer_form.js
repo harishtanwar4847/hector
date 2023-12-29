@@ -19,16 +19,6 @@ frappe.ui.form.on('Secondary Customer Form', {
         var phone = frm.doc.distributor_contact_number || ""
         var email = frm.doc.distributor_email_id || ""
         var town_code = frm.doc.please_enter_the_db_townunique_code_as_per_census_data || ""
-        var town_code_1 = frm.doc.additional_town_1_code_as_per_census_file || ""
-        var town_code_2 = frm.doc.additional_town_2_code_as_per_census_file || ""
-        var town_code_3 = frm.doc.additional_town_3_code_as_per_census_file || ""
-        var town_code_4 = frm.doc.additional_town_4_code_as_per_census_file || ""
-        var town_code_5 = frm.doc.additional_town_5_code_as_per_census_file || ""
-        var town_code_6 = frm.doc.additional_town_6_code_as_per_census_file || ""
-        var town_code_7 = frm.doc.additional_town_7_code_as_per_census_file || ""
-        var town_code_8 = frm.doc.additional_town_8_code_as_per_census_file || ""
-        var town_code_9 = frm.doc.additional_town_9_code_as_per_census_file || ""
-        var town_code_10 = frm.doc.additional_town_10_code_as_per_census_file || ""
         var mobile_pattern = "^\\d{10,11}$";
         var email_pattern = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
         var town_code_pattern = "^\\d{6}$";
@@ -47,8 +37,7 @@ frappe.ui.form.on('Secondary Customer Form', {
             frappe.throw('Old Census codes are invalid, kindly enter the new 6 digits census code.')
         }
 
-        if((town_code_1.length > 0  && !town_code_1.match(town_code_pattern)) || (town_code_2.length > 0  && !town_code_2.match(town_code_pattern)) || (town_code_3.length > 0  && !town_code_3.match(town_code_pattern)) || (town_code_4.length > 0  && !town_code_4.match(town_code_pattern)) || (town_code_5.length > 0  && !town_code_5.match(town_code_pattern)) || (town_code_6.length > 0  && !town_code_6.match(town_code_pattern)) || (town_code_7.length > 0  && !town_code_7.match(town_code_pattern)) || (town_code_8.length > 0  && !town_code_8.match(town_code_pattern)) || (town_code_9.length > 0  && !town_code_9.match(town_code_pattern)) || (town_code_10.length > 0  && !town_code_10.match(town_code_pattern)))
-        {
+        if ((frm.doc.additional_town_1_code && !frm.doc.additional_town_1_code.match(town_code_pattern)) || (frm.doc.additional_town_2_code && !frm.doc.additional_town_2_code.match(town_code_pattern))  || (frm.doc.additional_town_3_code && !frm.doc.additional_town_3_code.match(town_code_pattern))  || (frm.doc.additional_town_4_code && !frm.doc.additional_town_4_code.match(town_code_pattern))  || (frm.doc.additional_town_5_code && !frm.doc.additional_town_5_code.match(town_code_pattern))  || (frm.doc.additional_town_6_code && !frm.doc.additional_town_6_code.match(town_code_pattern))  || (frm.doc.additional_town_7_code && !frm.doc.additional_town_7_code.match(town_code_pattern))  || (frm.doc.additional_town_8_code && !frm.doc.additional_town_8_code.match(town_code_pattern))  || (frm.doc.additional_town_9_code && !frm.doc.additional_town_9_code.match(town_code_pattern))  || (frm.doc.additional_town_10_code && !frm.doc.additional_town_10_code.match(town_code_pattern))){
             frappe.throw('Old Census codes are invalid, kindly enter the new 6 digits census code.')
         }
 
