@@ -9,6 +9,7 @@
  "field_order": [
   "naming_series",
   "customer_type",
+  "idb_type",
   "state",
   "sales_officer_name",
   "super_stockist_name",
@@ -664,11 +665,18 @@
    "fieldname": "additional_town_10_code",
    "fieldtype": "Data",
    "label": "Additional Town 10 code as per Census File"
+  },
+  {
+   "depends_on": "eval:doc.customer_type=='Indirect Distributor'",
+   "fieldname": "idb_type",
+   "fieldtype": "Select",
+   "label": "IDB Type",
+   "options": "\nNormal\nWhole Sale"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-29 17:38:28.521921",
+ "modified": "2024-02-23 15:33:13.776860",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Secondary Customer Form",
