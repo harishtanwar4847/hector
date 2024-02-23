@@ -671,13 +671,13 @@
    "fieldname": "idb_type",
    "fieldtype": "Select",
    "label": "IDB Type",
-   "mandatory_depends_on": "eval:doc.customer_type=='Indirect Distributor'",
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection && doc.customer_type=='Indirect Distributor'",
    "options": "\nNormal\nWhole Sale"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-23 16:45:18.327767",
+ "modified": "2024-02-23 18:31:56.080903",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Secondary Customer Form",
