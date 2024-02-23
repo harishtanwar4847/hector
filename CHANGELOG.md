@@ -4,7 +4,7 @@
 
 ### Added
 
--[Add IDB Type in Lead and Secondary Customer Form]()
+-[Add IDB Type in Lead and Secondary Customer Form](https://github.com/atrina-technologies-pvt-ltd/hector/pull/11)
 
 
 ## [v1.8.3] - 2024-01-04
