@@ -1,5 +1,12 @@
 # Changelog
 
+## [v1.8.4-uat] - 2024-02-23
+
+### Added
+
+-[Add IDB Type in Lead and Secondary Customer Form]()
+
+
 ## [v1.8.3] - 2024-01-04
 ## [v1.8.3-uat] - 2023-12-29
 
