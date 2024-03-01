@@ -1,5 +1,13 @@
 # Changelog
 
+## [v1.8.4] - 2024-03-01
+## [v1.8.4-uat] - 2024-02-23
+
+### Added
+
+-[Add IDB Type in Lead and Secondary Customer Form](https://github.com/atrina-technologies-pvt-ltd/hector/pull/11)
+
+
 ## [v1.8.3] - 2024-01-04
 ## [v1.8.3-uat] - 2023-12-29
 

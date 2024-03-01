@@ -24,6 +24,7 @@ def on_update(doc,method):
         res2 = frappe.new_doc("Secondary Customer Form")
         res2.lead_id = doc.name
         res2.customer_type = doc.customer_type
+        res2.idb_type = doc.idb_type
         res2.asm_user = doc.asm_user
         res2.rsm_user = doc.rsm_user
         res2.name_of_new_distributor = doc.lead_name
