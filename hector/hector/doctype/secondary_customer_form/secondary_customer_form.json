@@ -126,19 +126,19 @@
    "fieldname": "sales_officer_name",
    "fieldtype": "Data",
    "label": "Sales Officer Name",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection"
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection && doc.idb_type != \"Whole Sale\""
   },
   {
    "fieldname": "super_stockist_code",
    "fieldtype": "Data",
    "label": "Super Stockist Code",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection"
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection && doc.idb_type != \"Whole Sale\""
   },
   {
    "fieldname": "ssdp_name_of_district",
    "fieldtype": "Data",
    "label": "SS/DP Name of District",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection"
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection && doc.idb_type != \"Whole Sale\""
   },
   {
    "fieldname": "name_of_new_distributor",
@@ -169,189 +169,189 @@
    "fieldname": "distributor_tehsiltaluk",
    "fieldtype": "Data",
    "label": "Distributor Tehsil/Taluk",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection"
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection && doc.idb_type != \"Whole Sale\""
   },
   {
    "fieldname": "distributor_email_id",
    "fieldtype": "Data",
    "label": "Distributor Email ID",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection"
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection && doc.idb_type != \"Whole Sale\""
   },
   {
    "fieldname": "date_of_birth_of_distributor",
    "fieldtype": "Date",
    "label": "Date of Birth of Distributor",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection"
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection && doc.idb_type != \"Whole Sale\""
   },
   {
    "fieldname": "number_of_years_in_distribution_business",
    "fieldtype": "Float",
    "label": "Number of Years in Distribution Business",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\""
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && doc.idb_type != \"Whole Sale\""
   },
   {
    "fieldname": "other_company_brandhandled",
    "fieldtype": "Data",
    "label": "Other Company Brand/Handled",
-   "reqd": 1
+   "mandatory_depends_on": "eval: doc.idb_type != \"Whole Sale\";"
   },
   {
    "fieldname": "total_turn_over_the_distributor_in_lakhs_in_a_month",
    "fieldtype": "Float",
    "label": "Total Turn over the Distributor in lakhs in a month ",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.idb_type != \"Whole Sale\";"
   },
   {
    "fieldname": "number_of_vehicles",
    "fieldtype": "Data",
    "label": "Number of Vehicles",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.idb_type != \"Whole Sale\";"
   },
   {
    "fieldname": "does_db_goes_to_market_himself",
    "fieldtype": "Select",
    "label": "Does DB goes to market himself",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection",
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection && doc.idb_type != \"Whole Sale\"",
    "options": "\nYes\nNo"
   },
   {
    "fieldname": "is_the_distributor_is_a_beverage_distributor_as_well",
    "fieldtype": "Select",
    "label": "Is the distributor is a beverage distributor as well",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection",
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection && doc.idb_type != \"Whole Sale\"",
    "options": "\nYes\nNo"
   },
   {
    "fieldname": "is_he_working_as_a_ready_stock_or_order_booking",
    "fieldtype": "Select",
    "label": "Is he working as a ready stock or order booking",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection",
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection && doc.idb_type != \"Whole Sale\"",
    "options": "\nReady Stock\nOrder Booking"
   },
   {
    "fieldname": "is_this_distributor_a_new_db_or_replacement",
    "fieldtype": "Select",
    "label": "Is this Distributor a new DB or Replacement",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection",
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection && doc.idb_type != \"Whole Sale\"",
    "options": "\nDB\nReplacement"
   },
   {
    "fieldname": "old_db_name_if_it_is_replaced__by_old_db",
    "fieldtype": "Data",
    "label": "Old DB Name if it is replaced  by old DB ",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection"
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection && doc.idb_type != \"Whole Sale\""
   },
   {
    "fieldname": "old_db_code_if_it_is_replaced_by_old_db",
    "fieldtype": "Data",
    "label": "Old DB Code if it is replaced by old DB",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection"
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection && doc.idb_type != \"Whole Sale\""
   },
   {
    "fieldname": "districttown_population__in_lakhs",
    "fieldtype": "Float",
    "label": "District/Town Population  in Lakhs",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\""
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && doc.idb_type != \"Whole Sale\""
   },
   {
    "fieldname": "no_of_outlets_covered",
    "fieldtype": "Int",
    "label": "No of Outlets covered",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.idb_type != \"Whole Sale\";"
   },
   {
    "fieldname": "no_of_salesman",
    "fieldtype": "Int",
    "label": "No of Salesman",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.idb_type != \"Whole Sale\";"
   },
   {
    "fieldname": "warehouse_type",
    "fieldtype": "Select",
    "label": "Warehouse Type",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection",
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection && doc.idb_type != \"Whole Sale\"",
    "options": "\nOwn\nRented"
   },
   {
    "fieldname": "warehouse_sizein_sq_feets",
    "fieldtype": "Float",
    "label": "Warehouse Size(In Sq. feets) ",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\""
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && doc.idb_type != \"Whole Sale\""
   },
   {
    "fieldname": "db_internet_available",
    "fieldtype": "Select",
    "label": "DB Internet Available",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection",
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection && doc.idb_type != \"Whole Sale\"",
    "options": "\nYes\nNo"
   },
   {
    "fieldname": "expected_volume_in_cases_for_hector",
    "fieldtype": "Float",
    "label": "Expected Volume in Cases for Hector",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\""
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && doc.idb_type != \"Whole Sale\""
   },
   {
    "fieldname": "expected_value_sales",
    "fieldtype": "Float",
    "label": "Expected Value Sales",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\""
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && doc.idb_type != \"Whole Sale\""
   },
   {
    "fieldname": "expected_per_month_in_lacs",
    "fieldtype": "Float",
    "label": "Expected Per Month in Lacs",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\""
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && doc.idb_type != \"Whole Sale\""
   },
   {
    "fieldname": "no_of_outlet_covered_in_hector_beverages",
    "fieldtype": "Int",
    "label": "No of Outlet Covered in Hector Beverages",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\""
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && doc.idb_type != \"Whole Sale\""
   },
   {
    "fieldname": "coverage_frequency",
    "fieldtype": "Select",
    "label": "Coverage Frequency",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection",
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection && doc.idb_type != \"Whole Sale\"",
    "options": "\nDaily\nWeekly\nFortnightly"
   },
   {
    "fieldname": "reason_for_new_distributor_appointment",
    "fieldtype": "Data",
    "label": "Reason For new Distributor Appointment",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection"
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection && doc.idb_type != \"Whole Sale\""
   },
   {
    "fieldname": "did_you_have_taken_feedback_about_the_distributor_from_market",
    "fieldtype": "Select",
    "label": "Did you have taken feedback about the distributor from market",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection",
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection && doc.idb_type != \"Whole Sale\"",
    "options": "\nYes\nNo"
   },
   {
    "fieldname": "distributor_owner_name",
    "fieldtype": "Data",
    "label": "Distributor Owner Name",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection"
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection && doc.idb_type != \"Whole Sale\""
   },
   {
    "fieldname": "please_enter_the_db_townunique_code_as_per_census_data",
    "fieldtype": "Data",
    "label": "Please Enter the DB Town(Unique Code) As per Census Data",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection"
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection && doc.idb_type != \"Whole Sale\""
   },
   {
    "fieldname": "distributor_gst_no",
    "fieldtype": "Data",
    "label": "Distributor GST No",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection"
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection && doc.idb_type != \"Whole Sale\""
   },
   {
    "fieldname": "distributor_food_certificate",
    "fieldtype": "Data",
    "label": "Distributor Food Certificate",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection"
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection && doc.idb_type != \"Whole Sale\""
   },
   {
    "fieldname": "remarks",
@@ -468,7 +468,7 @@
    "fieldname": "beat_1",
    "fieldtype": "Data",
    "label": "Beat 1",
-   "mandatory_depends_on": "eval: (doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection)"
+   "mandatory_depends_on": "eval: (doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection && doc.idb_type != \"Whole Sale\")"
   },
   {
    "depends_on": "beat_1",
@@ -498,7 +498,7 @@
    "fieldname": "super_stockist_name",
    "fieldtype": "Data",
    "label": "Super Stockist Name",
-   "mandatory_depends_on": "eval: doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection"
+   "mandatory_depends_on": "eval: doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection && doc.idb_type != \"Whole Sale\""
   },
   {
    "depends_on": "beat_5",
@@ -541,7 +541,7 @@
    "fieldname": "will_the_distibutor_cover_more_than_1_town",
    "fieldtype": "Select",
    "label": "Will the Distibutor Cover More than 1 Town",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection",
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection && doc.idb_type != \"Whole Sale\"",
    "options": "\nYes\nNo"
   },
   {
@@ -549,14 +549,14 @@
    "fieldname": "additional_town_1_name",
    "fieldtype": "Data",
    "label": "Additional Town 1 name as per Census File",
-   "mandatory_depends_on": "eval:doc.will_the_distibutor_cover_more_than_1_town === \"Yes\";"
+   "mandatory_depends_on": "eval:doc.will_the_distibutor_cover_more_than_1_town === \"Yes\" && doc.idb_type != \"Whole Sale\";"
   },
   {
    "depends_on": "eval:doc.will_the_distibutor_cover_more_than_1_town === \"Yes\";",
    "fieldname": "additional_town_1_code",
    "fieldtype": "Data",
    "label": "Additional Town 1 code as per Census File",
-   "mandatory_depends_on": "eval:doc.will_the_distibutor_cover_more_than_1_town === \"Yes\";"
+   "mandatory_depends_on": "eval:doc.will_the_distibutor_cover_more_than_1_town === \"Yes\" && doc.idb_type != \"Whole Sale\";"
   },
   {
    "depends_on": "eval:doc.will_the_distibutor_cover_more_than_1_town === \"Yes\" && doc.additional_town_1_name && doc.additional_town_1_code;",
@@ -671,13 +671,13 @@
    "fieldname": "idb_type",
    "fieldtype": "Select",
    "label": "IDB Type",
-   "mandatory_depends_on": "eval:doc.workflow_state == \"Pending For Secondary Customer Additional Details\" && !doc.reason_of_rejection && doc.customer_type=='Indirect Distributor'",
+   "mandatory_depends_on": "eval:!doc.reason_of_rejection && doc.customer_type=='Indirect Distributor'",
    "options": "\nNormal\nWhole Sale"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-23 18:31:56.080903",
+ "modified": "2024-03-06 12:41:51.376604",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Secondary Customer Form",
