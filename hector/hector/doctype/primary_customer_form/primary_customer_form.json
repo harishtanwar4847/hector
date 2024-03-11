@@ -16,6 +16,9 @@
   "customer_email_address",
   "mobile_no_of_the_customer",
   "contact_name_of_the_customer",
+  "image1",
+  "image2",
+  "image3",
   "profile_information_section",
   "customer_type",
   "type_of_business",
@@ -25,6 +28,7 @@
   "commercial_information_section",
   "gst_registration_number",
   "pan_card_no",
+  "trade_license_number",
   "attach_pan_card_copy",
   "attach_gst_registration_certificate",
   "food_license_copy_and_number",
@@ -501,11 +505,31 @@
    "label": "Lead ID",
    "options": "Lead",
    "read_only": 1
+  },
+  {
+   "fieldname": "trade_license_number",
+   "fieldtype": "Data",
+   "label": "Trade License Number"
+  },
+  {
+   "fieldname": "image1",
+   "fieldtype": "Attach Image",
+   "label": "Image1"
+  },
+  {
+   "fieldname": "image2",
+   "fieldtype": "Attach Image",
+   "label": "Image2"
+  },
+  {
+   "fieldname": "image3",
+   "fieldtype": "Attach Image",
+   "label": "Image3"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-08-10 16:32:39.558793",
+ "modified": "2024-03-11 17:23:54.111513",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Primary Customer Form",
