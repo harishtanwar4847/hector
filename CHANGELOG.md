@@ -5,7 +5,7 @@
 
 ### Added
 
--[Make fields in Secondary Customer Form non-mandatory if IDB Type is Whole Sale](https://github.com/atrina-technologies-pvt-ltd/hector/pull/13)
+-[Make fields in Secondary Customer Form non-mandatory if IDB Type is Whole Sale](https://github.com/atrina-technologies-pvt-ltd/hector/pull/14)
 
 ## [v1.8.4] - 2024-03-01
 ## [v1.8.4-uat] - 2024-02-23
