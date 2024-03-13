@@ -1901,7 +1901,7 @@
    "name": "Lead-idb_type",
    "no_copy": 0,
    "non_negative": 0,
-   "options": "\nNormal\nWhole Sale",
+   "options": "\nNormal\nStrikers",
    "owner": "administrator",
    "parent": null,
    "parentfield": null,
