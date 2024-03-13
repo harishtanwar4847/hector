@@ -4,7 +4,7 @@
 
 ### Added
 
--[Change IDB Type option from Whole Sale to Strikers](https://github.com/atrina-technologies-pvt-ltd/hector/pull/)
+-[Change IDB Type option from Whole Sale to Strikers](https://github.com/atrina-technologies-pvt-ltd/hector/pull/15)
 
 
 ## [v1.8.5] - 2024-03-11
