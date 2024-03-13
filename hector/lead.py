@@ -18,9 +18,8 @@ def on_update(doc,method):
         res.customer_type = doc.customer_type
         res.asm_user = doc.asm_user
         res.rsm_user = doc.rsm_user
-        res.image1 = doc.image1
-        res.image2 = doc.image2
-        res.image3 = doc.image3
+        res.customer_image1 = doc.customer_image1
+        res.customer_image2 = doc.customer_image2
         res.insert()
         frappe.msgprint("Send for Primary Customer Additional Details")
     
@@ -47,9 +46,8 @@ def on_update(doc,method):
         res2.no_of_salesman = doc.sales_man_that_are_not_sponsor_by_other_brands
         res2.super_stockist_name = doc.ss_name
         res2.super_stockist_code = doc.ss_code
-        res2.image1 = doc.image1
-        res2.image2 = doc.image2
-        res2.image3 = doc.image3
+        res2.customer_image1 = doc.customer_image1
+        res2.customer_image2 = doc.customer_image2
         res2.insert()
         frappe.msgprint("Send for Secondary Customer Additional Details")
 

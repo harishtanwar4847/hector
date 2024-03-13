@@ -85,9 +85,8 @@
   "rsm_user",
   "reason_of_rejection",
   "lead_id",
-  "image1",
-  "image2",
-  "image3",
+  "customer_image1",
+  "customer_image2",
   "time_details_section",
   "secondary_customer_additional_details_approval_time",
   "rejected_by_asm_time",
@@ -690,24 +689,19 @@
    "label": "Trade License Number"
   },
   {
-   "fieldname": "image1",
+   "fieldname": "customer_image1",
    "fieldtype": "Attach Image",
-   "label": "Image1"
+   "label": "Customer Image1"
   },
   {
-   "fieldname": "image2",
+   "fieldname": "customer_image2",
    "fieldtype": "Attach Image",
-   "label": "Image2"
-  },
-  {
-   "fieldname": "image3",
-   "fieldtype": "Attach Image",
-   "label": "Image3"
+   "label": "Customer Image2"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-11 17:31:03.488560",
+ "modified": "2024-03-12 14:51:27.891032",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Secondary Customer Form",
