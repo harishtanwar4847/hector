@@ -25,6 +25,7 @@
   "commercial_information_section",
   "gst_registration_number",
   "pan_card_no",
+  "trade_license_number",
   "attach_pan_card_copy",
   "attach_gst_registration_certificate",
   "food_license_copy_and_number",
@@ -59,6 +60,8 @@
   "beat_4",
   "beat_5",
   "beat_6",
+  "customer_image1",
+  "customer_image2",
   "asm_user",
   "rsm_user",
   "reason_of_rejection",
@@ -501,11 +504,26 @@
    "label": "Lead ID",
    "options": "Lead",
    "read_only": 1
+  },
+  {
+   "fieldname": "trade_license_number",
+   "fieldtype": "Data",
+   "label": "Trade License Number"
+  },
+  {
+   "fieldname": "customer_image1",
+   "fieldtype": "Attach Image",
+   "label": "Customer Image1"
+  },
+  {
+   "fieldname": "customer_image2",
+   "fieldtype": "Attach Image",
+   "label": "Customer Image2"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-08-10 16:32:39.558793",
+ "modified": "2024-03-12 14:58:18.125177",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Primary Customer Form",
