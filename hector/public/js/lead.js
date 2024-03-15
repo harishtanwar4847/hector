@@ -60,7 +60,6 @@ frappe.ui.form.on('Lead', {
       frappe.throw('Infrastructure(In Sq. ft) can be a maximum 20 digit number')
     }
     
-    
   }
 
   

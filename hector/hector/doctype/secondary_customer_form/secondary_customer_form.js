@@ -19,9 +19,11 @@ frappe.ui.form.on('Secondary Customer Form', {
         var phone = frm.doc.distributor_contact_number || ""
         var email = frm.doc.distributor_email_id || ""
         var town_code = frm.doc.please_enter_the_db_townunique_code_as_per_census_data || ""
+        let pan_number = frm.doc.distributor_pan_number || ""
         var mobile_pattern = "^\\d{10,11}$";
         var email_pattern = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
         var town_code_pattern = "^\\d{6}$";
+        let pan_pattern = /[A-Z]{5}[0-9]{4}[A-Z]{1}$/i;
 
         if(phone.length > 0  && !phone.match(mobile_pattern))
         {
@@ -39,6 +41,10 @@ frappe.ui.form.on('Secondary Customer Form', {
 
         if ((frm.doc.additional_town_1_code && !frm.doc.additional_town_1_code.match(town_code_pattern)) || (frm.doc.additional_town_2_code && !frm.doc.additional_town_2_code.match(town_code_pattern))  || (frm.doc.additional_town_3_code && !frm.doc.additional_town_3_code.match(town_code_pattern))  || (frm.doc.additional_town_4_code && !frm.doc.additional_town_4_code.match(town_code_pattern))  || (frm.doc.additional_town_5_code && !frm.doc.additional_town_5_code.match(town_code_pattern))  || (frm.doc.additional_town_6_code && !frm.doc.additional_town_6_code.match(town_code_pattern))  || (frm.doc.additional_town_7_code && !frm.doc.additional_town_7_code.match(town_code_pattern))  || (frm.doc.additional_town_8_code && !frm.doc.additional_town_8_code.match(town_code_pattern))  || (frm.doc.additional_town_9_code && !frm.doc.additional_town_9_code.match(town_code_pattern))  || (frm.doc.additional_town_10_code && !frm.doc.additional_town_10_code.match(town_code_pattern))){
             frappe.throw('Old Census codes are invalid, kindly enter the new 6 digits census code.')
+        }
+
+        if (pan_number.length > 0 && !pan_number.match(pan_pattern)) {
+            frappe.throw('Invalid PAN Number');
         }
 
     }
