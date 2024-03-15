@@ -4,7 +4,7 @@
 
 ### Added
 
--[DB Scout Changes](https://github.com/atrina-technologies-pvt-ltd/hector/pull/)
+-[DB Scout Changes](https://github.com/atrina-technologies-pvt-ltd/hector/pull/17)
 
 ## [v1.8.6] - 2024-03-13
 ## [v1.8.6-uat] - 2024-03-13
