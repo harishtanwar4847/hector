@@ -69,6 +69,8 @@
   "additional_town_10_name",
   "additional_town_10_code",
   "distributor_gst_no",
+  "distributor_pan_number",
+  "trade_license_number",
   "distributor_food_certificate",
   "remarks",
   "db_code",
@@ -79,6 +81,8 @@
   "beat_4",
   "beat_5",
   "beat_6",
+  "customer_image1",
+  "customer_image2",
   "asm_user",
   "rsm_user",
   "reason_of_rejection",
@@ -673,11 +677,31 @@
    "label": "IDB Type",
    "mandatory_depends_on": "eval:!doc.reason_of_rejection && doc.customer_type=='Indirect Distributor'",
    "options": "\nNormal\nStrikers"
+  },
+  {
+   "fieldname": "distributor_pan_number",
+   "fieldtype": "Data",
+   "label": "Distributor PAN Number"
+  },
+  {
+   "fieldname": "trade_license_number",
+   "fieldtype": "Data",
+   "label": "Trade License Number"
+  },
+  {
+   "fieldname": "customer_image1",
+   "fieldtype": "Attach Image",
+   "label": "Customer Image1"
+  },
+  {
+   "fieldname": "customer_image2",
+   "fieldtype": "Attach Image",
+   "label": "Customer Image2"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-13 16:48:27.259521",
+ "modified": "2024-03-14 12:59:45.607259",
  "modified_by": "Administrator",
  "module": "Hector",
  "name": "Secondary Customer Form",

@@ -1,4 +1,5 @@
 import frappe
+import requests
 
 def on_update(doc,method):
     if doc.workflow_state == "Pending For Primary Customer Additional Details":
@@ -53,4 +54,43 @@ def on_update(doc,method):
 
     if doc.workflow_state == "Lead Rejected":
         frappe.db.set_value("Lead", doc.name, "lead_rejection_time", frappe.utils.now())
+
+    if doc.workflow_state == "Lead Closed":
+        try:
+            if doc.close_state_notified == 0:
+                if frappe.utils.get_url() == "https://uat-hector-workflow.atriina.com":
+                    url = frappe.db.get_single_value("Hector API Settings", "uat_myhector_url")
+                    headers = {
+                        "token": frappe.db.get_single_value("Hector API Settings", "uat_myhector_token"),
+                        "appinstancecode": frappe.db.get_single_value("Hector API Settings", "uat_myhector_appinstance")
+                    }
+                    json = {
+                        "userCode": frappe.db.get_single_value("Hector API Settings", "uat_myhector_usercode"),
+                        "mobileNumber":doc.phone,
+                        "customerName": doc.lead_name,
+                        "customerType": doc.customer_type,
+                        "leadStatus": "1"
+                    }
+                    requests.put(url, headers=headers, json=json)
+                if frappe.utils.get_url() == "https://apps.myhector.com":
+                        url = frappe.db.get_single_value("Hector API Settings", "prod_myhector_url")
+                        headers = {
+                            "token": frappe.db.get_single_value("Hector API Settings", "prod_myhector_token"),
+                            "appinstancecode": frappe.db.get_single_value("Hector API Settings", "prod_myhector_appinstance")
+                        }
+                        json = {
+                            "userCode": frappe.db.get_single_value("Hector API Settings", "prod_myhector_usercode"),
+                            "mobileNumber":doc.phone,
+                            "customerName": doc.lead_name,
+                            "customerType": doc.customer_type,
+                            "leadStatus": "1"
+                        }
+                        requests.put(url, headers=headers, json=json)
+        except:
+            frappe.log_error(
+            message=frappe.get_traceback(),
+            title="DB Scout Lead Close API Error",
+        )
+        else:
+            frappe.db.set_value("Lead", doc.name, "close_state_notified", 1)
 

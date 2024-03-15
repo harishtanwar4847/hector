@@ -1,5 +1,11 @@
 # Changelog
 
+## [v1.8.7-uat] - 2024-03-14
+
+### Added
+
+-[DB Scout Changes](https://github.com/atrina-technologies-pvt-ltd/hector/pull/15)
+
 ## [v1.8.6] - 2024-03-13
 ## [v1.8.6-uat] - 2024-03-13
 

@@ -11,14 +11,12 @@ frappe.ui.form.on('Lead', {
     var mobile_pattern = "^\\d{10,11}$";
     var pin_pattern = "^[1-9][0-9]{5}$"
     var gst_pattern = "^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$";
-    let pan_pattern = /[A-Z]{5}[0-9]{4}[A-Z]{1}$/;
     var phone = frm.doc.phone || ""
     var pin = frm.doc.pincode || ""
     var experience = frm.doc.enter_distribution_experience_in_years || ""
     var average_salary =  frm.doc.monthly_turn_over || ""
     var vehicles = frm.doc.number_of_vehicles_for_distribution || ""
     var infra = frm.doc.infrastructure || ""
-    let pan_number = frm.doc.pan_number || ""
     var number_list = ['0','1','2','3','4','5','6','7','8','9']
 
     if(phone.length > 0  && !phone.match(mobile_pattern))
@@ -60,10 +58,6 @@ frappe.ui.form.on('Lead', {
   }
     if(infra > 99999999999999999999){
       frappe.throw('Infrastructure(In Sq. ft) can be a maximum 20 digit number')
-    }
-    
-    if (pan_number.length > 0 && !pan_number.match(pan_pattern)) {
-      frappe.throw(__('Invalid PAN Number'));
     }
     
   }

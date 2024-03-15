@@ -23,7 +23,7 @@ frappe.ui.form.on('Secondary Customer Form', {
         var mobile_pattern = "^\\d{10,11}$";
         var email_pattern = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
         var town_code_pattern = "^\\d{6}$";
-        let pan_pattern = /[A-Z]{5}[0-9]{4}[A-Z]{1}$/;
+        let pan_pattern = /[A-Z]{5}[0-9]{4}[A-Z]{1}$/i;
 
         if(phone.length > 0  && !phone.match(mobile_pattern))
         {

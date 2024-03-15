@@ -1,0 +1,139 @@
+{
+ "actions": [],
+ "creation": "2024-03-15 10:54:32.510438",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "myhecor_dev_api_details_column",
+  "dev_myhector_url",
+  "dev_myhector_token",
+  "column_break_4",
+  "dev_myhector_appinstance",
+  "dev_myhector_usercode",
+  "myhecor_uat_api_details_section",
+  "uat_myhector_url",
+  "uat_myhector_token",
+  "column_break_10",
+  "uat_myhector_appinstance",
+  "uat_myhector_usercode",
+  "myhecor_prod_api_details_section",
+  "prod_myhector_url",
+  "prod_myhector_token",
+  "column_break_16",
+  "prod_myhector_appinstance",
+  "prod_myhector_usercode"
+ ],
+ "fields": [
+  {
+   "fieldname": "dev_myhector_url",
+   "fieldtype": "Data",
+   "label": "Dev Myhector URL"
+  },
+  {
+   "fieldname": "dev_myhector_token",
+   "fieldtype": "Data",
+   "label": "Dev Myhector Token"
+  },
+  {
+   "fieldname": "dev_myhector_appinstance",
+   "fieldtype": "Data",
+   "label": "Dev Myhector Appinstance"
+  },
+  {
+   "fieldname": "dev_myhector_usercode",
+   "fieldtype": "Data",
+   "label": "Dev Myhector UserCode"
+  },
+  {
+   "fieldname": "myhecor_dev_api_details_column",
+   "fieldtype": "Section Break",
+   "label": "Myhecor Dev API Details"
+  },
+  {
+   "fieldname": "myhecor_uat_api_details_section",
+   "fieldtype": "Section Break",
+   "label": "Myhecor UAT API Details"
+  },
+  {
+   "fieldname": "uat_myhector_url",
+   "fieldtype": "Data",
+   "label": "UAT Myhector URL"
+  },
+  {
+   "fieldname": "uat_myhector_token",
+   "fieldtype": "Data",
+   "label": "UAT Myhector Token"
+  },
+  {
+   "fieldname": "uat_myhector_appinstance",
+   "fieldtype": "Data",
+   "label": "UAT Myhector Appinstance"
+  },
+  {
+   "fieldname": "uat_myhector_usercode",
+   "fieldtype": "Data",
+   "label": "UAT Myhector UserCode"
+  },
+  {
+   "fieldname": "myhecor_prod_api_details_section",
+   "fieldtype": "Section Break",
+   "label": "Myhecor Prod API Details"
+  },
+  {
+   "fieldname": "prod_myhector_url",
+   "fieldtype": "Data",
+   "label": "Prod Myhector URL"
+  },
+  {
+   "fieldname": "prod_myhector_token",
+   "fieldtype": "Data",
+   "label": "Prod Myhector Token"
+  },
+  {
+   "fieldname": "prod_myhector_appinstance",
+   "fieldtype": "Data",
+   "label": "Prod Myhector Appinstance"
+  },
+  {
+   "fieldname": "prod_myhector_usercode",
+   "fieldtype": "Data",
+   "label": "Prod Myhector UserCode"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-03-15 11:06:36.349375",
+ "modified_by": "Administrator",
+ "module": "Hector",
+ "name": "Hector API Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
