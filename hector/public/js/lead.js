@@ -4,6 +4,12 @@ frappe.ui.form.on('Lead', {
     if ((frm.doc.workflow_state == "Pending with Customer Support Team" && !frm.doc.customer_type && !frm.is_new()) || (frm.doc.workflow_state == "Pending with Customer Support Team" && !frm.doc.asm_user && !frm.is_new())){
       frm.set_intro("Please Enter Type of Customer, ASM and RSM")
     }
+    if (frm.is_new()) {
+      frm.doc.close_state_notified = 0;
+      frm.refresh_field('close_state_notified');
+      frm.doc.reject_state_notified = 0;
+      frm.refresh_field('reject_state_notified');
+    }
   },
 
   
