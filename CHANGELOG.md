@@ -4,7 +4,7 @@
 
 ### Added
 
--[API call to DBScout on Lead Reject](https://github.com/atrina-technologies-pvt-ltd/hector/pull/)
+-[API call to DBScout on Lead Reject](https://github.com/atrina-technologies-pvt-ltd/hector/pull/18)
 
 
 ## [v1.8.7-uat] - 2024-03-15
