@@ -77,6 +77,7 @@ def on_update(doc,method):
         else:
             frappe.db.set_value("Lead", doc.name, "close_state_notified", 1)
 
+# API call to DB Scout to inform of lead close or reject
 def notify_lead_status(doc, status):
     if status == "closed":
         lead_status = "1"
